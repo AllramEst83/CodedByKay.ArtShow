@@ -5,11 +5,19 @@
 # Bundle the artwork images inside the Lambda zip
 # so the function can read them via fs in production.
 [functions]
-  included_files = ["assets/drawngs/**"]
+  included_files = ["assets/drawngs/**", "netlify/functions/data/**"]
+
+# Block direct static HTTP access to raw artwork files
+# so they can ONLY be accessed via the /.netlify/functions/image function.
+[[redirects]]
+  from = "/assets/drawngs/*"
+  to = "/index.html"
+  status = 404
 
 # Serve the SPA from the root
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+
 

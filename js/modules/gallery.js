@@ -1,6 +1,4 @@
-import artwork from '../data/artwork.js';
-
-export let filteredArtwork = [...artwork];
+export let filteredArtwork = [];
 
 export function setFilteredArtwork(items) {
   filteredArtwork = items;
@@ -10,12 +8,20 @@ export function renderGallery(items) {
   const gallery = document.getElementById('gallery');
   gallery.innerHTML = '';
   
+  const emptyState = document.getElementById('empty-state');
+  const emptyTitle = document.getElementById('empty-title');
+  const emptyDesc = document.getElementById('empty-desc');
+  
   if (items.length === 0) {
-    document.getElementById('empty-state').hidden = false;
+    if (emptyTitle) emptyTitle.textContent = "Oops, we seem to have an issue...";
+    if (emptyDesc) emptyDesc.textContent = "No artwork found matching your search or filters. Try resetting your search!";
+    if (emptyState) emptyState.hidden = false;
     return;
   }
   
-  document.getElementById('empty-state').hidden = true;
+  if (emptyState) emptyState.hidden = true;
+  
+  let failedCount = 0;
   
   items.forEach(item => {
     const article = document.createElement('article');
@@ -39,8 +45,28 @@ export function renderGallery(items) {
       shimmer.classList.add('shimmer--done');
       shimmer.addEventListener('transitionend', () => shimmer.remove(), { once: true });
     };
+    
     img.onload = removeShimmer;
-    img.onerror = removeShimmer;
+    
+    img.onerror = () => {
+      removeShimmer();
+      failedCount++;
+      imgWrapper.classList.add('has-error');
+      imgWrapper.innerHTML = `
+        <div class="card-error-fallback">
+          <span class="error-emoji" aria-hidden="true">🎨☕</span>
+          <p class="error-title">Oops, we seem to have an issue...</p>
+          <p class="error-subtext">This drawing took an unexpected coffee break!</p>
+        </div>
+      `;
+      
+      // If all images in gallery fail to load due to network/server issues
+      if (failedCount === items.length && emptyState) {
+        if (emptyTitle) emptyTitle.textContent = "Oops, we seem to have an issue...";
+        if (emptyDesc) emptyDesc.textContent = "The internet ate our pencils! We couldn't fetch the artwork images from the server right now.";
+        emptyState.hidden = false;
+      }
+    };
 
     const overlay = document.createElement('div');
     overlay.className = 'card-overlay';
@@ -75,6 +101,8 @@ export function renderGallery(items) {
   });
 }
 
-export function initGallery() {
+export function initGallery(initialArtwork = []) {
+  setFilteredArtwork(initialArtwork);
   renderGallery(filteredArtwork);
 }
+

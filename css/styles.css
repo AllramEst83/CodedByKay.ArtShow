@@ -49,16 +49,37 @@ a, button, input, select {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  gap: 1rem;
+  padding: 0.85rem 2rem;
   background-color: var(--color-surface);
   border-bottom: 1px solid var(--color-border);
   box-shadow: var(--shadow-sm);
   transition: all var(--transition-speed);
 }
 
-/* Glassmorphism specific backdrop */
-[data-theme="glassmorphism"] .app-header,
-[data-theme="glassmorphism"] .filter-popover {
+.brand-title {
+  font-size: clamp(1.2rem, 5vw, 1.75rem);
+  font-weight: 700;
+  white-space: nowrap;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+/* Glassmorphism & Claymorphism specific header backdrops */
+[data-theme="glassmorphism"] .app-header {
+  background-color: rgba(18, 14, 36, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+[data-theme="claymorphism"] .app-header {
+  background-color: rgba(240, 230, 255, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(180, 160, 210, 0.4);
+  box-shadow: 0 4px 14px rgba(180, 160, 210, 0.35);
+}
+[data-theme="glassmorphism"] .filter-popover,
+[data-theme="claymorphism"] .filter-popover {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }
@@ -74,12 +95,12 @@ a, button, input, select {
 .theme-controls {
   display: flex;
   align-items: center;
-  gap: 0;
+  gap: 0.5rem;
   flex-shrink: 0;
 }
 
 .theme-selector {
-  padding: 0.375rem 0.75rem;
+  padding: 0.4rem 0.75rem;
   border-radius: var(--radius-sm);
   background-color: var(--color-bg);
   color: var(--color-text-primary);
@@ -87,10 +108,26 @@ a, button, input, select {
   cursor: pointer;
   box-shadow: var(--shadow-sm);
   font-size: 0.875rem;
+  font-weight: 500;
   max-width: 160px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  transition: all var(--transition-speed);
+}
+
+@media (max-width: 600px) {
+  .app-header {
+    padding: 0.75rem 1rem;
+  }
+  .theme-selector {
+    max-width: 125px;
+    padding: 0.35rem 0.5rem;
+    font-size: 0.8rem;
+  }
+  main {
+    padding: 1rem;
+  }
 }
 
 /* Controls */
@@ -155,16 +192,26 @@ main {
 .filter-popover {
   position: absolute;
   top: calc(100% + 0.5rem);
-  right: 0;
-  width: 300px;
+  left: 0;
+  right: auto;
+  width: min(320px, calc(100vw - 2rem));
   background-color: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   padding: 1.5rem;
   box-shadow: var(--shadow-lg);
-  z-index: 50;
+  z-index: 90;
   transition: opacity 0.2s, transform 0.2s;
 }
+
+@media (min-width: 601px) {
+  .filter-popover {
+    left: auto;
+    right: 0;
+    width: 300px;
+  }
+}
+
 .filter-popover[hidden] {
   display: none;
 }
@@ -355,12 +402,92 @@ main {
   padding: 4rem 2rem;
   color: var(--color-text-secondary);
 }
+.empty-emoji {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+  animation: floatEmoji 3s infinite ease-in-out;
+}
+@keyframes floatEmoji {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
 .empty-state h2 {
   margin-bottom: 0.5rem;
   color: var(--color-text-primary);
 }
 .empty-state button {
   margin-top: 1.5rem;
+}
+
+/* Error Fallbacks & Funny Messages */
+.art-card-image-wrapper.has-error {
+  min-height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-bg-secondary);
+}
+
+.card-error-fallback {
+  text-align: center;
+  padding: 1.5rem;
+  color: var(--color-text-secondary);
+}
+
+.card-error-fallback .error-emoji {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.card-error-fallback .error-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.card-error-fallback .error-subtext {
+  font-size: 0.825rem;
+}
+
+.lightbox-error-fallback {
+  text-align: center;
+  padding: 2rem;
+  color: #ffffff;
+  max-width: 380px;
+}
+
+.lightbox-error-fallback .error-emoji {
+  font-size: 3.5rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.lightbox-error-fallback h3 {
+  font-size: 1.35rem;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.lightbox-error-fallback p {
+  font-size: 0.95rem;
+  color: #cccccc;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.btn-retry {
+  background-color: var(--color-accent);
+  color: var(--color-accent-text);
+  border: none;
+  font-size: 0.9rem;
+  padding: 0.6rem 1.25rem;
+  margin: 0 auto;
+}
+.btn-retry:hover {
+  transform: scale(1.05);
 }
 
 /* Lightbox Modal */
@@ -403,6 +530,7 @@ main {
 .lightbox-content {
   flex: 1;
   display: flex;
+  position: relative;
   background-color: var(--color-bg);
   border-radius: var(--radius-lg);
   overflow: hidden;
@@ -433,6 +561,31 @@ main {
   cursor: zoom-out;
 }
 
+.lightbox-controls {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  z-index: 20;
+}
+
+.lightbox-controls .icon-btn {
+  background: rgba(0, 0, 0, 0.65);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  width: 44px;
+  height: 44px;
+}
+.lightbox-controls .icon-btn:hover,
+.lightbox-content.info-active .info-btn {
+  background: var(--color-accent);
+  color: var(--color-accent-text);
+  border-color: var(--color-accent);
+}
+
 .lightbox-sidebar {
   flex: 1;
   min-width: 300px;
@@ -440,11 +593,70 @@ main {
   padding: 2rem;
   overflow-y: auto;
   border-left: 1px solid var(--color-border);
+  background-color: var(--color-bg);
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.lightbox-sidebar h2 {
-  font-size: 1.75rem;
+.drawer-handle {
+  display: none;
+  width: 40px;
+  height: 5px;
+  background-color: var(--color-text-muted);
+  border-radius: 99px;
+  margin: 0 auto 0.75rem auto;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 0.2s ease;
+}
+.drawer-handle:hover {
+  opacity: 1;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
   margin-bottom: 1.5rem;
+}
+
+.sidebar-header h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0;
+}
+
+.info-close-btn {
+  background: var(--color-surface);
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.info-close-btn:hover {
+  background: var(--color-accent);
+  color: var(--color-accent-text);
+  border-color: var(--color-accent);
+}
+
+@media (min-width: 901px) {
+  .info-close-btn {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .drawer-handle {
+    display: block;
+  }
 }
 
 .meta-row {
@@ -492,7 +704,7 @@ main {
 .icon-btn:hover {
   background: var(--color-accent);
   color: var(--color-accent-text);
-  transform: scale(1.1);
+  transform: scale(1.08);
 }
 .icon-btn:disabled {
   opacity: 0.5;
@@ -505,28 +717,56 @@ main {
   right: 1.5rem;
   z-index: 1010;
 }
-.zoom-btn {
-  position: absolute;
-  bottom: 1rem;
-  right: 1rem;
-  background: rgba(0,0,0,0.5);
-  color: #fff;
-  border: none;
-}
 
 /* Responsive Lightbox */
 @media (max-width: 900px) {
+  .lightbox-overlay {
+    padding: 1rem;
+  }
+  .lightbox-container {
+    gap: 0;
+  }
   .lightbox-content {
     flex-direction: column;
+    position: relative;
+    max-height: 85vh;
   }
   .lightbox-image-container {
     flex: 1;
-    min-height: 50vh;
+    width: 100%;
+    height: 100%;
+    min-height: 0;
   }
+  
   .lightbox-sidebar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
     max-width: 100%;
-    flex: 0 0 auto;
+    max-height: 60vh;
+    border-left: none;
+    border-top: 1px solid var(--color-border);
+    box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    background-color: var(--color-surface);
+    transform: translateY(100%);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 30;
+    padding: 1.5rem;
+    border-top-left-radius: var(--radius-lg);
+    border-top-right-radius: var(--radius-lg);
   }
+
+  .lightbox-content.info-active .lightbox-sidebar {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
   .nav-btn {
     position: absolute;
     top: 50%;
@@ -535,7 +775,11 @@ main {
   }
   .prev { left: 0.5rem; }
   .next { right: 0.5rem; }
-  .lightbox-container {
-    gap: 0;
+  .close-btn {
+    top: 0.75rem;
+    right: 0.75rem;
+    width: 40px;
+    height: 40px;
   }
 }
+
