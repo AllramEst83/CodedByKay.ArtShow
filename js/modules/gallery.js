@@ -23,31 +23,42 @@ export function renderGallery(items) {
     article.tabIndex = 0;
     article.dataset.id = item.id;
     
-    // Shimmer placeholder
+    // Image wrapper — shimmer sits as an absolute overlay inside this
+    const imgWrapper = document.createElement('div');
+    imgWrapper.className = 'art-card-image-wrapper';
+
     const shimmer = document.createElement('div');
     shimmer.className = 'shimmer';
-    
+
     const img = document.createElement('img');
     img.src = item.thumbnailUrl;
     img.alt = item.title;
     img.loading = 'lazy';
-    img.onload = () => shimmer.remove();
-    
+
+    const removeShimmer = () => {
+      shimmer.classList.add('shimmer--done');
+      shimmer.addEventListener('transitionend', () => shimmer.remove(), { once: true });
+    };
+    img.onload = removeShimmer;
+    img.onerror = removeShimmer;
+
     const overlay = document.createElement('div');
     overlay.className = 'card-overlay';
-    
+
     const title = document.createElement('h3');
     title.textContent = item.title;
-    
+
     const category = document.createElement('span');
     category.className = 'card-category';
     category.textContent = item.category;
-    
+
     overlay.appendChild(category);
     overlay.appendChild(title);
-    
-    article.appendChild(shimmer);
-    article.appendChild(img);
+
+    imgWrapper.appendChild(img);
+    imgWrapper.appendChild(shimmer);
+
+    article.appendChild(imgWrapper);
     article.appendChild(overlay);
     
     // Events

@@ -274,13 +274,6 @@ main {
   transition: transform var(--transition-speed), box-shadow var(--transition-speed);
 }
 
-.art-card img {
-  display: block;
-  width: 100%;
-  height: auto;
-  transition: transform var(--transition-speed);
-}
-
 @media (hover: hover) {
   .art-card:hover {
     transform: translateY(-4px) scale(1.02);
@@ -315,17 +308,45 @@ main {
   color: #ddd;
 }
 
-/* Shimmer Loading */
+/* Image wrapper + Shimmer Loading */
+.art-card-image-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 160px;
+  background-color: var(--color-surface);
+}
+
+.art-card-image-wrapper img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform var(--transition-speed);
+}
+
 .shimmer {
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, var(--color-surface) 0px, var(--color-bg-secondary) 50%, var(--color-surface) 100%);
+  background: linear-gradient(
+    90deg,
+    var(--color-surface) 0%,
+    var(--color-bg-secondary) 40%,
+    var(--color-surface) 80%
+  );
   background-size: 200% 100%;
-  animation: shimmer 1.5s infinite linear;
+  animation: shimmer 1.4s infinite linear;
+  opacity: 1;
+  transition: opacity 0.4s ease;
+  z-index: 1;
+  pointer-events: none;
 }
+
+.shimmer--done {
+  opacity: 0;
+}
+
 @keyframes shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
 }
 
 /* Empty State */
