@@ -1,0 +1,32 @@
+---
+description: Vanilla Web Development — HTML5, modern CSS, ESM, selective NPM deps, and UX/a11y standards
+globs: **/*.{html,css,js,mjs,ts}
+alwaysApply: false
+---
+
+# Vanilla Web Development
+
+## Stack
+
+- Use **HTML5**, **modern CSS** (Flexbox/Grid), and **ECMAScript ES2024+**
+- Use **ES Modules** for all JavaScript — `import`/`export` only; no script-tag globals or ad-hoc IIFEs
+
+## Dependencies
+
+- Prefer **native Web APIs** (Fetch, Crypto, Storage) for trivial tasks — avoid heavy packages for simple problems
+- When a library is warranted, favor **established, well-maintained NPM packages** instead of reinventing wheels
+- Before adding a dependency, search [npmjs.com](https://www.npmjs.com/) for the most downloaded standard choice:
+  - Dates → `date-fns`
+  - Validation → `zod`
+
+## User Experience
+
+- When the user must wait for data or any async operation, show a **loading indicator** (spinner, skeleton, or progress state) so they know something is happening
+- Use **shimmer placeholders** on images so slow network loads feel smooth instead of jumping in abruptly
+
+## Accessibility & Code Quality
+
+- **Semantic HTML:** use proper elements and landmarks for screen readers and keyboard navigation
+- **WCAG color:** meet contrast ratios (4.5:1 for normal text, 3:1 for large text); never rely on color alone to convey meaning
+- **Theming:** CSS custom properties for colors, spacing, and typography
+- **Clean code:** early returns, descriptive naming, single-responsibility functions

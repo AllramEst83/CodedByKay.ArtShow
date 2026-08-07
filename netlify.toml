@@ -1,0 +1,15 @@
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+# Bundle the artwork images inside the Lambda zip
+# so the function can read them via fs in production.
+[functions]
+  included_files = ["assets/drawngs/**"]
+
+# Serve the SPA from the root
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+

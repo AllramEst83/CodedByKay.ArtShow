@@ -1,0 +1,124 @@
+:root[data-theme="glassmorphism"] {
+  --color-bg: #120e24;
+  --color-bg-secondary: rgba(255, 255, 255, 0.03);
+  --color-surface: rgba(255, 255, 255, 0.08);
+  --color-surface-hover: rgba(255, 255, 255, 0.15);
+  --color-text-primary: #f8f8f2;
+  --color-text-secondary: #c2c2d6;
+  --color-text-muted: #8b8b9a;
+  --color-accent: #b084e6;
+  --color-accent-hover: #c49eff;
+  --color-accent-text: #ffffff;
+  --color-border: rgba(255, 255, 255, 0.2);
+  --color-border-subtle: rgba(255, 255, 255, 0.1);
+  --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(176, 132, 230, 0.2);
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-full: 9999px;
+  --font-heading: 'Inter', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --transition-speed: 0.3s;
+}
+
+:root[data-theme="neo-brutalism"] {
+  --color-bg: #fffbf0;
+  --color-bg-secondary: #f0ead6;
+  --color-surface: #ffffff;
+  --color-surface-hover: #ffde59;
+  --color-text-primary: #000000;
+  --color-text-secondary: #222222;
+  --color-text-muted: #555555;
+  --color-accent: #ff4747;
+  --color-accent-hover: #ff0000;
+  --color-accent-text: #ffffff;
+  --color-border: #000000;
+  --color-border-subtle: #000000;
+  --shadow-sm: 2px 2px 0px #000000;
+  --shadow-md: 4px 4px 0px #000000;
+  --shadow-lg: 8px 8px 0px #000000;
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-full: 0px;
+  --font-heading: 'Space Mono', monospace;
+  --font-body: 'Space Mono', monospace;
+  --transition-speed: 0.15s;
+}
+
+:root[data-theme="neumorphism"] {
+  --color-bg: #e0e5ec;
+  --color-bg-secondary: #e0e5ec;
+  --color-surface: #e0e5ec;
+  --color-surface-hover: #e0e5ec;
+  --color-text-primary: #334;
+  --color-text-secondary: #556;
+  --color-text-muted: #778;
+  --color-accent: #6b8cce;
+  --color-accent-hover: #5a7bba;
+  --color-accent-text: #ffffff;
+  --color-border: transparent;
+  --color-border-subtle: transparent;
+  --shadow-sm: 5px 5px 10px #bebebe, -5px -5px 10px #ffffff;
+  --shadow-md: 9px 9px 16px #a3b1c6, -9px -9px 16px #ffffff;
+  --shadow-lg: 12px 12px 24px #a3b1c6, -12px -12px 24px #ffffff;
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-full: 50px;
+  --font-heading: system-ui, -apple-system, sans-serif;
+  --font-body: system-ui, -apple-system, sans-serif;
+  --transition-speed: 0.4s;
+}
+
+:root[data-theme="material"] {
+  --color-bg: #f5f5f6;
+  --color-bg-secondary: #e0e0e0;
+  --color-surface: #ffffff;
+  --color-surface-hover: #f0f0f0;
+  --color-text-primary: rgba(0, 0, 0, 0.87);
+  --color-text-secondary: rgba(0, 0, 0, 0.6);
+  --color-text-muted: rgba(0, 0, 0, 0.38);
+  --color-accent: #1976D2;
+  --color-accent-hover: #1565C0;
+  --color-accent-text: #ffffff;
+  --color-border: rgba(0, 0, 0, 0.12);
+  --color-border-subtle: rgba(0, 0, 0, 0.08);
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  --shadow-md: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  --shadow-lg: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+  --radius-full: 9999px;
+  --font-heading: 'Roboto', sans-serif;
+  --font-body: 'Roboto', sans-serif;
+  --transition-speed: 0.25s;
+}
+
+:root[data-theme="claymorphism"] {
+  --color-bg: #f0e6ff;
+  --color-bg-secondary: #e6d8ff;
+  --color-surface: #ffffff;
+  --color-surface-hover: #faf7ff;
+  --color-text-primary: #4a3b69;
+  --color-text-secondary: #6e5e8c;
+  --color-text-muted: #9b8eb5;
+  --color-accent: #ff9a9e;
+  --color-accent-hover: #ff757a;
+  --color-accent-text: #ffffff;
+  --color-border: #ffffff;
+  --color-border-subtle: rgba(255,255,255,0.5);
+  --shadow-sm: 4px 4px 10px rgba(180, 160, 210, 0.4), inset -2px -2px 6px rgba(0,0,0,0.05), inset 2px 2px 6px #ffffff;
+  --shadow-md: 8px 8px 16px rgba(180, 160, 210, 0.4), inset -3px -3px 8px rgba(0,0,0,0.05), inset 3px 3px 8px #ffffff;
+  --shadow-lg: 12px 12px 24px rgba(180, 160, 210, 0.5), inset -4px -4px 10px rgba(0,0,0,0.05), inset 4px 4px 10px #ffffff;
+  --radius-sm: 16px;
+  --radius-md: 24px;
+  --radius-lg: 32px;
+  --radius-full: 999px;
+  --font-heading: 'Quicksand', sans-serif;
+  --font-body: 'Quicksand', sans-serif;
+  --transition-speed: 0.3s;
+}

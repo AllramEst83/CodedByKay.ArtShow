@@ -1,0 +1,15 @@
+{
+  "name": "codedby-kay-artshow",
+  "version": "1.0.0",
+  "description": "Kay's ArtShow — a vanilla HTML/CSS/JS art portfolio",
+  "scripts": {
+    "dev": "netlify dev",
+    "start": "netlify dev"
+  },
+  "keywords": ["art", "portfolio", "vanilla"],
+  "author": "Kay",
+  "license": "MIT",
+  "devDependencies": {
+    "netlify-cli": "^17.0.0"
+  }
+}
