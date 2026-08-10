@@ -51,7 +51,7 @@ exports.handler = async (event) => {
     }
   }
 
-  const { file } = event.queryStringParameters || {};
+  const { file, size } = event.queryStringParameters || {};
 
   // If no file parameter is provided, return all artwork metadata from the server-side database
   if (!file) {
@@ -101,7 +101,15 @@ exports.handler = async (event) => {
 
   // Resolve path relative to assets/drawngs
   const assetsDir = path.resolve(process.cwd(), 'assets', 'drawngs');
-  const filePath = path.resolve(assetsDir, normalizedSubpath);
+  let filePath = path.resolve(assetsDir, normalizedSubpath);
+
+  if (size === 'thumb') {
+    const dirPath = path.dirname(normalizedSubpath);
+    const thumbPath = path.resolve(assetsDir, dirPath, 'thumbs', basename);
+    if (fs.existsSync(thumbPath)) {
+      filePath = thumbPath;
+    }
+  }
 
   // Double-check the resolved path is strictly inside assets/drawngs
   if (!filePath.startsWith(assetsDir + path.sep) && filePath !== assetsDir) {

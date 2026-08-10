@@ -1,3 +1,30 @@
+/* ── Tokens ──────────────────────────────────────────────────────────── */
+:root {
+  --bg:           #0d0d14;
+  --bg-surface:   #16141f;
+  --bg-card:      #1c1929;
+  --bg-input:     #231f31;
+  --border:       #2e2a42;
+  --border-focus: #7c6ff7;
+  --accent:       #7c6ff7;
+  --accent-2:     #c084fc;
+  --accent-glow:  rgba(124,111,247,0.22);
+  --success:      #34d399;
+  --warning:      #fbbf24;
+  --danger:       #f87171;
+  --new:          #38bdf8;       /* colour for "new in folder" items */
+  --new-glow:     rgba(56,189,248,0.18);
+  --text-primary: #f0eeff;
+  --text-muted:   #8b85a8;
+  --text-subtle:  #5a5570;
+  --radius:       10px;
+  --radius-lg:    16px;
+  --shadow:       0 4px 24px rgba(0,0,0,0.45);
+  --transition:   0.18s ease;
+  --font-body:    'Inter', system-ui, sans-serif;
+  --font-mono:    'JetBrains Mono', monospace;
+}
+
 :root[data-theme="glassmorphism"] {
   --color-bg: #120e24;
   --color-bg-secondary: rgba(255, 255, 255, 0.03);
