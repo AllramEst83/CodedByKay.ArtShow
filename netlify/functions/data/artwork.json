@@ -12,8 +12,8 @@
     ],
     "medium": "Charcoal",
     "dimensions": "12x16 inches",
-    "imageUrl": "/.netlify/functions/image?file=2010%2Fmom-and-grandma.jpg",
-    "thumbnailUrl": "/.netlify/functions/image?file=2010%2Fmom-and-grandma.jpg"
+    "imageUrl": "/.netlify/functions/image?file=2010%2Fmom-and-grandma.webp",
+    "thumbnailUrl": "/.netlify/functions/image?file=2010%2Fmom-and-grandma.webp"
   },
   {
     "id": "art-002",
@@ -28,8 +28,8 @@
     ],
     "medium": "Pencil",
     "dimensions": "10x14 inches",
-    "imageUrl": "/.netlify/functions/image?file=2009%2Fmy-son.jpg",
-    "thumbnailUrl": "/.netlify/functions/image?file=2009%2Fmy-son.jpg"
+    "imageUrl": "/.netlify/functions/image?file=2009%2Fmy-son.webp",
+    "thumbnailUrl": "/.netlify/functions/image?file=2009%2Fmy-son.webp"
   },
   {
     "id": "art-003",
@@ -44,8 +44,8 @@
     ],
     "medium": "Pencil",
     "dimensions": "8x11 inches",
-    "imageUrl": "/.netlify/functions/image?file=2010%2Fold-lady.jpg",
-    "thumbnailUrl": "/.netlify/functions/image?file=2010%2Fold-lady.jpg"
+    "imageUrl": "/.netlify/functions/image?file=2010%2Fold-lady.webp",
+    "thumbnailUrl": "/.netlify/functions/image?file=2010%2Fold-lady.webp"
   },
   {
     "id": "art-004",
@@ -60,8 +60,8 @@
     ],
     "medium": "Pencil",
     "dimensions": "8x11 inches",
-    "imageUrl": "/.netlify/functions/image?file=2010%2Fportrait-of-girl-with-deer-eyes.jpg",
-    "thumbnailUrl": "/.netlify/functions/image?file=2010%2Fportrait-of-girl-with-deer-eyes.jpg"
+    "imageUrl": "/.netlify/functions/image?file=2010%2Fportrait-of-girl-with-deer-eyes.webp",
+    "thumbnailUrl": "/.netlify/functions/image?file=2010%2Fportrait-of-girl-with-deer-eyes.webp"
   },
   {
     "id": "art-005",
@@ -78,8 +78,8 @@
     ],
     "medium": "Pencil",
     "dimensions": "14x10 inches",
-    "imageUrl": "/.netlify/functions/image?file=2009%2Fyggdrasil.jpg",
-    "thumbnailUrl": "/.netlify/functions/image?file=2009%2Fyggdrasil.jpg"
+    "imageUrl": "/.netlify/functions/image?file=2009%2Fyggdrasil.webp",
+    "thumbnailUrl": "/.netlify/functions/image?file=2009%2Fyggdrasil.webp"
   },
   {
     "id": "art-006",
@@ -96,8 +96,8 @@
     ],
     "medium": "Photography / Costume",
     "dimensions": "Digital",
-    "imageUrl": "/.netlify/functions/image?file=2009%2Fair-schoold-project.png",
-    "thumbnailUrl": "/.netlify/functions/image?file=2009%2Fair-schoold-project.png"
+    "imageUrl": "/.netlify/functions/image?file=2009%2Fair-schoold-project.webp",
+    "thumbnailUrl": "/.netlify/functions/image?file=2009%2Fair-schoold-project.webp"
   },
   {
     "id": "art-007",
@@ -114,8 +114,8 @@
     ],
     "medium": "Photography / Body Paint",
     "dimensions": "Digital",
-    "imageUrl": "/.netlify/functions/image?file=2009%2Ffire-schoold-project.png",
-    "thumbnailUrl": "/.netlify/functions/image?file=2009%2Ffire-schoold-project.png"
+    "imageUrl": "/.netlify/functions/image?file=2009%2Ffire-schoold-project.webp",
+    "thumbnailUrl": "/.netlify/functions/image?file=2009%2Ffire-schoold-project.webp"
   },
   {
     "id": "art-008",
@@ -132,8 +132,8 @@
     ],
     "medium": "Photography / Body Paint",
     "dimensions": "Digital",
-    "imageUrl": "/.netlify/functions/image?file=2009%2Fwater-schoold-project.png",
-    "thumbnailUrl": "/.netlify/functions/image?file=2009%2Fwater-schoold-project.png"
+    "imageUrl": "/.netlify/functions/image?file=2009%2Fwater-schoold-project.webp",
+    "thumbnailUrl": "/.netlify/functions/image?file=2009%2Fwater-schoold-project.webp"
   },
   {
     "id": "art-009",
@@ -144,8 +144,8 @@
     "tags": [],
     "medium": "Pencil, Watercolor and fine liner",
     "dimensions": "",
-    "imageUrl": "/.netlify/functions/image?file=2025%2Finsect-demon.jpg",
-    "thumbnailUrl": "/.netlify/functions/image?file=2025%2Finsect-demon.jpg"
+    "imageUrl": "/.netlify/functions/image?file=2025%2Finsect-demon.webp",
+    "thumbnailUrl": "/.netlify/functions/image?file=2025%2Finsect-demon.webp"
   },
   {
     "id": "art-010",
@@ -156,7 +156,7 @@
     "tags": [],
     "medium": "",
     "dimensions": "",
-    "imageUrl": "/.netlify/functions/image?file=2025%2Ftentacle-nightmare.jpg",
-    "thumbnailUrl": "/.netlify/functions/image?file=2025%2Ftentacle-nightmare.jpg"
+    "imageUrl": "/.netlify/functions/image?file=2025%2Ftentacle-nightmare.webp",
+    "thumbnailUrl": "/.netlify/functions/image?file=2025%2Ftentacle-nightmare.webp"
   }
 ]
