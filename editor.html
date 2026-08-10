@@ -1,0 +1,1227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Artwork Metadata Editor — CodedByKay Dev</title>
+  <meta name="description" content="Local dev editor for managing artwork metadata stored in artwork.json" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    /* ── Tokens ──────────────────────────────────────────────────────────── */
+    :root {
+      --bg:           #0d0d14;
+      --bg-surface:   #16141f;
+      --bg-card:      #1c1929;
+      --bg-input:     #231f31;
+      --border:       #2e2a42;
+      --border-focus: #7c6ff7;
+      --accent:       #7c6ff7;
+      --accent-2:     #c084fc;
+      --accent-glow:  rgba(124,111,247,0.22);
+      --success:      #34d399;
+      --warning:      #fbbf24;
+      --danger:       #f87171;
+      --new:          #38bdf8;       /* colour for "new in folder" items */
+      --new-glow:     rgba(56,189,248,0.18);
+      --text-primary: #f0eeff;
+      --text-muted:   #8b85a8;
+      --text-subtle:  #5a5570;
+      --radius:       10px;
+      --radius-lg:    16px;
+      --shadow:       0 4px 24px rgba(0,0,0,0.45);
+      --transition:   0.18s ease;
+      --font-body:    'Inter', system-ui, sans-serif;
+      --font-mono:    'JetBrains Mono', monospace;
+    }
+
+    /* ── Reset ───────────────────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: var(--font-body);
+      background: var(--bg);
+      color: var(--text-primary);
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+    /* ── Shell ───────────────────────────────────────────────────────────── */
+    .app-shell {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      grid-template-rows: auto 1fr;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* ── Header ──────────────────────────────────────────────────────────── */
+    .header {
+      grid-column: 1 / -1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.85rem 1.75rem;
+      background: var(--bg-surface);
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+      z-index: 200;
+    }
+    .header-brand { display: flex; align-items: center; gap: 0.75rem; }
+    .header-icon {
+      width: 34px; height: 34px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem;
+    }
+    .header-title { font-size: 1.1rem; font-weight: 700; letter-spacing: -0.01em; }
+    .header-badge {
+      font-size: 0.62rem; font-weight: 600; letter-spacing: 0.08em;
+      text-transform: uppercase; padding: 0.2em 0.55em; border-radius: 4px;
+      background: rgba(251,191,36,0.12); color: var(--warning);
+      border: 1px solid rgba(251,191,36,0.25);
+    }
+    .header-actions { display: flex; align-items: center; gap: 0.65rem; }
+
+    /* ── Buttons ─────────────────────────────────────────────────────────── */
+    .btn {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      padding: 0.5rem 1rem; border-radius: var(--radius);
+      border: 1px solid transparent; font-size: 0.855rem; font-weight: 500;
+      cursor: pointer; transition: all var(--transition);
+      white-space: nowrap; font-family: inherit;
+    }
+    .btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #fff; box-shadow: 0 2px 10px var(--accent-glow);
+    }
+    .btn-primary:hover { filter: brightness(1.1); transform: translateY(-1px); }
+    .btn-primary:active { transform: translateY(0); }
+    .btn-outline { background: transparent; color: var(--text-muted); border-color: var(--border); }
+    .btn-outline:hover { border-color: var(--accent); color: var(--accent); background: rgba(124,111,247,0.06); }
+    .btn-danger { background: rgba(248,113,113,0.1); color: var(--danger); border-color: rgba(248,113,113,0.22); }
+    .btn-danger:hover { background: rgba(248,113,113,0.18); }
+    .btn-success { background: rgba(52,211,153,0.1); color: var(--success); border-color: rgba(52,211,153,0.22); }
+    .btn-success:hover { background: rgba(52,211,153,0.18); }
+    .btn-sm { padding: 0.32rem 0.7rem; font-size: 0.78rem; }
+    .btn-icon { padding: 0.4rem; background: transparent; border: none; color: var(--text-muted); cursor: pointer; border-radius: 6px; }
+    .btn-icon:hover { background: rgba(255,255,255,0.06); color: var(--text-primary); }
+
+    /* ── Sidebar ─────────────────────────────────────────────────────────── */
+    .sidebar {
+      background: var(--bg-surface);
+      border-right: 1px solid var(--border);
+      display: flex; flex-direction: column;
+      overflow: hidden;
+    }
+    .sidebar-search {
+      padding: 0.7rem 0.9rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .search-input {
+      width: 100%;
+      padding: 0.45rem 0.7rem 0.45rem 1.9rem;
+      background: var(--bg-input); border: 1px solid var(--border);
+      border-radius: var(--radius); color: var(--text-primary);
+      font-size: 0.855rem; font-family: inherit;
+      transition: border-color var(--transition);
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='13' viewBox='0 0 24 24' fill='none' stroke='%238b85a8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E");
+      background-repeat: no-repeat; background-position: 0.55rem center;
+    }
+    .search-input:focus { outline: none; border-color: var(--border-focus); }
+    .search-input::placeholder { color: var(--text-subtle); }
+
+    .sidebar-scroll { flex: 1; overflow-y: auto; }
+
+    /* section headers inside sidebar */
+    .sidebar-section-header {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0.65rem 1rem 0.4rem;
+      position: sticky; top: 0; z-index: 2;
+      background: var(--bg-surface);
+    }
+    .sidebar-section-label {
+      font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--text-subtle);
+    }
+    .sidebar-count {
+      font-size: 0.67rem; padding: 0.12em 0.45em; border-radius: 999px;
+      background: rgba(124,111,247,0.14); color: var(--accent); font-weight: 600;
+    }
+    .sidebar-count.new-count {
+      background: rgba(56,189,248,0.14); color: var(--new);
+    }
+
+    /* ── Separator between tracked / untracked ───────────────────────────── */
+    .sidebar-separator {
+      display: flex; align-items: center; gap: 0.6rem;
+      padding: 0.5rem 1rem 0.2rem;
+    }
+    .sidebar-separator-line { flex: 1; height: 1px; background: var(--border); }
+    .sidebar-separator-label {
+      font-size: 0.62rem; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; white-space: nowrap;
+      color: var(--new); opacity: 0.9;
+      display: flex; align-items: center; gap: 0.3rem;
+    }
+    .new-pulse {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--new);
+      box-shadow: 0 0 6px var(--new);
+      animation: blink 2s ease-in-out infinite;
+    }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
+
+    /* ── List items ──────────────────────────────────────────────────────── */
+    .list-item {
+      display: flex; align-items: center; gap: 0.55rem;
+      padding: 0.55rem 0.9rem; cursor: pointer;
+      transition: all var(--transition);
+      border: 1px solid transparent;
+      border-radius: var(--radius);
+      margin: 1px 0.4rem;
+    }
+    .list-item:hover { background: rgba(255,255,255,0.04); border-color: var(--border); }
+    .list-item.active { background: rgba(124,111,247,0.1); border-color: rgba(124,111,247,0.3); }
+    .list-item.new-item { }
+    .list-item.new-item:hover { background: rgba(56,189,248,0.07); border-color: rgba(56,189,248,0.25); }
+
+    .item-thumb {
+      width: 34px; height: 34px; border-radius: 6px;
+      object-fit: cover; flex-shrink: 0;
+      background: var(--bg-card); border: 1px solid var(--border);
+    }
+    .item-thumb-placeholder {
+      width: 34px; height: 34px; border-radius: 6px; flex-shrink: 0;
+      background: var(--bg-card); border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--text-subtle); font-size: 0.9rem;
+    }
+    .item-meta { flex: 1; min-width: 0; }
+    .item-name {
+      font-size: 0.8rem; font-weight: 500;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .item-sub { font-size: 0.68rem; color: var(--text-subtle); }
+    .item-sub.new-sub { color: var(--new); opacity: 0.8; }
+    .new-badge {
+      font-size: 0.6rem; font-weight: 700; letter-spacing: 0.05em;
+      text-transform: uppercase; padding: 0.1em 0.4em; border-radius: 4px;
+      background: rgba(56,189,248,0.15); color: var(--new);
+      border: 1px solid rgba(56,189,248,0.25); flex-shrink: 0;
+    }
+
+    .sidebar-footer {
+      padding: 0.65rem 0.9rem;
+      border-top: 1px solid var(--border);
+    }
+
+    /* ── Main panel ──────────────────────────────────────────────────────── */
+    .main-panel { display: flex; flex-direction: column; overflow: hidden; }
+
+    .main-toolbar {
+      padding: 0.75rem 1.4rem;
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+      background: var(--bg-surface); flex-shrink: 0;
+    }
+    .main-toolbar-left { display: flex; align-items: center; gap: 0.65rem; }
+    .id-badge {
+      font-size: 0.68rem; font-family: var(--font-mono);
+      color: var(--text-subtle); padding: 0.15em 0.5em;
+      border-radius: 4px; background: var(--bg-card); border: 1px solid var(--border);
+    }
+    .dirty-dot {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: var(--warning); box-shadow: 0 0 5px var(--warning);
+      display: none;
+    }
+    .dirty-dot.on { display: inline-block; }
+
+    .form-wrap { flex: 1; overflow-y: auto; padding: 1.4rem; }
+
+    /* ── Empty / Unsaved ─────────────────────────────────────────────────── */
+    .empty-state {
+      flex: 1; display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 1rem; color: var(--text-subtle);
+      text-align: center; padding: 3rem;
+    }
+    .empty-icon { font-size: 3rem; opacity: 0.35; }
+    .empty-state h3 { font-size: 1rem; color: var(--text-muted); font-weight: 600; }
+    .empty-state p { font-size: 0.85rem; max-width: 260px; line-height: 1.6; }
+
+    .unsaved-banner {
+      display: none; align-items: center; gap: 0.5rem;
+      padding: 0.45rem 1rem; flex-shrink: 0;
+      background: rgba(251,191,36,0.07);
+      border-bottom: 1px solid rgba(251,191,36,0.18);
+      font-size: 0.78rem; color: var(--warning);
+    }
+    .unsaved-banner.show { display: flex; }
+
+    /* ── Form ────────────────────────────────────────────────────────────── */
+    .form-grid  { display: grid; gap: 1.15rem; }
+    .form-row   { display: grid; grid-template-columns: 1fr 1fr; gap: 1.15rem; }
+    .form-row-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.15rem; }
+    .form-group { display: flex; flex-direction: column; gap: 0.35rem; }
+    .form-label {
+      font-size: 0.71rem; font-weight: 600; letter-spacing: 0.05em;
+      text-transform: uppercase; color: var(--text-muted);
+    }
+    .form-label .req { color: var(--danger); margin-left: 2px; }
+    .form-input, .form-textarea {
+      padding: 0.58rem 0.8rem;
+      background: var(--bg-input); border: 1px solid var(--border);
+      border-radius: var(--radius); color: var(--text-primary);
+      font-size: 0.855rem; font-family: inherit; width: 100%;
+      transition: border-color var(--transition), box-shadow var(--transition);
+    }
+    .form-input:focus, .form-textarea:focus {
+      outline: none; border-color: var(--border-focus);
+      box-shadow: 0 0 0 3px var(--accent-glow);
+    }
+    .form-input::placeholder, .form-textarea::placeholder { color: var(--text-subtle); }
+    .form-textarea { resize: vertical; min-height: 86px; line-height: 1.55; }
+
+    /* URL field with picker button */
+    .url-field-wrap { display: flex; gap: 0.4rem; align-items: stretch; }
+    .url-field-wrap .form-input { flex: 1; }
+    .btn-pick {
+      padding: 0 0.7rem; border-radius: var(--radius);
+      background: var(--bg-card); border: 1px solid var(--border);
+      color: var(--text-muted); cursor: pointer; font-size: 0.78rem;
+      font-family: inherit; white-space: nowrap;
+      transition: all var(--transition); display: flex; align-items: center; gap: 0.3rem;
+    }
+    .btn-pick:hover { border-color: var(--accent); color: var(--accent); background: rgba(124,111,247,0.07); }
+
+    /* Image picker popover */
+    .picker-popover {
+      position: absolute; z-index: 500;
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); box-shadow: var(--shadow);
+      width: 320px; max-height: 320px; overflow-y: auto;
+      display: none;
+    }
+    .picker-popover.open { display: block; }
+    .picker-popover-header {
+      padding: 0.6rem 0.9rem; border-bottom: 1px solid var(--border);
+      font-size: 0.72rem; color: var(--text-muted); font-weight: 600;
+      letter-spacing: 0.05em; text-transform: uppercase;
+    }
+    .picker-item {
+      display: flex; align-items: center; gap: 0.6rem;
+      padding: 0.5rem 0.9rem; cursor: pointer;
+      transition: background var(--transition);
+    }
+    .picker-item:hover { background: rgba(124,111,247,0.08); }
+    .picker-thumb {
+      width: 32px; height: 32px; border-radius: 5px;
+      object-fit: cover; background: var(--bg-input);
+      border: 1px solid var(--border); flex-shrink: 0;
+    }
+    .picker-name { font-size: 0.8rem; flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .picker-new-tag {
+      font-size: 0.6rem; font-weight: 700; letter-spacing: 0.05em;
+      text-transform: uppercase; padding: 0.1em 0.4em; border-radius: 4px;
+      background: rgba(56,189,248,0.15); color: var(--new);
+      border: 1px solid rgba(56,189,248,0.22); flex-shrink: 0;
+    }
+    .picker-separator {
+      padding: 0.3rem 0.9rem;
+      font-size: 0.62rem; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--new); opacity: 0.8;
+      background: rgba(56,189,248,0.04);
+      border-top: 1px solid rgba(56,189,248,0.12);
+    }
+    .picker-empty { padding: 1rem; text-align: center; font-size: 0.8rem; color: var(--text-subtle); }
+
+    /* ── Image preview ───────────────────────────────────────────────────── */
+    .img-wrap {
+      border: 1px solid var(--border); border-radius: var(--radius-lg);
+      overflow: hidden; background: var(--bg-card);
+      aspect-ratio: 4/3; display: flex;
+      align-items: center; justify-content: center; position: relative;
+    }
+    .img-wrap img { width: 100%; height: 100%; object-fit: contain; }
+    .img-placeholder {
+      display: flex; flex-direction: column; align-items: center;
+      gap: 0.4rem; color: var(--text-subtle); font-size: 0.78rem;
+    }
+    .img-placeholder span { font-size: 2rem; }
+
+    /* ── Tags ────────────────────────────────────────────────────────────── */
+    .tags-wrap {
+      display: flex; flex-wrap: wrap; gap: 0.3rem; align-items: center;
+      padding: 0.38rem 0.55rem; background: var(--bg-input);
+      border: 1px solid var(--border); border-radius: var(--radius);
+      min-height: 42px; cursor: text;
+      transition: border-color var(--transition), box-shadow var(--transition);
+    }
+    .tags-wrap:focus-within { border-color: var(--border-focus); box-shadow: 0 0 0 3px var(--accent-glow); }
+    .tag-chip {
+      display: inline-flex; align-items: center; gap: 0.25rem;
+      padding: 0.12em 0.5em; border-radius: 999px;
+      background: rgba(124,111,247,0.14); color: var(--accent);
+      font-size: 0.75rem; font-weight: 500;
+      border: 1px solid rgba(124,111,247,0.28);
+    }
+    .tag-chip button { background: none; border: none; cursor: pointer; color: inherit; padding: 0; line-height: 1; opacity: 0.7; }
+    .tag-chip button:hover { opacity: 1; }
+    .tags-input { border: none; outline: none; background: transparent; color: var(--text-primary); font-size: 0.855rem; font-family: inherit; flex: 1; min-width: 80px; }
+    .tags-hint { font-size: 0.68rem; color: var(--text-subtle); margin-top: 0.15rem; }
+
+    /* ── Toggle ──────────────────────────────────────────────────────────── */
+    .toggle-row {
+      display: flex; align-items: center; gap: 0.7rem;
+      padding: 0.65rem 0.85rem; background: var(--bg-card);
+      border: 1px solid var(--border); border-radius: var(--radius);
+    }
+    .toggle { position: relative; width: 38px; height: 21px; flex-shrink: 0; }
+    .toggle input { opacity: 0; width: 0; height: 0; }
+    .toggle-slider {
+      position: absolute; inset: 0; background: var(--border);
+      border-radius: 999px; cursor: pointer; transition: background var(--transition);
+    }
+    .toggle-slider::before {
+      content: ''; position: absolute; width: 15px; height: 15px;
+      border-radius: 50%; background: #fff; top: 3px; left: 3px;
+      transition: transform var(--transition);
+    }
+    .toggle input:checked + .toggle-slider { background: var(--accent); }
+    .toggle input:checked + .toggle-slider::before { transform: translateX(17px); }
+    .toggle-label { font-size: 0.855rem; font-weight: 500; flex: 1; }
+    .toggle-desc { font-size: 0.72rem; color: var(--text-subtle); }
+
+    /* ── Divider ─────────────────────────────────────────────────────────── */
+    .divider {
+      display: flex; align-items: center; gap: 0.7rem; margin: 0.1rem 0;
+    }
+    .divider-label { font-size: 0.67rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-subtle); white-space: nowrap; }
+    .divider-line { flex: 1; height: 1px; background: var(--border); }
+
+    /* ── Status bar ──────────────────────────────────────────────────────── */
+    .status-bar {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0.4rem 1.4rem; background: var(--bg-surface);
+      border-top: 1px solid var(--border);
+      font-size: 0.7rem; color: var(--text-subtle);
+      font-family: var(--font-mono); flex-shrink: 0;
+    }
+    .status-row { display: flex; align-items: center; gap: 0.45rem; }
+    .s-dot {
+      width: 5px; height: 5px; border-radius: 50%;
+      background: var(--success); animation: pulse 2.5s ease-in-out infinite;
+    }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.35} }
+    #s-text { color: var(--text-muted); }
+
+    /* ── Toast ───────────────────────────────────────────────────────────── */
+    #toasts {
+      position: fixed; bottom: 1.25rem; right: 1.25rem;
+      display: flex; flex-direction: column; gap: 0.5rem; z-index: 9999;
+    }
+    .toast {
+      display: flex; align-items: center; gap: 0.55rem;
+      padding: 0.65rem 1rem; border-radius: var(--radius);
+      background: var(--bg-card); border: 1px solid var(--border);
+      box-shadow: var(--shadow); font-size: 0.84rem;
+      animation: toastIn 0.2s ease; max-width: 360px;
+    }
+    .toast.ok  { border-left: 3px solid var(--success); }
+    .toast.err { border-left: 3px solid var(--danger); }
+    .toast.inf { border-left: 3px solid var(--accent); }
+    @keyframes toastIn { from{opacity:0;transform:translateX(16px)} to{opacity:1;transform:translateX(0)} }
+
+    /* ── Confirm dialog ──────────────────────────────────────────────────── */
+    .overlay {
+      position: fixed; inset: 0; background: rgba(0,0,0,0.55);
+      backdrop-filter: blur(4px); z-index: 600;
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; pointer-events: none; transition: opacity var(--transition);
+    }
+    .overlay.show { opacity: 1; pointer-events: all; }
+    .dialog {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); padding: 1.75rem;
+      max-width: 380px; width: 90%; box-shadow: var(--shadow);
+      transform: scale(0.96); transition: transform var(--transition);
+    }
+    .overlay.show .dialog { transform: scale(1); }
+    .dialog h3 { font-size: 1.05rem; margin-bottom: 0.4rem; }
+    .dialog p  { font-size: 0.84rem; color: var(--text-muted); margin-bottom: 1.4rem; }
+    .dialog-btns { display: flex; gap: 0.65rem; justify-content: flex-end; }
+  </style>
+</head>
+<body>
+<div class="app-shell">
+
+  <!-- ── Header ─────────────────────────────────────────────────────────── -->
+  <header class="header">
+    <div class="header-brand">
+      <div class="header-icon">🎨</div>
+      <span class="header-title">Artwork Metadata Editor</span>
+      <span class="header-badge">🔒 Local Dev</span>
+    </div>
+    <div class="header-actions">
+      <button class="btn btn-outline btn-sm" id="btn-refresh" title="Refresh image list and reload from server">↺ Refresh</button>
+      <button class="btn btn-outline btn-sm" id="btn-add">+ New Artwork</button>
+      <button class="btn btn-primary" id="btn-save-all">💾 Save to JSON</button>
+    </div>
+  </header>
+
+  <!-- ── Sidebar ────────────────────────────────────────────────────────── -->
+  <aside class="sidebar">
+    <div class="sidebar-search">
+      <input class="search-input" type="search" id="search" placeholder="Filter…" />
+    </div>
+
+    <div class="sidebar-scroll" id="sidebar-scroll">
+      <!-- Tracked artworks -->
+      <div class="sidebar-section-header">
+        <span class="sidebar-section-label">Artworks</span>
+        <span class="sidebar-count" id="count-tracked">0</span>
+      </div>
+      <div id="artwork-list"></div>
+
+      <!-- Untracked images — injected by JS when images exist without metadata -->
+      <div id="untracked-section" style="display:none">
+        <div class="sidebar-separator">
+          <div class="sidebar-separator-line"></div>
+          <div class="sidebar-separator-label">
+            <span class="new-pulse"></span>
+            New in Folder
+          </div>
+          <div class="sidebar-separator-line"></div>
+        </div>
+        <div class="sidebar-section-header" style="padding-top:0.25rem">
+          <span class="sidebar-section-label" style="color:var(--new);opacity:0.85">Not in artwork.json</span>
+          <span class="sidebar-count new-count" id="count-untracked">0</span>
+        </div>
+        <div id="untracked-list"></div>
+      </div>
+    </div>
+
+    <div class="sidebar-footer">
+      <button class="btn btn-outline btn-sm" id="btn-add-sb" style="width:100%">+ New Artwork</button>
+    </div>
+  </aside>
+
+  <!-- ── Main ───────────────────────────────────────────────────────────── -->
+  <main class="main-panel">
+    <div class="unsaved-banner" id="unsaved-banner">
+      ⚠ Draft differs from artwork.json — click "Save to JSON" to persist.
+    </div>
+
+    <div class="main-toolbar" id="toolbar" style="display:none">
+      <div class="main-toolbar-left">
+        <span id="t-title" style="font-weight:600;font-size:0.92rem"></span>
+        <span class="id-badge" id="t-id"></span>
+        <span class="dirty-dot" id="dirty-dot"></span>
+      </div>
+      <div style="display:flex;gap:0.45rem">
+        <button class="btn btn-danger btn-sm" id="btn-delete">🗑 Delete</button>
+        <button class="btn btn-success btn-sm" id="btn-apply">✓ Apply</button>
+      </div>
+    </div>
+
+    <div class="form-wrap" id="form-wrap">
+      <!-- Empty state -->
+      <div class="empty-state" id="empty-state">
+        <div class="empty-icon">🖼️</div>
+        <h3>No artwork selected</h3>
+        <p>Pick an artwork from the sidebar, or click a new image to create an entry for it.</p>
+        <button class="btn btn-primary btn-sm" id="btn-add-empty">+ New Artwork</button>
+      </div>
+
+      <!-- Form -->
+      <form class="form-grid" id="art-form" style="display:none" autocomplete="off" novalidate>
+
+        <div class="form-row">
+          <!-- Preview -->
+          <div class="form-group">
+            <label class="form-label">Preview</label>
+            <div class="img-wrap" id="img-wrap">
+              <div class="img-placeholder" id="img-placeholder">
+                <span>🖼️</span><span>No image selected</span>
+              </div>
+              <img id="img-preview" src="" alt="" style="display:none" />
+            </div>
+          </div>
+
+          <!-- Core fields -->
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label" for="f-id">ID <span style="font-size:0.65rem;text-transform:none;letter-spacing:0;color:var(--text-subtle);font-weight:400;margin-left:auto">🔒 Auto-generated</span></label>
+              <input class="form-input" type="text" id="f-id" readonly title="Auto-generated unique ID" style="opacity:0.7;cursor:not-allowed;background:var(--bg-card);border-color:var(--border)" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="f-title">Title <span class="req">*</span></label>
+              <input class="form-input" type="text" id="f-title" placeholder="Artwork title" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="f-category">Category</label>
+              <input class="form-input" type="text" id="f-category" list="cat-list" placeholder="Portraits, Studies…" />
+              <datalist id="cat-list">
+                <option value="Portraits"/><option value="Studies"/>
+                <option value="Illustration"/><option value="Concept Art"/>
+                <option value="Sketch"/><option value="Digital"/>
+              </datalist>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="f-date">Created Date</label>
+              <input class="form-input" type="date" id="f-date" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Description -->
+        <div class="form-group">
+          <label class="form-label" for="f-desc">Description</label>
+          <textarea class="form-textarea" id="f-desc" placeholder="Describe the artwork…"></textarea>
+        </div>
+
+        <div class="divider"><span class="divider-label">Details</span><div class="divider-line"></div></div>
+
+        <div class="form-row-3">
+          <div class="form-group">
+            <label class="form-label" for="f-medium">Medium</label>
+            <input class="form-input" type="text" id="f-medium" list="medium-list" placeholder="Pencil, Charcoal…" />
+            <datalist id="medium-list">
+              <option value="Pencil"/><option value="Charcoal"/><option value="Ink"/>
+              <option value="Watercolour"/><option value="Oil"/><option value="Acrylic"/>
+              <option value="Photography / Body Paint"/><option value="Photography / Costume"/>
+              <option value="Digital"/>
+            </datalist>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="f-dims">Dimensions</label>
+            <input class="form-input" type="text" id="f-dims" placeholder="12x16 inches" />
+          </div>
+        </div>
+
+        <div class="divider"><span class="divider-label">Tags</span><div class="divider-line"></div></div>
+
+        <div class="form-group">
+          <label class="form-label">Tags</label>
+          <div class="tags-wrap" id="tags-wrap">
+            <input class="tags-input" id="tags-input" type="text" placeholder="Type and press Enter…" />
+          </div>
+          <span class="tags-hint">Enter or , to add · Backspace to remove last</span>
+        </div>
+
+        <div class="divider"><span class="divider-label">Image URLs</span><div class="divider-line"></div></div>
+
+        <!-- Image URL with picker -->
+        <div style="position:relative">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="f-imageUrl">Image URL</label>
+              <div class="url-field-wrap">
+                <input class="form-input" type="text" id="f-imageUrl" placeholder="/.netlify/functions/image?file=…" />
+                <button type="button" class="btn-pick" id="btn-pick-image" title="Pick from images folder">📁 Pick</button>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="f-thumbUrl">Thumbnail URL</label>
+              <div class="url-field-wrap">
+                <input class="form-input" type="text" id="f-thumbUrl" placeholder="/.netlify/functions/image?file=…" />
+                <button type="button" class="btn-pick" id="btn-pick-thumb" title="Pick from images folder">📁 Pick</button>
+              </div>
+            </div>
+          </div>
+          <!-- Shared popover for both pickers -->
+          <div class="picker-popover" id="picker-popover">
+            <div class="picker-popover-header" id="picker-header">Available Images</div>
+            <div id="picker-list"></div>
+          </div>
+        </div>
+
+      </form>
+    </div>
+
+    <!-- Status bar -->
+    <div class="status-bar">
+      <div class="status-row">
+        <div class="s-dot" id="s-dot"></div>
+        <span id="s-text">Ready</span>
+      </div>
+      <span id="s-right"></span>
+    </div>
+  </main>
+</div>
+
+<!-- Delete dialog -->
+<div class="overlay" id="del-overlay">
+  <div class="dialog">
+    <h3>🗑 Delete Artwork?</h3>
+    <p id="del-msg"></p>
+    <div class="dialog-btns">
+      <button class="btn btn-outline btn-sm" id="btn-del-cancel">Cancel</button>
+      <button class="btn btn-danger btn-sm" id="btn-del-ok">Delete</button>
+    </div>
+  </div>
+</div>
+
+<div id="toasts"></div>
+
+<script>
+// ── Constants ─────────────────────────────────────────────────────────────────
+const DB_NAME    = 'artwork-editor';
+const STORE      = 'artworks';
+const DB_VER     = 1;
+const API_LOAD   = '/.netlify/functions/image';
+const API_SAVE   = '/.netlify/functions/save-artwork';
+const API_IMAGES = '/.netlify/functions/list-images';
+
+function makeUrl(filename) {
+  return '/.netlify/functions/image?file=' + encodeURIComponent(filename);
+}
+
+// ── State ─────────────────────────────────────────────────────────────────────
+let db             = null;
+let artworks       = [];         // working draft
+let allImages      = [];         // filenames in assets/drawngs
+let selectedId     = null;
+let dirty          = false;
+let pendingDel     = null;
+let currentTags    = [];
+let serverSnap     = null;       // JSON string of last server save
+let pickerTarget   = null;       // 'image' or 'thumb'
+
+// ── IndexedDB ─────────────────────────────────────────────────────────────────
+function openDB() {
+  return new Promise((res, rej) => {
+    const r = indexedDB.open(DB_NAME, DB_VER);
+    r.onupgradeneeded = e => {
+      const d = e.target.result;
+      if (!d.objectStoreNames.contains(STORE)) d.createObjectStore(STORE, { keyPath: 'id' });
+    };
+    r.onsuccess = e => res(e.target.result);
+    r.onerror   = e => rej(e.target.error);
+  });
+}
+function dbGetAll() {
+  return new Promise((res, rej) => {
+    const r = db.transaction(STORE, 'readonly').objectStore(STORE).getAll();
+    r.onsuccess = () => res(r.result);
+    r.onerror   = () => rej(r.error);
+  });
+}
+function dbPutAll(items) {
+  return new Promise((res, rej) => {
+    const store = db.transaction(STORE, 'readwrite').objectStore(STORE);
+    const c = store.clear();
+    c.onsuccess = () => {
+      if (!items.length) { res(); return; }
+      items.forEach((it, i) => {
+        const r = store.put({ ...it, _order: i });
+        r.onerror = () => rej(r.error);
+        if (i === items.length - 1) r.onsuccess = () => res();
+      });
+    };
+    c.onerror = () => rej(c.error);
+  });
+}
+function dbPut(item) {
+  return new Promise((res, rej) => {
+    const r = db.transaction(STORE, 'readwrite').objectStore(STORE).put(item);
+    r.onsuccess = () => res(); r.onerror = () => rej(r.error);
+  });
+}
+function dbDel(id) {
+  return new Promise((res, rej) => {
+    const r = db.transaction(STORE, 'readwrite').objectStore(STORE).delete(id);
+    r.onsuccess = () => res(); r.onerror = () => rej(r.error);
+  });
+}
+
+// ── Server ────────────────────────────────────────────────────────────────────
+async function fetchArtworks() {
+  const r = await fetch(API_LOAD);
+  if (!r.ok) throw new Error('HTTP ' + r.status);
+  return r.json();
+}
+async function fetchImages() {
+  try {
+    const r = await fetch(API_IMAGES);
+    if (!r.ok) return [];
+    return r.json();
+  } catch { return []; }
+}
+
+async function reloadAll() {
+  setStatus('Loading…', 'muted');
+  const [data, imgs] = await Promise.all([fetchArtworks(), fetchImages()]);
+  await dbPutAll(data);
+  artworks   = data;
+  allImages  = imgs;
+  serverSnap = JSON.stringify(data);
+  selectArtwork(null);
+  renderSidebar();
+  updateUnsaved(false);
+  setStatus('Loaded ' + artworks.length + ' artworks, ' + allImages.length + ' images', 'ok');
+  toast('Refreshed', 'inf');
+}
+
+async function loadFromDB() {
+  const items = await dbGetAll();
+  const imgs  = await fetchImages();
+  allImages = imgs;
+  if (!items.length) {
+    await reloadAll();
+    return;
+  }
+  items.sort((a, b) => (a._order ?? 0) - (b._order ?? 0));
+  artworks = items.map(({ _order, ...r }) => r);
+  renderSidebar();
+  setStatus('Loaded ' + artworks.length + ' artworks from draft', 'ok');
+  // Background server snap
+  fetchArtworks().then(d => {
+    serverSnap = JSON.stringify(d);
+    updateUnsaved(hasDiff());
+  }).catch(() => {});
+}
+
+function hasDiff() {
+  if (!serverSnap) return false;
+  return JSON.stringify(artworks) !== serverSnap;
+}
+
+// ── Sidebar rendering ─────────────────────────────────────────────────────────
+function trackedFilenames() {
+  const urls = artworks.flatMap(a => [a.imageUrl, a.thumbnailUrl].filter(Boolean));
+  const names = new Set();
+  urls.forEach(u => {
+    const m = u.match(/[?&]file=([^&]+)/);
+    if (m) names.add(decodeURIComponent(m[1]));
+  });
+  return names;
+}
+
+function renderSidebar() {
+  const q = (document.getElementById('search').value || '').toLowerCase();
+
+  // ── Tracked artworks
+  const list   = document.getElementById('artwork-list');
+  list.innerHTML = '';
+  const filtered = artworks.filter(a =>
+    !q || (a.title||'').toLowerCase().includes(q) ||
+    (a.category||'').toLowerCase().includes(q) ||
+    (a.id||'').toLowerCase().includes(q)
+  );
+  document.getElementById('count-tracked').textContent = artworks.length;
+
+  filtered.forEach(art => {
+    const el = document.createElement('div');
+    el.className = 'list-item' + (art.id === selectedId ? ' active' : '');
+    el.dataset.id = art.id;
+    const thumbUrl = art.thumbnailUrl || art.imageUrl || '';
+    el.innerHTML =
+      (thumbUrl ? `<img class="item-thumb" src="${thumbUrl}" alt="" onerror="this.style.display='none'" />` : '') +
+      `<div class="item-thumb-placeholder" style="${thumbUrl ? 'display:none' : ''}">🖼️</div>` +
+      `<div class="item-meta">
+        <div class="item-name">${art.title || '<em style="opacity:.5">Untitled</em>'}</div>
+        <div class="item-sub">${art.category || '—'}</div>
+      </div>`;
+    el.addEventListener('click', () => {
+      if (dirty) applyChanges(false);
+      selectArtwork(art.id);
+    });
+    list.appendChild(el);
+  });
+
+  // ── Untracked images
+  const tracked   = trackedFilenames();
+  const untracked = allImages.filter(f => !tracked.has(f));
+  const untrackedFiltered = untracked.filter(f =>
+    !q || f.toLowerCase().includes(q)
+  );
+
+  const section = document.getElementById('untracked-section');
+  const ulist   = document.getElementById('untracked-list');
+  document.getElementById('count-untracked').textContent = untracked.length;
+  section.style.display = untracked.length ? '' : 'none';
+  ulist.innerHTML = '';
+
+  untrackedFiltered.forEach(filename => {
+    const url = makeUrl(filename);
+    const el  = document.createElement('div');
+    el.className = 'list-item new-item';
+    el.dataset.file = filename;
+    el.innerHTML =
+      `<img class="item-thumb" src="${url}" alt="" onerror="this.style.display='none'" />` +
+      `<div class="item-meta">
+        <div class="item-name">${filename}</div>
+        <div class="item-sub new-sub">Not in artwork.json</div>
+      </div>` +
+      `<span class="new-badge">NEW</span>`;
+    el.addEventListener('click', () => createFromFile(filename));
+    ulist.appendChild(el);
+  });
+}
+
+// ── Create artwork from untracked file ───────────────────────────────────────
+async function createFromFile(filename) {
+  const url   = makeUrl(filename);
+  const title = filenameToTitle(filename);
+  const newId = nextId();
+  const blank = {
+    id: newId, title, description: '', createdDate: '',
+    category: '', tags: [], medium: '', dimensions: '',
+    imageUrl: url, thumbnailUrl: url,
+  };
+  artworks.push(blank);
+  await dbPut(blank);
+  renderSidebar();
+  selectArtwork(newId);
+  toast('Entry created for ' + filename, 'inf');
+}
+
+function filenameToTitle(f) {
+  return f
+    .replace(/\.[^.]+$/, '')           // strip extension
+    .replace(/[-_]+/g, ' ')            // dashes/underscores → spaces
+    .replace(/\b\w/g, c => c.toUpperCase()); // title case
+}
+
+function nextId() {
+  const nums = artworks
+    .map(a => { const m = a.id.match(/(\d+)$/); return m ? parseInt(m[1]) : 0; })
+    .filter(Boolean);
+  const next = nums.length ? Math.max(...nums) + 1 : artworks.length + 1;
+  return 'art-' + String(next).padStart(3, '0');
+}
+
+// ── Select artwork ────────────────────────────────────────────────────────────
+function selectArtwork(id) {
+  selectedId = id;
+  dirty = false;
+  document.getElementById('dirty-dot').classList.remove('on');
+  document.querySelectorAll('.list-item').forEach(el => {
+    el.classList.toggle('active', el.dataset.id === id);
+  });
+
+  const emptyEl   = document.getElementById('empty-state');
+  const formEl    = document.getElementById('art-form');
+  const toolbarEl = document.getElementById('toolbar');
+
+  if (!id) {
+    emptyEl.style.display   = 'flex';
+    formEl.style.display    = 'none';
+    toolbarEl.style.display = 'none';
+    return;
+  }
+  const art = artworks.find(a => a.id === id);
+  if (!art) return;
+
+  emptyEl.style.display   = 'none';
+  formEl.style.display    = 'grid';
+  toolbarEl.style.display = 'flex';
+
+  g('f-id').value       = art.id || '';
+  g('f-title').value    = art.title || '';
+  g('f-category').value = art.category || '';
+  g('f-date').value     = art.createdDate || '';
+  g('f-desc').value     = art.description || '';
+  g('f-medium').value   = art.medium || '';
+  g('f-dims').value     = art.dimensions || '';
+  g('f-imageUrl').value = art.imageUrl || '';
+  g('f-thumbUrl').value = art.thumbnailUrl || '';
+  g('t-title').textContent = art.title || 'Untitled';
+  g('t-id').textContent    = art.id;
+
+  renderTags(art.tags || []);
+  updatePreview(art.imageUrl);
+}
+
+// ── Preview ───────────────────────────────────────────────────────────────────
+function updatePreview(url) {
+  const img  = g('img-preview');
+  const ph   = g('img-placeholder');
+  if (url) {
+    img.src = url;
+    img.style.display = 'block';
+    ph.style.display  = 'none';
+    img.onerror = () => { img.style.display = 'none'; ph.style.display = 'flex'; };
+  } else {
+    img.style.display = 'none';
+    ph.style.display  = 'flex';
+  }
+}
+
+// ── Tags ──────────────────────────────────────────────────────────────────────
+function renderTags(tags) {
+  currentTags = [...tags];
+  const wrap  = g('tags-wrap');
+  const input = g('tags-input');
+  wrap.innerHTML = '';
+  currentTags.forEach(t => {
+    const chip = document.createElement('span');
+    chip.className = 'tag-chip';
+    chip.innerHTML = t + '<button type="button">\xd7</button>';
+    chip.querySelector('button').onclick = () => removeTag(t);
+    wrap.appendChild(chip);
+  });
+  wrap.appendChild(input);
+  input.value = '';
+}
+function addTag(t) {
+  t = t.trim().toLowerCase().replace(/[,\s]+/g, '-').replace(/^-|-$/g, '');
+  if (!t || currentTags.includes(t)) return;
+  currentTags.push(t);
+  renderTags(currentTags);
+  markDirty();
+}
+function removeTag(t) {
+  currentTags = currentTags.filter(x => x !== t);
+  renderTags(currentTags);
+  markDirty();
+}
+
+// ── Apply changes ─────────────────────────────────────────────────────────────
+async function applyChanges(feedback = true) {
+  if (!selectedId) return;
+
+  const updated = {
+    id:           selectedId,
+    title:        g('f-title').value.trim(),
+    description:  g('f-desc').value.trim(),
+    createdDate:  g('f-date').value || '',
+    category:     g('f-category').value.trim(),
+    tags:         [...currentTags],
+    medium:       g('f-medium').value.trim(),
+    dimensions:   g('f-dims').value.trim(),
+    imageUrl:     g('f-imageUrl').value.trim(),
+    thumbnailUrl: g('f-thumbUrl').value.trim(),
+  };
+
+  const idx = artworks.findIndex(a => a.id === selectedId);
+  if (idx === -1) return;
+
+  artworks[idx] = updated;
+  await dbPut(updated);
+  dirty = false;
+  g('dirty-dot').classList.remove('on');
+  g('t-title').textContent = updated.title || 'Untitled';
+  g('t-id').textContent    = updated.id;
+  updatePreview(updated.imageUrl);
+  renderSidebar();
+  updateUnsaved(hasDiff());
+  if (feedback) toast('Changes applied to draft', 'ok');
+}
+
+// ── Add new blank artwork ─────────────────────────────────────────────────────
+async function addNewArtwork() {
+  const id    = nextId();
+  const blank = { id, title: '', description: '', createdDate: '', category: '', tags: [], medium: '', dimensions: '', imageUrl: '', thumbnailUrl: '' };
+  artworks.push(blank);
+  await dbPut(blank);
+  renderSidebar();
+  selectArtwork(id);
+  g('f-title').focus();
+  toast('New artwork created', 'inf');
+}
+
+// ── Delete ────────────────────────────────────────────────────────────────────
+function confirmDelete(id) {
+  const art = artworks.find(a => a.id === id);
+  pendingDel = id;
+  g('del-msg').textContent = 'Delete "' + (art?.title || id) + '"? This removes it from the draft — click "Save to JSON" to persist.';
+  g('del-overlay').classList.add('show');
+}
+async function execDelete() {
+  if (!pendingDel) return;
+  const id = pendingDel;
+  artworks = artworks.filter(a => a.id !== id);
+  await dbDel(id);
+  pendingDel = null;
+  g('del-overlay').classList.remove('show');
+  if (selectedId === id) selectArtwork(null);
+  renderSidebar();
+  updateUnsaved(hasDiff());
+  toast('Artwork removed from draft', 'inf');
+}
+
+// ── Save to JSON ──────────────────────────────────────────────────────────────
+async function saveToJson() {
+  setStatus('Saving…', 'muted');
+  try {
+    const r    = await fetch(API_SAVE, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(artworks) });
+    const data = await r.json();
+    if (!r.ok) throw new Error(data.error || r.statusText);
+    serverSnap = JSON.stringify(artworks);
+    updateUnsaved(false);
+    setStatus('Saved ' + data.saved + ' artworks', 'ok');
+    toast('Saved ' + data.saved + ' artworks to artwork.json', 'ok');
+  } catch (err) {
+    setStatus('Save failed: ' + err.message, 'err');
+    toast('Save failed: ' + err.message, 'err');
+  }
+}
+
+// ── Image picker ──────────────────────────────────────────────────────────────
+function openPicker(target) {
+  pickerTarget = target;
+  const popover = g('picker-popover');
+  const list    = g('picker-list');
+  const tracked = trackedFilenames();
+
+  g('picker-header').textContent = target === 'image' ? 'Pick Image URL' : 'Pick Thumbnail URL';
+
+  list.innerHTML = '';
+
+  if (!allImages.length) {
+    list.innerHTML = '<div class="picker-empty">No images found in assets/drawngs/</div>';
+    popover.classList.add('open');
+    return;
+  }
+
+  const inArtwork  = allImages.filter(f => tracked.has(f));
+  const notInArtwork = allImages.filter(f => !tracked.has(f));
+
+  function addItem(filename, isNew) {
+    const url = makeUrl(filename);
+    const el  = document.createElement('div');
+    el.className = 'picker-item';
+    el.innerHTML =
+      `<img class="picker-thumb" src="${url}" alt="" onerror="this.style.display='none'" />` +
+      `<span class="picker-name">${filename}</span>` +
+      (isNew ? `<span class="picker-new-tag">NEW</span>` : '');
+    el.addEventListener('click', () => {
+      if (pickerTarget === 'image') {
+        g('f-imageUrl').value = url;
+        updatePreview(url);
+      } else {
+        g('f-thumbUrl').value = url;
+      }
+      markDirty();
+      closePicker();
+    });
+    list.appendChild(el);
+  }
+
+  if (notInArtwork.length) {
+    const sep = document.createElement('div');
+    sep.className = 'picker-separator';
+    sep.textContent = '✦ New in folder — not yet in artwork.json';
+    list.appendChild(sep);
+    notInArtwork.forEach(f => addItem(f, true));
+  }
+  if (inArtwork.length) {
+    const sep = document.createElement('div');
+    sep.className = 'picker-separator';
+    sep.style.color = 'var(--text-subtle)';
+    sep.style.background = 'transparent';
+    sep.style.borderTopColor = 'var(--border)';
+    sep.textContent = 'Already in artwork.json';
+    list.appendChild(sep);
+    inArtwork.forEach(f => addItem(f, false));
+  }
+
+  popover.classList.add('open');
+}
+
+function closePicker() {
+  g('picker-popover').classList.remove('open');
+  pickerTarget = null;
+}
+
+// ── Helpers ───────────────────────────────────────────────────────────────────
+function g(id) { return document.getElementById(id); }
+function markDirty() { dirty = true; g('dirty-dot').classList.add('on'); }
+function updateUnsaved(show) { g('unsaved-banner').classList.toggle('show', show); }
+function setStatus(msg, type) {
+  g('s-text').textContent = msg;
+  const d = g('s-dot');
+  d.style.background = type === 'err' ? 'var(--danger)' : type === 'muted' ? 'var(--text-subtle)' : 'var(--success)';
+}
+function toast(msg, type) {
+  const c  = g('toasts');
+  const el = document.createElement('div');
+  el.className = 'toast ' + (type || 'inf');
+  el.innerHTML = '<span>' + ({ ok: '✓', err: '✕', inf: 'ℹ' }[type] || '') + '</span><span>' + msg + '</span>';
+  c.appendChild(el);
+  setTimeout(() => el.remove(), 3400);
+}
+
+// ── Init ──────────────────────────────────────────────────────────────────────
+async function init() {
+  db = await openDB();
+  await loadFromDB();
+
+  // Header buttons
+  g('btn-save-all').onclick = saveToJson;
+  g('btn-refresh').onclick  = () => { if (confirm('Reload from server and refresh image list? Draft will be overwritten.')) reloadAll(); };
+  ['btn-add','btn-add-sb','btn-add-empty'].forEach(id => { const el = g(id); if (el) el.onclick = addNewArtwork; });
+
+  // Toolbar
+  g('btn-apply').onclick  = () => applyChanges(true);
+  g('btn-delete').onclick = () => confirmDelete(selectedId);
+
+  // Delete dialog
+  g('btn-del-cancel').onclick = () => { g('del-overlay').classList.remove('show'); pendingDel = null; };
+  g('btn-del-ok').onclick     = execDelete;
+  g('del-overlay').onclick    = e => { if (e.target === e.currentTarget) { g('del-overlay').classList.remove('show'); pendingDel = null; } };
+
+  // Search
+  g('search').oninput = renderSidebar;
+
+  // Form dirty tracking
+  ['f-title','f-category','f-date','f-desc','f-medium','f-dims'].forEach(id => {
+    const el = g(id); if (!el) return;
+    el.addEventListener('input',  markDirty);
+    el.addEventListener('change', markDirty);
+  });
+  g('f-thumbUrl').addEventListener('input', markDirty);
+
+  // Image URL field → live preview
+  g('f-imageUrl').addEventListener('input', e => { updatePreview(e.target.value.trim()); markDirty(); });
+
+  // Tags
+  const ti = g('tags-input');
+  ti.addEventListener('keydown', e => {
+    if ((e.key === 'Enter' || e.key === ',') && ti.value.trim()) { e.preventDefault(); addTag(ti.value.replace(/,/g, '')); }
+    if (e.key === 'Backspace' && !ti.value && currentTags.length) removeTag(currentTags[currentTags.length - 1]);
+  });
+  ti.addEventListener('blur', () => { if (ti.value.trim()) addTag(ti.value); });
+
+  // Image pickers
+  g('btn-pick-image').onclick = () => pickerTarget === 'image' ? closePicker() : openPicker('image');
+  g('btn-pick-thumb').onclick = () => pickerTarget === 'thumb' ? closePicker() : openPicker('thumb');
+  document.addEventListener('click', e => {
+    const popover = g('picker-popover');
+    if (popover.classList.contains('open') &&
+        !popover.contains(e.target) &&
+        e.target !== g('btn-pick-image') &&
+        e.target !== g('btn-pick-thumb')) {
+      closePicker();
+    }
+  });
+
+  // Ctrl+S
+  document.addEventListener('keydown', e => {
+    if ((e.ctrlKey || e.metaKey) && e.key === 's') {
+      e.preventDefault();
+      if (dirty) applyChanges(true);
+      else saveToJson();
+    }
+  });
+
+  g('s-right').textContent = new Date().toLocaleTimeString();
+}
+
+init().catch(err => {
+  console.error(err);
+  toast('Init failed: ' + err.message, 'err');
+});
+</script>
+</body>
+</html>

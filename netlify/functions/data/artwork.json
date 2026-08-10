@@ -5,12 +5,15 @@
     "description": "A heartfelt portrait capturing the warmth and bond between generations.",
     "createdDate": "2010-01-15",
     "category": "Portraits",
-    "tags": ["family", "portrait", "charcoal"],
+    "tags": [
+      "family",
+      "portrait",
+      "charcoal"
+    ],
     "medium": "Charcoal",
     "dimensions": "12x16 inches",
     "imageUrl": "/.netlify/functions/image?file=mom-and-grandma.jpg",
-    "thumbnailUrl": "/.netlify/functions/image?file=mom-and-grandma.jpg",
-    "featured": true
+    "thumbnailUrl": "/.netlify/functions/image?file=mom-and-grandma.jpg"
   },
   {
     "id": "art-002",
@@ -18,12 +21,15 @@
     "description": "A tender study of youth and curiosity, drawn with love.",
     "createdDate": "2009-03-22",
     "category": "Portraits",
-    "tags": ["family", "portrait", "pencil"],
+    "tags": [
+      "family",
+      "portrait",
+      "pencil"
+    ],
     "medium": "Pencil",
     "dimensions": "10x14 inches",
     "imageUrl": "/.netlify/functions/image?file=my-son.jpg",
-    "thumbnailUrl": "/.netlify/functions/image?file=my-son.jpg",
-    "featured": true
+    "thumbnailUrl": "/.netlify/functions/image?file=my-son.jpg"
   },
   {
     "id": "art-003",
@@ -31,12 +37,15 @@
     "description": "Character study exploring the depth and story written in aged features.",
     "createdDate": "2010-05-10",
     "category": "Studies",
-    "tags": ["character", "portrait", "ink"],
+    "tags": [
+      "character",
+      "portrait",
+      "ink"
+    ],
     "medium": "Pencil",
     "dimensions": "8x11 inches",
     "imageUrl": "/.netlify/functions/image?file=old-lady.jpg",
-    "thumbnailUrl": "/.netlify/functions/image?file=old-lady.jpg",
-    "featured": false
+    "thumbnailUrl": "/.netlify/functions/image?file=old-lady.jpg"
   },
   {
     "id": "art-004",
@@ -44,12 +53,15 @@
     "description": "A delicate pencil portrait capturing an intense, wide-eyed gaze — signed and dated 2010.",
     "createdDate": "2010-06-01",
     "category": "Portraits",
-    "tags": ["portrait", "pencil", "sketch"],
+    "tags": [
+      "portrait",
+      "pencil",
+      "sketch"
+    ],
     "medium": "Pencil",
     "dimensions": "8x11 inches",
     "imageUrl": "/.netlify/functions/image?file=portrait-of-girl-with-deer-eyes.jpg",
-    "thumbnailUrl": "/.netlify/functions/image?file=portrait-of-girl-with-deer-eyes.jpg",
-    "featured": false
+    "thumbnailUrl": "/.netlify/functions/image?file=portrait-of-girl-with-deer-eyes.jpg"
   },
   {
     "id": "art-005",
@@ -57,12 +69,17 @@
     "description": "A sweeping pencil illustration of the Norse world tree — a monstrous, serpent-entwined giant confronted by a lone warrior, set against a volcanic landscape.",
     "createdDate": "2009-07-04",
     "category": "Illustration",
-    "tags": ["norse", "mythology", "pencil", "fantasy", "illustration"],
+    "tags": [
+      "norse",
+      "mythology",
+      "pencil",
+      "fantasy",
+      "illustration"
+    ],
     "medium": "Pencil",
     "dimensions": "14x10 inches",
     "imageUrl": "/.netlify/functions/image?file=yggdrasil.jpg",
-    "thumbnailUrl": "/.netlify/functions/image?file=yggdrasil.jpg",
-    "featured": true
+    "thumbnailUrl": "/.netlify/functions/image?file=yggdrasil.jpg"
   },
   {
     "id": "art-006",
@@ -70,12 +87,17 @@
     "description": "An ethereal figure in all white, suspended in stillness — a creative costume and concept photography piece exploring the element of air.",
     "createdDate": "2009-08-10",
     "category": "Concept Art",
-    "tags": ["elements", "concept", "photography", "school-project", "air"],
+    "tags": [
+      "elements",
+      "concept",
+      "photography",
+      "school-project",
+      "air"
+    ],
     "medium": "Photography / Costume",
     "dimensions": "Digital",
     "imageUrl": "/.netlify/functions/image?file=air-schoold-project.png",
-    "thumbnailUrl": "/.netlify/functions/image?file=air-schoold-project.png",
-    "featured": false
+    "thumbnailUrl": "/.netlify/functions/image?file=air-schoold-project.png"
   },
   {
     "id": "art-007",
@@ -83,12 +105,17 @@
     "description": "Intense body paint and dramatic lighting bring the element of fire to life — flames curl from outstretched hands against pitch black.",
     "createdDate": "2009-08-10",
     "category": "Concept Art",
-    "tags": ["elements", "concept", "photography", "school-project", "fire"],
+    "tags": [
+      "elements",
+      "concept",
+      "photography",
+      "school-project",
+      "fire"
+    ],
     "medium": "Photography / Body Paint",
     "dimensions": "Digital",
     "imageUrl": "/.netlify/functions/image?file=fire-schoold-project.png",
-    "thumbnailUrl": "/.netlify/functions/image?file=fire-schoold-project.png",
-    "featured": true
+    "thumbnailUrl": "/.netlify/functions/image?file=fire-schoold-project.png"
   },
   {
     "id": "art-008",
@@ -96,11 +123,40 @@
     "description": "A haunting blue-painted figure crawls from a swimming pool in the dark — a visceral interpretation of the element of water.",
     "createdDate": "2009-08-10",
     "category": "Concept Art",
-    "tags": ["elements", "concept", "photography", "school-project", "water"],
+    "tags": [
+      "elements",
+      "concept",
+      "photography",
+      "school-project",
+      "water"
+    ],
     "medium": "Photography / Body Paint",
     "dimensions": "Digital",
     "imageUrl": "/.netlify/functions/image?file=water-schoold-project.png",
-    "thumbnailUrl": "/.netlify/functions/image?file=water-schoold-project.png",
-    "featured": false
+    "thumbnailUrl": "/.netlify/functions/image?file=water-schoold-project.png"
+  },
+  {
+    "id": "art-009",
+    "title": "Insect Demon",
+    "description": "",
+    "createdDate": "2025-01-01",
+    "category": "Fantasy",
+    "tags": [],
+    "medium": "Pencil, Watercolor and fine liner",
+    "dimensions": "",
+    "imageUrl": "/.netlify/functions/image?file=insect-demon.jpg",
+    "thumbnailUrl": "/.netlify/functions/image?file=insect-demon.jpg"
+  },
+  {
+    "id": "art-010",
+    "title": "Tentacle Nightmare",
+    "description": "",
+    "createdDate": "2025-02-01",
+    "category": "Fantasy",
+    "tags": [],
+    "medium": "",
+    "dimensions": "",
+    "imageUrl": "/.netlify/functions/image?file=tentacle-nightmare.jpg",
+    "thumbnailUrl": "/.netlify/functions/image?file=tentacle-nightmare.jpg"
   }
 ]

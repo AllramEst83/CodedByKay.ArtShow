@@ -1,5 +1,15 @@
 export let filteredArtwork = [];
 
+export function formatDate(dateInput) {
+  if (!dateInput) return '';
+  const d = new Date(dateInput);
+  if (isNaN(d.getTime())) return String(dateInput);
+  const year = d.getUTCFullYear();
+  const month = String(d.getUTCMonth() + 1).padStart(2, '0');
+  const day = String(d.getUTCDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
+}
+
 export function setFilteredArtwork(items) {
   filteredArtwork = items;
 }
@@ -84,54 +94,8 @@ export function renderGallery(items) {
     imgWrapper.appendChild(img);
     imgWrapper.appendChild(shimmer);
 
-    // ── Desktop "i" info button ──────────────────────────────────────────────
-    const infoBtn = document.createElement('button');
-    infoBtn.className = 'card-info-btn';
-    infoBtn.setAttribute('aria-label', 'Show artwork info');
-    infoBtn.title = 'Artwork info';
-    infoBtn.type = 'button';
-    infoBtn.innerHTML = `
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <circle cx="12" cy="12" r="10"/>
-        <line x1="12" y1="16" x2="12" y2="12"/>
-        <line x1="12" y1="8" x2="12.01" y2="8"/>
-      </svg>`;
-
-    // Metadata peek tooltip
-    const formattedDate = item.createdDate
-      ? new Date(item.createdDate).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })
-      : '';
-    const metaPeek = document.createElement('div');
-    metaPeek.className = 'card-meta-peek';
-    metaPeek.setAttribute('role', 'tooltip');
-    metaPeek.innerHTML = `
-      ${item.medium ? `<div class="meta-peek-row"><span class="peek-label">Medium</span><span class="peek-value">${item.medium}</span></div>` : ''}
-      ${formattedDate ? `<div class="meta-peek-row"><span class="peek-label">Created</span><span class="peek-value">${formattedDate}</span></div>` : ''}
-      ${item.dimensions ? `<div class="meta-peek-row"><span class="peek-label">Size</span><span class="peek-value">${item.dimensions}</span></div>` : ''}
-    `;
-
-    let peekOpen = false;
-
-    infoBtn.addEventListener('click', (e) => {
-      e.stopPropagation(); // prevent lightbox from opening
-      peekOpen = !peekOpen;
-      metaPeek.classList.toggle('is-visible', peekOpen);
-      infoBtn.setAttribute('aria-expanded', peekOpen);
-    });
-
-    // Close on outside click
-    document.addEventListener('click', () => {
-      if (peekOpen) {
-        peekOpen = false;
-        metaPeek.classList.remove('is-visible');
-        infoBtn.setAttribute('aria-expanded', 'false');
-      }
-    }, { capture: false });
-
     article.appendChild(imgWrapper);
     article.appendChild(overlay);
-    article.appendChild(infoBtn);
-    article.appendChild(metaPeek);
     
     // Events
     const openLightbox = () => {

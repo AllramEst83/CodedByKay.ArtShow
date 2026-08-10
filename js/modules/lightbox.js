@@ -1,4 +1,4 @@
-import { filteredArtwork } from './gallery.js';
+import { filteredArtwork, formatDate } from './gallery.js';
 
 let currentItem = null;
 let isZoomed = false;
@@ -163,7 +163,7 @@ function updateLightboxContent() {
   
   document.getElementById('lightbox-title').textContent = currentItem.title;
   document.getElementById('lightbox-category').textContent = currentItem.category;
-  document.getElementById('lightbox-date').textContent = new Date(currentItem.createdDate).toLocaleDateString();
+  document.getElementById('lightbox-date').textContent = formatDate(currentItem.createdDate);
   document.getElementById('lightbox-medium').textContent = currentItem.medium;
   document.getElementById('lightbox-dimensions').textContent = currentItem.dimensions;
   document.getElementById('lightbox-desc').textContent = currentItem.description;
