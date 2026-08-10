@@ -217,6 +217,23 @@
       border: 1px solid rgba(56,189,248,0.25); flex-shrink: 0;
     }
 
+    /* ── Bulk Actions Bar ───────────────────────────────────────────────── */
+    .bulk-bar {
+      display: none; align-items: center; justify-content: space-between;
+      padding: 0.45rem 0.85rem; background: rgba(248,113,113,0.09);
+      border-bottom: 1px solid rgba(248,113,113,0.2);
+      font-size: 0.78rem; color: var(--danger); flex-shrink: 0;
+    }
+    .bulk-bar.show { display: flex; }
+    .bulk-bar-actions { display: flex; align-items: center; gap: 0.4rem; }
+
+    .item-checkbox {
+      width: 15px; height: 15px; accent-color: var(--accent);
+      cursor: pointer; flex-shrink: 0; opacity: 0.6;
+      transition: opacity var(--transition);
+    }
+    .list-item:hover .item-checkbox, .item-checkbox:checked { opacity: 1; }
+
     .sidebar-footer {
       padding: 0.65rem 0.9rem;
       border-top: 1px solid var(--border);
@@ -486,9 +503,21 @@
     <div class="sidebar-scroll" id="sidebar-scroll">
       <!-- Tracked artworks -->
       <div class="sidebar-section-header">
-        <span class="sidebar-section-label">Artworks</span>
+        <div style="display:flex;align-items:center;gap:0.45rem">
+          <input type="checkbox" id="chk-select-all" class="item-checkbox" title="Select / Deselect All" />
+          <span class="sidebar-section-label">Artworks</span>
+        </div>
         <span class="sidebar-count" id="count-tracked">0</span>
       </div>
+
+      <!-- Bulk Actions Bar -->
+      <div class="bulk-bar" id="bulk-bar">
+        <span id="bulk-text" style="font-weight:600">0 selected</span>
+        <div class="bulk-bar-actions">
+          <button type="button" class="btn btn-danger btn-sm" id="btn-bulk-delete" style="padding:0.2rem 0.5rem;font-size:0.75rem">🗑 Delete Selected</button>
+        </div>
+      </div>
+
       <div id="artwork-list"></div>
 
       <!-- Untracked images — injected by JS when images exist without metadata -->
@@ -590,7 +619,7 @@
 
         <div class="divider"><span class="divider-label">Details</span><div class="divider-line"></div></div>
 
-        <div class="form-row-3">
+        <div style="display:grid;grid-template-columns:2fr 1fr;gap:1.15rem">
           <div class="form-group">
             <label class="form-label" for="f-medium">Medium</label>
             <input class="form-input" type="text" id="f-medium" list="medium-list" placeholder="Pencil, Charcoal…" />
@@ -603,7 +632,7 @@
           </div>
           <div class="form-group">
             <label class="form-label" for="f-dims">Dimensions</label>
-            <input class="form-input" type="text" id="f-dims" placeholder="12x16 inches" />
+            <input class="form-input" type="text" id="f-dims" placeholder="30 x 40 cm" />
           </div>
         </div>
 
@@ -682,7 +711,7 @@ const API_SAVE   = '/.netlify/functions/save-artwork';
 const API_IMAGES = '/.netlify/functions/list-images';
 
 function makeUrl(filename) {
-  return '/.netlify/functions/image?file=' + encodeURIComponent(filename);
+  return '/.netlify/functions/image?file=' + filename.split('/').map(encodeURIComponent).join('/');
 }
 
 // ── State ─────────────────────────────────────────────────────────────────────
@@ -695,6 +724,7 @@ let pendingDel     = null;
 let currentTags    = [];
 let serverSnap     = null;       // JSON string of last server save
 let pickerTarget   = null;       // 'image' or 'thumb'
+let checkedIds     = new Set();  // set of checked artwork IDs for bulk delete
 
 // ── IndexedDB ─────────────────────────────────────────────────────────────────
 function openDB() {
@@ -824,19 +854,33 @@ function renderSidebar() {
     el.className = 'list-item' + (art.id === selectedId ? ' active' : '');
     el.dataset.id = art.id;
     const thumbUrl = art.thumbnailUrl || art.imageUrl || '';
+    const isChecked = checkedIds.has(art.id);
+
     el.innerHTML =
+      `<input type="checkbox" class="item-checkbox" ${isChecked ? 'checked' : ''} aria-label="Select ${art.title || art.id}" />` +
       (thumbUrl ? `<img class="item-thumb" src="${thumbUrl}" alt="" onerror="this.style.display='none'" />` : '') +
       `<div class="item-thumb-placeholder" style="${thumbUrl ? 'display:none' : ''}">🖼️</div>` +
       `<div class="item-meta">
         <div class="item-name">${art.title || '<em style="opacity:.5">Untitled</em>'}</div>
         <div class="item-sub">${art.category || '—'}</div>
       </div>`;
+
+    const chk = el.querySelector('.item-checkbox');
+    chk.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (chk.checked) checkedIds.add(art.id);
+      else checkedIds.delete(art.id);
+      updateBulkBar(filtered);
+    });
+
     el.addEventListener('click', () => {
       if (dirty) applyChanges(false);
       selectArtwork(art.id);
     });
     list.appendChild(el);
   });
+
+  updateBulkBar(filtered);
 
   // ── Untracked images
   const tracked   = trackedFilenames();
@@ -1041,10 +1085,39 @@ function confirmDelete(id) {
   g('del-msg').textContent = 'Delete "' + (art?.title || id) + '"? This removes it from the draft — click "Save to JSON" to persist.';
   g('del-overlay').classList.add('show');
 }
+
+function confirmBulkDelete() {
+  if (!checkedIds.size) return;
+  pendingDel = 'bulk';
+  g('del-msg').textContent = 'Delete ' + checkedIds.size + ' selected artworks from the draft? Click "Save to JSON" to persist changes.';
+  g('del-overlay').classList.add('show');
+}
+
 async function execDelete() {
   if (!pendingDel) return;
+
+  if (pendingDel === 'bulk') {
+    const toDelete = Array.from(checkedIds);
+    for (const id of toDelete) {
+      await dbDel(id);
+    }
+    artworks = artworks.filter(a => !checkedIds.has(a.id));
+    if (selectedId && checkedIds.has(selectedId)) {
+      selectArtwork(null);
+    }
+    const count = checkedIds.size;
+    checkedIds.clear();
+    pendingDel = null;
+    g('del-overlay').classList.remove('show');
+    renderSidebar();
+    updateUnsaved(hasDiff());
+    toast('Deleted ' + count + ' artworks from draft', 'inf');
+    return;
+  }
+
   const id = pendingDel;
   artworks = artworks.filter(a => a.id !== id);
+  checkedIds.delete(id);
   await dbDel(id);
   pendingDel = null;
   g('del-overlay').classList.remove('show');
@@ -1052,6 +1125,25 @@ async function execDelete() {
   renderSidebar();
   updateUnsaved(hasDiff());
   toast('Artwork removed from draft', 'inf');
+}
+
+function updateBulkBar(filteredArtworks = artworks) {
+  const bar = g('bulk-bar');
+  const countText = g('bulk-text');
+  const selectAllChk = g('chk-select-all');
+
+  if (checkedIds.size > 0) {
+    bar.classList.add('show');
+    countText.textContent = checkedIds.size + ' selected';
+  } else {
+    bar.classList.remove('show');
+  }
+
+  if (selectAllChk && filteredArtworks.length > 0) {
+    const allChecked = filteredArtworks.every(a => checkedIds.has(a.id));
+    selectAllChk.checked = allChecked;
+    selectAllChk.indeterminate = !allChecked && filteredArtworks.some(a => checkedIds.has(a.id));
+  }
 }
 
 // ── Save to JSON ──────────────────────────────────────────────────────────────
@@ -1169,6 +1261,23 @@ async function init() {
   // Toolbar
   g('btn-apply').onclick  = () => applyChanges(true);
   g('btn-delete').onclick = () => confirmDelete(selectedId);
+
+  // Bulk actions
+  g('btn-bulk-delete').onclick = confirmBulkDelete;
+  g('chk-select-all').addEventListener('change', (e) => {
+    const q = (g('search').value || '').toLowerCase();
+    const filtered = artworks.filter(a =>
+      !q || (a.title||'').toLowerCase().includes(q) ||
+      (a.category||'').toLowerCase().includes(q) ||
+      (a.id||'').toLowerCase().includes(q)
+    );
+    if (e.target.checked) {
+      filtered.forEach(a => checkedIds.add(a.id));
+    } else {
+      filtered.forEach(a => checkedIds.delete(a.id));
+    }
+    renderSidebar();
+  });
 
   // Delete dialog
   g('btn-del-cancel').onclick = () => { g('del-overlay').classList.remove('show'); pendingDel = null; };

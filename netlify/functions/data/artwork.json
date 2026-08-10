@@ -8,12 +8,12 @@
     "tags": [
       "family",
       "portrait",
-      "charcoal"
+      "watercolor"
     ],
-    "medium": "Charcoal",
-    "dimensions": "12x16 inches",
-    "imageUrl": "/.netlify/functions/image?file=2010%2Fmom-and-grandma.webp",
-    "thumbnailUrl": "/.netlify/functions/image?file=2010%2Fmom-and-grandma.webp"
+    "medium": "Pencil, Water color and Fine liner",
+    "dimensions": "30.5 x 40.6 cm",
+    "imageUrl": "/.netlify/functions/image?file=2010/mom-and-grandma.webp",
+    "thumbnailUrl": "/.netlify/functions/image?file=2010/mom-and-grandma.webp"
   },
   {
     "id": "art-002",
@@ -26,10 +26,10 @@
       "portrait",
       "pencil"
     ],
-    "medium": "Pencil",
-    "dimensions": "10x14 inches",
-    "imageUrl": "/.netlify/functions/image?file=2009%2Fmy-son.webp",
-    "thumbnailUrl": "/.netlify/functions/image?file=2009%2Fmy-son.webp"
+    "medium": "Pencil and watercolor",
+    "dimensions": "25.4 x 35.6 cm",
+    "imageUrl": "/.netlify/functions/image?file=2009/my-son.webp",
+    "thumbnailUrl": "/.netlify/functions/image?file=2009/my-son.webp"
   },
   {
     "id": "art-003",
@@ -40,12 +40,13 @@
     "tags": [
       "character",
       "portrait",
-      "ink"
+      "ink",
+      "pencil"
     ],
     "medium": "Pencil",
-    "dimensions": "8x11 inches",
-    "imageUrl": "/.netlify/functions/image?file=2010%2Fold-lady.webp",
-    "thumbnailUrl": "/.netlify/functions/image?file=2010%2Fold-lady.webp"
+    "dimensions": "20.3 x 27.9 cm",
+    "imageUrl": "/.netlify/functions/image?file=2010/old-lady.webp",
+    "thumbnailUrl": "/.netlify/functions/image?file=2010/old-lady.webp"
   },
   {
     "id": "art-004",
@@ -59,9 +60,9 @@
       "sketch"
     ],
     "medium": "Pencil",
-    "dimensions": "8x11 inches",
-    "imageUrl": "/.netlify/functions/image?file=2010%2Fportrait-of-girl-with-deer-eyes.webp",
-    "thumbnailUrl": "/.netlify/functions/image?file=2010%2Fportrait-of-girl-with-deer-eyes.webp"
+    "dimensions": "20.3 x 27.9 cm",
+    "imageUrl": "/.netlify/functions/image?file=2010/portrait-of-girl-with-deer-eyes.webp",
+    "thumbnailUrl": "/.netlify/functions/image?file=2010/portrait-of-girl-with-deer-eyes.webp"
   },
   {
     "id": "art-005",
@@ -77,9 +78,9 @@
       "illustration"
     ],
     "medium": "Pencil",
-    "dimensions": "14x10 inches",
-    "imageUrl": "/.netlify/functions/image?file=2009%2Fyggdrasil.webp",
-    "thumbnailUrl": "/.netlify/functions/image?file=2009%2Fyggdrasil.webp"
+    "dimensions": "35.6 x 25.4 cm",
+    "imageUrl": "/.netlify/functions/image?file=2009/yggdrasil.webp",
+    "thumbnailUrl": "/.netlify/functions/image?file=2009/yggdrasil.webp"
   },
   {
     "id": "art-006",
@@ -96,8 +97,8 @@
     ],
     "medium": "Photography / Costume",
     "dimensions": "Digital",
-    "imageUrl": "/.netlify/functions/image?file=2009%2Fair-schoold-project.webp",
-    "thumbnailUrl": "/.netlify/functions/image?file=2009%2Fair-schoold-project.webp"
+    "imageUrl": "/.netlify/functions/image?file=2009/air-schoold-project.webp",
+    "thumbnailUrl": "/.netlify/functions/image?file=2009/air-schoold-project.webp"
   },
   {
     "id": "art-007",
@@ -114,8 +115,8 @@
     ],
     "medium": "Photography / Body Paint",
     "dimensions": "Digital",
-    "imageUrl": "/.netlify/functions/image?file=2009%2Ffire-schoold-project.webp",
-    "thumbnailUrl": "/.netlify/functions/image?file=2009%2Ffire-schoold-project.webp"
+    "imageUrl": "/.netlify/functions/image?file=2009/fire-schoold-project.webp",
+    "thumbnailUrl": "/.netlify/functions/image?file=2009/fire-schoold-project.webp"
   },
   {
     "id": "art-008",
@@ -132,31 +133,45 @@
     ],
     "medium": "Photography / Body Paint",
     "dimensions": "Digital",
-    "imageUrl": "/.netlify/functions/image?file=2009%2Fwater-schoold-project.webp",
-    "thumbnailUrl": "/.netlify/functions/image?file=2009%2Fwater-schoold-project.webp"
+    "imageUrl": "/.netlify/functions/image?file=2009/water-schoold-project.webp",
+    "thumbnailUrl": "/.netlify/functions/image?file=2009/water-schoold-project.webp"
   },
   {
     "id": "art-009",
     "title": "Insect Demon",
-    "description": "",
+    "description": "An intricate, dark fantasy study of a biomechanical insect creature rendered with fine liner, watercolor washes, and detailed pencil shading.",
     "createdDate": "2025-01-01",
-    "category": "Fantasy",
-    "tags": [],
-    "medium": "Pencil, Watercolor and fine liner",
-    "dimensions": "",
-    "imageUrl": "/.netlify/functions/image?file=2025%2Finsect-demon.webp",
-    "thumbnailUrl": "/.netlify/functions/image?file=2025%2Finsect-demon.webp"
+    "category": "Illustration",
+    "tags": [
+      "fantasy",
+      "illustration",
+      "insect",
+      "creature",
+      "watercolor",
+      "pencil"
+    ],
+    "medium": "Pencil, Watercolor & Fine Liner",
+    "dimensions": "21 x 29.7 cm",
+    "imageUrl": "/.netlify/functions/image?file=2025/insect-demon.webp",
+    "thumbnailUrl": "/.netlify/functions/image?file=2025/insect-demon.webp"
   },
   {
     "id": "art-010",
     "title": "Tentacle Nightmare",
-    "description": "",
+    "description": "A visceral, horror-inspired graphite illustration depicting a churning mass of writhing tentacles and alien eyes.",
     "createdDate": "2025-02-01",
-    "category": "Fantasy",
-    "tags": [],
-    "medium": "",
-    "dimensions": "",
-    "imageUrl": "/.netlify/functions/image?file=2025%2Ftentacle-nightmare.webp",
-    "thumbnailUrl": "/.netlify/functions/image?file=2025%2Ftentacle-nightmare.webp"
+    "category": "Illustration",
+    "tags": [
+      "fantasy",
+      "horror",
+      "illustration",
+      "pencil",
+      "creature",
+      "sketch"
+    ],
+    "medium": "Pencil",
+    "dimensions": "21 x 29.7 cm",
+    "imageUrl": "/.netlify/functions/image?file=2025/tentacle-nightmare.webp",
+    "thumbnailUrl": "/.netlify/functions/image?file=2025/tentacle-nightmare.webp"
   }
 ]
