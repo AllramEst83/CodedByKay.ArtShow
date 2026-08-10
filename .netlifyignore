@@ -1,0 +1,3 @@
+# Ignore editor.html so it is never published to Netlify production
+editor.html
+scripts/

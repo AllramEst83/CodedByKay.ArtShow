@@ -7,6 +7,13 @@
 [functions]
   included_files = ["assets/drawngs/**", "netlify/functions/data/**"]
 
+# Block public production access to the dev-mode editor page
+[[redirects]]
+  from = "/editor.html"
+  to = "/index.html"
+  status = 404
+  force = true
+
 # Block direct static HTTP access to raw artwork files
 # so they can ONLY be accessed via the /.netlify/functions/image function.
 [[redirects]]
@@ -19,5 +26,3 @@
   from = "/*"
   to = "/index.html"
   status = 200
-
-

@@ -77,8 +77,9 @@ exports.handler = async (event) => {
     }
   }
 
-  // Security: strip any directory components — only bare filenames allowed.
-  const basename = path.basename(file);
+  // Normalize relative file subpath (e.g. "2010/mom-and-grandma.jpg" or "mom-and-grandma.jpg")
+  const normalizedSubpath = path.normalize(file).replace(/^(\.\.[\/\\])+/, '');
+  const basename = path.basename(normalizedSubpath);
   const ext = path.extname(basename).toLowerCase();
 
   // Security Check 2: Block hidden files and .env files
@@ -98,11 +99,11 @@ exports.handler = async (event) => {
     };
   }
 
-  // Resolve path relative to the repo root (process.cwd() in Netlify)
-  const filePath = path.resolve(process.cwd(), 'assets', 'drawngs', basename);
-
-  // Double-check the resolved path is still inside the expected directory
+  // Resolve path relative to assets/drawngs
   const assetsDir = path.resolve(process.cwd(), 'assets', 'drawngs');
+  const filePath = path.resolve(assetsDir, normalizedSubpath);
+
+  // Double-check the resolved path is strictly inside assets/drawngs
   if (!filePath.startsWith(assetsDir + path.sep) && filePath !== assetsDir) {
     return {
       statusCode: 403,

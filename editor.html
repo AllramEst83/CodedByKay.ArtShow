@@ -873,8 +873,11 @@ async function createFromFile(filename) {
   const url   = makeUrl(filename);
   const title = filenameToTitle(filename);
   const newId = nextId();
+  const yearMatch = filename.match(/^(\d{4})\//);
+  const createdDate = yearMatch ? `${yearMatch[1]}-01-01` : '';
+
   const blank = {
-    id: newId, title, description: '', createdDate: '',
+    id: newId, title, description: '', createdDate,
     category: '', tags: [], medium: '', dimensions: '',
     imageUrl: url, thumbnailUrl: url,
   };
@@ -886,7 +889,8 @@ async function createFromFile(filename) {
 }
 
 function filenameToTitle(f) {
-  return f
+  const base = f.split('/').pop();
+  return base
     .replace(/\.[^.]+$/, '')           // strip extension
     .replace(/[-_]+/g, ' ')            // dashes/underscores → spaces
     .replace(/\b\w/g, c => c.toUpperCase()); // title case
