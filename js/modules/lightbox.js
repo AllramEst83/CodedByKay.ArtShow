@@ -3,6 +3,7 @@ import { filteredArtwork } from './gallery.js';
 let currentItem = null;
 let isZoomed = false;
 let isInfoOpen = false;
+let isFullscreen = false;
 
 export function initLightbox() {
   document.addEventListener('artwork:open', (e) => {
@@ -18,6 +19,7 @@ export function initLightbox() {
   const infoCloseBtn = document.getElementById('lightbox-info-close');
   const drawerHandle = document.getElementById('drawer-handle');
   const imageContainer = document.querySelector('.lightbox-image-container');
+  const fullscreenBtn = document.getElementById('lightbox-fullscreen');
   
   closeBtn.addEventListener('click', closeLightbox);
   
@@ -42,13 +44,28 @@ export function initLightbox() {
       }
     });
   }
+  if (fullscreenBtn) {
+    fullscreenBtn.addEventListener('click', toggleFullscreen);
+  }
+
+  // Fullscreen-internal nav arrows
+  const fsPrevBtn = document.getElementById('lightbox-fs-prev');
+  const fsNextBtn = document.getElementById('lightbox-fs-next');
+  if (fsPrevBtn) fsPrevBtn.addEventListener('click', showPrev);
+  if (fsNextBtn) fsNextBtn.addEventListener('click', showNext);
+
+  // Listen for fullscreen change events (e.g. user presses Escape in native fullscreen)
+  document.addEventListener('fullscreenchange', onFullscreenChange);
+  document.addEventListener('webkitfullscreenchange', onFullscreenChange);
   
   // Keyboard nav
   document.addEventListener('keydown', (e) => {
     if (lightbox.hidden) return;
     
     if (e.key === 'Escape') {
-      if (isInfoOpen) {
+      if (isFullscreen) {
+        exitFullscreen();
+      } else if (isInfoOpen) {
         closeInfo();
       } else {
         closeLightbox();
@@ -57,6 +74,7 @@ export function initLightbox() {
     if (e.key === 'ArrowLeft') showPrev();
     if (e.key === 'ArrowRight') showNext();
     if (e.key === 'i' || e.key === 'I') toggleInfo();
+    if (e.key === 'f' || e.key === 'F') toggleFullscreen();
   });
   
   // Close on backdrop click
@@ -88,6 +106,8 @@ function openLightbox(item) {
 }
 
 function closeLightbox() {
+  if (isFullscreen) exitFullscreen();
+  
   const lightbox = document.getElementById('lightbox');
   lightbox.classList.remove('is-open');
   
@@ -143,7 +163,7 @@ function updateLightboxContent() {
   
   document.getElementById('lightbox-title').textContent = currentItem.title;
   document.getElementById('lightbox-category').textContent = currentItem.category;
-  document.getElementById('lightbox-date').textContent = new Date(currentItem.dateAdded).toLocaleDateString();
+  document.getElementById('lightbox-date').textContent = new Date(currentItem.createdDate).toLocaleDateString();
   document.getElementById('lightbox-medium').textContent = currentItem.medium;
   document.getElementById('lightbox-dimensions').textContent = currentItem.dimensions;
   document.getElementById('lightbox-desc').textContent = currentItem.description;
@@ -178,8 +198,14 @@ function showNext() {
 
 function updateNavButtons() {
   const currentIndex = filteredArtwork.findIndex(a => a.id === currentItem.id);
-  document.getElementById('lightbox-prev').disabled = currentIndex <= 0;
-  document.getElementById('lightbox-next').disabled = currentIndex === -1 || currentIndex >= filteredArtwork.length - 1;
+  const isPrev = currentIndex <= 0;
+  const isNext = currentIndex === -1 || currentIndex >= filteredArtwork.length - 1;
+  document.getElementById('lightbox-prev').disabled = isPrev;
+  document.getElementById('lightbox-next').disabled = isNext;
+  const fsPrev = document.getElementById('lightbox-fs-prev');
+  const fsNext = document.getElementById('lightbox-fs-next');
+  if (fsPrev) fsPrev.disabled = isPrev;
+  if (fsNext) fsNext.disabled = isNext;
 }
 
 function toggleZoom() {
@@ -203,17 +229,93 @@ function toggleInfo() {
 function openInfo() {
   isInfoOpen = true;
   const content = document.querySelector('.lightbox-content');
+  const container = document.querySelector('.lightbox-image-container');
   const infoBtn = document.getElementById('lightbox-info-btn');
   if (content) content.classList.add('info-active');
+  if (container) container.classList.add('info-active'); // for fullscreen mode
   if (infoBtn) infoBtn.setAttribute('aria-expanded', 'true');
 }
 
 function closeInfo() {
   isInfoOpen = false;
   const content = document.querySelector('.lightbox-content');
+  const container = document.querySelector('.lightbox-image-container');
   const infoBtn = document.getElementById('lightbox-info-btn');
   if (content) content.classList.remove('info-active');
+  if (container) container.classList.remove('info-active');
   if (infoBtn) infoBtn.setAttribute('aria-expanded', 'false');
 }
 
+// ─── Fullscreen ───────────────────────────────────────────────────────────────
 
+function toggleFullscreen() {
+  if (!isFullscreen) {
+    enterFullscreen();
+  } else {
+    exitFullscreen();
+  }
+}
+
+function enterFullscreen() {
+  const container = document.querySelector('.lightbox-image-container');
+  if (!container) return;
+
+  if (container.requestFullscreen) {
+    container.requestFullscreen();
+  } else if (container.webkitRequestFullscreen) {
+    container.webkitRequestFullscreen();
+  }
+}
+
+function exitFullscreen() {
+  if (document.fullscreenElement || document.webkitFullscreenElement) {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    } else if (document.webkitExitFullscreen) {
+      document.webkitExitFullscreen();
+    }
+  }
+}
+
+function onFullscreenChange() {
+  isFullscreen = !!(document.fullscreenElement || document.webkitFullscreenElement);
+  const btn = document.getElementById('lightbox-fullscreen');
+  const container = document.querySelector('.lightbox-image-container');
+  const content = document.querySelector('.lightbox-content');
+  const sidebar = document.querySelector('.lightbox-sidebar');
+
+  if (isFullscreen) {
+    if (btn) {
+      btn.setAttribute('aria-label', 'Exit fullscreen');
+      btn.title = 'Exit fullscreen';
+      btn.innerHTML = `
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 3v3a2 2 0 0 1-2 2H3"/><path d="M21 8h-3a2 2 0 0 1-2-2V3"/>
+          <path d="M3 16h3a2 2 0 0 1 2 2v3"/><path d="M16 21v-3a2 2 0 0 1 2-2h3"/>
+        </svg>`;
+    }
+    if (container) container.classList.add('is-fullscreen');
+    // Move sidebar into the fullscreened element so it appears in fullscreen
+    if (sidebar && container) {
+      container.appendChild(sidebar);
+      sidebar.dataset.movedToFs = 'true';
+    }
+  } else {
+    if (btn) {
+      btn.setAttribute('aria-label', 'Enter fullscreen');
+      btn.title = 'Enter fullscreen';
+      btn.innerHTML = `
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M21 8V5a2 2 0 0 0-2-2h-3"/>
+          <path d="M3 16v3a2 2 0 0 0 2 2h3"/><path d="M16 21h3a2 2 0 0 0 2-2v-3"/>
+        </svg>`;
+    }
+    if (container) container.classList.remove('is-fullscreen');
+    // Move sidebar back to lightbox-content
+    if (sidebar && sidebar.dataset.movedToFs && content) {
+      content.appendChild(sidebar);
+      delete sidebar.dataset.movedToFs;
+    }
+    isFullscreen = false;
+  }
+}
