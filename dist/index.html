@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="glassmorphism">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kay's ArtShow</title>
+  <meta name="description" content="A beautiful art portfolio featuring stunning drawings and artwork by Kay.">
+  <meta name="author" content="Kay">
+  <meta name="keywords" content="art, portfolio, drawings, portraits, illustration, Kay, ArtShow">
+  <meta name="theme-color" content="#120e24">
+
+  <!-- Open Graph (Facebook, LinkedIn, Discord, WhatsApp, etc.) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Kay's ArtShow">
+  <meta property="og:title" content="Kay's ArtShow">
+  <meta property="og:description" content="A curated portfolio of original drawings, portraits, and illustrations by Kay — from intimate pencil studies to bold concept photography.">
+  <meta property="og:url" content="https://kays-art-show.netlify.app/">
+  <meta property="og:image" content="https://kays-art-show.netlify.app/assets/icons/android-chrome-512x512.png">
+  <meta property="og:image:width" content="512">
+  <meta property="og:image:height" content="512">
+  <meta property="og:image:alt" content="Kay's ArtShow — art portfolio">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Kay's ArtShow">
+  <meta name="twitter:description" content="A curated portfolio of original drawings, portraits, and illustrations by Kay — from intimate pencil studies to bold concept photography.">
+  <meta name="twitter:image" content="https://kays-art-show.netlify.app/assets/icons/android-chrome-512x512.png">
+  <meta name="twitter:image:alt" content="Kay's ArtShow — art portfolio">
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="/assets/icons/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&family=Space+Mono:wght@400;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/themes.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="app-header">
+    <h1 class="brand-title">Kay's ArtShow</h1>
+    <div class="theme-controls">
+      <label for="theme-selector" class="sr-only">Select Theme</label>
+      <select id="theme-selector" class="theme-selector" aria-label="Select Theme">
+        <option value="glassmorphism">Glassmorphism</option>
+        <option value="neo-brutalism">Neo-Brutalism</option>
+        <option value="neumorphism">Neumorphism</option>
+        <option value="material">Material</option>
+        <option value="claymorphism">Claymorphism</option>
+      </select>
+    </div>
+  </header>
+
+  <main>
+    <section class="control-bar">
+      <div class="search-container">
+        <input type="search" id="search-input" placeholder="Search artwork..." aria-label="Search artwork">
+      </div>
+      <div class="filter-container">
+        <button id="filter-btn" class="btn" aria-haspopup="true" aria-expanded="false">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg>
+          Filter & Sort
+        </button>
+        <div id="filter-popover" class="filter-popover" hidden>
+          <div class="filter-section">
+            <h3>Sort By</h3>
+            <label><input type="radio" name="sort" value="date-desc" checked> Date (Newest)</label>
+            <label><input type="radio" name="sort" value="date-asc"> Date (Oldest)</label>
+            <label><input type="radio" name="sort" value="title-asc"> Title (A-Z)</label>
+          </div>
+          <div class="filter-section">
+            <h3>Categories</h3>
+            <div id="category-filters" class="checkbox-group"></div>
+          </div>
+          <div class="filter-section">
+            <h3>Tags</h3>
+            <div id="tag-filters" class="chip-group"></div>
+          </div>
+          <div class="filter-section" id="timeline-filter-section" hidden>
+            <!-- Built dynamically by filters.js -->
+          </div>
+          <div class="filter-actions">
+            <button id="clear-filters-btn" class="btn-text">Clear All</button>
+          </div>
+        </div>
+      </div>
+      <div id="active-filters" class="active-filters" aria-live="polite"></div>
+    </section>
+
+    <section class="gallery-container">
+      <div id="gallery" class="gallery-grid" role="region" aria-label="Artwork Gallery">
+        <!-- Gallery cards will be injected here -->
+      </div>
+      <div id="empty-state" class="empty-state" hidden>
+        <div class="empty-emoji" aria-hidden="true">🎨🙈</div>
+        <h2 id="empty-title">Oops, we seem to have an issue...</h2>
+        <p id="empty-desc">The internet ate our pencils! We couldn't load any artwork right now.</p>
+        <button id="empty-clear-btn" class="btn">Try Again / Reset Filters</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox-overlay" role="dialog" aria-modal="true" aria-label="Artwork detail" hidden>
+    <button id="lightbox-close" class="icon-btn close-btn" aria-label="Close modal">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </button>
+    <div class="lightbox-container">
+      <button id="lightbox-prev" class="icon-btn nav-btn prev" aria-label="Previous artwork">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+      </button>
+      
+      <div class="lightbox-content">
+        <div class="lightbox-image-container">
+          <img id="lightbox-image" class="lightbox-image" src="" alt="">
+          <div class="lightbox-controls">
+            <button id="lightbox-info-btn" class="icon-btn info-btn" aria-label="Toggle details" aria-expanded="false" title="Artwork Info">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="16" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+              </svg>
+            </button>
+            <button id="lightbox-zoom" class="icon-btn zoom-btn" aria-label="Toggle zoom" title="Toggle zoom">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </button>
+            <button id="lightbox-fullscreen" class="icon-btn fullscreen-btn" aria-label="Enter fullscreen" title="Enter fullscreen">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M21 8V5a2 2 0 0 0-2-2h-3"/>
+                <path d="M3 16v3a2 2 0 0 0 2 2h3"/><path d="M16 21h3a2 2 0 0 0 2-2v-3"/>
+              </svg>
+            </button>
+          </div>
+          <!-- Nav arrows visible in native fullscreen (inside fullscreened element) -->
+          <button id="lightbox-fs-prev" class="nav-btn-fullscreen prev-fs" aria-label="Previous artwork">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+          </button>
+          <button id="lightbox-fs-next" class="nav-btn-fullscreen next-fs" aria-label="Next artwork">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </button>
+        </div>
+        <aside class="lightbox-sidebar">
+          <div class="drawer-handle" id="drawer-handle"></div>
+          <div class="sidebar-header">
+            <h2 id="lightbox-title"></h2>
+            <button id="lightbox-info-close" class="info-close-btn" aria-label="Close artwork info" title="Close details">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </button>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">Category</span>
+            <span id="lightbox-category" class="meta-value"></span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">Created</span>
+            <span id="lightbox-date" class="meta-value"></span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">Medium</span>
+            <span id="lightbox-medium" class="meta-value"></span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">Dimensions</span>
+            <span id="lightbox-dimensions" class="meta-value"></span>
+          </div>
+          <div class="lightbox-desc-container">
+            <h3>Description</h3>
+            <p id="lightbox-desc"></p>
+          </div>
+          <div class="lightbox-tags-container">
+            <h3>Tags</h3>
+            <div id="lightbox-tags" class="chip-group"></div>
+          </div>
+        </aside>
+      </div>
+
+      <button id="lightbox-next" class="icon-btn nav-btn next" aria-label="Next artwork">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </button>
+    </div>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+All you ned to know about this solution can be found here: (C:\Users\kaywi\dev\Superimpose\.cursor) 
