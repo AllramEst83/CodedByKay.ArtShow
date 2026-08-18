@@ -445,15 +445,20 @@ main {
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    90deg,
-    var(--color-surface) 0%,
-    var(--color-bg-secondary) 40%,
-    var(--color-surface) 80%
+    110deg,
+    rgba(124, 111, 247, 0.08)  0%,
+    rgba(192, 132, 252, 0.35) 18%,
+    rgba(56,  189, 248, 0.45) 33%,
+    rgba(52,  211, 153, 0.35) 48%,
+    rgba(251, 191,  36, 0.40) 63%,
+    rgba(248, 113, 113, 0.35) 78%,
+    rgba(192, 132, 252, 0.30) 90%,
+    rgba(124, 111, 247, 0.08) 100%
   );
-  background-size: 200% 100%;
-  animation: shimmer 1.4s infinite linear;
+  background-size: 300% 100%;
+  animation: shimmer 1.8s infinite linear;
   opacity: 1;
-  transition: opacity 0.4s ease;
+  transition: opacity 0.5s ease;
   z-index: 1;
   pointer-events: none;
 }
@@ -463,8 +468,8 @@ main {
 }
 
 @keyframes shimmer {
-  0%   { background-position: 200% 0; }
-  100% { background-position: -200% 0; }
+  0%   { background-position: 150% 0; }
+  100% { background-position: -150% 0; }
 }
 
 /* Empty State */
