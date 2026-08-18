@@ -20,6 +20,7 @@ export function initFilters(artwork, onUpdate) {
   populateFilterOptions();
   buildTimeline();
   bindEvents();
+  applyFilters();
 }
 
 function setupUI() {
