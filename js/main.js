@@ -31,5 +31,26 @@ document.addEventListener('DOMContentLoaded', () => {
   initTheme();
   initLightbox();
   loadServerArtwork();
+
+  // Fake ad parallax — ads drift at 40% of page scroll speed
+  const adLeft  = document.querySelector('.fake-ad--left');
+  const adRight = document.querySelector('.fake-ad--right');
+
+  if (adLeft || adRight) {
+    const DRIFT_RATIO = 0.4;
+    let ticking = false;
+
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          const offset = window.scrollY * DRIFT_RATIO;
+          if (adLeft)  adLeft.scrollTop  = offset;
+          if (adRight) adRight.scrollTop = offset;
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
+  }
 });
 

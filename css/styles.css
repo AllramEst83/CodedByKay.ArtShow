@@ -317,6 +317,58 @@ main {
   transform: scale(1.05);
 }
 
+/* Fake ads — fill full gutter from viewport edge to main content boundary */
+.fake-ad {
+  position: fixed;
+  top: 57px; /* height of sticky header */
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  z-index: 10;
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: calc((100vw - 1400px) / 2);
+  background: var(--color-surface);
+  scrollbar-width: none; /* Firefox */
+}
+.fake-ad::-webkit-scrollbar { display: none; } /* Chrome/Safari */
+
+.fake-ad--left  { left: 0; }
+.fake-ad--right { right: 0; }
+
+.fake-ad__unit {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 0.5rem 0;
+}
+
+.fake-ad__unit img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  opacity: 0.82;
+}
+
+.fake-ad__label {
+  flex-shrink: 0;
+  font-size: 0.6rem;
+  color: var(--color-text-muted);
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.3rem 0 0.75rem;
+}
+
+/* Hide when gutter is too narrow (< 150px each side) */
+@media (max-width: 1700px) {
+  .fake-ad { display: none; }
+}
+
 /* Gallery Grid */
 .gallery-grid {
   column-count: 1;
