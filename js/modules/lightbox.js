@@ -165,7 +165,6 @@ function updateLightboxContent() {
   document.getElementById('lightbox-category').textContent = currentItem.category;
   document.getElementById('lightbox-date').textContent = formatDate(currentItem.createdDate);
   document.getElementById('lightbox-medium').textContent = currentItem.medium;
-  document.getElementById('lightbox-dimensions').textContent = currentItem.dimensions;
   document.getElementById('lightbox-desc').textContent = currentItem.description;
   
   const tagsContainer = document.getElementById('lightbox-tags');

@@ -11,7 +11,6 @@
       "watercolor"
     ],
     "medium": "Pencil, Water color and Fine liner",
-    "dimensions": "30.5 x 40.6 cm",
     "imageUrl": "/.netlify/functions/image?file=2010/mom-and-grandma.webp",
     "thumbnailUrl": "/.netlify/functions/image?file=2010/mom-and-grandma.webp"
   },
@@ -27,7 +26,6 @@
       "pencil"
     ],
     "medium": "Pencil and watercolor",
-    "dimensions": "25.4 x 35.6 cm",
     "imageUrl": "/.netlify/functions/image?file=2009/my-son.webp",
     "thumbnailUrl": "/.netlify/functions/image?file=2009/my-son.webp"
   },
@@ -44,7 +42,6 @@
       "pencil"
     ],
     "medium": "Pencil",
-    "dimensions": "20.3 x 27.9 cm",
     "imageUrl": "/.netlify/functions/image?file=2010/old-lady.webp",
     "thumbnailUrl": "/.netlify/functions/image?file=2010/old-lady.webp"
   },
@@ -60,7 +57,6 @@
       "sketch"
     ],
     "medium": "Pencil",
-    "dimensions": "20.3 x 27.9 cm",
     "imageUrl": "/.netlify/functions/image?file=2010/portrait-of-girl-with-deer-eyes.webp",
     "thumbnailUrl": "/.netlify/functions/image?file=2010/portrait-of-girl-with-deer-eyes.webp"
   },
@@ -78,7 +74,6 @@
       "illustration"
     ],
     "medium": "Pencil",
-    "dimensions": "35.6 x 25.4 cm",
     "imageUrl": "/.netlify/functions/image?file=2009/yggdrasil.webp",
     "thumbnailUrl": "/.netlify/functions/image?file=2009/yggdrasil.webp"
   },
@@ -96,7 +91,6 @@
       "air"
     ],
     "medium": "Photography / Costume",
-    "dimensions": "Digital",
     "imageUrl": "/.netlify/functions/image?file=2009/air-schoold-project.webp",
     "thumbnailUrl": "/.netlify/functions/image?file=2009/air-schoold-project.webp"
   },
@@ -114,7 +108,6 @@
       "fire"
     ],
     "medium": "Photography / Body Paint",
-    "dimensions": "Digital",
     "imageUrl": "/.netlify/functions/image?file=2009/fire-schoold-project.webp",
     "thumbnailUrl": "/.netlify/functions/image?file=2009/fire-schoold-project.webp"
   },
@@ -132,7 +125,6 @@
       "water"
     ],
     "medium": "Photography / Body Paint",
-    "dimensions": "Digital",
     "imageUrl": "/.netlify/functions/image?file=2009/water-schoold-project.webp",
     "thumbnailUrl": "/.netlify/functions/image?file=2009/water-schoold-project.webp"
   },
@@ -151,7 +143,6 @@
       "pencil"
     ],
     "medium": "Pencil, Watercolor & Fine Liner",
-    "dimensions": "21 x 29.7 cm",
     "imageUrl": "/.netlify/functions/image?file=2025/insect-demon.webp",
     "thumbnailUrl": "/.netlify/functions/image?file=2025/insect-demon.webp"
   },
@@ -170,8 +161,235 @@
       "sketch"
     ],
     "medium": "Pencil",
-    "dimensions": "21 x 29.7 cm",
     "imageUrl": "/.netlify/functions/image?file=2025/tentacle-nightmare.webp",
     "thumbnailUrl": "/.netlify/functions/image?file=2025/tentacle-nightmare.webp"
+  },
+  {
+    "id": "art-011",
+    "title": "Ant Cup",
+    "description": "A playful pencil sketch of a ant mixed with a cup of coffee",
+    "createdDate": "2023-01-01",
+    "category": "Illustration",
+    "tags": [ "humor", "sketch", "pencil" ],
+    "medium": "Pencil",
+    "imageUrl": "/.netlify/functions/image?file=2023/ant_cup.webp",
+    "thumbnailUrl": "/.netlify/functions/image?file=2023/ant_cup.webp"
+  },
+  {
+    "id": "art-012",
+    "title": "Eyes and Nose",
+    "description": "A close-up face through a rectangular border",
+    "createdDate": "2023-01-01",
+    "category": "Studies",
+    "tags": [
+      "face",
+      "portrait",
+      "pencil",
+      "sketch"
+    ],
+    "medium": "Pencil",
+    "imageUrl": "/.netlify/functions/image?file=2023/eyes_and_nose.webp",
+    "thumbnailUrl": "/.netlify/functions/image?file=2023/eyes_and_nose.webp"
+  },
+  {
+    "id": "art-013",
+    "title": "Seglora Church",
+    "description": "A loose perspective sketch of Seglora kyrka — the historic Swedish stave church — captured in pencil with quick confident strokes.",
+    "createdDate": "2023-01-01",
+    "category": "Architecture",
+    "tags": [
+      "architecture",
+      "church",
+      "sweden",
+      "pencil",
+      "sketch"
+    ],
+    "medium": "Pencil",
+    "imageUrl": "/.netlify/functions/image?file=2023/segloria.webp",
+    "thumbnailUrl": "/.netlify/functions/image?file=2023/segloria.webp"
+  },
+  {
+    "id": "art-014",
+    "title": "The Sacrifice",
+    "description": "A ritualistic figure with outstretched arms is splayed within a great wheel, an unsettling composition evoking ancient ceremony and sacrifice.",
+    "createdDate": "2023-01-01",
+    "category": "Illustration",
+    "tags": [
+      "dark",
+      "ritual",
+      "fantasy",
+      "pencil",
+      "sketch"
+    ],
+    "medium": "Pencil",
+    "imageUrl": "/.netlify/functions/image?file=2023/the_sacrifice.webp",
+    "thumbnailUrl": "/.netlify/functions/image?file=2023/the_sacrifice.webp"
+  },
+  {
+    "id": "art-015",
+    "title": "Demon Beast",
+    "description": "A ferocious creature lunges forward, gaping jaws, jagged mane, and raking claws rendered in urgent, slashing pencil strokes.",
+    "createdDate": "2024-01-01",
+    "category": "Illustration",
+    "tags": [
+      "creature",
+      "fantasy",
+      "horror",
+      "pencil",
+      "sketch"
+    ],
+    "medium": "Pencil",
+    "imageUrl": "/.netlify/functions/image?file=2024/demon_beast.webp",
+    "thumbnailUrl": "/.netlify/functions/image?file=2024/demon_beast.webp"
+  },
+  {
+    "id": "art-016",
+    "title": "Reading by the Light",
+    "description": "Towering stacks of books rise from the floor of a dimly lit study, a solitary figure dwarfed among them, a love letter to knowledge and quiet obsession.",
+    "createdDate": "2024-01-01",
+    "category": "Illustration",
+    "tags": [
+      "books",
+      "interior",
+      "cozy",
+      "pencil",
+      "sketch"
+    ],
+    "medium": "Pencil",
+    "imageUrl": "/.netlify/functions/image?file=2024/kid_reading_in_by_the_light.webp",
+    "thumbnailUrl": "/.netlify/functions/image?file=2024/kid_reading_in_by_the_light.webp"
+  },
+  {
+    "id": "art-017",
+    "title": "Mug Shot",
+    "description": "Three anthropomorphic mug characters stand side-by-side against a tiled wall, holding placards.",
+    "createdDate": "2024-01-01",
+    "category": "Illustration",
+    "tags": [
+      "humor",
+      "character",
+      "sketch",
+      "pencil"
+    ],
+    "medium": "Pencil",
+    "imageUrl": "/.netlify/functions/image?file=2024/mug_shot.webp",
+    "thumbnailUrl": "/.netlify/functions/image?file=2024/mug_shot.webp"
+  },
+  {
+    "id": "art-018",
+    "title": "Pencil Mantis",
+    "description": "A merge between a mantis and a pencil.",
+    "createdDate": "2024-01-01",
+    "category": "Studies",
+    "tags": [
+      "insect",
+      "nature",
+      "mantis",
+      "pencil",
+      "sketch"
+    ],
+    "medium": "Pencil",
+    "imageUrl": "/.netlify/functions/image?file=2024/pencil_mantis.webp",
+    "thumbnailUrl": "/.netlify/functions/image?file=2024/pencil_mantis.webp"
+  },
+  {
+    "id": "art-019",
+    "title": "Boy with Cap",
+    "description": "A smiling boy wearing an LA cap.",
+    "createdDate": "2026-01-01",
+    "category": "Portraits",
+    "tags": [
+      "portrait",
+      "youth",
+      "pencil",
+      "sketch"
+    ],
+    "medium": "Pencil",
+    "imageUrl": "/.netlify/functions/image?file=2026/boy_with_cap.webp",
+    "thumbnailUrl": "/.netlify/functions/image?file=2026/boy_with_cap.webp"
+  },
+  {
+    "id": "art-020",
+    "title": "Boy with Closed Eyes",
+    "description": "A boy with closed eyes.",
+    "createdDate": "2026-01-01",
+    "category": "Portraits",
+    "tags": [
+      "portrait",
+      "pencil",
+      "sketch",
+      "contemplative"
+    ],
+    "medium": "Pencil",
+    "imageUrl": "/.netlify/functions/image?file=2026/boy_with_closed_eyes.webp",
+    "thumbnailUrl": "/.netlify/functions/image?file=2026/boy_with_closed_eyes.webp"
+  },
+  {
+    "id": "art-021",
+    "title": "Me and My Better Half I",
+    "description": "A tender double portrait of a loving couple.",
+    "createdDate": "2026-01-01",
+    "category": "Portraits",
+    "tags": [
+      "portrait",
+      "couple",
+      "family",
+      "pencil",
+      "sketch"
+    ],
+    "medium": "Pencil",
+    "imageUrl": "/.netlify/functions/image?file=2026/me_and_my_better_half_1.webp",
+    "thumbnailUrl": "/.netlify/functions/image?file=2026/me_and_my_better_half_1.webp"
+  },
+  {
+    "id": "art-022",
+    "title": "Me and My Better Half II",
+    "description": "A second intimate study of a loving couple.",
+    "createdDate": "2026-01-01",
+    "category": "Portraits",
+    "tags": [
+      "portrait",
+      "couple",
+      "family",
+      "pencil",
+      "sketch"
+    ],
+    "medium": "Pencil",
+    "imageUrl": "/.netlify/functions/image?file=2026/me_and_my_better_half_2.webp",
+    "thumbnailUrl": "/.netlify/functions/image?file=2026/me_and_my_better_half_2.webp"
+  },
+  {
+    "id": "art-023",
+    "title": "Parrot and Woman",
+    "description": "A portrait of a woman with a parrot perched on her shoulder.",
+    "createdDate": "2026-01-01",
+    "category": "Portraits",
+    "tags": [
+      "portrait",
+      "animal",
+      "parrot",
+      "pencil",
+      "sketch"
+    ],
+    "medium": "Pencil",
+    "imageUrl": "/.netlify/functions/image?file=2026/parrot_and_woman.webp",
+    "thumbnailUrl": "/.netlify/functions/image?file=2026/parrot_and_woman.webp"
+  },
+  {
+    "id": "art-024",
+    "title": "Tree by the Fence",
+    "description": "A tree by the fence.",
+    "createdDate": "2026-01-01",
+    "category": "Landscape",
+    "tags": [
+      "landscape",
+      "nature",
+      "tree",
+      "pencil",
+      "sketch"
+    ],
+    "medium": "Pencil",
+    "imageUrl": "/.netlify/functions/image?file=2026/tree_by_the_fence.webp",
+    "thumbnailUrl": "/.netlify/functions/image?file=2026/tree_by_the_fence.webp" 
   }
 ]
