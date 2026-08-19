@@ -2,38 +2,36 @@
  * admin-users.js — Netlify Function
  *
  * Exposes admin CRUD operations for Netlify Identity users via the GoTrue
- * Admin HTTP API. Only reachable by authenticated admin users.
+ * Admin HTTP API. Only reachable by authenticated users with the 'admin' role.
  *
  * Endpoints:
  *   GET    /.netlify/functions/admin-users         → list users
  *   POST   /.netlify/functions/admin-users         → invite user  { action: 'invite', email }
  *   DELETE /.netlify/functions/admin-users?id=<id> → delete user
  *
- * Security model:
+ * Security model (pure RBAC):
  *   1. Netlify automatically verifies the Authorization: Bearer JWT and injects
  *      the decoded payload into context.clientContext.user.
- *   2. We additionally check the caller's email against ADMIN_EMAILS env var
- *      (or the kaywib@gmail.com fallback) as a second gate.
+ *   2. We check that user.app_metadata.roles includes 'admin' — this field is
+ *      server-set only (GoTrue admin API) and cannot be modified by the user.
  *   3. The short-lived admin bearer token (context.clientContext.identity.token)
  *      is used to make GoTrue admin calls — it never leaves the server.
+ *
+ * To grant admin access: set app_metadata.roles = ["admin"] on the user via
+ * the Netlify dashboard (Identity → user → Edit) or via the GoTrue admin API.
  */
 
-const ADMIN_EMAILS = (process.env.ADMIN_EMAILS || 'kaywib@gmail.com')
-  .split(',')
-  .map((e) => e.trim().toLowerCase())
-  .filter(Boolean);
-
-// ── Authorization check ────────────────────────────────────────────────────
+// ── Authorization check (RBAC only — no email lists) ──────────────────────
 
 function isAdmin(clientContext) {
   const user = clientContext?.user;
   if (!user) return false;
 
+  // app_metadata is set server-side only and cannot be forged by the client.
   const roles = user.app_metadata?.roles ?? [];
-  const email = (user.email ?? '').toLowerCase();
-
-  return roles.includes('admin') || ADMIN_EMAILS.includes(email);
+  return roles.includes('admin');
 }
+
 
 // ── GoTrue HTTP helper ─────────────────────────────────────────────────────
 
