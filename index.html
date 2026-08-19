@@ -36,13 +36,18 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&family=Space+Mono:wght@400;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Netlify Identity Widget -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/auth.css">
 </head>
 <body>
   <header class="app-header">
     <h1 class="brand-title">Kay's ArtShow</h1>
     <div class="theme-controls">
+      <!-- Auth button / avatar — injected by auth.js -->
+      <div id="auth-control" class="auth-control"></div>
       <label for="theme-selector" class="sr-only">Select Theme</label>
       <select id="theme-selector" class="theme-selector" aria-label="Select Theme">
         <option value="glassmorphism">Glassmorphism</option>

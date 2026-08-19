@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="glassmorphism">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Management — Kay's ArtShow</title>
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- Netlify Identity Widget -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&family=Space+Mono:wght@400;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/auth.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+  <header class="app-header">
+    <a href="/" class="brand-title" style="text-decoration:none;">← Kay's ArtShow</a>
+    <div class="theme-controls">
+      <!-- Auth button / avatar — injected by auth.js -->
+      <div id="auth-control" class="auth-control"></div>
+      <label for="theme-selector" class="sr-only">Select Theme</label>
+      <select id="theme-selector" class="theme-selector" aria-label="Select Theme">
+        <option value="glassmorphism">Glassmorphism</option>
+        <option value="neo-brutalism">Neo-Brutalism</option>
+        <option value="neumorphism">Neumorphism</option>
+        <option value="material">Material</option>
+        <option value="claymorphism">Claymorphism</option>
+      </select>
+    </div>
+  </header>
+
+  <main id="admin-main">
+    <!-- Loading / access check state -->
+    <div id="admin-loading" class="admin-loading" aria-live="polite">
+      <p>Verifying access…</p>
+    </div>
+
+    <!-- Main content (revealed after admin check) -->
+    <div id="admin-content" hidden>
+      <div class="admin-header-bar">
+        <h1>User Management</h1>
+        <button id="invite-btn" class="btn">+ Invite User</button>
+      </div>
+      <div id="users-table-wrap" aria-live="polite">
+        <!-- User table injected by admin.js -->
+      </div>
+    </div>
+  </main>
+
+  <!-- ── Invite Modal ─────────────────────────────────────────────────── -->
+  <div
+    id="invite-modal"
+    class="modal-overlay"
+    hidden
+    role="dialog"
+    aria-modal="true"
+    aria-label="Invite a new user"
+    aria-describedby="invite-modal-desc"
+  >
+    <div class="modal-box">
+      <h2>Invite New User</h2>
+      <p id="invite-modal-desc" class="sr-only">
+        Enter the email address of the person you want to invite. They will receive an
+        invitation email to set up their account.
+      </p>
+      <label for="invite-email">
+        Email address
+        <input
+          id="invite-email"
+          type="email"
+          placeholder="user@example.com"
+          autocomplete="email"
+        >
+      </label>
+      <p id="invite-error" class="invite-error" hidden aria-live="assertive"></p>
+      <div class="modal-actions">
+        <button id="invite-cancel-btn" class="btn-text">Cancel</button>
+        <button id="invite-submit-btn" class="btn">Send Invite</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="js/admin.js"></script>
+</body>
+</html>

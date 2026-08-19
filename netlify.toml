@@ -7,6 +7,12 @@
 [functions]
   included_files = ["assets/drawngs/**", "netlify/functions/data/**"]
 
+# Clean URL for the admin user-management page
+[[redirects]]
+  from = "/admin"
+  to   = "/admin.html"
+  status = 200
+
 # Block direct static HTTP access to raw artwork files
 [[redirects]]
   from = "/assets/drawngs/*"

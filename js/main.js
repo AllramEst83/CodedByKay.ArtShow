@@ -2,6 +2,7 @@ import { initTheme } from './modules/themes.js';
 import { initGallery, renderGallery } from './modules/gallery.js';
 import { initFilters } from './modules/filters.js';
 import { initLightbox } from './modules/lightbox.js';
+import { initAuth } from './modules/auth.js';
 
 async function loadServerArtwork() {
   const emptyState = document.getElementById('empty-state');
@@ -28,6 +29,7 @@ async function loadServerArtwork() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  initAuth();
   initTheme();
   initLightbox();
   loadServerArtwork();
