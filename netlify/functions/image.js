@@ -99,8 +99,8 @@ exports.handler = async (event) => {
     };
   }
 
-  // Resolve path relative to assets/drawngs
-  const assetsDir = path.resolve(process.cwd(), 'assets', 'drawngs');
+  // Resolve path relative to assets/drawings
+  const assetsDir = path.resolve(process.cwd(), 'assets', 'drawings');
   let filePath = path.resolve(assetsDir, normalizedSubpath);
 
   if (size === 'thumb') {
@@ -111,7 +111,7 @@ exports.handler = async (event) => {
     }
   }
 
-  // Double-check the resolved path is strictly inside assets/drawngs
+  // Double-check the resolved path is strictly inside assets/drawings
   if (!filePath.startsWith(assetsDir + path.sep) && filePath !== assetsDir) {
     return {
       statusCode: 403,
