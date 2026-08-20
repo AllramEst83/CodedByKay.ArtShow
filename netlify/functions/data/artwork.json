@@ -391,5 +391,24 @@
     "medium": "Pencil",
     "imageUrl": "/.netlify/functions/image?file=2026/tree_by_the_fence.webp",
     "thumbnailUrl": "/.netlify/functions/image?file=2026/tree_by_the_fence.webp" 
+  },
+  {
+    "id": "art-025",
+    "title": "Elephant Man (v1)",
+    "description": "A surreal portrait merging human features with an elephant's trunk and tusks.",
+    "createdDate": "2026-08-20",
+    "category": "Portraits",
+    "tags": [
+      "portrait",
+      "character",
+      "surreal",
+      "sketch",
+      "color",
+      "elephant",
+      "digital"
+    ],
+    "medium": "Pencil, marker and watercolor. Digital",
+    "imageUrl": "/.netlify/functions/image?file=2026/elephant_man_v1.webp",
+    "thumbnailUrl": "/.netlify/functions/image?file=2026/elephant_man_v1.webp"
   }
 ]
