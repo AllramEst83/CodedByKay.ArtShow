@@ -14,7 +14,7 @@ const ALLOWED_ORIGINS = (process.env.ALLOWED_ORIGINS || '')
   .map(url => url.trim().toLowerCase())
   .filter(Boolean);
 
-const ALLOWED_EXTENSIONS = new Set(['.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg']);
+const ALLOWED_EXTENSIONS = new Set(['.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg', '.mp4', '.webm']);
 
 const MIME_TYPES = {
   '.jpg':  'image/jpeg',
@@ -23,6 +23,8 @@ const MIME_TYPES = {
   '.gif':  'image/gif',
   '.webp': 'image/webp',
   '.svg':  'image/svg+xml',
+  '.mp4':  'video/mp4',
+  '.webm': 'video/webm',
 };
 
 exports.handler = async (event) => {
@@ -122,10 +124,42 @@ exports.handler = async (event) => {
 
   try {
     const data = fs.readFileSync(filePath);
+    const contentType = MIME_TYPES[ext];
+    const isVideo = ext === '.mp4' || ext === '.webm';
+
+    // Handle HTTP Range requests (needed for video seeking in browsers)
+    const rangeHeader = (event.headers || {}).range;
+    if (isVideo && rangeHeader) {
+      const fileSize = data.length;
+      const matches = rangeHeader.match(/bytes=(\d+)-(\d*)/);
+      if (matches) {
+        const start = parseInt(matches[1], 10);
+        const end = matches[2] ? parseInt(matches[2], 10) : fileSize - 1;
+        const clampedEnd = Math.min(end, fileSize - 1);
+        const chunkSize = clampedEnd - start + 1;
+        const chunk = data.slice(start, clampedEnd + 1);
+        return {
+          statusCode: 206,
+          headers: {
+            'Content-Type': contentType,
+            'Content-Range': `bytes ${start}-${clampedEnd}/${fileSize}`,
+            'Accept-Ranges': 'bytes',
+            'Content-Length': String(chunkSize),
+            'Cache-Control': 'public, max-age=31536000, immutable',
+            'X-Content-Type-Options': 'nosniff',
+            'Access-Control-Allow-Origin': requestOrigin ? requestOrigin : '*',
+          },
+          body: chunk.toString('base64'),
+          isBase64Encoded: true,
+        };
+      }
+    }
+
     return {
       statusCode: 200,
       headers: {
-        'Content-Type': MIME_TYPES[ext],
+        'Content-Type': contentType,
+        'Accept-Ranges': isVideo ? 'bytes' : 'none',
         'Cache-Control': 'public, max-age=31536000, immutable',
         'X-Content-Type-Options': 'nosniff',
         'Access-Control-Allow-Origin': requestOrigin ? requestOrigin : '*',
@@ -137,7 +171,7 @@ exports.handler = async (event) => {
     if (err.code === 'ENOENT') {
       return {
         statusCode: 404,
-        body: JSON.stringify({ error: `Image not found: ${basename}` }),
+        body: JSON.stringify({ error: `File not found: ${basename}` }),
         headers: { 'Content-Type': 'application/json' },
       };
     }

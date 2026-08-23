@@ -107,6 +107,7 @@ function openLightbox(item) {
 
 function closeLightbox() {
   if (isFullscreen) exitFullscreen();
+  stopCurrentVideo();
   
   const lightbox = document.getElementById('lightbox');
   lightbox.classList.remove('is-open');
@@ -120,6 +121,15 @@ function closeLightbox() {
   }, 300); // var(--transition-speed)
 }
 
+function stopCurrentVideo() {
+  const existing = document.getElementById('lightbox-video');
+  if (existing) {
+    existing.pause();
+    existing.src = '';
+    existing.remove();
+  }
+}
+
 function updateLightboxContent() {
   if (!currentItem) return;
   
@@ -128,37 +138,90 @@ function updateLightboxContent() {
     const oldError = container.querySelector('.lightbox-error-fallback');
     if (oldError) oldError.remove();
   }
-  
-  const img = document.getElementById('lightbox-image');
-  if (img) {
-    img.style.display = 'block';
-    img.src = currentItem.imageUrl;
-    img.alt = currentItem.title;
-    img.className = 'lightbox-image';
-    
-    img.onerror = () => {
-      img.style.display = 'none';
+
+  const isVideo = currentItem.type === 'video';
+
+  // Toggle zoom button visibility — zoom has no meaning for video
+  const zoomBtn = document.getElementById('lightbox-zoom');
+  if (zoomBtn) zoomBtn.style.display = isVideo ? 'none' : '';
+
+  if (isVideo) {
+    // Hide static image
+    const img = document.getElementById('lightbox-image');
+    if (img) img.style.display = 'none';
+
+    stopCurrentVideo();
+
+    const video = document.createElement('video');
+    video.id = 'lightbox-video';
+    video.className = 'lightbox-video';
+    video.controls = true;
+    video.autoplay = true;
+    video.playsInline = true;
+    video.src = currentItem.videoUrl;
+    video.setAttribute('aria-label', currentItem.title);
+
+    video.onerror = () => {
+      video.remove();
       if (container && !container.querySelector('.lightbox-error-fallback')) {
         const errDiv = document.createElement('div');
         errDiv.className = 'lightbox-error-fallback';
         errDiv.innerHTML = `
-          <span class="error-emoji" aria-hidden="true">🎨🙈</span>
+          <span class="error-emoji" aria-hidden="true">🎬🙈</span>
           <h3>Oops, we seem to have an issue...</h3>
-          <p>The canvas lost connection! Couldn't load "${currentItem.title}".</p>
+          <p>Couldn't load the video "${currentItem.title}".</p>
           <button id="lightbox-retry-btn" class="btn btn-retry">Retry Loading 🔄</button>
         `;
         container.appendChild(errDiv);
-        const retryBtn = errDiv.querySelector('#lightbox-retry-btn');
-        if (retryBtn) {
-          retryBtn.addEventListener('click', () => {
-            errDiv.remove();
-            img.style.display = 'block';
-            const cacheBuster = (currentItem.imageUrl.includes('?') ? '&' : '?') + 'retry=' + Date.now();
-            img.src = currentItem.imageUrl + cacheBuster;
-          });
-        }
+        errDiv.querySelector('#lightbox-retry-btn')?.addEventListener('click', () => {
+          errDiv.remove();
+          updateLightboxContent();
+        });
       }
     };
+
+    // Insert before .lightbox-controls so it sits behind the control bar
+    const controls = container?.querySelector('.lightbox-controls');
+    if (container && controls) {
+      container.insertBefore(video, controls);
+    } else if (container) {
+      container.appendChild(video);
+    }
+  } else {
+    // Image path
+    stopCurrentVideo();
+
+    const img = document.getElementById('lightbox-image');
+    if (img) {
+      img.style.display = 'block';
+      img.src = currentItem.imageUrl;
+      img.alt = currentItem.title;
+      img.className = 'lightbox-image';
+      
+      img.onerror = () => {
+        img.style.display = 'none';
+        if (container && !container.querySelector('.lightbox-error-fallback')) {
+          const errDiv = document.createElement('div');
+          errDiv.className = 'lightbox-error-fallback';
+          errDiv.innerHTML = `
+            <span class="error-emoji" aria-hidden="true">🎨🙈</span>
+            <h3>Oops, we seem to have an issue...</h3>
+            <p>The canvas lost connection! Couldn't load "${currentItem.title}".</p>
+            <button id="lightbox-retry-btn" class="btn btn-retry">Retry Loading 🔄</button>
+          `;
+          container.appendChild(errDiv);
+          const retryBtn = errDiv.querySelector('#lightbox-retry-btn');
+          if (retryBtn) {
+            retryBtn.addEventListener('click', () => {
+              errDiv.remove();
+              img.style.display = 'block';
+              const cacheBuster = (currentItem.imageUrl.includes('?') ? '&' : '?') + 'retry=' + Date.now();
+              img.src = currentItem.imageUrl + cacheBuster;
+            });
+          }
+        }
+      };
+    }
   }
   
   document.getElementById('lightbox-title').textContent = currentItem.title;

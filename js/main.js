@@ -2,6 +2,7 @@ import { initTheme } from './modules/themes.js';
 import { initGallery, renderGallery } from './modules/gallery.js';
 import { initFilters } from './modules/filters.js';
 import { initLightbox } from './modules/lightbox.js';
+import { initPagination, resetToPageOne, updatePaginationAndRender } from './modules/pagination.js';
 
 async function loadServerArtwork() {
   const emptyState = document.getElementById('empty-state');
@@ -16,8 +17,11 @@ async function loadServerArtwork() {
     const artwork = await response.json();
     
     initGallery(artwork);
-    initFilters(artwork, (filtered) => {
-      renderGallery(filtered);
+    initPagination();
+    
+    initFilters(artwork, () => {
+      resetToPageOne();
+      updatePaginationAndRender();
     });
   } catch (err) {
     console.error('[App] Failed to load server artwork:', err);

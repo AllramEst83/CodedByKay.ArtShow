@@ -94,6 +94,15 @@ export function renderGallery(items) {
     imgWrapper.appendChild(img);
     imgWrapper.appendChild(shimmer);
 
+    // Video badge — shown on cards where type === 'video'
+    if (item.type === 'video') {
+      const badge = document.createElement('div');
+      badge.className = 'card-video-badge';
+      badge.setAttribute('aria-hidden', 'true');
+      badge.innerHTML = `<svg width="36" height="36" viewBox="0 0 24 24" fill="white" stroke="none"><circle cx="12" cy="12" r="12" fill="rgba(0,0,0,0.55)"/><polygon points="10,8 18,12 10,16" fill="white"/></svg>`;
+      imgWrapper.appendChild(badge);
+    }
+
     article.appendChild(imgWrapper);
     article.appendChild(overlay);
     
