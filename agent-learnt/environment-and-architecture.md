@@ -2,7 +2,10 @@
 
 ## App Structure & Serving Model
 - **Publish Root:** Netlify is configured to publish `.` directly. Do not introduce complex build outputs (`dist/`) unless explicitly requested.
-- **Image Protection:** Static HTTP access to `assets/drawings/*` is denied in `netlify.toml`. Media must be fetched via `/.netlify/functions/image?file=...`.
+- **Media Serving (migrated off function proxying):** Images and video in `assets/drawings/**` are served as plain static assets directly from the Netlify CDN — do not add `assets/drawings/**` back to `[functions].included_files` or re-introduce a byte-proxying function. `artwork.json`'s `imageUrl`/`thumbnailUrl`/`videoUrl` fields are plain paths like `/assets/drawings/2026/elephant_man_v1_video.mp4`, not `/.netlify/functions/...?file=...` query strings.
+  - **Why:** the old `image.js` read+base64-encoded every image through a regional Lambda (≈33% size overhead, ~6MB sync response ceiling, single-region latency). Video was worse — a hand-rolled `video-stream.mjs` had to manually parse `Range` headers and clamp every response to 8MB because Netlify streaming function responses cap at 20MB. Static CDN serving has none of these limits and supports native HTTP Range requests for video with zero custom code.
+  - **Access gate:** `netlify/edge-functions/media-gate.js` runs in front of `/assets/drawings/*`, checks Origin/Referer against `ALLOWED_ORIGINS`, and calls `context.next()` to let Netlify's normal static pipeline serve the file (or returns 403). It never touches file bytes itself — that's what preserves full CDN caching and Range support. `netlify/functions/image.js` now serves *only* the artwork metadata JSON.
+  - **If protection needs to be stronger later:** Origin/Referer are client-spoofable; a real upgrade would be signed, expiring tokens minted by a function and checked in the edge function, not a switch back to byte-proxying.
 - **Editor Isolation:** Any local dev tools or draft editors must be completely isolated or omitted from production deployment if not meant to be public.
 
 ## Netlify Identity Integration
