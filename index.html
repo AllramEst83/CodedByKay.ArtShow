@@ -9,6 +9,19 @@
   <meta name="keywords" content="art, portfolio, drawings, portraits, illustration, Kay, ArtShow">
   <meta name="theme-color" content="#120e24">
 
+  <!-- Applies the persisted theme before first paint to avoid a flash of the default theme -->
+  <script>
+    (function () {
+      var THEMES = ['neo-brutalism', 'neumorphism', 'glassmorphism', 'material', 'claymorphism'];
+      try {
+        var saved = localStorage.getItem('artshow-theme');
+        if (saved && THEMES.indexOf(saved) !== -1) {
+          document.documentElement.setAttribute('data-theme', saved);
+        }
+      } catch (e) {}
+    })();
+  </script>
+
   <!-- Open Graph (Facebook, LinkedIn, Discord, WhatsApp, etc.) -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Kay's ArtShow">
