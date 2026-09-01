@@ -16,4 +16,4 @@ The `agent-learnt/` directory is reserved for recording technical insights, envi
 Future AI agents working on this project should check `agent-learnt/` before starting tasks and add new notes as new lessons or edge cases are encountered.
 
 ## Agent Rules
-Additional agent rules and project guidelines can be found in [.cursor/rules](./CodedByKay.ArtShow/.cursor/rules).
+Additional agent rules and project guidelines can be found in [.cursor/rules](./CodedByKay.ArtShow/.agents/rules).

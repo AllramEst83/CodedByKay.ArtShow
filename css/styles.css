@@ -1207,7 +1207,7 @@ main {
   appearance: none;
   height: 4px;
   border-radius: 99px;
-  background: var(--color-border);
+  background: var(--color-text-muted, #8b8b9a);
   outline: none;
   cursor: pointer;
 }
