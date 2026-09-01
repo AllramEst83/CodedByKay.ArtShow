@@ -485,9 +485,9 @@
   },
   {
     "id": "art-025",
-    "addedDate": "2026-08-30",
     "title": "Elephant Man (v1)",
     "description": "A surreal portrait merging human features with an elephant's trunk and tusks.",
+    "addedDate": "2026-08-30",
     "createdDate": "2026-08-20",
     "category": "Portraits",
     "tags": [
@@ -546,8 +546,8 @@
     "id": "art-028",
     "type": "video",
     "title": "Video of how I created the Elephant Man (V1)",
-    "description": "A test video.",
-    "addedDate":"2026-08-20",
+    "description": "This video show the process of how I created the Elephant Man (V1) from start to finish. It is a time lapse video of the whole process.",
+    "addedDate": "2026-08-30",
     "createdDate": "2026-08-20",
     "category": "Video",
     "tags": [
@@ -562,7 +562,7 @@
     ],
     "groups": ["Fantastical"],
     "medium": "Video",
-    "thumbnailUrl": "/.netlify/functions/image?file=2026/elephant_man_v1_video.webp",
+    "thumbnailUrl": "/.netlify/functions/image?file=2026/elephant_man_v1_video_thumb.webp",
     "videoUrl": "/.netlify/functions/image?file=2026/elephant_man_v1_video.mp4"
   }
 ]
