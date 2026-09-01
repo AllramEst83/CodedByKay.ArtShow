@@ -2,16 +2,13 @@
   publish = "."
   functions = "netlify/functions"
 
-# Bundle the artwork images inside the Lambda zip
-# so the function can read them via fs in production.
+# Bundle only the artwork metadata inside the Lambda zip so the
+# metadata function can read it via fs in production. Artwork
+# files themselves are served as static assets straight from the
+# Netlify CDN (gated by netlify/edge-functions/media-gate.js) —
+# no need to bundle them into a function anymore.
 [functions]
-  included_files = ["assets/drawings/**", "netlify/functions/data/**"]
-
-# Block direct static HTTP access to raw artwork files
-[[redirects]]
-  from = "/assets/drawings/*"
-  to = "/index.html"
-  status = 404
+  included_files = ["netlify/functions/data/**"]
 
 # Serve the SPA from the root
 [[redirects]]
