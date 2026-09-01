@@ -550,7 +550,16 @@
     "addedDate":"2026-08-20",
     "createdDate": "2026-08-20",
     "category": "Video",
-    "tags": ["video", "infinite painter", "fantasy", "elephant", "surreal"],
+    "tags": [
+      "video", 
+      "digital",
+      "portrait",
+      "character",
+      "surreal",
+      "sketch",
+      "color",
+      "elephant"
+    ],
     "groups": ["Fantastical"],
     "medium": "Video",
     "thumbnailUrl": "/.netlify/functions/image?file=2026/elephant_man_v1_video.webp",
