@@ -1,4 +1,5 @@
-import { filteredArtwork, renderGallery } from './gallery.js';
+import { renderGallery } from './gallery.js';
+import { getScopedArtwork, isGroupsMode, getActiveGroup, computeGroupBoxes, renderGroupBoxes, clearGroupsViewClass } from './groups.js';
 
 let currentPage = 1;
 let itemsPerPage = parseInt(localStorage.getItem('artshow_items_per_page'), 10) || 25;
@@ -30,7 +31,7 @@ export function initPagination() {
   
   if (nextBtn) {
     nextBtn.addEventListener('click', () => {
-      const totalPages = Math.ceil(filteredArtwork.length / itemsPerPage);
+      const totalPages = Math.ceil(getScopedArtwork().length / itemsPerPage);
       if (currentPage < totalPages) {
         currentPage++;
         updatePaginationAndRender();
@@ -45,17 +46,28 @@ export function resetToPageOne() {
 }
 
 export function updatePaginationAndRender() {
-  const totalItems = filteredArtwork.length;
+  // Group-box screen: show every box on one page, no pagination.
+  if (isGroupsMode() && !getActiveGroup()) {
+    const container = document.getElementById('pagination-controls');
+    if (container) container.hidden = true;
+    renderGroupBoxes(computeGroupBoxes());
+    return;
+  }
+
+  clearGroupsViewClass();
+
+  const scoped = getScopedArtwork();
+  const totalItems = scoped.length;
   const totalPages = Math.ceil(totalItems / itemsPerPage) || 1;
-  
+
   // Ensure current page is within valid bounds
   if (currentPage > totalPages) currentPage = totalPages;
   if (currentPage < 1) currentPage = 1;
-  
+
   const start = (currentPage - 1) * itemsPerPage;
   const end = start + itemsPerPage;
-  const sliced = filteredArtwork.slice(start, end);
-  
+  const sliced = scoped.slice(start, end);
+
   updatePaginationUI(totalPages, totalItems);
   renderGallery(sliced);
   prefetchNextPage();
@@ -89,12 +101,13 @@ function scrollToGalleryTop() {
 
 // Pre-fetch thumbnails for the next page to make navigation instantaneous
 function prefetchNextPage() {
-  const totalPages = Math.ceil(filteredArtwork.length / itemsPerPage);
+  const scoped = getScopedArtwork();
+  const totalPages = Math.ceil(scoped.length / itemsPerPage);
   if (currentPage >= totalPages) return;
-  
+
   const start = currentPage * itemsPerPage;
   const end = start + itemsPerPage;
-  const nextSlice = filteredArtwork.slice(start, end);
+  const nextSlice = scoped.slice(start, end);
   
   nextSlice.forEach(item => {
     const img = new Image();

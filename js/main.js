@@ -3,6 +3,7 @@ import { initGallery, renderGallery } from './modules/gallery.js';
 import { initFilters } from './modules/filters.js';
 import { initLightbox } from './modules/lightbox.js';
 import { initPagination, resetToPageOne, updatePaginationAndRender } from './modules/pagination.js';
+import { initGroups } from './modules/groups.js';
 import { initAdsToggle } from './modules/ads.js';
 
 async function loadServerArtwork() {
@@ -20,6 +21,10 @@ async function loadServerArtwork() {
 
     initGallery(artwork);
     initPagination();
+    initGroups(() => {
+      resetToPageOne();
+      updatePaginationAndRender();
+    });
 
     initFilters(artwork, () => {
       resetToPageOne();

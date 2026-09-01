@@ -1,4 +1,5 @@
-import { filteredArtwork, formatDate } from './gallery.js';
+import { formatDate } from './gallery.js';
+import { getScopedArtwork } from './groups.js';
 
 let currentItem = null;
 let isZoomed = false;
@@ -243,25 +244,28 @@ function updateLightboxContent() {
 }
 
 function showPrev() {
-  const currentIndex = filteredArtwork.findIndex(a => a.id === currentItem.id);
+  const scoped = getScopedArtwork();
+  const currentIndex = scoped.findIndex(a => a.id === currentItem.id);
   if (currentIndex > 0) {
-    currentItem = filteredArtwork[currentIndex - 1];
+    currentItem = scoped[currentIndex - 1];
     updateLightboxContent();
   }
 }
 
 function showNext() {
-  const currentIndex = filteredArtwork.findIndex(a => a.id === currentItem.id);
-  if (currentIndex >= 0 && currentIndex < filteredArtwork.length - 1) {
-    currentItem = filteredArtwork[currentIndex + 1];
+  const scoped = getScopedArtwork();
+  const currentIndex = scoped.findIndex(a => a.id === currentItem.id);
+  if (currentIndex >= 0 && currentIndex < scoped.length - 1) {
+    currentItem = scoped[currentIndex + 1];
     updateLightboxContent();
   }
 }
 
 function updateNavButtons() {
-  const currentIndex = filteredArtwork.findIndex(a => a.id === currentItem.id);
+  const scoped = getScopedArtwork();
+  const currentIndex = scoped.findIndex(a => a.id === currentItem.id);
   const isPrev = currentIndex <= 0;
-  const isNext = currentIndex === -1 || currentIndex >= filteredArtwork.length - 1;
+  const isNext = currentIndex === -1 || currentIndex >= scoped.length - 1;
   document.getElementById('lightbox-prev').disabled = isPrev;
   document.getElementById('lightbox-next').disabled = isNext;
   const fsPrev = document.getElementById('lightbox-fs-prev');

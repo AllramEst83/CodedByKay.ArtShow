@@ -272,6 +272,28 @@ main {
   position: relative;
 }
 
+/* View Mode Toggle (Grid / Groups) */
+.view-toggle {
+  display: flex;
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+}
+.view-toggle-btn {
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+  padding: 0.75rem 1.25rem;
+}
+.view-toggle-btn + .view-toggle-btn {
+  border-left: 1px solid var(--color-border);
+}
+.view-toggle-btn.is-active {
+  background-color: var(--color-accent);
+  color: var(--color-accent-text);
+}
+
 .btn {
   display: flex;
   align-items: center;
@@ -457,6 +479,23 @@ main {
   .ads-toggle { display: none; }
 }
 
+/* Group Breadcrumb */
+.group-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+}
+.group-breadcrumb[hidden] {
+  display: none;
+}
+.group-breadcrumb-name {
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
 /* Gallery Grid */
 .gallery-grid {
   column-count: 1;
@@ -465,6 +504,45 @@ main {
 @media (min-width: 600px) { .gallery-grid { column-count: 2; } }
 @media (min-width: 900px) { .gallery-grid { column-count: 3; } }
 @media (min-width: 1200px) { .gallery-grid { column-count: 4; } }
+
+/* Groups view: uniform tiles instead of masonry columns */
+.gallery-grid.is-groups-view {
+  column-count: unset;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+.gallery-grid.is-groups-view .group-card {
+  margin-bottom: 0;
+}
+.group-card-image-wrapper {
+  aspect-ratio: 4 / 3;
+  min-height: 0;
+}
+.group-card-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.group-card-count {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full);
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+.group-card .group-card-overlay {
+  opacity: 1;
+  background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0) 60%);
+}
+.group-card-overlay h3 {
+  font-size: 1.1rem;
+  margin-top: 0;
+}
 
 .art-card {
   break-inside: avoid;
@@ -1213,6 +1291,10 @@ main {
 }
 
 /* Pagination Controls */
+.pagination-controls[hidden] {
+  display: none;
+}
+
 .pagination-controls {
   display: flex;
   flex-wrap: wrap;
