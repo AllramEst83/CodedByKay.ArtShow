@@ -10,6 +10,15 @@
 [functions]
   included_files = ["netlify/functions/data/**"]
 
+# Artwork files don't change once published — cache them at the edge for a
+# year instead of revalidating on every request. If a file is ever replaced
+# with different content, give it a new filename rather than overwriting the
+# old one in place, so stale cached copies aren't served.
+[[headers]]
+  for = "/assets/drawings/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
 # Serve the SPA from the root
 [[redirects]]
   from = "/*"
