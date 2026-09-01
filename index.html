@@ -42,15 +42,26 @@
 <body>
   <header class="app-header">
     <h1 class="brand-title">Kay's ArtShow</h1>
-    <div class="theme-controls">
-      <label for="theme-selector" class="sr-only">Select Theme</label>
-      <select id="theme-selector" class="theme-selector" aria-label="Select Theme">
-        <option value="glassmorphism">Glassmorphism</option>
-        <option value="neo-brutalism">Neo-Brutalism</option>
-        <option value="neumorphism">Neumorphism</option>
-        <option value="material">Material</option>
-        <option value="claymorphism">Claymorphism</option>
-      </select>
+    <div class="header-controls">
+      <label class="ads-toggle">
+        <span class="ads-toggle__label" aria-hidden="true">Hide Ads</span>
+        <span class="switch">
+          <input type="checkbox" id="ads-toggle" role="switch" aria-label="Hide ads" aria-checked="false">
+          <span class="switch__track" aria-hidden="true">
+            <span class="switch__thumb"></span>
+          </span>
+        </span>
+      </label>
+      <div class="theme-controls">
+        <label for="theme-selector" class="sr-only">Select Theme</label>
+        <select id="theme-selector" class="theme-selector" aria-label="Select Theme">
+          <option value="glassmorphism">Glassmorphism</option>
+          <option value="neo-brutalism">Neo-Brutalism</option>
+          <option value="neumorphism">Neumorphism</option>
+          <option value="material">Material</option>
+          <option value="claymorphism">Claymorphism</option>
+        </select>
+      </div>
     </div>
   </header>
 

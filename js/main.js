@@ -3,6 +3,7 @@ import { initGallery, renderGallery } from './modules/gallery.js';
 import { initFilters } from './modules/filters.js';
 import { initLightbox } from './modules/lightbox.js';
 import { initPagination, resetToPageOne, updatePaginationAndRender } from './modules/pagination.js';
+import { initAdsToggle } from './modules/ads.js';
 
 async function loadServerArtwork() {
   const emptyState = document.getElementById('empty-state');
@@ -33,6 +34,7 @@ async function loadServerArtwork() {
 
 document.addEventListener('DOMContentLoaded', () => {
   initTheme();
+  initAdsToggle();
   initLightbox();
   loadServerArtwork();
 

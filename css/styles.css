@@ -108,11 +108,94 @@ a, button, input, select {
   border: 4px solid var(--color-border);
 }
 
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-shrink: 0;
+}
+
 .theme-controls {
   display: flex;
   align-items: center;
   gap: 0.5rem;
   flex-shrink: 0;
+}
+
+/* Ads toggle switch */
+.ads-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.ads-toggle__label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  white-space: nowrap;
+}
+
+.switch {
+  position: relative;
+  display: inline-flex;
+  flex-shrink: 0;
+  width: 42px;
+  height: 24px;
+}
+
+.switch input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.switch__track {
+  position: absolute;
+  inset: 0;
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-sm);
+  transition: background-color var(--transition-speed), border-color var(--transition-speed);
+}
+
+.switch__thumb {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 18px;
+  height: 18px;
+  background-color: var(--color-text-muted);
+  border-radius: var(--radius-full);
+  transition: transform var(--transition-speed), background-color var(--transition-speed);
+}
+
+.switch input:checked ~ .switch__track {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.switch input:checked ~ .switch__track .switch__thumb {
+  transform: translateX(18px);
+  background-color: var(--color-accent-text);
+}
+
+.switch input:focus-visible ~ .switch__track {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Hide the fake ad units while the toggle is on */
+html.hide-ads .fake-ad {
+  display: none;
 }
 
 .theme-selector {
@@ -136,6 +219,9 @@ a, button, input, select {
   .app-header {
     padding: 0.75rem 1rem;
   }
+  .header-controls {
+    gap: 0.75rem;
+  }
   .theme-selector {
     max-width: 125px;
     padding: 0.35rem 0.5rem;
@@ -143,6 +229,23 @@ a, button, input, select {
   }
   main {
     padding: 1rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .ads-toggle__label {
+    display: none;
+  }
+  .switch {
+    width: 34px;
+    height: 20px;
+  }
+  .switch__thumb {
+    width: 14px;
+    height: 14px;
+  }
+  .switch input:checked ~ .switch__track .switch__thumb {
+    transform: translateX(14px);
   }
 }
 
