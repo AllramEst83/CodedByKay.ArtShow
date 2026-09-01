@@ -351,6 +351,25 @@ main {
   }
 }
 
+/* On small screens the popover was absolutely positioned against the
+   Filter & Sort button, which sits mid-row once the control bar wraps —
+   `left: 0` + a viewport-relative width meant it could start well past
+   the left edge and overflow off the right side of the screen instead of
+   reflowing. Anchor it to the viewport itself instead, as a bottom sheet. */
+@media (max-width: 600px) {
+  .filter-popover {
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-height: 75vh;
+    overflow-y: auto;
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
+  }
+}
+
 .filter-popover[hidden] {
   display: none;
 }
