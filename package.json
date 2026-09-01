@@ -15,5 +15,8 @@
   "license": "MIT",
   "devDependencies": {
     "netlify-cli": "^17.38.1"
+  },
+  "allowScripts": {
+    "sharp@0.32.6": true
   }
 }
