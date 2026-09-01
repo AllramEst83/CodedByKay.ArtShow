@@ -158,6 +158,7 @@ function updateLightboxContent() {
     video.className = 'lightbox-video';
     video.controls = true;
     video.autoplay = true;
+    video.muted = true;
     video.playsInline = true;
     video.src = currentItem.videoUrl;
     video.setAttribute('aria-label', currentItem.title);
