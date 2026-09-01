@@ -1,6 +1,7 @@
 [
   {
     "id": "art-001",
+    "addedDate": "2026-08-06",
     "title": "Mom & Grandma",
     "description": "A heartfelt portrait capturing the warmth and bond between generations.",
     "createdDate": "2010-01-15",
@@ -10,12 +11,16 @@
       "portrait",
       "watercolor"
     ],
+    "groups": [
+      "portrait"
+    ],
     "medium": "Pencil, Water color and Fine liner",
     "imageUrl": "/.netlify/functions/image?file=2010/mom-and-grandma.webp",
     "thumbnailUrl": "/.netlify/functions/image?file=2010/mom-and-grandma.webp"
   },
   {
     "id": "art-002",
+    "addedDate": "2026-08-07",
     "title": "My Son",
     "description": "A tender study of youth and curiosity, drawn with love.",
     "createdDate": "2009-03-22",
@@ -25,12 +30,16 @@
       "portrait",
       "pencil"
     ],
+    "groups": [
+      "portrait"
+    ],
     "medium": "Pencil and watercolor",
     "imageUrl": "/.netlify/functions/image?file=2009/my-son.webp",
     "thumbnailUrl": "/.netlify/functions/image?file=2009/my-son.webp"
   },
   {
     "id": "art-003",
+    "addedDate": "2026-08-08",
     "title": "Old Lady",
     "description": "Character study exploring the depth and story written in aged features.",
     "createdDate": "2010-05-10",
@@ -41,12 +50,16 @@
       "ink",
       "pencil"
     ],
+    "groups": [
+      "portrait"
+    ],
     "medium": "Pencil",
     "imageUrl": "/.netlify/functions/image?file=2010/old-lady.webp",
     "thumbnailUrl": "/.netlify/functions/image?file=2010/old-lady.webp"
   },
   {
     "id": "art-004",
+    "addedDate": "2026-08-09",
     "title": "Portrait of a Girl with Deer Eyes",
     "description": "A delicate pencil portrait capturing an intense, wide-eyed gaze — signed and dated 2010.",
     "createdDate": "2010-06-01",
@@ -56,12 +69,16 @@
       "pencil",
       "sketch"
     ],
+    "groups": [
+      "portrait"
+    ],
     "medium": "Pencil",
     "imageUrl": "/.netlify/functions/image?file=2010/portrait-of-girl-with-deer-eyes.webp",
     "thumbnailUrl": "/.netlify/functions/image?file=2010/portrait-of-girl-with-deer-eyes.webp"
   },
   {
     "id": "art-005",
+    "addedDate": "2026-08-10",
     "title": "Yggdrasil",
     "description": "A sweeping pencil illustration of the Norse world tree — a monstrous, serpent-entwined giant confronted by a lone warrior, set against a volcanic landscape.",
     "createdDate": "2009-07-04",
@@ -73,12 +90,16 @@
       "fantasy",
       "illustration"
     ],
+    "groups": [
+      "Mythology"
+    ],
     "medium": "Pencil",
     "imageUrl": "/.netlify/functions/image?file=2009/yggdrasil.webp",
     "thumbnailUrl": "/.netlify/functions/image?file=2009/yggdrasil.webp"
   },
   {
     "id": "art-006",
+    "addedDate": "2026-08-11",
     "title": "Air — School Project",
     "description": "An ethereal figure in all white, suspended in stillness — a creative costume and concept photography piece exploring the element of air.",
     "createdDate": "2009-08-10",
@@ -90,12 +111,16 @@
       "school-project",
       "air"
     ],
+    "groups": [
+      "School project"
+    ],
     "medium": "Photography / Costume",
     "imageUrl": "/.netlify/functions/image?file=2009/air-schoold-project.webp",
     "thumbnailUrl": "/.netlify/functions/image?file=2009/air-schoold-project.webp"
   },
   {
     "id": "art-007",
+    "addedDate": "2026-08-12",
     "title": "Fire — School Project",
     "description": "Intense body paint and dramatic lighting bring the element of fire to life — flames curl from outstretched hands against pitch black.",
     "createdDate": "2009-08-10",
@@ -107,12 +132,16 @@
       "school-project",
       "fire"
     ],
+    "groups": [
+      "School project"
+    ],
     "medium": "Photography / Body Paint",
     "imageUrl": "/.netlify/functions/image?file=2009/fire-schoold-project.webp",
     "thumbnailUrl": "/.netlify/functions/image?file=2009/fire-schoold-project.webp"
   },
   {
     "id": "art-008",
+    "addedDate": "2026-08-13",
     "title": "Water — School Project",
     "description": "A haunting blue-painted figure crawls from a swimming pool in the dark — a visceral interpretation of the element of water.",
     "createdDate": "2009-08-10",
@@ -124,12 +153,16 @@
       "school-project",
       "water"
     ],
+    "groups": [
+      "School project"
+    ],
     "medium": "Photography / Body Paint",
     "imageUrl": "/.netlify/functions/image?file=2009/water-schoold-project.webp",
     "thumbnailUrl": "/.netlify/functions/image?file=2009/water-schoold-project.webp"
   },
   {
     "id": "art-009",
+    "addedDate": "2026-08-14",
     "title": "Insect Demon",
     "description": "An intricate, dark fantasy study of a biomechanical insect creature rendered with fine liner, watercolor washes, and detailed pencil shading.",
     "createdDate": "2025-01-01",
@@ -142,12 +175,16 @@
       "watercolor",
       "pencil"
     ],
+    "groups": [
+      "Fantastical"
+    ],
     "medium": "Pencil, Watercolor & Fine Liner",
     "imageUrl": "/.netlify/functions/image?file=2025/insect-demon.webp",
     "thumbnailUrl": "/.netlify/functions/image?file=2025/insect-demon.webp"
   },
   {
     "id": "art-010",
+    "addedDate": "2026-08-15",
     "title": "Tentacle Nightmare",
     "description": "A visceral, horror-inspired graphite illustration depicting a churning mass of writhing tentacles and alien eyes.",
     "createdDate": "2025-02-01",
@@ -160,23 +197,31 @@
       "creature",
       "sketch"
     ],
+    "groups": [
+      "Fantastical"
+    ],
     "medium": "Pencil",
     "imageUrl": "/.netlify/functions/image?file=2025/tentacle-nightmare.webp",
     "thumbnailUrl": "/.netlify/functions/image?file=2025/tentacle-nightmare.webp"
   },
   {
     "id": "art-011",
+    "addedDate": "2026-08-16",
     "title": "Ant Cup",
     "description": "A playful pencil sketch of a ant mixed with a cup of coffee",
     "createdDate": "2023-01-01",
     "category": "Illustration",
     "tags": [ "humor", "sketch", "pencil" ],
+    "groups": [
+      "Fantastical"
+    ],
     "medium": "Pencil",
     "imageUrl": "/.netlify/functions/image?file=2023/ant_cup.webp",
     "thumbnailUrl": "/.netlify/functions/image?file=2023/ant_cup.webp"
   },
   {
     "id": "art-012",
+    "addedDate": "2026-08-17",
     "title": "Eyes and Nose",
     "description": "A close-up face through a rectangular border",
     "createdDate": "2023-01-01",
@@ -193,6 +238,7 @@
   },
   {
     "id": "art-013",
+    "addedDate": "2026-08-18",
     "title": "Seglora Church",
     "description": "A loose perspective sketch of Seglora kyrka — the historic Swedish stave church — captured in pencil with quick confident strokes.",
     "createdDate": "2023-01-01",
@@ -204,12 +250,14 @@
       "pencil",
       "sketch"
     ],
+    "groups":["Architecture"],
     "medium": "Pencil",
     "imageUrl": "/.netlify/functions/image?file=2023/segloria.webp",
     "thumbnailUrl": "/.netlify/functions/image?file=2023/segloria.webp"
   },
   {
     "id": "art-014",
+    "addedDate": "2026-08-19",
     "title": "The Sacrifice",
     "description": "A ritualistic figure with outstretched arms is splayed within a great wheel, an unsettling composition evoking ancient ceremony and sacrifice.",
     "createdDate": "2023-01-01",
@@ -221,12 +269,16 @@
       "pencil",
       "sketch"
     ],
+    "groups":[
+      "Fantastical"
+    ],
     "medium": "Pencil",
     "imageUrl": "/.netlify/functions/image?file=2023/the_sacrifice.webp",
     "thumbnailUrl": "/.netlify/functions/image?file=2023/the_sacrifice.webp"
   },
   {
     "id": "art-015",
+    "addedDate": "2026-08-20",
     "title": "Demon Beast",
     "description": "A ferocious creature lunges forward, gaping jaws, jagged mane, and raking claws rendered in urgent, slashing pencil strokes.",
     "createdDate": "2024-01-01",
@@ -238,12 +290,16 @@
       "pencil",
       "sketch"
     ],
+    "groups": [
+      "Fantastical"
+    ],
     "medium": "Pencil",
     "imageUrl": "/.netlify/functions/image?file=2024/demon_beast.webp",
     "thumbnailUrl": "/.netlify/functions/image?file=2024/demon_beast.webp"
   },
   {
     "id": "art-016",
+    "addedDate": "2026-08-21",
     "title": "Reading by the Light",
     "description": "Towering stacks of books rise from the floor of a dimly lit study, a solitary figure dwarfed among them, a love letter to knowledge and quiet obsession.",
     "createdDate": "2024-01-01",
@@ -255,12 +311,16 @@
       "pencil",
       "sketch"
     ],
+    "groups": [
+      "Whimsical"
+    ],
     "medium": "Pencil",
     "imageUrl": "/.netlify/functions/image?file=2024/kid_reading_in_by_the_light.webp",
     "thumbnailUrl": "/.netlify/functions/image?file=2024/kid_reading_in_by_the_light.webp"
   },
   {
     "id": "art-017",
+    "addedDate": "2026-08-22",
     "title": "Mug Shot",
     "description": "Three anthropomorphic mug characters stand side-by-side against a tiled wall, holding placards.",
     "createdDate": "2024-01-01",
@@ -271,12 +331,16 @@
       "sketch",
       "pencil"
     ],
+    "groups": [
+      "Whimsical"
+    ],
     "medium": "Pencil",
     "imageUrl": "/.netlify/functions/image?file=2024/mug_shot.webp",
     "thumbnailUrl": "/.netlify/functions/image?file=2024/mug_shot.webp"
   },
   {
     "id": "art-018",
+    "addedDate": "2026-08-23",
     "title": "Pencil Mantis",
     "description": "A merge between a mantis and a pencil.",
     "createdDate": "2024-01-01",
@@ -288,12 +352,16 @@
       "pencil",
       "sketch"
     ],
+    "groups": [
+      "Fantastical"
+    ],
     "medium": "Pencil",
     "imageUrl": "/.netlify/functions/image?file=2024/pencil_mantis.webp",
     "thumbnailUrl": "/.netlify/functions/image?file=2024/pencil_mantis.webp"
   },
   {
     "id": "art-019",
+    "addedDate": "2026-08-24",
     "title": "Boy with Cap",
     "description": "A smiling boy wearing an LA cap.",
     "createdDate": "2026-01-01",
@@ -304,12 +372,16 @@
       "pencil",
       "sketch"
     ],
+    "groups": [
+      "Portrait"
+    ],
     "medium": "Pencil",
     "imageUrl": "/.netlify/functions/image?file=2026/boy_with_cap.webp",
     "thumbnailUrl": "/.netlify/functions/image?file=2026/boy_with_cap.webp"
   },
   {
     "id": "art-020",
+    "addedDate": "2026-08-25",
     "title": "Boy with Closed Eyes",
     "description": "A boy with closed eyes.",
     "createdDate": "2026-01-01",
@@ -320,12 +392,16 @@
       "sketch",
       "contemplative"
     ],
+    "groups": [
+      "Portrait"
+    ],
     "medium": "Pencil",
     "imageUrl": "/.netlify/functions/image?file=2026/boy_with_closed_eyes.webp",
     "thumbnailUrl": "/.netlify/functions/image?file=2026/boy_with_closed_eyes.webp"
   },
   {
     "id": "art-021",
+    "addedDate": "2026-08-26",
     "title": "Me and My Better Half I",
     "description": "A tender double portrait of a loving couple.",
     "createdDate": "2026-01-01",
@@ -337,12 +413,16 @@
       "pencil",
       "sketch"
     ],
+    "groups": [
+      "Portrait"
+    ],
     "medium": "Pencil",
     "imageUrl": "/.netlify/functions/image?file=2026/me_and_my_better_half_1.webp",
     "thumbnailUrl": "/.netlify/functions/image?file=2026/me_and_my_better_half_1.webp"
   },
   {
     "id": "art-022",
+    "addedDate": "2026-08-27",
     "title": "Me and My Better Half II",
     "description": "A second intimate study of a loving couple.",
     "createdDate": "2026-01-01",
@@ -354,12 +434,16 @@
       "pencil",
       "sketch"
     ],
+    "groups": [
+      "Portrait"
+    ],
     "medium": "Pencil",
     "imageUrl": "/.netlify/functions/image?file=2026/me_and_my_better_half_2.webp",
     "thumbnailUrl": "/.netlify/functions/image?file=2026/me_and_my_better_half_2.webp"
   },
   {
     "id": "art-023",
+    "addedDate": "2026-08-28",
     "title": "Parrot and Woman",
     "description": "A portrait of a woman with a parrot perched on her shoulder.",
     "createdDate": "2026-01-01",
@@ -371,12 +455,16 @@
       "pencil",
       "sketch"
     ],
+    "groups": [
+      "Portrait"
+    ],
     "medium": "Pencil",
     "imageUrl": "/.netlify/functions/image?file=2026/parrot_and_woman.webp",
     "thumbnailUrl": "/.netlify/functions/image?file=2026/parrot_and_woman.webp"
   },
   {
     "id": "art-024",
+    "addedDate": "2026-08-29",
     "title": "Tree by the Fence",
     "description": "A tree by the fence.",
     "createdDate": "2026-01-01",
@@ -388,12 +476,16 @@
       "pencil",
       "sketch"
     ],
+    "groups": [
+      "Landscape"
+    ],
     "medium": "Pencil",
     "imageUrl": "/.netlify/functions/image?file=2026/tree_by_the_fence.webp",
     "thumbnailUrl": "/.netlify/functions/image?file=2026/tree_by_the_fence.webp" 
   },
   {
     "id": "art-025",
+    "addedDate": "2026-08-30",
     "title": "Elephant Man (v1)",
     "description": "A surreal portrait merging human features with an elephant's trunk and tusks.",
     "createdDate": "2026-08-20",
@@ -407,8 +499,47 @@
       "elephant",
       "digital"
     ],
+    "groups": [
+      "Fantastical"
+    ],
     "medium": "Pencil, marker and watercolor. Digital",
     "imageUrl": "/.netlify/functions/image?file=2026/elephant_man_v1.webp",
     "thumbnailUrl": "/.netlify/functions/image?file=2026/elephant_man_v1.webp"
+  },
+  {
+    "id": "art-026",
+    "addedDate": "2026-08-31",
+    "title": "Atelje Kopiko Logo",
+    "description": "Around the year 2012 I started a Illustartion and Set design company with a colluge. We called it Atelje Kopiko. This is the logo I made for it.",
+    "createdDate": "2012-01-01",
+    "category": "Illustration",
+    "tags": [
+      "pencil",
+      "atelje kopiko",
+      "watercolor"
+    ],
+    "groups": [
+      "Atelje Kopiko"
+    ],
+    "medium": "Pencil, Water color pencils and Water color",
+    "imageUrl": "/.netlify/functions/image?file=2012/atelje_kopiko_logo.webp",
+    "thumbnailUrl": "/.netlify/functions/image?file=2012/atelje_kopiko_logo.webp"
+  },
+    {
+    "id": "art-027",
+    "addedDate": "2026-09-01",
+    "title": "A sketch of a remoted controlled cat",
+    "description": "I really liked the idea of remote cintrolled pets and a cat seems like a perfect candidate for that.",
+    "createdDate": "2010-01-01",
+    "category": "Concept Art",
+    "tags": [
+      "pencil"
+    ],
+    "groups": [
+      "Fantastical"
+    ],
+    "medium": "Pencil",
+    "imageUrl": "/.netlify/functions/image?file=2010/remote_controlled_cat.webp",
+    "thumbnailUrl": "/.netlify/functions/image?file=2010/remote_controlled_cat.webp"
   }
 ]

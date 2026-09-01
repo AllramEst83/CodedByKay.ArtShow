@@ -4,7 +4,7 @@ let state = {
   searchQuery: '',
   selectedCategories: new Set(),
   selectedTags: new Set(),
-  sortBy: 'date-desc',
+  sortBy: 'added-date-desc',
   timelineDate: null,      // Date object or null (null = no timeline filter)
   timelineInvert: false    // false = show on/before, true = show on/after
 };
@@ -252,12 +252,15 @@ function renderBadges() {
 
   if (state.timelineDate !== null) {
     const arrow = state.timelineInvert ? '≥' : '≤';
-    createBadge(`Date ${arrow} ${formatDate(state.timelineDate)}`, () => {
-      // Reset slider to max (show all)
+    createBadge(`Created date ${arrow} ${formatDate(state.timelineDate)}`, () => {
+      // Reset slider to max (show all) and clear invert mode
       const slider = document.getElementById('timeline-slider');
+      const invertCheckbox = document.getElementById('timeline-invert');
+      state.timelineDate = null;
+      state.timelineInvert = false;
+      if (invertCheckbox) invertCheckbox.checked = false;
       if (slider) {
         slider.value = slider.max;
-        state.timelineDate = null;
         updateTimelineLabel(slider, Number(slider.min), Number(slider.max));
       }
       applyFilters();
@@ -319,6 +322,8 @@ function applyFilters() {
   filtered.sort((a, b) => {
     if (state.sortBy === 'date-desc') return new Date(b.createdDate) - new Date(a.createdDate);
     if (state.sortBy === 'date-asc') return new Date(a.createdDate) - new Date(b.createdDate);
+    if (state.sortBy === 'added-date-desc') return new Date(b.addedDate) - new Date(a.addedDate);
+    if (state.sortBy === 'added-date-asc') return new Date(a.addedDate) - new Date(b.addedDate);
     if (state.sortBy === 'title-asc') return a.title.localeCompare(b.title);
     return 0;
   });
