@@ -232,23 +232,6 @@ html.hide-ads .fake-ad {
   }
 }
 
-@media (max-width: 380px) {
-  .ads-toggle__label {
-    display: none;
-  }
-  .switch {
-    width: 34px;
-    height: 20px;
-  }
-  .switch__thumb {
-    width: 14px;
-    height: 14px;
-  }
-  .switch input:checked ~ .switch__track .switch__thumb {
-    transform: translateX(14px);
-  }
-}
-
 
 /* Controls */
 main {
@@ -470,6 +453,8 @@ main {
 /* Hide when gutter is too narrow (< 150px each side) */
 @media (max-width: 1700px) {
   .fake-ad { display: none; }
+  /* Ads aren't shown at this width, so the toggle has nothing to control */
+  .ads-toggle { display: none; }
 }
 
 /* Gallery Grid */
