@@ -83,13 +83,17 @@
       <div class="search-container">
         <input type="search" id="search-input" placeholder="Search artwork..." aria-label="Search artwork">
       </div>
+      <div class="view-toggle" role="group" aria-label="View mode">
+        <button id="view-grid-btn" class="btn view-toggle-btn is-active" aria-pressed="true">Grid</button>
+        <button id="view-groups-btn" class="btn view-toggle-btn" aria-pressed="false">Groups</button>
+      </div>
       <div class="filter-container">
         <button id="filter-btn" class="btn" aria-haspopup="true" aria-expanded="false">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg>
           Filter & Sort
         </button>
         <div id="filter-popover" class="filter-popover" hidden>
-          <div class="filter-section">
+          <div class="filter-section" id="sort-filter-section">
             <h3>Sort By</h3>
             <label><input type="radio" name="sort" value="date-desc" checked> Date (Newest)</label>
             <label><input type="radio" name="sort" value="date-asc"> Date (Oldest)</label>
@@ -118,6 +122,11 @@
       <div id="gallery-loading" class="loading-state" role="status" aria-live="polite">
         <div class="spinner" aria-hidden="true"></div>
         <p class="loading-text">Loading artwork...</p>
+      </div>
+      <div id="group-breadcrumb" class="group-breadcrumb" hidden>
+        <button id="back-to-groups-btn" class="btn-text">&larr; All Groups</button>
+        <span class="group-breadcrumb-label">Group:</span>
+        <span id="group-breadcrumb-name" class="group-breadcrumb-name"></span>
       </div>
       <div id="gallery" class="gallery-grid" role="region" aria-label="Artwork Gallery">
         <!-- Gallery cards will be injected here -->
