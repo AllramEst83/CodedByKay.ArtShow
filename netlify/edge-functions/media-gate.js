@@ -1,9 +1,10 @@
-// Gatekeeper for raw artwork files (assets/drawings/**). Runs at the Netlify
-// edge in front of static asset serving — it never touches the file bytes
-// itself, it only decides whether the request may proceed. On a pass,
-// context.next() hands off to Netlify's normal static/CDN pipeline, so
-// images and video get full edge caching and native HTTP Range support
-// with no size limits and no custom streaming code.
+// Gatekeeper for raw artwork files (assets/drawings/**) and their Image CDN
+// transforms (/.netlify/images). Runs at the Netlify edge in front of both
+// pipelines — it never touches the file bytes itself, it only decides
+// whether the request may proceed. On a pass, context.next() hands off to
+// Netlify's normal static/CDN or Image CDN pipeline, so images and video
+// get full edge caching and native HTTP Range support with no size limits
+// and no custom streaming code.
 //
 // Mirrors the origin/referer allowlist that used to live in
 // netlify/functions/image.js: same ALLOWED_ORIGINS env var, same
@@ -45,4 +46,4 @@ export default async (request, context) => {
   return context.next();
 };
 
-export const config = { path: '/assets/drawings/*' };
+export const config = { path: ['/assets/drawings/*', '/.netlify/images/*'] };

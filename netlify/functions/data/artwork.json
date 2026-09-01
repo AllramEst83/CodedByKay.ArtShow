@@ -16,7 +16,7 @@
     ],
     "medium": "Pencil, Water color and Fine liner",
     "imageUrl": "/assets/drawings/2010/mom-and-grandma.webp",
-    "thumbnailUrl": "/assets/drawings/2010/mom-and-grandma.webp"
+    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2010%2Fmom-and-grandma.webp&w=600&q=75"
   },
   {
     "id": "art-002",
@@ -35,7 +35,7 @@
     ],
     "medium": "Pencil and watercolor",
     "imageUrl": "/assets/drawings/2009/my-son.webp",
-    "thumbnailUrl": "/assets/drawings/2009/my-son.webp"
+    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2009%2Fmy-son.webp&w=600&q=75"
   },
   {
     "id": "art-003",
@@ -55,7 +55,7 @@
     ],
     "medium": "Pencil",
     "imageUrl": "/assets/drawings/2010/old-lady.webp",
-    "thumbnailUrl": "/assets/drawings/2010/old-lady.webp"
+    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2010%2Fold-lady.webp&w=600&q=75"
   },
   {
     "id": "art-004",
@@ -74,7 +74,7 @@
     ],
     "medium": "Pencil",
     "imageUrl": "/assets/drawings/2010/portrait-of-girl-with-deer-eyes.webp",
-    "thumbnailUrl": "/assets/drawings/2010/portrait-of-girl-with-deer-eyes.webp"
+    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2010%2Fportrait-of-girl-with-deer-eyes.webp&w=600&q=75"
   },
   {
     "id": "art-005",
@@ -95,7 +95,7 @@
     ],
     "medium": "Pencil",
     "imageUrl": "/assets/drawings/2009/yggdrasil.webp",
-    "thumbnailUrl": "/assets/drawings/2009/yggdrasil.webp"
+    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2009%2Fyggdrasil.webp&w=600&q=75"
   },
   {
     "id": "art-006",
@@ -116,7 +116,7 @@
     ],
     "medium": "Photography / Costume",
     "imageUrl": "/assets/drawings/2009/air-schoold-project.webp",
-    "thumbnailUrl": "/assets/drawings/2009/air-schoold-project.webp"
+    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2009%2Fair-schoold-project.webp&w=600&q=75"
   },
   {
     "id": "art-007",
@@ -137,7 +137,7 @@
     ],
     "medium": "Photography / Body Paint",
     "imageUrl": "/assets/drawings/2009/fire-schoold-project.webp",
-    "thumbnailUrl": "/assets/drawings/2009/fire-schoold-project.webp"
+    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2009%2Ffire-schoold-project.webp&w=600&q=75"
   },
   {
     "id": "art-008",
@@ -158,7 +158,7 @@
     ],
     "medium": "Photography / Body Paint",
     "imageUrl": "/assets/drawings/2009/water-schoold-project.webp",
-    "thumbnailUrl": "/assets/drawings/2009/water-schoold-project.webp"
+    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2009%2Fwater-schoold-project.webp&w=600&q=75"
   },
   {
     "id": "art-009",
@@ -180,7 +180,7 @@
     ],
     "medium": "Pencil, Watercolor & Fine Liner",
     "imageUrl": "/assets/drawings/2025/insect-demon.webp",
-    "thumbnailUrl": "/assets/drawings/2025/insect-demon.webp"
+    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2025%2Finsect-demon.webp&w=600&q=75"
   },
   {
     "id": "art-010",
@@ -202,7 +202,7 @@
     ],
     "medium": "Pencil",
     "imageUrl": "/assets/drawings/2025/tentacle-nightmare.webp",
-    "thumbnailUrl": "/assets/drawings/2025/tentacle-nightmare.webp"
+    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2025%2Ftentacle-nightmare.webp&w=600&q=75"
   },
   {
     "id": "art-011",
@@ -221,7 +221,7 @@
     ],
     "medium": "Pencil",
     "imageUrl": "/assets/drawings/2023/ant_cup.webp",
-    "thumbnailUrl": "/assets/drawings/2023/ant_cup.webp"
+    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2023%2Fant_cup.webp&w=600&q=75"
   },
   {
     "id": "art-012",
@@ -238,7 +238,7 @@
     ],
     "medium": "Pencil",
     "imageUrl": "/assets/drawings/2023/eyes_and_nose.webp",
-    "thumbnailUrl": "/assets/drawings/2023/eyes_and_nose.webp"
+    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2023%2Feyes_and_nose.webp&w=600&q=75"
   },
   {
     "id": "art-013",
@@ -259,7 +259,7 @@
     ],
     "medium": "Pencil",
     "imageUrl": "/assets/drawings/2023/segloria.webp",
-    "thumbnailUrl": "/assets/drawings/2023/segloria.webp"
+    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2023%2Fsegloria.webp&w=600&q=75"
   },
   {
     "id": "art-014",
@@ -280,7 +280,7 @@
     ],
     "medium": "Pencil",
     "imageUrl": "/assets/drawings/2023/the_sacrifice.webp",
-    "thumbnailUrl": "/assets/drawings/2023/the_sacrifice.webp"
+    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2023%2Fthe_sacrifice.webp&w=600&q=75"
   },
   {
     "id": "art-015",
@@ -301,7 +301,7 @@
     ],
     "medium": "Pencil",
     "imageUrl": "/assets/drawings/2024/demon_beast.webp",
-    "thumbnailUrl": "/assets/drawings/2024/demon_beast.webp"
+    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2024%2Fdemon_beast.webp&w=600&q=75"
   },
   {
     "id": "art-016",
@@ -322,7 +322,7 @@
     ],
     "medium": "Pencil",
     "imageUrl": "/assets/drawings/2024/kid_reading_in_by_the_light.webp",
-    "thumbnailUrl": "/assets/drawings/2024/kid_reading_in_by_the_light.webp"
+    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2024%2Fkid_reading_in_by_the_light.webp&w=600&q=75"
   },
   {
     "id": "art-017",
@@ -342,7 +342,7 @@
     ],
     "medium": "Pencil",
     "imageUrl": "/assets/drawings/2024/mug_shot.webp",
-    "thumbnailUrl": "/assets/drawings/2024/mug_shot.webp"
+    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2024%2Fmug_shot.webp&w=600&q=75"
   },
   {
     "id": "art-018",
@@ -363,7 +363,7 @@
     ],
     "medium": "Pencil",
     "imageUrl": "/assets/drawings/2024/pencil_mantis.webp",
-    "thumbnailUrl": "/assets/drawings/2024/pencil_mantis.webp"
+    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2024%2Fpencil_mantis.webp&w=600&q=75"
   },
   {
     "id": "art-019",
@@ -383,7 +383,7 @@
     ],
     "medium": "Pencil",
     "imageUrl": "/assets/drawings/2026/boy_with_cap.webp",
-    "thumbnailUrl": "/assets/drawings/2026/boy_with_cap.webp"
+    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2026%2Fboy_with_cap.webp&w=600&q=75"
   },
   {
     "id": "art-020",
@@ -403,7 +403,7 @@
     ],
     "medium": "Pencil",
     "imageUrl": "/assets/drawings/2026/boy_with_closed_eyes.webp",
-    "thumbnailUrl": "/assets/drawings/2026/boy_with_closed_eyes.webp"
+    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2026%2Fboy_with_closed_eyes.webp&w=600&q=75"
   },
   {
     "id": "art-021",
@@ -424,7 +424,7 @@
     ],
     "medium": "Pencil",
     "imageUrl": "/assets/drawings/2026/me_and_my_better_half_1.webp",
-    "thumbnailUrl": "/assets/drawings/2026/me_and_my_better_half_1.webp"
+    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2026%2Fme_and_my_better_half_1.webp&w=600&q=75"
   },
   {
     "id": "art-022",
@@ -445,7 +445,7 @@
     ],
     "medium": "Pencil",
     "imageUrl": "/assets/drawings/2026/me_and_my_better_half_2.webp",
-    "thumbnailUrl": "/assets/drawings/2026/me_and_my_better_half_2.webp"
+    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2026%2Fme_and_my_better_half_2.webp&w=600&q=75"
   },
   {
     "id": "art-023",
@@ -466,7 +466,7 @@
     ],
     "medium": "Pencil",
     "imageUrl": "/assets/drawings/2026/parrot_and_woman.webp",
-    "thumbnailUrl": "/assets/drawings/2026/parrot_and_woman.webp"
+    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2026%2Fparrot_and_woman.webp&w=600&q=75"
   },
   {
     "id": "art-024",
@@ -487,7 +487,7 @@
     ],
     "medium": "Pencil",
     "imageUrl": "/assets/drawings/2026/tree_by_the_fence.webp",
-    "thumbnailUrl": "/assets/drawings/2026/tree_by_the_fence.webp"
+    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2026%2Ftree_by_the_fence.webp&w=600&q=75"
   },
   {
     "id": "art-025",
@@ -510,7 +510,7 @@
     ],
     "medium": "Pencil, marker and watercolor. Digital",
     "imageUrl": "/assets/drawings/2026/elephant_man_v1.webp",
-    "thumbnailUrl": "/assets/drawings/2026/elephant_man_v1.webp"
+    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2026%2Felephant_man_v1.webp&w=600&q=75"
   },
   {
     "id": "art-026",
@@ -529,7 +529,7 @@
     ],
     "medium": "Pencil, Water color pencils and Water color",
     "imageUrl": "/assets/drawings/2012/atelje_kopiko_logo.webp",
-    "thumbnailUrl": "/assets/drawings/2012/atelje_kopiko_logo.webp"
+    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2012%2Fatelje_kopiko_logo.webp&w=600&q=75"
   },
   {
     "id": "art-027",
@@ -546,7 +546,7 @@
     ],
     "medium": "Pencil",
     "imageUrl": "/assets/drawings/2010/remote_controlled_cat.webp",
-    "thumbnailUrl": "/assets/drawings/2010/remote_controlled_cat.webp"
+    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2010%2Fremote_controlled_cat.webp&w=600&q=75"
   },
   {
     "id": "art-028",
@@ -570,7 +570,7 @@
       "Fantastical"
     ],
     "medium": "Video",
-    "thumbnailUrl": "/assets/drawings/2026/elephant_man_v1_video_thumb.webp",
+    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2026%2Felephant_man_v1_video_thumb.webp&w=600&q=75",
     "videoUrl": "/assets/drawings/2026/elephant_man_v1_video.mp4"
   }
 ]
