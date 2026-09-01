@@ -563,6 +563,6 @@
     "groups": ["Fantastical"],
     "medium": "Video",
     "thumbnailUrl": "/.netlify/functions/image?file=2026/elephant_man_v1_video_thumb.webp",
-    "videoUrl": "/.netlify/functions/image?file=2026/elephant_man_v1_video.mp4"
+    "videoUrl": "/.netlify/functions/video-stream?file=2026/elephant_man_v1_video.mp4"
   }
 ]
