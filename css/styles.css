@@ -275,23 +275,37 @@ main {
 /* View Mode Toggle (Grid / Groups) */
 .view-toggle {
   display: flex;
+  gap: 0.25rem;
+  padding: 0.25rem;
   border-radius: var(--radius-full);
-  overflow: hidden;
+  background-color: var(--color-bg-secondary);
   border: 1px solid var(--color-border);
-  box-shadow: var(--shadow-sm);
 }
 .view-toggle-btn {
-  border-radius: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.55rem 1.1rem;
+  border-radius: var(--radius-full);
   border: none;
+  background: transparent;
   box-shadow: none;
-  padding: 0.75rem 1.25rem;
+  color: var(--color-text-secondary);
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color var(--transition-speed), color var(--transition-speed), box-shadow var(--transition-speed);
 }
-.view-toggle-btn + .view-toggle-btn {
-  border-left: 1px solid var(--color-border);
+.view-toggle-btn svg {
+  flex-shrink: 0;
+}
+.view-toggle-btn:hover:not(.is-active) {
+  background-color: var(--color-surface-hover);
+  color: var(--color-text-primary);
 }
 .view-toggle-btn.is-active {
   background-color: var(--color-accent);
   color: var(--color-accent-text);
+  box-shadow: var(--shadow-sm);
 }
 
 .btn {
