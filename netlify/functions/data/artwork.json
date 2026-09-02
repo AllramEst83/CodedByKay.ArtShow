@@ -7,12 +7,14 @@
     "createdDate": "2010-01-15",
     "category": "Portraits",
     "tags": [
-      "family",
       "portrait",
-      "watercolor"
+      "family",
+      "pencil",
+      "watercolor",
+      "ink"
     ],
     "groups": [
-      "Portrait"
+      "Portraits"
     ],
     "medium": "Pencil, Water color and Fine liner",
     "imageUrl": "/assets/drawings/2010/mom-and-grandma.webp",
@@ -26,9 +28,10 @@
     "createdDate": "2009-03-22",
     "category": "Portraits",
     "tags": [
-      "family",
       "portrait",
-      "pencil"
+      "family",
+      "pencil",
+      "watercolor"
     ],
     "groups": [
       "Portraits"
@@ -43,11 +46,9 @@
     "title": "Old Lady",
     "description": "Character study exploring the depth and story written in aged features.",
     "createdDate": "2010-05-10",
-    "category": "Studies",
+    "category": "Portraits",
     "tags": [
-      "character",
       "portrait",
-      "ink",
       "pencil"
     ],
     "groups": [
@@ -84,11 +85,10 @@
     "createdDate": "2009-07-04",
     "category": "Illustration",
     "tags": [
-      "norse",
       "mythology",
-      "pencil",
       "fantasy",
-      "illustration"
+      "creature",
+      "pencil"
     ],
     "groups": [
       "Mythology"
@@ -105,11 +105,8 @@
     "createdDate": "2009-08-10",
     "category": "Concept Art",
     "tags": [
-      "elements",
-      "concept",
       "photography",
-      "school-project",
-      "air"
+      "school-project"
     ],
     "groups": [
       "School project"
@@ -126,11 +123,8 @@
     "createdDate": "2009-08-10",
     "category": "Concept Art",
     "tags": [
-      "elements",
-      "concept",
       "photography",
-      "school-project",
-      "fire"
+      "school-project"
     ],
     "groups": [
       "School project"
@@ -147,11 +141,8 @@
     "createdDate": "2009-08-10",
     "category": "Concept Art",
     "tags": [
-      "elements",
-      "concept",
       "photography",
-      "school-project",
-      "water"
+      "school-project"
     ],
     "groups": [
       "School project"
@@ -169,11 +160,10 @@
     "category": "Illustration",
     "tags": [
       "fantasy",
-      "illustration",
-      "insect",
       "creature",
+      "pencil",
       "watercolor",
-      "pencil"
+      "ink"
     ],
     "groups": [
       "Fantastical"
@@ -192,9 +182,8 @@
     "tags": [
       "fantasy",
       "horror",
-      "illustration",
-      "pencil",
       "creature",
+      "pencil",
       "sketch"
     ],
     "groups": [
@@ -213,8 +202,9 @@
     "category": "Illustration",
     "tags": [
       "humor",
-      "sketch",
-      "pencil"
+      "animal",
+      "pencil",
+      "sketch"
     ],
     "groups": [
       "Fantastical"
@@ -229,9 +219,8 @@
     "title": "Eyes and Nose",
     "description": "A close-up face through a rectangular border",
     "createdDate": "2023-01-01",
-    "category": "Studies",
+    "category": "Portraits",
     "tags": [
-      "face",
       "portrait",
       "pencil",
       "sketch"
@@ -251,9 +240,6 @@
     "createdDate": "2023-01-01",
     "category": "Architecture",
     "tags": [
-      "architecture",
-      "church",
-      "sweden",
       "pencil",
       "sketch"
     ],
@@ -272,9 +258,8 @@
     "createdDate": "2023-01-01",
     "category": "Illustration",
     "tags": [
-      "dark",
-      "ritual",
       "fantasy",
+      "horror",
       "pencil",
       "sketch"
     ],
@@ -314,9 +299,6 @@
     "createdDate": "2024-01-01",
     "category": "Illustration",
     "tags": [
-      "books",
-      "interior",
-      "cozy",
       "pencil",
       "sketch"
     ],
@@ -336,9 +318,8 @@
     "category": "Illustration",
     "tags": [
       "humor",
-      "character",
-      "sketch",
-      "pencil"
+      "pencil",
+      "sketch"
     ],
     "groups": [
       "Whimsical"
@@ -353,11 +334,10 @@
     "title": "Pencil Mantis",
     "description": "A merge between a mantis and a pencil.",
     "createdDate": "2024-01-01",
-    "category": "Studies",
+    "category": "Illustration",
     "tags": [
-      "insect",
-      "nature",
-      "mantis",
+      "humor",
+      "animal",
       "pencil",
       "sketch"
     ],
@@ -377,12 +357,11 @@
     "category": "Portraits",
     "tags": [
       "portrait",
-      "youth",
       "pencil",
       "sketch"
     ],
     "groups": [
-      "Portrait"
+      "Portraits"
     ],
     "medium": "Pencil",
     "imageUrl": "/assets/drawings/2026/boy_with_cap.webp",
@@ -398,11 +377,10 @@
     "tags": [
       "portrait",
       "pencil",
-      "sketch",
-      "contemplative"
+      "sketch"
     ],
     "groups": [
-      "Portrait"
+      "Portraits"
     ],
     "medium": "Pencil",
     "imageUrl": "/assets/drawings/2026/boy_with_closed_eyes.webp",
@@ -417,13 +395,12 @@
     "category": "Portraits",
     "tags": [
       "portrait",
-      "couple",
       "family",
       "pencil",
       "sketch"
     ],
     "groups": [
-      "Portrait"
+      "Portraits"
     ],
     "medium": "Pencil",
     "imageUrl": "/assets/drawings/2026/me_and_my_better_half_1.webp",
@@ -438,13 +415,12 @@
     "category": "Portraits",
     "tags": [
       "portrait",
-      "couple",
       "family",
       "pencil",
       "sketch"
     ],
     "groups": [
-      "Portrait"
+      "Portraits"
     ],
     "medium": "Pencil",
     "imageUrl": "/assets/drawings/2026/me_and_my_better_half_2.webp",
@@ -460,12 +436,11 @@
     "tags": [
       "portrait",
       "animal",
-      "parrot",
       "pencil",
       "sketch"
     ],
     "groups": [
-      "Portrait"
+      "Portraits"
     ],
     "medium": "Pencil",
     "imageUrl": "/assets/drawings/2026/parrot_and_woman.webp",
@@ -479,9 +454,7 @@
     "createdDate": "2026-01-01",
     "category": "Landscape",
     "tags": [
-      "landscape",
       "nature",
-      "tree",
       "pencil",
       "sketch"
     ],
@@ -501,11 +474,10 @@
     "category": "Portraits",
     "tags": [
       "portrait",
-      "character",
       "surreal",
-      "sketch",
-      "color",
-      "elephant",
+      "pencil",
+      "marker",
+      "watercolor",
       "digital"
     ],
     "groups": [
@@ -524,7 +496,6 @@
     "category": "Illustration",
     "tags": [
       "pencil",
-      "atelje kopiko",
       "watercolor"
     ],
     "groups": [
@@ -542,7 +513,10 @@
     "createdDate": "2010-01-01",
     "category": "Concept Art",
     "tags": [
-      "pencil"
+      "humor",
+      "animal",
+      "pencil",
+      "sketch"
     ],
     "groups": [
       "Fantastical"
@@ -560,14 +534,9 @@
     "createdDate": "2026-08-20",
     "category": "Video",
     "tags": [
-      "video",
-      "digital",
       "portrait",
-      "character",
       "surreal",
-      "sketch",
-      "color",
-      "elephant"
+      "digital"
     ],
     "groups": [
       "Fantastical"
@@ -585,11 +554,9 @@
     "category": "Portraits",
     "tags": [
       "portrait",
-      "character",
       "surreal",
-      "sketch",
-      "color",
-      "elephant",
+      "pencil",
+      "watercolor",
       "digital"
     ],
     "groups": [
@@ -608,14 +575,8 @@
     "createdDate": "2026-09-02",
     "category": "Video",
     "tags": [
-      "video",
-      "digital",
       "portrait",
-      "character",
       "surreal",
-      "sketch",
-      "color",
-      "elephant",
       "digital"
     ],
     "groups": [
@@ -633,9 +594,10 @@
     "createdDate": "2004-09-22",
     "category": "Illustration",
     "tags": [
-      "pencil",
       "school-project",
-      "marker"
+      "pencil",
+      "marker",
+      "ink"
     ],
     "groups": [
       "School project"
@@ -652,9 +614,10 @@
     "createdDate": "2004-09-22",
     "category": "Illustration",
     "tags": [
-      "pencil",
       "school-project",
-      "marker"
+      "pencil",
+      "marker",
+      "ink"
     ],
     "groups": [
       "School project"
@@ -663,9 +626,7 @@
     "imageUrl": "/assets/drawings/2004/gabriel_chive_2.webp",
     "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2004%2Fgabriel_chive_2.webp&w=600&q=75"
   },
-
-
-    {
+  {
     "id": "art-033",
     "addedDate": "2026-09-02",
     "title": "Tatue design Original",
@@ -674,9 +635,8 @@
     "category": "Illustration",
     "tags": [
       "pencil",
-      "tatue",
-      "marker",
-      "fine-liner"
+      "watercolor",
+      "ink"
     ],
     "groups": [
       "Whimsical"
@@ -685,7 +645,7 @@
     "imageUrl": "/assets/drawings/2010/gabriel_chives_tatue_original.webp",
     "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2010%2Fgabriel_chives_tatue_original.webp&w=600&q=75"
   },
-    {
+  {
     "id": "art-034",
     "addedDate": "2026-09-02",
     "title": "Gabriel gräslök (2/2)",
@@ -693,15 +653,215 @@
     "createdDate": "2010-01-01",
     "category": "Illustration",
     "tags": [
+      "school-project",
       "pencil",
-      "marker",
-      "fine-liner"
+      "watercolor"
     ],
     "groups": [
-      "Whimsical"
+      "School project"
     ],
     "medium": "Pencil, Water color pencils and Water color",
     "imageUrl": "/assets/drawings/2010/sketch_gabriel_chives.webp",
     "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2010%2Fsketch_gabriel_chives.webp&w=600&q=75"
+  },
+  {
+    "id": "art-035",
+    "addedDate": "2026-09-02",
+    "createdDate": "2012-01-01",
+    "title": "Atelje Kopiko Website back button",
+    "description": "I created this illustartion for the Atelje Kopiko website. Atelje Kopiko was me and a friends buisness we started around 2012. We did illustartion and set design for theater and film.",
+    "category": "Illustration",
+    "tags": [
+      "pencil",
+      "watercolor"      
+    ],
+    "groups": [
+      "Atelje Kopiko"
+    ],
+    "medium": "Pencil, Water color pencils and Water color",
+    "imageUrl": "/assets/drawings/2012/atelje_kopiko_back_button.webp",
+    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2012%2Fatelje_kopiko_back_button.webp&w=600&q=75"
+  },
+    {
+    "id": "art-036",
+    "addedDate": "2026-09-02",
+    "createdDate": "2012-01-01",
+    "title": "Atelje Kopiko blue flower",
+    "description": "I created this illustartion for the Atelje Kopiko website, but right now I dont remember what for. Atelje Kopiko was me and a friends buisness we started around 2012. We did illustartion and set design for theater and film.",
+    "category": "Illustration",
+    "tags": [
+      "pencil",
+      "watercolor"
+    ],
+    "groups": [
+      "Atelje Kopiko"
+    ],
+    "medium": "Pencil, Water color pencils and Water color",
+    "imageUrl": "/assets/drawings/2012/atelje_kopiko_blue_flower.webp",
+    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2012%2Fatelje_kopiko_blue_flower.webp&w=600&q=75"
+  },
+    {
+    "id": "art-038",
+    "addedDate": "2026-09-02",
+    "createdDate": "2012-01-01",
+    "title": "Atelje Kopiko home button",
+    "description": "I created this illustartion for the Atelje Kopiko website. It was the webiste home button. Atelje Kopiko was me and a friends buisness we started around 2012. We did illustartion and set design for theater and film.",
+    "category": "Illustration",
+    "tags": [
+      "pencil",
+      "watercolor"
+    ],
+    "groups": [
+      "Atelje Kopiko"
+    ],
+    "medium": "",
+    "imageUrl": "/assets/drawings/2012/atelje_kopiko_home.webp",
+    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2012%2Fatelje_kopiko_home.webp&w=600&q=75"
+  },
+  {
+    "id": "art-038",
+    "addedDate": "2026-09-02",
+    "createdDate": "2012-01-01",
+    "title": "Atelje Kopiko Lady bug (1/2)",
+    "description": "This illustartion was created for the Atelje Kopiko website. It was the company signature logo, a lady bug. My first born sin used to call lady bugs 'Kopiko'. Taht is where we got the name from. Atelje Kopiko was me and a friends buisness we started around 2012. We did illustartion and set design for theater and film.",
+    "category": "Illustration",
+    "tags": [
+      "pencil",
+      "watercolor"
+    ],
+    "groups": [
+      "Atelje Kopiko"
+    ],
+    "medium": "",
+    "imageUrl": "/assets/drawings/2012/atelje_kopiko_lady_bug_closed_wings.webp",
+    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2012%2Fatelje_kopiko_lady_bug_closed_wings.webp&w=600&q=75"
+  },
+  {
+    "id": "art-039",
+    "addedDate": "2026-09-02",
+    "createdDate": "2012-01-01",
+    "title": "Atelje Kopiko Lady bug (2/2)",
+    "description": "This illustartion was created for the Atelje Kopiko website. It was the company signature logo, a lady bug. My first born sin used to call lady bugs 'Kopiko'. That is  were we got the name from. Atelje Kopiko was me and a friends buisness we started around 2012. We did illustartion and set design for theater and film.",
+    "category": "Illustration",
+    "tags": [
+      "pencil",
+      "watercolor"
+    ],
+    "groups": [
+      "Atelje Kopiko"
+    ],
+    "medium": "",
+    "imageUrl": "/assets/drawings/2012/atelje_kopiko_lady_bug_wings_open.webp",
+    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2012%2Fatelje_kopiko_lady_bug_wings_open.webp&w=600&q=75"
+  },
+  {
+    "id": "art-040",
+    "addedDate": "2026-09-02",
+    "createdDate": "2012-01-01",
+    "title": "Atelje Kopiko Portfolio",
+    "description": "This illustartion was created for the Atelje Kopiko website. This was the icon representing the portfolio. Atelje Kopiko was me and a friends buisness we started around 2012. We did illustartion and set design for theater and film.",
+    "category": "Illustration",
+    "tags": [
+      "pencil",
+      "watercolor"
+    ],
+    "groups": [
+      "Atelje Kopiko"
+    ],
+    "medium": "",
+    "imageUrl": "/assets/drawings/2012/atelje_kopiko_portfolio.webp",
+    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2012%2Fatelje_kopiko_portfolio.webp&w=600&q=75"
+  },
+  {
+    "id": "art-041",
+    "addedDate": "2026-09-02",
+    "createdDate": "2012-01-01",
+    "title": "Atelje Kopiko Resume",
+    "description": "This illustartion was created for the Atelje Kopiko website. This was the icon representing both our resumes. Atelje Kopiko was me and a friends buisness we started around 2012. We did illustartion and set design for theater and film.",
+    "category": "Illustration",
+    "tags": [
+      "pencil",
+      "watercolor"
+    ],
+    "groups": [
+      "Atelje Kopiko"
+    ],
+    "medium": "",
+    "imageUrl": "/assets/drawings/2012/atelje_kopiko_resume.webp",
+    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2012%2Fatelje_kopiko_resume.webp&w=600&q=75"
+  },
+  {
+    "id": "art-042",
+    "addedDate": "2026-09-02",
+    "createdDate": "2012-01-01",
+    "title": "Atelje Kopiko (Self porttrait)",
+    "description": "This illustartion was created for the Atelje Kopiko website. This was the self porttrait I had on the website. Atelje Kopiko was me and a friends buisness we started around 2012. We did illustartion and set design for theater and film.",
+    "category": "Illustration",
+    "tags": [
+      "pencil",
+      "watercolor"
+    ],
+    "groups": [
+      "Atelje Kopiko"
+    ],
+    "medium": "",
+    "imageUrl": "/assets/drawings/2012/atelje_kopiko_self_portrait_oval_frame.webp",
+    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2012%2Fatelje_kopiko_self_portrait_oval_frame.webp&w=600&q=75"
+  },
+  {
+    "id": "art-043",
+    "addedDate": "2026-09-02",
+    "createdDate": "2012-01-01",
+    "title": "Atelje Kopiko Tools of the trade",
+    "description": "This illustartion was created for the Atelje Kopiko website. This illustration represented the tools of the trade. what tools we used to create things we made. Atelje Kopiko was me and a friends buisness we started around 2012. We did illustartion and set design for theater and film.",
+    "category": "Illustration",
+    "tags": [
+      "pencil",
+      "watercolor"
+    ],
+    "groups": [
+      "Atelje Kopiko"
+    ],
+    "medium": "",
+    "imageUrl": "/assets/drawings/2012/atelje_kopiko_the_tools_of_the_trade.webp",
+    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2012%2Fatelje_kopiko_the_tools_of_the_trade.webp&w=600&q=75"
+  },
+  {
+    "id": "art-044",
+    "addedDate": "2026-09-02",
+    "createdDate": "2012-01-01",
+    "title": "Atelje Kopiko (Self porttrait orange) 1/2",
+    "description": "This is a self-portrait of me around the same time I did illusatrions for our website Atelje Kopiko. This illustration never made it to the website, but I liked it and kept it. Atelje Kopiko was me and a friends buisness we started around 2012. We did illustartion and set design for theater and film.",
+    "category": "Illustration",
+    "tags": [
+      "pencil",
+      "watercolor"
+    ],
+    "groups": [
+      "Atelje Kopiko"
+    ],
+    "medium": "",
+    "imageUrl": "/assets/drawings/2012/self_portrait_orange_cloths.webp",
+    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2012%2Fself_portrait_orange_cloths.webp&w=600&q=75"
+  },
+  {
+    "id": "art-045",
+    "addedDate": "2026-09-02",
+    "createdDate": "2012-01-01",
+    "title": "Atelje Kopiko (Self porttrait red) 2/2",
+    "description": "This is a self-portrait of me around the same time I did illusatrions for our website Atelje Kopiko. This illustration never made it to the website, but I liked it and kept it. Atelje Kopiko was me and a friends buisness we started around 2012. We did illustartion and set design for theater and film.",
+    "category": "Illustration",
+    "tags": [
+      "pencil",
+      "watercolor"
+    ],
+    "groups": [
+      "Atelje Kopiko"
+    ],
+    "medium": "",
+    "imageUrl": "/assets/drawings/2012/self_portrait_red_cloths.webp",
+    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2012%2Fself_portrait_red_cloths.webp&w=600&q=75"
   }
 ]
+
+
