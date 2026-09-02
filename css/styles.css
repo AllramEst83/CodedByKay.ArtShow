@@ -844,6 +844,8 @@ main {
   /* Push controls area up so the video doesn't sit under the icon buttons */
   padding-bottom: 3.5rem;
   box-sizing: border-box;
+  opacity: 1;
+  transition: opacity 0.2s ease;
 }
 
 .lightbox-error-fallback {
@@ -979,11 +981,42 @@ main {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.2s ease;
+  opacity: 1;
 }
 .lightbox-image.zoomed {
   transform: scale(2);
   cursor: zoom-out;
+}
+/* Hide the outgoing image/video the instant a new item starts loading (no
+   transition — a fade-out would keep the stale frame visible and reproduce
+   the flicker), then fade the new one in via the transition above once it
+   finishes loading and this class is removed. */
+.lightbox-image.is-loading,
+.lightbox-video.is-loading {
+  opacity: 0;
+  transition: none;
+}
+
+.lightbox-loading {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 15;
+  pointer-events: none;
+}
+.lightbox-loading[hidden] {
+  display: none;
+}
+.lightbox-loading .spinner {
+  width: 44px;
+  height: 44px;
+  /* Lightbox background is always black regardless of theme, so the ring
+     needs a fixed light track — only the accent (spin) color follows the theme. */
+  border-color: rgba(255, 255, 255, 0.25);
+  border-top-color: var(--color-accent);
 }
 
 .lightbox-controls {

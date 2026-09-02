@@ -109,16 +109,17 @@ function openLightbox(item) {
 function closeLightbox() {
   if (isFullscreen) exitFullscreen();
   stopCurrentVideo();
-  
+
   const lightbox = document.getElementById('lightbox');
   lightbox.classList.remove('is-open');
-  
+
   const content = document.querySelector('.lightbox-content');
   if (content) content.classList.remove('info-active');
-  
+
   setTimeout(() => {
     lightbox.hidden = true;
     document.body.style.overflow = '';
+    clearLightboxMedia();
   }, 300); // var(--transition-speed)
 }
 
@@ -129,6 +130,34 @@ function stopCurrentVideo() {
     existing.src = '';
     existing.remove();
   }
+}
+
+// Empty out the image/video so a stale frame from the last-viewed item can't
+// flash on screen while the next item's media is still loading.
+function clearLightboxMedia() {
+  const img = document.getElementById('lightbox-image');
+  if (img) {
+    img.onload = null;
+    img.onerror = null;
+    img.removeAttribute('src');
+    img.classList.remove('is-loading', 'zoomed');
+  }
+  stopCurrentVideo();
+  hideLoading();
+
+  const container = document.querySelector('.lightbox-image-container');
+  const oldError = container?.querySelector('.lightbox-error-fallback');
+  if (oldError) oldError.remove();
+}
+
+function showLoading() {
+  const loading = document.getElementById('lightbox-loading');
+  if (loading) loading.hidden = false;
+}
+
+function hideLoading() {
+  const loading = document.getElementById('lightbox-loading');
+  if (loading) loading.hidden = true;
 }
 
 function updateLightboxContent() {
@@ -146,24 +175,36 @@ function updateLightboxContent() {
   const zoomBtn = document.getElementById('lightbox-zoom');
   if (zoomBtn) zoomBtn.style.display = isVideo ? 'none' : '';
 
+  showLoading();
+
   if (isVideo) {
     // Hide static image
     const img = document.getElementById('lightbox-image');
-    if (img) img.style.display = 'none';
+    if (img) {
+      img.style.display = 'none';
+      img.onload = null;
+      img.onerror = null;
+      img.removeAttribute('src');
+    }
 
     stopCurrentVideo();
 
     const video = document.createElement('video');
     video.id = 'lightbox-video';
-    video.className = 'lightbox-video';
+    video.className = 'lightbox-video is-loading';
     video.controls = true;
     video.autoplay = true;
     video.muted = true;
     video.playsInline = true;
-    video.src = currentItem.videoUrl;
     video.setAttribute('aria-label', currentItem.title);
 
+    video.addEventListener('loadeddata', () => {
+      video.classList.remove('is-loading');
+      hideLoading();
+    });
+
     video.onerror = () => {
+      hideLoading();
       video.remove();
       if (container && !container.querySelector('.lightbox-error-fallback')) {
         const errDiv = document.createElement('div');
@@ -189,6 +230,7 @@ function updateLightboxContent() {
     } else if (container) {
       container.appendChild(video);
     }
+    video.src = currentItem.videoUrl;
   } else {
     // Image path
     stopCurrentVideo();
@@ -196,11 +238,17 @@ function updateLightboxContent() {
     const img = document.getElementById('lightbox-image');
     if (img) {
       img.style.display = 'block';
-      img.src = currentItem.imageUrl;
       img.alt = currentItem.title;
-      img.className = 'lightbox-image';
-      
+      img.className = 'lightbox-image is-loading';
+
+      img.onload = () => {
+        img.classList.remove('is-loading');
+        hideLoading();
+      };
+
       img.onerror = () => {
+        hideLoading();
+        img.classList.remove('is-loading');
         img.style.display = 'none';
         if (container && !container.querySelector('.lightbox-error-fallback')) {
           const errDiv = document.createElement('div');
@@ -217,15 +265,19 @@ function updateLightboxContent() {
             retryBtn.addEventListener('click', () => {
               errDiv.remove();
               img.style.display = 'block';
+              img.classList.add('is-loading');
+              showLoading();
               const cacheBuster = (currentItem.imageUrl.includes('?') ? '&' : '?') + 'retry=' + Date.now();
               img.src = currentItem.imageUrl + cacheBuster;
             });
           }
         }
       };
+
+      img.src = currentItem.imageUrl;
     }
   }
-  
+
   document.getElementById('lightbox-title').textContent = currentItem.title;
   document.getElementById('lightbox-category').textContent = currentItem.category;
   document.getElementById('lightbox-date').textContent = formatDate(currentItem.createdDate);
