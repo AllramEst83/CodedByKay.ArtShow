@@ -12,7 +12,7 @@
       "watercolor"
     ],
     "groups": [
-      "portrait"
+      "Portrait"
     ],
     "medium": "Pencil, Water color and Fine liner",
     "imageUrl": "/assets/drawings/2010/mom-and-grandma.webp",
@@ -31,7 +31,7 @@
       "pencil"
     ],
     "groups": [
-      "portrait"
+      "Portraits"
     ],
     "medium": "Pencil and watercolor",
     "imageUrl": "/assets/drawings/2009/my-son.webp",
@@ -51,7 +51,7 @@
       "pencil"
     ],
     "groups": [
-      "portrait"
+      "Portraits"
     ],
     "medium": "Pencil",
     "imageUrl": "/assets/drawings/2010/old-lady.webp",
@@ -70,7 +70,7 @@
       "sketch"
     ],
     "groups": [
-      "portrait"
+      "Portraits"
     ],
     "medium": "Pencil",
     "imageUrl": "/assets/drawings/2010/portrait-of-girl-with-deer-eyes.webp",
@@ -235,6 +235,9 @@
       "portrait",
       "pencil",
       "sketch"
+    ],
+    "groups":[
+      "Whimsical"
     ],
     "medium": "Pencil",
     "imageUrl": "/assets/drawings/2023/eyes_and_nose.webp",
@@ -509,8 +512,8 @@
       "Fantastical"
     ],
     "medium": "Pencil, marker and watercolor. Digital",
-    "imageUrl": "/assets/drawings/2026/elephant_man_v1.webp",
-    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2026%2Felephant_man_v1.webp&w=600&q=75"
+    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2026%2Felephant_man_v1.webp&w=600&q=75",
+    "imageUrl": "/assets/drawings/2026/elephant_man_v1.webp"
   },
   {
     "id": "art-026",
@@ -570,7 +573,30 @@
       "Fantastical"
     ],
     "medium": "Video",
-    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2026%2Felephant_man_v1_video_thumb.webp&w=600&q=75",
-    "videoUrl": "/assets/drawings/2026/elephant_man_v1_video.mp4"
+    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2026%2Fvideo%2Felephant_man_v1_video_thumb.webp&w=600&q=75",
+    "videoUrl": "/assets/drawings/2026/video/elephant_man_v1_video.mp4"
+  },
+    {
+    "id": "art-029",
+    "title": "Elephant Man (V2)",
+    "description": "The second iteration of the Elephant man. A surreal portrait merging human features with an elephant's trunk and tusks.",
+    "addedDate": "2026-09-02",
+    "createdDate": "2026-09-01",
+    "category": "Portraits",
+    "tags": [
+      "portrait",
+      "character",
+      "surreal",
+      "sketch",
+      "color",
+      "elephant",
+      "digital"
+    ],
+    "groups": [
+      "Fantastical"
+    ],
+    "medium": "Pencil, and watercolor. Digital",
+    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2026%2Felephant_man_v2.webp&w=600&q=75",
+    "imageUrl": "/assets/drawings/2026/elephant_man_v2.webp"
   }
 ]
