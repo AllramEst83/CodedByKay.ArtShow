@@ -101,6 +101,13 @@ export function renderGallery(items) {
       badge.setAttribute('aria-hidden', 'true');
       badge.innerHTML = `<svg width="36" height="36" viewBox="0 0 24 24" fill="white" stroke="none"><circle cx="12" cy="12" r="12" fill="rgba(0,0,0,0.55)"/><polygon points="10,8 18,12 10,16" fill="white"/></svg>`;
       imgWrapper.appendChild(badge);
+
+      // Video ribbon — folded corner banner, bottom-right
+      const ribbon = document.createElement('div');
+      ribbon.className = 'card-video-ribbon';
+      ribbon.setAttribute('aria-hidden', 'true');
+      ribbon.innerHTML = '<span>Video</span>';
+      imgWrapper.appendChild(ribbon);
     }
 
     article.appendChild(imgWrapper);
