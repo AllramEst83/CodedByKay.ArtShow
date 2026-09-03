@@ -126,6 +126,7 @@ function closeLightbox() {
 function stopCurrentVideo() {
   const existing = document.getElementById('lightbox-video');
   if (existing) {
+    existing.onerror = null;
     existing.pause();
     existing.src = '';
     existing.remove();
