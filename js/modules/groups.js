@@ -1,8 +1,10 @@
 import { filteredArtwork } from './gallery.js';
 
 const STORAGE_KEY = 'artshow_view_mode';
+const GROUP_BY_STORAGE_KEY = 'artshow_group_by_mode';
 
 let viewMode = localStorage.getItem(STORAGE_KEY) === 'groups' ? 'groups' : 'grid';
+let groupByMode = localStorage.getItem(GROUP_BY_STORAGE_KEY) === 'year' ? 'year' : 'name';
 let activeGroup = null;
 let onChange = null;
 
@@ -12,18 +14,26 @@ export function initGroups(onUpdate) {
   const gridBtn = document.getElementById('view-grid-btn');
   const groupsBtn = document.getElementById('view-groups-btn');
   const backBtn = document.getElementById('back-to-groups-btn');
+  const groupByNameBtn = document.getElementById('group-by-name-btn');
+  const groupByYearBtn = document.getElementById('group-by-year-btn');
 
   gridBtn.addEventListener('click', () => setViewMode('grid'));
   groupsBtn.addEventListener('click', () => setViewMode('groups'));
   backBtn.addEventListener('click', () => {
     activeGroup = null;
     updateSortVisibility();
+    updateGroupByToggleVisibility();
     updateBreadcrumb();
     onChange();
   });
 
+  if (groupByNameBtn) groupByNameBtn.addEventListener('click', () => setGroupByMode('name'));
+  if (groupByYearBtn) groupByYearBtn.addEventListener('click', () => setGroupByMode('year'));
+
   updateToggleUI();
+  updateGroupByToggleUI();
   updateSortVisibility();
+  updateGroupByToggleVisibility();
   updateBreadcrumb();
 }
 
@@ -34,6 +44,18 @@ function setViewMode(mode) {
   localStorage.setItem(STORAGE_KEY, mode);
   updateToggleUI();
   updateSortVisibility();
+  updateGroupByToggleVisibility();
+  updateBreadcrumb();
+  onChange();
+}
+
+function setGroupByMode(mode) {
+  if (groupByMode === mode) return;
+  groupByMode = mode;
+  activeGroup = null;
+  localStorage.setItem(GROUP_BY_STORAGE_KEY, mode);
+  updateGroupByToggleUI();
+  updateSortVisibility();
   updateBreadcrumb();
   onChange();
 }
@@ -41,6 +63,7 @@ function setViewMode(mode) {
 function selectGroup(name) {
   activeGroup = name;
   updateSortVisibility();
+  updateGroupByToggleVisibility();
   updateBreadcrumb();
   onChange();
 }
@@ -54,6 +77,21 @@ function updateToggleUI() {
   groupsBtn.setAttribute('aria-pressed', String(viewMode === 'groups'));
 }
 
+function updateGroupByToggleUI() {
+  const nameBtn = document.getElementById('group-by-name-btn');
+  const yearBtn = document.getElementById('group-by-year-btn');
+  if (!nameBtn || !yearBtn) return;
+  nameBtn.classList.toggle('is-active', groupByMode === 'name');
+  nameBtn.setAttribute('aria-pressed', String(groupByMode === 'name'));
+  yearBtn.classList.toggle('is-active', groupByMode === 'year');
+  yearBtn.setAttribute('aria-pressed', String(groupByMode === 'year'));
+}
+
+function updateGroupByToggleVisibility() {
+  const toggle = document.getElementById('group-by-toggle');
+  if (toggle) toggle.hidden = !(viewMode === 'groups' && !activeGroup);
+}
+
 function updateSortVisibility() {
   const sortSection = document.getElementById('sort-filter-section');
   if (sortSection) sortSection.hidden = viewMode === 'groups' && !activeGroup;
@@ -61,10 +99,12 @@ function updateSortVisibility() {
 
 function updateBreadcrumb() {
   const breadcrumb = document.getElementById('group-breadcrumb');
+  const labelEl = document.getElementById('group-breadcrumb-label');
   const nameEl = document.getElementById('group-breadcrumb-name');
   if (!breadcrumb) return;
   if (viewMode === 'groups' && activeGroup) {
     breadcrumb.hidden = false;
+    if (labelEl) labelEl.textContent = groupByMode === 'year' ? 'Year:' : 'Group:';
     if (nameEl) nameEl.textContent = activeGroup;
   } else {
     breadcrumb.hidden = true;
@@ -79,10 +119,19 @@ export function getActiveGroup() {
   return activeGroup;
 }
 
+// Pieces without a valid createdDate have no year bucket to belong to.
+function getItemYear(item) {
+  const year = new Date(item.createdDate).getFullYear();
+  return Number.isNaN(year) ? null : String(year);
+}
+
 // The artwork list pagination/lightbox should walk: everything filtered in
-// grid mode, or only the active group's items when one is selected.
+// grid mode, or only the active group's/year's items when one is selected.
 export function getScopedArtwork() {
   if (viewMode === 'groups' && activeGroup) {
+    if (groupByMode === 'year') {
+      return filteredArtwork.filter(item => getItemYear(item) === activeGroup);
+    }
     return filteredArtwork.filter(item => Array.isArray(item.groups) && item.groups.includes(activeGroup));
   }
   return filteredArtwork;
@@ -90,6 +139,23 @@ export function getScopedArtwork() {
 
 export function computeGroupBoxes() {
   const groups = new Map();
+
+  if (groupByMode === 'year') {
+    filteredArtwork.forEach(item => {
+      const year = getItemYear(item);
+      if (!year) return;
+      if (!groups.has(year)) groups.set(year, []);
+      groups.get(year).push(item);
+    });
+
+    return [...groups.entries()]
+      .map(([name, items]) => ({
+        name,
+        count: items.length,
+        cover: items.slice().sort((a, b) => new Date(b.createdDate) - new Date(a.createdDate))[0]
+      }))
+      .sort((a, b) => b.name.localeCompare(a.name));
+  }
 
   filteredArtwork.forEach(item => {
     if (!Array.isArray(item.groups)) return;
