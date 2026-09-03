@@ -131,9 +131,14 @@
         <div class="spinner" aria-hidden="true"></div>
         <p class="loading-text">Loading artwork...</p>
       </div>
+      <div id="group-by-toggle" class="group-by-toggle" hidden role="group" aria-label="Group by">
+        <span class="group-by-toggle-label">Group by:</span>
+        <button id="group-by-name-btn" class="group-by-toggle-btn is-active" aria-pressed="true">Name</button>
+        <button id="group-by-year-btn" class="group-by-toggle-btn" aria-pressed="false">Year</button>
+      </div>
       <div id="group-breadcrumb" class="group-breadcrumb" hidden>
         <button id="back-to-groups-btn" class="btn-text">&larr; All Groups</button>
-        <span class="group-breadcrumb-label">Group:</span>
+        <span id="group-breadcrumb-label" class="group-breadcrumb-label">Group:</span>
         <span id="group-breadcrumb-name" class="group-breadcrumb-name"></span>
       </div>
       <div id="gallery" class="gallery-grid" role="region" aria-label="Artwork Gallery">

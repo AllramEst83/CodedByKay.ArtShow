@@ -512,6 +512,43 @@ main {
   .ads-toggle { display: none; }
 }
 
+/* Group By Toggle (Name / Year) */
+.group-by-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 1.5rem;
+}
+.group-by-toggle[hidden] {
+  display: none;
+}
+.group-by-toggle-label {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  margin-right: 0.15rem;
+}
+.group-by-toggle-btn {
+  padding: 0.4rem 0.9rem;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-surface);
+  color: var(--color-text-secondary);
+  font-weight: 500;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color var(--transition-speed), color var(--transition-speed), box-shadow var(--transition-speed);
+}
+.group-by-toggle-btn:hover:not(.is-active) {
+  background-color: var(--color-surface-hover);
+  color: var(--color-text-primary);
+}
+.group-by-toggle-btn.is-active {
+  background-color: var(--color-accent);
+  color: var(--color-accent-text);
+  border-color: transparent;
+  box-shadow: var(--shadow-sm);
+}
+
 /* Group Breadcrumb */
 .group-breadcrumb {
   display: flex;
