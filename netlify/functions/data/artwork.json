@@ -714,7 +714,7 @@
     "groups": [
       "Atelje Kopiko"
     ],
-    "medium": "",
+    "medium": "Pencil, Water color pencils and Water color",
     "imageUrl": "/assets/drawings/2012/atelje_kopiko_home.webp",
     "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2012%2Fatelje_kopiko_home.webp&w=600&q=75"
   },
@@ -732,7 +732,7 @@
     "groups": [
       "Atelje Kopiko"
     ],
-    "medium": "",
+    "medium": "Pencil, Water color pencils and Water color",
     "imageUrl": "/assets/drawings/2012/atelje_kopiko_lady_bug_closed_wings.webp",
     "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2012%2Fatelje_kopiko_lady_bug_closed_wings.webp&w=600&q=75"
   },
@@ -750,7 +750,7 @@
     "groups": [
       "Atelje Kopiko"
     ],
-    "medium": "",
+    "medium": "Pencil, Water color pencils and Water color",
     "imageUrl": "/assets/drawings/2012/atelje_kopiko_lady_bug_wings_open.webp",
     "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2012%2Fatelje_kopiko_lady_bug_wings_open.webp&w=600&q=75"
   },
@@ -768,7 +768,7 @@
     "groups": [
       "Atelje Kopiko"
     ],
-    "medium": "",
+    "medium": "Pencil, Water color pencils and Water color",
     "imageUrl": "/assets/drawings/2012/atelje_kopiko_portfolio.webp",
     "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2012%2Fatelje_kopiko_portfolio.webp&w=600&q=75"
   },
@@ -786,7 +786,7 @@
     "groups": [
       "Atelje Kopiko"
     ],
-    "medium": "",
+    "medium": "Pencil, Water color pencils and Water color",
     "imageUrl": "/assets/drawings/2012/atelje_kopiko_resume.webp",
     "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2012%2Fatelje_kopiko_resume.webp&w=600&q=75"
   },
@@ -804,7 +804,7 @@
     "groups": [
       "Atelje Kopiko"
     ],
-    "medium": "",
+    "medium": "Pencil, Water color pencils and Water color",
     "imageUrl": "/assets/drawings/2012/atelje_kopiko_self_portrait_oval_frame.webp",
     "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2012%2Fatelje_kopiko_self_portrait_oval_frame.webp&w=600&q=75"
   },
@@ -822,7 +822,7 @@
     "groups": [
       "Atelje Kopiko"
     ],
-    "medium": "",
+    "medium": "Pencil, Water color pencils and Water color",
     "imageUrl": "/assets/drawings/2012/atelje_kopiko_the_tools_of_the_trade.webp",
     "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2012%2Fatelje_kopiko_the_tools_of_the_trade.webp&w=600&q=75"
   },
@@ -840,7 +840,7 @@
     "groups": [
       "Portraits"
     ],
-    "medium": "",
+    "medium": "Pencil, Water color pencils and Water color",
     "imageUrl": "/assets/drawings/2012/self_portrait_orange_cloths.webp",
     "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2012%2Fself_portrait_orange_cloths.webp&w=600&q=75"
   },
@@ -858,9 +858,164 @@
     "groups": [
       "Portraits"
     ],
-    "medium": "",
+    "medium": "Pencil, Water color pencils and Water color",
     "imageUrl": "/assets/drawings/2012/self_portrait_red_cloths.webp",
     "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2012%2Fself_portrait_red_cloths.webp&w=600&q=75"
+  },
+  {
+    "id": "art-046",
+    "addedDate": "2026-09-03",
+    "createdDate": "2011-01-01",
+    "title": "Study of an Octopus",
+    "description": "For a time I got really into drawing water creatures, and specifically octopuses.",
+    "category": "Illustration",
+    "tags": [
+      "animal",
+      "nature",
+      "pencil",
+      "sketch"
+    ],
+    "groups": [
+      "Studies"
+    ],
+    "medium": "Pencil",
+    "imageUrl": "/assets/drawings/2011/octopus_study.webp",
+    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2011%2Foctopus_study.webp&w=600&q=75"
+  },
+  {
+    "id": "art-047",
+    "addedDate": "2026-09-03",
+    "createdDate": "2011-01-01",
+    "title": "Guardian of the holy grail",
+    "description": "I made this drawing while I was into robots and two legged machines. The name is a story I made up while visualizing the drawing.",
+    "category": "Illustration",
+    "tags": [
+      "robot",
+      "pencil",
+      "sketch"
+    ],
+    "groups": [
+      "Fantastical"
+    ],
+    "medium": "Pencil",
+    "imageUrl": "/assets/drawings/2011/guardian_of_the_holy_grail.webp",
+    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2011%2Fguardian_of_the_holy_grail.webp&w=600&q=75"
+  },
+  {
+    "id": "art-048",
+    "addedDate": "2026-09-03",
+    "createdDate": "2011-01-01",
+    "title": "Walking bot (Exploration edition)",
+    "description": "I made this drawing while I was into robots and two legged machines. This robot was supposed to explore unknown planets and terrain.",
+    "category": "Illustration",
+    "tags": [
+      "robot",
+      "pencil",
+      "sketch"
+    ],
+    "groups": [
+      "Fantastical"
+    ],
+    "medium": "Pencil",
+    "imageUrl": "/assets/drawings/2011/walking_bot_exploration_edition.webp",
+    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2011%2Fwalking_bot_exploration_edition.webp&w=600&q=75"
+  },
+  {
+    "id": "art-049",
+    "addedDate": "2026-09-03",
+    "createdDate": "2011-01-01",
+    "title": "Walking Cabriolet 1/2",
+    "description": "I made this drawing while watching a series called 'Eureka'. The intro had a hovering car which made me think of a walking car somehow.",
+    "category": "Illustration",
+    "tags": [
+      "car",
+      "robot",
+      "pencil",
+      "sketch"
+    ],
+    "groups": [
+      "Fantastical"
+    ],
+    "medium": "Pencil",
+    "imageUrl": "/assets/drawings/2011/walking_cabriolet_1.webp",
+    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2011%2Fwalking_cabriolet_1.webp&w=600&q=75"
+  },
+  {
+    "id": "art-050",
+    "addedDate": "2026-09-03",
+    "createdDate": "2011-01-01",
+    "title": "Walking Cabriolet 2/2",
+    "description": "I made this drawing while watching a series called 'Eureka'. The intro had a hovering car which made me think of a walking car somehow.",
+    "category": "Illustration",
+    "tags": [
+      "car",
+      "robot",
+      "pencil",
+      "sketch"
+    ],
+    "groups": [
+      "Fantastical"
+    ],
+    "medium": "Pencil",
+    "imageUrl": "/assets/drawings/2011/walking_cabriolet_2.webp",
+    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2011%2Fwalking_cabriolet_2.webp&w=600&q=75"
+  },
+  {
+    "id": "art-051",
+    "addedDate": "2026-09-03",
+    "createdDate": "2011-01-01",
+    "title": "Walking bot (Home edition)",
+    "description": "I made this drawing while I was into robots and two legged machines. I imagined this robot to have been created in the year 1932 and steam powered with visible moving parts on outside of its shell.",
+    "category": "Illustration",
+    "tags": [
+      "robot",
+      "pencil",
+      "sketch"
+    ],
+    "groups": [
+      "Fantastical"
+    ],
+    "medium": "Pencil",
+    "imageUrl": "/assets/drawings/2011/walking_bot_home_edition.webp",
+    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2011%2Fwalking_bot_home_edition.webp&w=600&q=75"
+  },
+  {
+    "id": "art-052",
+    "addedDate": "2026-09-03",
+    "createdDate": "2011-01-01",
+    "title": "Walking hunter craft",
+    "description": "I made this drawing while I was into robots and two legged machines. I was heavily inspired by the game Dishonored and the stilt-walkers (Stilt-police).",
+    "category": "Illustration",
+    "tags": [
+      "robot",
+      "pencil",
+      "sketch"
+    ],
+    "groups": [
+      "Fantastical"
+    ],
+    "medium": "Pencil",
+    "imageUrl": "/assets/drawings/2011/walking_hunter_craft.webp",
+    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2011%2Fwalking_hunter_craft.webp&w=600&q=75"
+  },
+  {
+    "id": "art-053",
+    "addedDate": "2026-09-03",
+    "createdDate": "2011-01-01",
+    "title": "Walking Mech",
+    "description": "I made this drawing while I was into robots and two legged machines. This was my attempt at creating a mech.",
+    "category": "Illustration",
+    "tags": [
+      "robot",
+      "pencil",
+      "sketch"
+    ],
+    "groups": [
+      "Fantastical"
+    ],
+    "medium": "Pencil",
+    "imageUrl": "/assets/drawings/2011/walking_mech.webp",
+    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2011%2Fwalking_mech.webp&w=600&q=75"
   }
 ]
 
