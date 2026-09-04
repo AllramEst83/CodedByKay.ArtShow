@@ -139,6 +139,37 @@ from your machine when you add or edit artwork.
 - `thumbnailUrl` stops being a Netlify Image CDN query string and becomes a
   plain R2 CDN path, generated once at `add`/`publish` time instead of
   re-derived by Netlify on every request.
+- Today's `imageUrl` is a **relative path** (`/assets/drawings/2010/...`),
+  because the file is same-origin, served by Netlify itself. Once files live
+  on R2 — a different origin — every URL in the JSON has to become
+  **absolute**.
+- **Don't use the bucket's `r2.dev` URL.** It's explicitly dev/test-only:
+  no Cloudflare caching, no CDN, and a variable rate limit that returns
+  `429`s under real traffic. Use a **custom domain attached to the R2
+  bucket** (e.g. `cdn.art.codedbykay.se`) — that's what actually gets you
+  Cloudflare's edge caching, i.e. the CDN behavior this migration is
+  counting on.
+- **SQLite stores the bucket-relative key only** (`R2Key`,
+  `ThumbR2Key` — e.g. `originals/2026/elephant-man-v1.webp`), never a full
+  URL. `publish` derives the absolute URL by combining a config value with
+  that key at generation time:
+
+  ```csharp
+  var imageUrl     = $"{options.R2PublicBaseUrl}/{artwork.R2Key}";
+  var thumbnailUrl = $"{options.R2PublicBaseUrl}/{artwork.ThumbR2Key}";
+  ```
+
+  `R2PublicBaseUrl` (e.g. `https://cdn.art.codedbykay.se`) lives in the
+  publisher's config (env var / `appsettings.json`), not in the database.
+  Same treatment for video — store `VideoProvider` + `VideoId`, derive the
+  Bunny playback URL from a `BunnyPullZoneBaseUrl` config value rather than
+  hardcoding Bunny's domain per record.
+
+  **Why this matters:** if the CDN domain ever changes (provider switch, a
+  staging environment, a new subdomain), it's a one-line config edit and a
+  `publish` re-run — not a migration touching every one of 1,500 rows. The
+  R2 key is the durable fact worth persisting; the URL is just one way of
+  presenting it.
 
 ---
 
@@ -158,8 +189,12 @@ from your machine when you add or edit artwork.
 ### Phase 1 — Stand up R2
 
 1. Create the Cloudflare account + R2 bucket, attach the custom CDN
-   subdomain.
+   subdomain (**not** the bucket's `r2.dev` URL — that has no caching and
+   is rate-limited by design).
 2. Generate an S3-compatible API token scoped to that bucket only.
+3. Set `R2PublicBaseUrl` in the publisher's config to the custom domain —
+   every generated `imageUrl`/`thumbnailUrl` is built from this at publish
+   time (see §5), never hardcoded per record.
 
 ### Phase 2 — Build the SQLite catalog + import
 
