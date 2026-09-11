@@ -126,9 +126,8 @@ function closeLightbox() {
 function stopCurrentVideo() {
   const existing = document.getElementById('lightbox-video');
   if (existing) {
-    existing.onerror = null;
-    existing.pause();
-    existing.src = '';
+    // YouTube embed lives in an <iframe> — removing it from the DOM stops
+    // playback in every current browser, no postMessage player API needed.
     existing.remove();
   }
 }
@@ -190,39 +189,21 @@ function updateLightboxContent() {
 
     stopCurrentVideo();
 
-    const video = document.createElement('video');
+    const video = document.createElement('iframe');
     video.id = 'lightbox-video';
     video.className = 'lightbox-video is-loading';
-    video.controls = true;
-    video.autoplay = true;
-    video.muted = true;
-    video.playsInline = true;
+    video.title = currentItem.title;
     video.setAttribute('aria-label', currentItem.title);
+    video.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+    video.allowFullscreen = true;
+    video.frameBorder = '0';
 
-    video.addEventListener('loadeddata', () => {
+    // Fires on embed load, not guaranteed-playable — same honesty level the
+    // old <video> "loadeddata" listener had while the clip was buffering.
+    video.addEventListener('load', () => {
       video.classList.remove('is-loading');
       hideLoading();
     });
-
-    video.onerror = () => {
-      hideLoading();
-      video.remove();
-      if (container && !container.querySelector('.lightbox-error-fallback')) {
-        const errDiv = document.createElement('div');
-        errDiv.className = 'lightbox-error-fallback';
-        errDiv.innerHTML = `
-          <span class="error-emoji" aria-hidden="true">🎬🙈</span>
-          <h3>Oops, we seem to have an issue...</h3>
-          <p>Couldn't load the video "${currentItem.title}".</p>
-          <button id="lightbox-retry-btn" class="btn btn-retry">Retry Loading 🔄</button>
-        `;
-        container.appendChild(errDiv);
-        errDiv.querySelector('#lightbox-retry-btn')?.addEventListener('click', () => {
-          errDiv.remove();
-          updateLightboxContent();
-        });
-      }
-    };
 
     // Insert before .lightbox-controls so it sits behind the control bar
     const controls = container?.querySelector('.lightbox-controls');
@@ -231,7 +212,7 @@ function updateLightboxContent() {
     } else if (container) {
       container.appendChild(video);
     }
-    video.src = currentItem.videoUrl;
+    video.src = `${currentItem.videoUrl}?autoplay=1&mute=1&rel=0`;
   } else {
     // Image path
     stopCurrentVideo();

@@ -18,14 +18,14 @@ model that scales to 20 years of art, costs $0–3/month, and fits a solo
                         ┌──────────────────────────┼───────────────────────┐
                         ▼                          ▼                       ▼
                 ┌───────────────┐         ┌─────────────────┐    ┌──────────────────┐
-                │ Cloudflare R2  │         │ static JSON files │    │ Bunny Stream       │
-                │ (images only)  │         │ committed to repo  │    │ (video, separate)   │
-                └───────┬───────┘         └─────────┬───────┘    └─────────┬────────┘
-                        │                            │                       │
+                │ Cloudflare R2  │         │ static JSON files │    │ YouTube            │
+                │ (images only)  │         │ committed to repo  │    │ (video, Kay uploads │
+                └───────┬───────┘         └─────────┬───────┘    │  manually)          │
+                        │                            │            └─────────┬────────┘
                         └──────────────┬─────────────┴───────────┬──────────┘
                                         ▼                         ▼
                                   Netlify (static site) ── fetches JSON, renders
-                                  <img src="R2 CDN url">   <video src="Bunny url">
+                                  <img src="R2 CDN url">   <iframe src="youtube-nocookie.com/embed/id">
 ```
 
 **Key principle:** there is exactly one writer (you) and no deadline on writes.
@@ -43,7 +43,7 @@ this stays free.
 - One bucket (e.g. `codedbykay-artshow`), objects laid out the same way
   `assets/drawings/` is today: `originals/<year>/<slug>.webp`,
   `thumbs/<year>/<slug>-600w.webp`.
-- Attach a custom subdomain (e.g. `cdn.art.codedbykay.se`) to the bucket —
+- Attach a custom subdomain (e.g. `kaysartshow.fyi`, what's actually in use) to the bucket —
   Cloudflare's edge network then *is* the CDN, no separate image-CDN product
   needed, and it replaces what Netlify Image CDN does today.
 - Thumbnails are generated **once, at publish time**, not on every request —
@@ -75,9 +75,7 @@ this stays free.
     OriginalPath  TEXT NOT NULL,      -- local file path at import time
     R2Key         TEXT,               -- originals/2026/foo.webp (images only)
     ThumbR2Key    TEXT,               -- thumbs/2026/foo-600w.webp (images only)
-    VideoProvider TEXT,               -- 'bunny' | null
-    VideoId       TEXT,               -- provider's video/asset id
-    VideoThumbUrl TEXT
+    VideoId       TEXT                -- YouTube video id (video items only); thumbnail is derived from it, not stored
   );
 
   CREATE TABLE ArtworkTags   (ArtworkId TEXT, Tag TEXT);
@@ -91,20 +89,32 @@ this stays free.
   concurrency and availability problem you don't have — one writer, no
   uptime requirement. SQLite is strictly simpler and costs nothing, forever.
 
-### 3. Video — not object storage, not R2
+### 3. Video — YouTube, not object storage or a dedicated stream provider
 
 Raw MP4 in a bucket has no adaptive bitrate and stalls on a bad connection;
 R2 (or any block-storage product) is the wrong tool for playback, not just
-the wrong price. Options, cheapest/simplest first:
+the wrong price. Bunny Stream was the original plan here (adaptive bitrate,
+your own domain, no on-site branding) but was **dropped 2026-09-11 before
+ever being set up** — no Bunny account, no cost, and Kay decided YouTube's
+$0 and zero-maintenance hosting was worth the tradeoff of YouTube's own
+player chrome inside the embed:
 
 | Option | Cost | Tradeoff |
 |---|---|---|
-| **Bunny Stream** (recommended) | ~$1/mo + $0.005–0.01/GB storage & delivery | Adaptive bitrate, proper player, your own domain, trivial API |
-| Cloudflare Stream | $5 / 1,000 min stored | More than you need at 2 videos, fine if the library grows a lot |
-| Unlisted YouTube embed | $0 | Free forever, but YouTube branding/UI on your art site |
+| **YouTube (decided)** | $0 | Free forever, embedded inline via `youtube-nocookie.com/embed/<id>` (not a redirect to youtube.com) — some YouTube player chrome, but the visitor never leaves the site |
+| Bunny Stream | ~$1/mo + $0.005–0.01/GB storage & delivery | Adaptive bitrate, proper player, your own domain — abandoned before setup |
+| Cloudflare Stream | $5 / 1,000 min stored | More than needed at 2 videos |
 
-Store `VideoProvider` + `VideoId` in SQLite; the publisher writes the
-provider's playback URL into the static JSON, same as `imageUrl` today.
+Upload happens manually through YouTube Studio, not the YouTube Data API —
+an OAuth upload flow (Google Cloud project, consent screen, ~6 uploads/day
+default quota) was judged not worth it for something done rarely. The CLI
+just stores the resulting `VideoId` in SQLite; `publish` derives both the
+embed URL and the thumbnail from it alone:
+
+```csharp
+var videoUrl     = $"https://www.youtube-nocookie.com/embed/{artwork.VideoId}";
+var thumbnailUrl = $"https://img.youtube.com/vi/{artwork.VideoId}/hqdefault.jpg"; // YouTube's own, no upload needed
+```
 
 ### 4. .NET CLI publisher
 
@@ -128,8 +138,9 @@ from your machine when you add or edit artwork.
 
 ### 5. Static JSON output — what the Netlify site actually fetches
 
-- `publish` writes to `netlify/functions/data/artwork.json` (same path,
-  same shape the frontend already expects) — or, once past a few hundred
+- `publish` writes to `data/artwork.json` (same shape the frontend already
+  expects; moved here from `netlify/functions/data/artwork.json` 2026-09-11
+  once no function read it anymore) — or, once past a few hundred
   items, shards it per year (`artwork-2026.json`, `artwork-2025.json`, …)
   to avoid shipping the whole catalog on every page load.
 - `netlify/functions/image.js` can be **retired** once the frontend fetches
@@ -146,9 +157,9 @@ from your machine when you add or edit artwork.
 - **Don't use the bucket's `r2.dev` URL.** It's explicitly dev/test-only:
   no Cloudflare caching, no CDN, and a variable rate limit that returns
   `429`s under real traffic. Use a **custom domain attached to the R2
-  bucket** (e.g. `cdn.art.codedbykay.se`) — that's what actually gets you
-  Cloudflare's edge caching, i.e. the CDN behavior this migration is
-  counting on.
+  bucket** (`kaysartshow.fyi`, what's actually in use) — that's what
+  actually gets you Cloudflare's edge caching, i.e. the CDN behavior this
+  migration is counting on.
 - **SQLite stores the bucket-relative key only** (`R2Key`,
   `ThumbR2Key` — e.g. `originals/2026/elephant-man-v1.webp`), never a full
   URL. `publish` derives the absolute URL by combining a config value with
@@ -159,11 +170,12 @@ from your machine when you add or edit artwork.
   var thumbnailUrl = $"{options.R2PublicBaseUrl}/{artwork.ThumbR2Key}";
   ```
 
-  `R2PublicBaseUrl` (e.g. `https://cdn.art.codedbykay.se`) lives in the
-  publisher's config (env var / `appsettings.json`), not in the database.
-  Same treatment for video — store `VideoProvider` + `VideoId`, derive the
-  Bunny playback URL from a `BunnyPullZoneBaseUrl` config value rather than
-  hardcoding Bunny's domain per record.
+  `R2PublicBaseUrl` (`https://kaysartshow.fyi`) lives in the publisher's
+  config (env var / `appsettings.json`), not in the database. Video rows
+  store just `VideoId` (a YouTube video id) — both the embed URL and the
+  thumbnail are derived from it at publish time against YouTube's fixed,
+  well-known domains, no config value needed for video the way `R2Key`
+  needs `R2PublicBaseUrl`.
 
   **Why this matters:** if the CDN domain ever changes (provider switch, a
   staging environment, a new subdomain), it's a one-line config edit and a
@@ -175,31 +187,35 @@ from your machine when you add or edit artwork.
 
 ## Migration phases
 
-### Phase 0 — Get media out of git history (do this first, independent of everything else)
+### Phase 0 — Get media out of git history (working-tree part done 2026-09-11, history rewrite still deferred)
 
-1. Confirm nothing under `assets/drawings/` is referenced anywhere except
-   `artwork.json` (it isn't, per current audit).
-2. Once files are re-hosted (Phase 2), remove `assets/drawings/` from the
-   working tree and run `git filter-repo` to strip it from history.
-3. **This rewrites history and requires a force-push** — coordinate timing,
+1. ✅ Confirmed nothing under `assets/drawings/` is referenced anywhere
+   except `artwork.json`.
+2. ✅ Files are re-hosted (Phase 2) and confirmed live — `assets/drawings/`
+   removed from the working tree (the two not-yet-migrated videos staged
+   at `ArtShow.Workspace/working-on/videos-to-upload/` first, see §3 Phase 3).
+3. `git filter-repo` to strip it from history **not yet run** — still
+   deliberately last (Phase 5 below).
+4. **This rewrites history and requires a force-push** — coordinate timing,
    make sure no one else has an unpushed clone, and keep a backup of the
    pre-filter repo until the new setup is verified end-to-end.
-4. Expected result: `.git` drops from ~142 MB to low single-digit MB.
+5. Expected result: `.git` drops from ~142 MB to low single-digit MB.
 
-### Phase 1 — Stand up R2
+### Phase 1 — Stand up R2 (done)
 
-1. Create the Cloudflare account + R2 bucket, attach the custom CDN
-   subdomain (**not** the bucket's `r2.dev` URL — that has no caching and
+1. ✅ Cloudflare account + R2 bucket created, custom domain `kaysartshow.fyi`
+   attached (**not** the bucket's `r2.dev` URL — that has no caching and
    is rate-limited by design).
-2. Generate an S3-compatible API token scoped to that bucket only.
-3. Set `R2PublicBaseUrl` in the publisher's config to the custom domain —
+2. ✅ S3-compatible API token generated, scoped to that bucket only.
+3. ✅ `R2PublicBaseUrl` set to the custom domain in the publisher's config —
    every generated `imageUrl`/`thumbnailUrl` is built from this at publish
    time (see §5), never hardcoded per record.
 
-### Phase 2 — Build the SQLite catalog + import
+### Phase 2 — Build the SQLite catalog + import (done, import code since removed)
 
-1. Scaffold `tools/ArtShow.Publisher/` with the EF Core model above.
-2. Run `import`: parses the current `artwork.json`, uploads each file in
+1. Scaffolded `tools/ArtShow.Publisher/` (now `CodedByKay.ArtShow.CLI`)
+   with the EF Core model above.
+2. Ran `import`: parsed the then-current `artwork.json`, uploaded each file in
    `assets/drawings/**` to R2 (originals + freshly generated thumbnails),
    populates SQLite with R2 keys.
 3. Spot-check a handful of records against the live site before trusting
@@ -207,27 +223,32 @@ from your machine when you add or edit artwork.
 
 ### Phase 3 — Video migration
 
-1. Create the Bunny Stream library, upload the two existing videos
-   (`elephant_man_v1_video_2.mp4`, `elephant_man_v2_video.mp4`).
-2. Update the corresponding SQLite rows with `VideoProvider`/`VideoId`.
-3. Confirm playback + range-request seeking works from the Netlify site.
+1. Upload the two existing videos (`elephant_man_v1_video_2.mp4`,
+   `elephant_man_v2_video.mp4` — staged at
+   `ArtShow.Workspace/working-on/videos-to-upload/` after `assets/drawings/`
+   was removed from the site repo) to YouTube via YouTube Studio, manually.
+2. Add each as a catalog row via the CLI's Add artwork → Video (pastes the
+   YouTube id into `VideoId`) — metadata for both is recorded in that
+   staging folder's `README.md`.
+3. Confirm the embed plays inline in the lightbox on the Netlify site.
 
-### Phase 4 — Cut the site over
+### Phase 4 — Cut the site over (done 2026-09-11)
 
-1. Run `publish`, commit the generated JSON, verify the gallery renders
-   identically against R2/Bunny URLs.
-2. Update `js/main.js` to fetch the static JSON file directly (drop the
-   `/.netlify/functions/image` call).
-3. Retire `netlify/functions/image.js`.
-4. Update `netlify/edge-functions/media-gate.js` — it currently gates
-   `/assets/drawings/*` and `/.netlify/images/*`, neither of which exist
-   after this migration. Either retire it, or repoint it at whatever gets
-   added back for hotlink protection on the new CDN domain (R2 custom
-   domains support Cloudflare's own hotlink rules, which can replace this
-   edge function outright).
-5. Update `netlify.toml` — drop the `included_files` bundling for
-   `netlify/functions/data/**` and the `/assets/drawings/*` cache headers
-   (no longer relevant).
+1. ✅ `publish` run, gallery confirmed rendering against real R2 URLs (all
+   51 items' image/thumbnail URLs HEAD-checked 200 on `kaysartshow.fyi`).
+2. ✅ `js/main.js` fetches the static JSON file directly (`/data/artwork.json`,
+   served as a plain static asset — `netlify.toml`'s `publish = "."`
+   already exposes it) instead of calling `/.netlify/functions/image`.
+3. ✅ `netlify/functions/image.js` retired (deleted).
+4. ✅ `netlify/edge-functions/media-gate.js` retired (deleted) — real
+   hotlink protection, if wanted later, is a Cloudflare dashboard setting
+   on the R2 custom domain, not app code.
+5. ✅ `netlify.toml` updated — dropped the `included_files` bundling (no
+   functions left) and the `/assets/drawings/*` cache headers; added a
+   short-TTL cache header for the now-static JSON path instead.
+6. ✅ The entire `netlify/` folder removed — `artwork.json` moved to plain
+   `data/artwork.json` (its old `netlify/functions/data/` path implied a
+   function was still involved; none is).
 
 ### Phase 5 — Execute Phase 0 (git history cleanup)
 
@@ -243,17 +264,18 @@ goes after everything else is proven, not before.
 |---|---|---|
 | R2 storage | 10 GB | $0.015/GB-month |
 | R2 egress | unlimited | $0, always |
-| Bunny Stream | none | ~$1/mo + ~$0.01/GB |
+| YouTube video hosting | unlimited | $0, always |
 | SQLite | n/a — runs locally | $0 |
 | Netlify static hosting | current plan, unchanged | unchanged |
 
-**Expected total: $0/month now, ~$1–3/month once past ~10 GB of images and
-a modest amount of video.**
+**Expected total: $0/month now, ~$1.50/month once past ~10 GB of images
+(video is free on YouTube regardless of volume).**
 
-## Open decisions before starting
+## Open decisions
 
-- [ ] Confirm Bunny Stream vs. YouTube-unlisted for video (cost vs. branding).
+- [x] Bunny Stream vs. YouTube for video — **YouTube**, decided 2026-09-11
+      (see §3).
 - [ ] Decide JSON sharding threshold (single file is fine well past current
-      53 items; shard by year once it's a genuinely large payload).
+      51 items; shard by year once it's a genuinely large payload).
 - [ ] Decide where the SQLite file itself gets backed up (private repo
       folder, R2 object, or both).

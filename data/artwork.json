@@ -1,8 +1,9 @@
 [
   {
-    "id": "art-001",
+    "id": "1",
+    "type": null,
     "addedDate": "2026-08-06",
-    "title": "Mom & Grandma",
+    "title": "Mom \u0026 Grandma",
     "description": "A heartfelt portrait capturing the warmth and bond between generations.",
     "createdDate": "2010-01-15",
     "category": "Portraits",
@@ -17,11 +18,13 @@
       "Portraits"
     ],
     "medium": "Pencil, Water color and Fine liner",
-    "imageUrl": "/assets/drawings/2010/mom-and-grandma.webp",
-    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2010%2Fmom-and-grandma.webp&w=600&q=75"
+    "imageUrl": "https://kaysartshow.fyi/originals/2010/mom-and-grandma.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2010/mom-and-grandma-600w.webp"
   },
   {
-    "id": "art-002",
+    "id": "2",
+    "type": null,
     "addedDate": "2026-08-07",
     "title": "My Son",
     "description": "A tender study of youth and curiosity, drawn with love.",
@@ -37,11 +40,13 @@
       "Portraits"
     ],
     "medium": "Pencil and watercolor",
-    "imageUrl": "/assets/drawings/2009/my-son.webp",
-    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2009%2Fmy-son.webp&w=600&q=75"
+    "imageUrl": "https://kaysartshow.fyi/originals/2009/my-son.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2009/my-son-600w.webp"
   },
   {
-    "id": "art-003",
+    "id": "3",
+    "type": null,
     "addedDate": "2026-08-08",
     "title": "Old Lady",
     "description": "Character study exploring the depth and story written in aged features.",
@@ -55,11 +60,13 @@
       "Portraits"
     ],
     "medium": "Pencil",
-    "imageUrl": "/assets/drawings/2010/old-lady.webp",
-    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2010%2Fold-lady.webp&w=600&q=75"
+    "imageUrl": "https://kaysartshow.fyi/originals/2010/old-lady.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2010/old-lady-600w.webp"
   },
   {
-    "id": "art-004",
+    "id": "4",
+    "type": null,
     "addedDate": "2026-08-09",
     "title": "Portrait of a Girl with Deer Eyes",
     "description": "A delicate pencil portrait capturing an intense, wide-eyed gaze \u2014 signed and dated 2010.",
@@ -74,11 +81,13 @@
       "Portraits"
     ],
     "medium": "Pencil",
-    "imageUrl": "/assets/drawings/2010/portrait-of-girl-with-deer-eyes.webp",
-    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2010%2Fportrait-of-girl-with-deer-eyes.webp&w=600&q=75"
+    "imageUrl": "https://kaysartshow.fyi/originals/2010/portrait-of-girl-with-deer-eyes.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2010/portrait-of-girl-with-deer-eyes-600w.webp"
   },
   {
-    "id": "art-005",
+    "id": "5",
+    "type": null,
     "addedDate": "2026-08-10",
     "title": "Yggdrasil",
     "description": "A sweeping pencil illustration of the Norse world tree \u2014 a monstrous, serpent-entwined giant confronted by a lone warrior, set against a volcanic landscape.",
@@ -94,11 +103,13 @@
       "Mythology"
     ],
     "medium": "Pencil",
-    "imageUrl": "/assets/drawings/2009/yggdrasil.webp",
-    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2009%2Fyggdrasil.webp&w=600&q=75"
+    "imageUrl": "https://kaysartshow.fyi/originals/2009/yggdrasil.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2009/yggdrasil-600w.webp"
   },
   {
-    "id": "art-006",
+    "id": "6",
+    "type": null,
     "addedDate": "2026-08-11",
     "title": "Air \u2014 School Project",
     "description": "An ethereal figure in all white, suspended in stillness \u2014 a creative costume and concept photography piece exploring the element of air.",
@@ -112,11 +123,13 @@
       "School project"
     ],
     "medium": "Photography / Costume",
-    "imageUrl": "/assets/drawings/2009/air-schoold-project.webp",
-    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2009%2Fair-schoold-project.webp&w=600&q=75"
+    "imageUrl": "https://kaysartshow.fyi/originals/2009/air-schoold-project.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2009/air-schoold-project-600w.webp"
   },
   {
-    "id": "art-007",
+    "id": "7",
+    "type": null,
     "addedDate": "2026-08-12",
     "title": "Fire \u2014 School Project",
     "description": "Intense body paint and dramatic lighting bring the element of fire to life \u2014 flames curl from outstretched hands against pitch black.",
@@ -130,11 +143,13 @@
       "School project"
     ],
     "medium": "Photography / Body Paint",
-    "imageUrl": "/assets/drawings/2009/fire-schoold-project.webp",
-    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2009%2Ffire-schoold-project.webp&w=600&q=75"
+    "imageUrl": "https://kaysartshow.fyi/originals/2009/fire-schoold-project.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2009/fire-schoold-project-600w.webp"
   },
   {
-    "id": "art-008",
+    "id": "8",
+    "type": null,
     "addedDate": "2026-08-13",
     "title": "Water \u2014 School Project",
     "description": "A haunting blue-painted figure crawls from a swimming pool in the dark \u2014 a visceral interpretation of the element of water.",
@@ -148,11 +163,13 @@
       "School project"
     ],
     "medium": "Photography / Body Paint",
-    "imageUrl": "/assets/drawings/2009/water-schoold-project.webp",
-    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2009%2Fwater-schoold-project.webp&w=600&q=75"
+    "imageUrl": "https://kaysartshow.fyi/originals/2009/water-schoold-project.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2009/water-schoold-project-600w.webp"
   },
   {
-    "id": "art-009",
+    "id": "9",
+    "type": null,
     "addedDate": "2026-08-14",
     "title": "Insect Demon",
     "description": "An intricate, dark fantasy study of a biomechanical insect creature rendered with fine liner, watercolor washes, and detailed pencil shading.",
@@ -168,12 +185,14 @@
     "groups": [
       "Fantastical"
     ],
-    "medium": "Pencil, Watercolor & Fine Liner",
-    "imageUrl": "/assets/drawings/2025/insect-demon.webp",
-    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2025%2Finsect-demon.webp&w=600&q=75"
+    "medium": "Pencil, Watercolor \u0026 Fine Liner",
+    "imageUrl": "https://kaysartshow.fyi/originals/2025/insect-demon.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2025/insect-demon-600w.webp"
   },
   {
-    "id": "art-010",
+    "id": "10",
+    "type": null,
     "addedDate": "2026-08-15",
     "title": "Tentacle Nightmare",
     "description": "A visceral, horror-inspired graphite illustration depicting a churning mass of writhing tentacles and alien eyes.",
@@ -190,11 +209,13 @@
       "Fantastical"
     ],
     "medium": "Pencil",
-    "imageUrl": "/assets/drawings/2025/tentacle-nightmare.webp",
-    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2025%2Ftentacle-nightmare.webp&w=600&q=75"
+    "imageUrl": "https://kaysartshow.fyi/originals/2025/tentacle-nightmare.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2025/tentacle-nightmare-600w.webp"
   },
   {
-    "id": "art-011",
+    "id": "11",
+    "type": null,
     "addedDate": "2026-08-16",
     "title": "Ant Cup",
     "description": "A playful pencil sketch of a ant mixed with a cup of coffee",
@@ -210,11 +231,13 @@
       "Fantastical"
     ],
     "medium": "Pencil",
-    "imageUrl": "/assets/drawings/2023/ant_cup.webp",
-    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2023%2Fant_cup.webp&w=600&q=75"
+    "imageUrl": "https://kaysartshow.fyi/originals/2023/ant_cup.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2023/ant_cup-600w.webp"
   },
   {
-    "id": "art-012",
+    "id": "12",
+    "type": null,
     "addedDate": "2026-08-17",
     "title": "Eyes and Nose",
     "description": "A close-up face through a rectangular border",
@@ -225,15 +248,17 @@
       "pencil",
       "sketch"
     ],
-    "groups":[
+    "groups": [
       "Whimsical"
     ],
     "medium": "Pencil",
-    "imageUrl": "/assets/drawings/2023/eyes_and_nose.webp",
-    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2023%2Feyes_and_nose.webp&w=600&q=75"
+    "imageUrl": "https://kaysartshow.fyi/originals/2023/eyes_and_nose.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2023/eyes_and_nose-600w.webp"
   },
   {
-    "id": "art-013",
+    "id": "13",
+    "type": null,
     "addedDate": "2026-08-18",
     "title": "Seglora Church",
     "description": "A loose perspective sketch of Seglora kyrka \u2014 the historic Swedish stave church \u2014 captured in pencil with quick confident strokes.",
@@ -247,11 +272,13 @@
       "Architecture"
     ],
     "medium": "Pencil",
-    "imageUrl": "/assets/drawings/2023/segloria.webp",
-    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2023%2Fsegloria.webp&w=600&q=75"
+    "imageUrl": "https://kaysartshow.fyi/originals/2023/segloria.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2023/segloria-600w.webp"
   },
   {
-    "id": "art-014",
+    "id": "14",
+    "type": null,
     "addedDate": "2026-08-19",
     "title": "The Sacrifice",
     "description": "A ritualistic figure with outstretched arms is splayed within a great wheel, an unsettling composition evoking ancient ceremony and sacrifice.",
@@ -267,11 +294,13 @@
       "Fantastical"
     ],
     "medium": "Pencil",
-    "imageUrl": "/assets/drawings/2023/the_sacrifice.webp",
-    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2023%2Fthe_sacrifice.webp&w=600&q=75"
+    "imageUrl": "https://kaysartshow.fyi/originals/2023/the_sacrifice.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2023/the_sacrifice-600w.webp"
   },
   {
-    "id": "art-015",
+    "id": "15",
+    "type": null,
     "addedDate": "2026-08-20",
     "title": "Demon Beast",
     "description": "A ferocious creature lunges forward, gaping jaws, jagged mane, and raking claws rendered in urgent, slashing pencil strokes.",
@@ -288,11 +317,13 @@
       "Fantastical"
     ],
     "medium": "Pencil",
-    "imageUrl": "/assets/drawings/2024/demon_beast.webp",
-    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2024%2Fdemon_beast.webp&w=600&q=75"
+    "imageUrl": "https://kaysartshow.fyi/originals/2024/demon_beast.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2024/demon_beast-600w.webp"
   },
   {
-    "id": "art-016",
+    "id": "16",
+    "type": null,
     "addedDate": "2026-08-21",
     "title": "Reading by the Light",
     "description": "Towering stacks of books rise from the floor of a dimly lit study, a solitary figure dwarfed among them, a love letter to knowledge and quiet obsession.",
@@ -306,11 +337,13 @@
       "Whimsical"
     ],
     "medium": "Pencil",
-    "imageUrl": "/assets/drawings/2024/kid_reading_in_by_the_light.webp",
-    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2024%2Fkid_reading_in_by_the_light.webp&w=600&q=75"
+    "imageUrl": "https://kaysartshow.fyi/originals/2024/kid_reading_in_by_the_light.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2024/kid_reading_in_by_the_light-600w.webp"
   },
   {
-    "id": "art-017",
+    "id": "17",
+    "type": null,
     "addedDate": "2026-08-22",
     "title": "Mug Shot",
     "description": "Three anthropomorphic mug characters stand side-by-side against a tiled wall, holding placards.",
@@ -325,11 +358,13 @@
       "Whimsical"
     ],
     "medium": "Pencil",
-    "imageUrl": "/assets/drawings/2024/mug_shot.webp",
-    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2024%2Fmug_shot.webp&w=600&q=75"
+    "imageUrl": "https://kaysartshow.fyi/originals/2024/mug_shot.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2024/mug_shot-600w.webp"
   },
   {
-    "id": "art-018",
+    "id": "18",
+    "type": null,
     "addedDate": "2026-08-23",
     "title": "Pencil Mantis",
     "description": "A merge between a mantis and a pencil.",
@@ -345,11 +380,13 @@
       "Fantastical"
     ],
     "medium": "Pencil",
-    "imageUrl": "/assets/drawings/2024/pencil_mantis.webp",
-    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2024%2Fpencil_mantis.webp&w=600&q=75"
+    "imageUrl": "https://kaysartshow.fyi/originals/2024/pencil_mantis.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2024/pencil_mantis-600w.webp"
   },
   {
-    "id": "art-019",
+    "id": "19",
+    "type": null,
     "addedDate": "2026-08-24",
     "title": "Boy with Cap",
     "description": "A smiling boy wearing an LA cap.",
@@ -364,11 +401,13 @@
       "Portraits"
     ],
     "medium": "Pencil",
-    "imageUrl": "/assets/drawings/2026/boy_with_cap.webp",
-    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2026%2Fboy_with_cap.webp&w=600&q=75"
+    "imageUrl": "https://kaysartshow.fyi/originals/2026/boy_with_cap.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2026/boy_with_cap-600w.webp"
   },
   {
-    "id": "art-020",
+    "id": "20",
+    "type": null,
     "addedDate": "2026-08-25",
     "title": "Boy with Closed Eyes",
     "description": "A boy with closed eyes.",
@@ -383,11 +422,13 @@
       "Portraits"
     ],
     "medium": "Pencil",
-    "imageUrl": "/assets/drawings/2026/boy_with_closed_eyes.webp",
-    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2026%2Fboy_with_closed_eyes.webp&w=600&q=75"
+    "imageUrl": "https://kaysartshow.fyi/originals/2026/boy_with_closed_eyes.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2026/boy_with_closed_eyes-600w.webp"
   },
   {
-    "id": "art-021",
+    "id": "21",
+    "type": null,
     "addedDate": "2026-08-26",
     "title": "Me and My Better Half I",
     "description": "A tender double portrait of a loving couple.",
@@ -403,11 +444,13 @@
       "Portraits"
     ],
     "medium": "Pencil",
-    "imageUrl": "/assets/drawings/2026/me_and_my_better_half_1.webp",
-    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2026%2Fme_and_my_better_half_1.webp&w=600&q=75"
+    "imageUrl": "https://kaysartshow.fyi/originals/2026/me_and_my_better_half_1.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2026/me_and_my_better_half_1-600w.webp"
   },
   {
-    "id": "art-022",
+    "id": "22",
+    "type": null,
     "addedDate": "2026-08-27",
     "title": "Me and My Better Half II",
     "description": "A second intimate study of a loving couple.",
@@ -423,11 +466,13 @@
       "Portraits"
     ],
     "medium": "Pencil",
-    "imageUrl": "/assets/drawings/2026/me_and_my_better_half_2.webp",
-    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2026%2Fme_and_my_better_half_2.webp&w=600&q=75"
+    "imageUrl": "https://kaysartshow.fyi/originals/2026/me_and_my_better_half_2.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2026/me_and_my_better_half_2-600w.webp"
   },
   {
-    "id": "art-023",
+    "id": "23",
+    "type": null,
     "addedDate": "2026-08-28",
     "title": "Parrot and Woman",
     "description": "A portrait of a woman with a parrot perched on her shoulder.",
@@ -443,11 +488,13 @@
       "Portraits"
     ],
     "medium": "Pencil",
-    "imageUrl": "/assets/drawings/2026/parrot_and_woman.webp",
-    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2026%2Fparrot_and_woman.webp&w=600&q=75"
+    "imageUrl": "https://kaysartshow.fyi/originals/2026/parrot_and_woman.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2026/parrot_and_woman-600w.webp"
   },
   {
-    "id": "art-024",
+    "id": "24",
+    "type": null,
     "addedDate": "2026-08-29",
     "title": "Tree by the Fence",
     "description": "A tree by the fence.",
@@ -462,14 +509,16 @@
       "Landscape"
     ],
     "medium": "Pencil",
-    "imageUrl": "/assets/drawings/2026/tree_by_the_fence.webp",
-    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2026%2Ftree_by_the_fence.webp&w=600&q=75"
+    "imageUrl": "https://kaysartshow.fyi/originals/2026/tree_by_the_fence.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2026/tree_by_the_fence-600w.webp"
   },
   {
-    "id": "art-025",
-    "title": "Elephant Man (v1)",
-    "description": "A surreal portrait merging human features with an elephant's trunk and tusks.",
+    "id": "25",
+    "type": null,
     "addedDate": "2026-08-30",
+    "title": "Elephant Man (v1)",
+    "description": "A surreal portrait merging human features with an elephant\u0027s trunk and tusks.",
     "createdDate": "2026-08-20",
     "category": "Portraits",
     "tags": [
@@ -484,11 +533,13 @@
       "Fantastical"
     ],
     "medium": "Pencil, marker and watercolor. Digital",
-    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2026%2Felephant_man_v1.webp&w=600&q=75",
-    "imageUrl": "/assets/drawings/2026/elephant_man_v1.webp"
+    "imageUrl": "https://kaysartshow.fyi/originals/2026/elephant_man_v1.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2026/elephant_man_v1-600w.webp"
   },
   {
-    "id": "art-026",
+    "id": "26",
+    "type": null,
     "addedDate": "2026-08-31",
     "title": "Atelje Kopiko Logo",
     "description": "Around the year 2012 I started a Illustartion and Set design company with a colluge. We called it Atelje Kopiko. This is the logo I made for it.",
@@ -502,11 +553,13 @@
       "Atelje Kopiko"
     ],
     "medium": "Pencil, Water color pencils and Water color",
-    "imageUrl": "/assets/drawings/2012/atelje_kopiko_logo.webp",
-    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2012%2Fatelje_kopiko_logo.webp&w=600&q=75"
+    "imageUrl": "https://kaysartshow.fyi/originals/2012/atelje_kopiko_logo.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/atelje_kopiko_logo-600w.webp"
   },
   {
-    "id": "art-027",
+    "id": "27",
+    "type": null,
     "addedDate": "2026-09-01",
     "title": "A sketch of a remoted controlled cat",
     "description": "I really liked the idea of remote cintrolled pets and a cat seems like a perfect candidate for that.",
@@ -522,34 +575,16 @@
       "Fantastical"
     ],
     "medium": "Pencil",
-    "imageUrl": "/assets/drawings/2010/remote_controlled_cat.webp",
-    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2010%2Fremote_controlled_cat.webp&w=600&q=75"
+    "imageUrl": "https://kaysartshow.fyi/originals/2010/remote_controlled_cat.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2010/remote_controlled_cat-600w.webp"
   },
   {
-    "id": "art-028",
-    "type": "video",
-    "title": "Video of how I created the Elephant Man (V1)",
-    "description": "This video show the process of how I created the Elephant Man (V1) from start to finish. It is a time lapse video of the whole process.",
-    "addedDate": "2026-08-30",
-    "createdDate": "2026-08-20",
-    "category": "Video",
-    "tags": [
-      "portrait",
-      "surreal",
-      "digital"
-    ],
-    "groups": [
-      "Fantastical"
-    ],
-    "medium": "Video",
-    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2026%2Fvideo%2Felephant_man_v1_video_thumb.webp&w=600&q=75",
-    "videoUrl": "/assets/drawings/2026/video/elephant_man_v1_video_2.mp4"
-  },
-  {
-    "id": "art-029",
-    "title": "Elephant Man (V2)",
-    "description": "The second iteration of the Elephant man. A surreal portrait merging human features with an elephant's trunk and tusks.",
+    "id": "28",
+    "type": null,
     "addedDate": "2026-09-02",
+    "title": "Elephant Man (V2)",
+    "description": "The second iteration of the Elephant man. A surreal portrait merging human features with an elephant\u0027s trunk and tusks.",
     "createdDate": "2026-09-01",
     "category": "Portraits",
     "tags": [
@@ -563,34 +598,16 @@
       "Fantastical"
     ],
     "medium": "Pencil, and watercolor. Digital",
-    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2026%2Felephant_man_v2.webp&w=600&q=75",
-    "imageUrl": "/assets/drawings/2026/elephant_man_v2.webp"
+    "imageUrl": "https://kaysartshow.fyi/originals/2026/elephant_man_v2.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2026/elephant_man_v2-600w.webp"
   },
   {
-    "id": "art-0230",
-    "title": "Video of how I created the Elephant Man (V2)",
-     "type": "video",
-    "description": "This is a video of how I created the Elephant Man (V2) from start to finish. It is a time lapse",
+    "id": "29",
+    "type": null,
     "addedDate": "2026-09-02",
-    "createdDate": "2026-09-02",
-    "category": "Video",
-    "tags": [
-      "portrait",
-      "surreal",
-      "digital"
-    ],
-    "groups": [
-      "Fantastical"
-    ],
-    "medium": "Video",
-    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2026%2Fvideo%2Felephant_man_v2_video_thumb.webp&w=600&q=75",
-    "videoUrl": "/assets/drawings/2026/video/elephant_man_v2_video.mp4"
-  },
-  {
-    "id": "art-031",
-    "addedDate": "2026-09-02",
-    "title": "Gabriel gräslök (1/2)",
-    "description": "This is a art assignment I made where we were suppose to illustarte a short text. I choose the childerens text Gabriel gräslök.",
+    "title": "Gabriel gr\u00E4sl\u00F6k (1/2)",
+    "description": "This is a art assignment I made where we were suppose to illustarte a short text. I choose the childerens text Gabriel gr\u00E4sl\u00F6k.",
     "createdDate": "2004-09-22",
     "category": "Illustration",
     "tags": [
@@ -603,14 +620,16 @@
       "School project"
     ],
     "medium": "Pencil, markers and fineliner",
-    "imageUrl": "/assets/drawings/2004/gabriel_chive_1.webp",
-    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2004%2Fgabriel_chive_1.webp&w=600&q=75"
+    "imageUrl": "https://kaysartshow.fyi/originals/2004/gabriel_chive_1.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2004/gabriel_chive_1-600w.webp"
   },
   {
-    "id": "art-032",
+    "id": "30",
+    "type": null,
     "addedDate": "2026-09-02",
-    "title": "Gabriel gräslök (2/2)",
-    "description": "This is a art assignment I made where we were suppose to illustarte a short text. I choose the childerens text Gabriel gräslök.",
+    "title": "Gabriel gr\u00E4sl\u00F6k (2/2)",
+    "description": "This is a art assignment I made where we were suppose to illustarte a short text. I choose the childerens text Gabriel gr\u00E4sl\u00F6k.",
     "createdDate": "2004-09-22",
     "category": "Illustration",
     "tags": [
@@ -623,14 +642,16 @@
       "School project"
     ],
     "medium": "Pencil, markers and fineliner",
-    "imageUrl": "/assets/drawings/2004/gabriel_chive_2.webp",
-    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2004%2Fgabriel_chive_2.webp&w=600&q=75"
+    "imageUrl": "https://kaysartshow.fyi/originals/2004/gabriel_chive_2.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2004/gabriel_chive_2-600w.webp"
   },
   {
-    "id": "art-033",
+    "id": "31",
+    "type": null,
     "addedDate": "2026-09-02",
     "title": "Tatue design Original",
-    "description": "This is a illustration I made for a friends who asked me to create a tatue design for him. He liked my 'Gabriel göslök' illustration.",
+    "description": "This is a illustration I made for a friends who asked me to create a tatue design for him. He liked my \u0027Gabriel g\u00F6sl\u00F6k\u0027 illustration.",
     "createdDate": "2010-01-01",
     "category": "Illustration",
     "tags": [
@@ -642,14 +663,16 @@
       "Whimsical"
     ],
     "medium": "Pencil, Water color and Fine liner",
-    "imageUrl": "/assets/drawings/2010/gabriel_chives_tatue_original.webp",
-    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2010%2Fgabriel_chives_tatue_original.webp&w=600&q=75"
+    "imageUrl": "https://kaysartshow.fyi/originals/2010/gabriel_chives_tatue_original.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2010/gabriel_chives_tatue_original-600w.webp"
   },
   {
-    "id": "art-034",
+    "id": "32",
+    "type": null,
     "addedDate": "2026-09-02",
-    "title": "Gabriel gräslök (2/2)",
-    "description": "This is a art assignment I made where we were suppose to illustarte a short text. I choose the childerens text Gabriel gräslök.",
+    "title": "Gabriel gr\u00E4sl\u00F6k (2/2)",
+    "description": "This is a art assignment I made where we were suppose to illustarte a short text. I choose the childerens text Gabriel gr\u00E4sl\u00F6k.",
     "createdDate": "2010-01-01",
     "category": "Illustration",
     "tags": [
@@ -661,33 +684,37 @@
       "School project"
     ],
     "medium": "Pencil, Water color pencils and Water color",
-    "imageUrl": "/assets/drawings/2010/sketch_gabriel_chives.webp",
-    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2010%2Fsketch_gabriel_chives.webp&w=600&q=75"
+    "imageUrl": "https://kaysartshow.fyi/originals/2010/sketch_gabriel_chives.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2010/sketch_gabriel_chives-600w.webp"
   },
   {
-    "id": "art-035",
+    "id": "33",
+    "type": null,
     "addedDate": "2026-09-02",
-    "createdDate": "2012-01-01",
     "title": "Atelje Kopiko Website back button",
     "description": "I created this illustartion for the Atelje Kopiko website. Atelje Kopiko was me and a friends buisness we started around 2012. We did illustartion and set design for theater and film.",
+    "createdDate": "2012-01-01",
     "category": "Illustration",
     "tags": [
       "pencil",
-      "watercolor"      
+      "watercolor"
     ],
     "groups": [
       "Atelje Kopiko"
     ],
     "medium": "Pencil, Water color pencils and Water color",
-    "imageUrl": "/assets/drawings/2012/atelje_kopiko_back_button.webp",
-    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2012%2Fatelje_kopiko_back_button.webp&w=600&q=75"
+    "imageUrl": "https://kaysartshow.fyi/originals/2012/atelje_kopiko_back_button.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/atelje_kopiko_back_button-600w.webp"
   },
-    {
-    "id": "art-036",
+  {
+    "id": "34",
+    "type": null,
     "addedDate": "2026-09-02",
-    "createdDate": "2012-01-01",
     "title": "Atelje Kopiko blue flower",
     "description": "I created this illustartion for the Atelje Kopiko website, but right now I dont remember what for. Atelje Kopiko was me and a friends buisness we started around 2012. We did illustartion and set design for theater and film.",
+    "createdDate": "2012-01-01",
     "category": "Illustration",
     "tags": [
       "pencil",
@@ -697,15 +724,17 @@
       "Atelje Kopiko"
     ],
     "medium": "Pencil, Water color pencils and Water color",
-    "imageUrl": "/assets/drawings/2012/atelje_kopiko_blue_flower.webp",
-    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2012%2Fatelje_kopiko_blue_flower.webp&w=600&q=75"
+    "imageUrl": "https://kaysartshow.fyi/originals/2012/atelje_kopiko_blue_flower.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/atelje_kopiko_blue_flower-600w.webp"
   },
-    {
-    "id": "art-037",
+  {
+    "id": "35",
+    "type": null,
     "addedDate": "2026-09-02",
-    "createdDate": "2012-01-01",
     "title": "Atelje Kopiko home button",
     "description": "I created this illustartion for the Atelje Kopiko website. It was the webiste home button. Atelje Kopiko was me and a friends buisness we started around 2012. We did illustartion and set design for theater and film.",
+    "createdDate": "2012-01-01",
     "category": "Illustration",
     "tags": [
       "pencil",
@@ -715,15 +744,17 @@
       "Atelje Kopiko"
     ],
     "medium": "Pencil, Water color pencils and Water color",
-    "imageUrl": "/assets/drawings/2012/atelje_kopiko_home.webp",
-    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2012%2Fatelje_kopiko_home.webp&w=600&q=75"
+    "imageUrl": "https://kaysartshow.fyi/originals/2012/atelje_kopiko_home.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/atelje_kopiko_home-600w.webp"
   },
   {
-    "id": "art-038",
+    "id": "36",
+    "type": null,
     "addedDate": "2026-09-02",
-    "createdDate": "2012-01-01",
     "title": "Atelje Kopiko Lady bug (1/2)",
-    "description": "This illustartion was created for the Atelje Kopiko website. It was the company signature logo, a lady bug. My first born sin used to call lady bugs 'Kopiko'. Taht is where we got the name from. Atelje Kopiko was me and a friends buisness we started around 2012. We did illustartion and set design for theater and film.",
+    "description": "This illustartion was created for the Atelje Kopiko website. It was the company signature logo, a lady bug. My first born sin used to call lady bugs \u0027Kopiko\u0027. Taht is where we got the name from. Atelje Kopiko was me and a friends buisness we started around 2012. We did illustartion and set design for theater and film.",
+    "createdDate": "2012-01-01",
     "category": "Illustration",
     "tags": [
       "pencil",
@@ -733,15 +764,17 @@
       "Atelje Kopiko"
     ],
     "medium": "Pencil, Water color pencils and Water color",
-    "imageUrl": "/assets/drawings/2012/atelje_kopiko_lady_bug_closed_wings.webp",
-    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2012%2Fatelje_kopiko_lady_bug_closed_wings.webp&w=600&q=75"
+    "imageUrl": "https://kaysartshow.fyi/originals/2012/atelje_kopiko_lady_bug_closed_wings.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/atelje_kopiko_lady_bug_closed_wings-600w.webp"
   },
   {
-    "id": "art-039",
+    "id": "37",
+    "type": null,
     "addedDate": "2026-09-02",
-    "createdDate": "2012-01-01",
     "title": "Atelje Kopiko Lady bug (2/2)",
-    "description": "This illustartion was created for the Atelje Kopiko website. It was the company signature logo, a lady bug. My first born sin used to call lady bugs 'Kopiko'. That is  were we got the name from. Atelje Kopiko was me and a friends buisness we started around 2012. We did illustartion and set design for theater and film.",
+    "description": "This illustartion was created for the Atelje Kopiko website. It was the company signature logo, a lady bug. My first born sin used to call lady bugs \u0027Kopiko\u0027. That is  were we got the name from. Atelje Kopiko was me and a friends buisness we started around 2012. We did illustartion and set design for theater and film.",
+    "createdDate": "2012-01-01",
     "category": "Illustration",
     "tags": [
       "pencil",
@@ -751,15 +784,17 @@
       "Atelje Kopiko"
     ],
     "medium": "Pencil, Water color pencils and Water color",
-    "imageUrl": "/assets/drawings/2012/atelje_kopiko_lady_bug_wings_open.webp",
-    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2012%2Fatelje_kopiko_lady_bug_wings_open.webp&w=600&q=75"
+    "imageUrl": "https://kaysartshow.fyi/originals/2012/atelje_kopiko_lady_bug_wings_open.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/atelje_kopiko_lady_bug_wings_open-600w.webp"
   },
   {
-    "id": "art-040",
+    "id": "38",
+    "type": null,
     "addedDate": "2026-09-02",
-    "createdDate": "2012-01-01",
     "title": "Atelje Kopiko Portfolio",
     "description": "This illustartion was created for the Atelje Kopiko website. This was the icon representing the portfolio. Atelje Kopiko was me and a friends buisness we started around 2012. We did illustartion and set design for theater and film.",
+    "createdDate": "2012-01-01",
     "category": "Illustration",
     "tags": [
       "pencil",
@@ -769,15 +804,17 @@
       "Atelje Kopiko"
     ],
     "medium": "Pencil, Water color pencils and Water color",
-    "imageUrl": "/assets/drawings/2012/atelje_kopiko_portfolio.webp",
-    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2012%2Fatelje_kopiko_portfolio.webp&w=600&q=75"
+    "imageUrl": "https://kaysartshow.fyi/originals/2012/atelje_kopiko_portfolio.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/atelje_kopiko_portfolio-600w.webp"
   },
   {
-    "id": "art-041",
+    "id": "39",
+    "type": null,
     "addedDate": "2026-09-02",
-    "createdDate": "2012-01-01",
     "title": "Atelje Kopiko Resume",
     "description": "This illustartion was created for the Atelje Kopiko website. This was the icon representing both our resumes. Atelje Kopiko was me and a friends buisness we started around 2012. We did illustartion and set design for theater and film.",
+    "createdDate": "2012-01-01",
     "category": "Illustration",
     "tags": [
       "pencil",
@@ -787,15 +824,17 @@
       "Atelje Kopiko"
     ],
     "medium": "Pencil, Water color pencils and Water color",
-    "imageUrl": "/assets/drawings/2012/atelje_kopiko_resume.webp",
-    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2012%2Fatelje_kopiko_resume.webp&w=600&q=75"
+    "imageUrl": "https://kaysartshow.fyi/originals/2012/atelje_kopiko_resume.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/atelje_kopiko_resume-600w.webp"
   },
   {
-    "id": "art-042",
+    "id": "40",
+    "type": null,
     "addedDate": "2026-09-02",
-    "createdDate": "2012-01-01",
     "title": "Atelje Kopiko (Self porttrait)",
     "description": "This illustartion was created for the Atelje Kopiko website. This was the self porttrait I had on the website. Atelje Kopiko was me and a friends buisness we started around 2012. We did illustartion and set design for theater and film.",
+    "createdDate": "2012-01-01",
     "category": "Illustration",
     "tags": [
       "pencil",
@@ -805,15 +844,17 @@
       "Atelje Kopiko"
     ],
     "medium": "Pencil, Water color pencils and Water color",
-    "imageUrl": "/assets/drawings/2012/atelje_kopiko_self_portrait_oval_frame.webp",
-    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2012%2Fatelje_kopiko_self_portrait_oval_frame.webp&w=600&q=75"
+    "imageUrl": "https://kaysartshow.fyi/originals/2012/atelje_kopiko_self_portrait_oval_frame.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/atelje_kopiko_self_portrait_oval_frame-600w.webp"
   },
   {
-    "id": "art-043",
+    "id": "41",
+    "type": null,
     "addedDate": "2026-09-02",
-    "createdDate": "2012-01-01",
     "title": "Atelje Kopiko Tools of the trade",
     "description": "This illustartion was created for the Atelje Kopiko website. This illustration represented the tools of the trade. what tools we used to create things we made. Atelje Kopiko was me and a friends buisness we started around 2012. We did illustartion and set design for theater and film.",
+    "createdDate": "2012-01-01",
     "category": "Illustration",
     "tags": [
       "pencil",
@@ -823,15 +864,17 @@
       "Atelje Kopiko"
     ],
     "medium": "Pencil, Water color pencils and Water color",
-    "imageUrl": "/assets/drawings/2012/atelje_kopiko_the_tools_of_the_trade.webp",
-    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2012%2Fatelje_kopiko_the_tools_of_the_trade.webp&w=600&q=75"
+    "imageUrl": "https://kaysartshow.fyi/originals/2012/atelje_kopiko_the_tools_of_the_trade.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/atelje_kopiko_the_tools_of_the_trade-600w.webp"
   },
   {
-    "id": "art-044",
+    "id": "42",
+    "type": null,
     "addedDate": "2026-09-02",
-    "createdDate": "2012-01-01",
     "title": "Self porttrait orange 1/2",
     "description": "This is a self-portrait of me around the same time I did illusatrions for our website Atelje Kopiko. This illustration never made it to the website, but I liked it and kept it. Atelje Kopiko was me and a friends buisness we started around 2012. We did illustartion and set design for theater and film.",
+    "createdDate": "2012-01-01",
     "category": "Illustration",
     "tags": [
       "pencil",
@@ -841,15 +884,17 @@
       "Portraits"
     ],
     "medium": "Pencil, Water color pencils and Water color",
-    "imageUrl": "/assets/drawings/2012/self_portrait_orange_cloths.webp",
-    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2012%2Fself_portrait_orange_cloths.webp&w=600&q=75"
+    "imageUrl": "https://kaysartshow.fyi/originals/2012/self_portrait_orange_cloths.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/self_portrait_orange_cloths-600w.webp"
   },
   {
-    "id": "art-045",
+    "id": "43",
+    "type": null,
     "addedDate": "2026-09-02",
-    "createdDate": "2012-01-01",
     "title": "Self porttrait red 2/2",
     "description": "This is a self-portrait of me around the same time I did illusatrions for our website Atelje Kopiko. This illustration never made it to the website, but I liked it and kept it. Atelje Kopiko was me and a friends buisness we started around 2012. We did illustartion and set design for theater and film.",
+    "createdDate": "2012-01-01",
     "category": "Illustration",
     "tags": [
       "pencil",
@@ -859,15 +904,17 @@
       "Portraits"
     ],
     "medium": "Pencil, Water color pencils and Water color",
-    "imageUrl": "/assets/drawings/2012/self_portrait_red_cloths.webp",
-    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2012%2Fself_portrait_red_cloths.webp&w=600&q=75"
+    "imageUrl": "https://kaysartshow.fyi/originals/2012/self_portrait_red_cloths.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/self_portrait_red_cloths-600w.webp"
   },
   {
-    "id": "art-046",
+    "id": "44",
+    "type": null,
     "addedDate": "2026-09-03",
-    "createdDate": "2011-01-01",
     "title": "Study of an Octopus",
     "description": "For a time I got really into drawing water creatures, and specifically octopuses.",
+    "createdDate": "2011-01-01",
     "category": "Illustration",
     "tags": [
       "animal",
@@ -879,15 +926,17 @@
       "Studies"
     ],
     "medium": "Pencil",
-    "imageUrl": "/assets/drawings/2011/octopus_study.webp",
-    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2011%2Foctopus_study.webp&w=600&q=75"
+    "imageUrl": "https://kaysartshow.fyi/originals/2011/octopus_study.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2011/octopus_study-600w.webp"
   },
   {
-    "id": "art-047",
+    "id": "45",
+    "type": null,
     "addedDate": "2026-09-03",
-    "createdDate": "2011-01-01",
     "title": "Guardian of the holy grail",
     "description": "I made this drawing while I was into robots and two legged machines. The name is a story I made up while visualizing the drawing.",
+    "createdDate": "2011-01-01",
     "category": "Illustration",
     "tags": [
       "robot",
@@ -898,15 +947,17 @@
       "Fantastical"
     ],
     "medium": "Pencil",
-    "imageUrl": "/assets/drawings/2011/guardian_of_the_holy_grail.webp",
-    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2011%2Fguardian_of_the_holy_grail.webp&w=600&q=75"
+    "imageUrl": "https://kaysartshow.fyi/originals/2011/guardian_of_the_holy_grail.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2011/guardian_of_the_holy_grail-600w.webp"
   },
   {
-    "id": "art-048",
+    "id": "46",
+    "type": null,
     "addedDate": "2026-09-03",
-    "createdDate": "2011-01-01",
     "title": "Walking bot (Exploration edition)",
     "description": "I made this drawing while I was into robots and two legged machines. This robot was supposed to explore unknown planets and terrain.",
+    "createdDate": "2011-01-01",
     "category": "Illustration",
     "tags": [
       "robot",
@@ -917,15 +968,17 @@
       "Fantastical"
     ],
     "medium": "Pencil",
-    "imageUrl": "/assets/drawings/2011/walking_bot_exploration_edition.webp",
-    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2011%2Fwalking_bot_exploration_edition.webp&w=600&q=75"
+    "imageUrl": "https://kaysartshow.fyi/originals/2011/walking_bot_exploration_edition.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2011/walking_bot_exploration_edition-600w.webp"
   },
   {
-    "id": "art-049",
+    "id": "47",
+    "type": null,
     "addedDate": "2026-09-03",
-    "createdDate": "2011-01-01",
     "title": "Walking Cabriolet 1/2",
-    "description": "I made this drawing while watching a series called 'Eureka'. The intro had a hovering car which made me think of a walking car somehow.",
+    "description": "I made this drawing while watching a series called \u0027Eureka\u0027. The intro had a hovering car which made me think of a walking car somehow.",
+    "createdDate": "2011-01-01",
     "category": "Illustration",
     "tags": [
       "car",
@@ -937,15 +990,17 @@
       "Fantastical"
     ],
     "medium": "Pencil",
-    "imageUrl": "/assets/drawings/2011/walking_cabriolet_1.webp",
-    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2011%2Fwalking_cabriolet_1.webp&w=600&q=75"
+    "imageUrl": "https://kaysartshow.fyi/originals/2011/walking_cabriolet_1.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2011/walking_cabriolet_1-600w.webp"
   },
   {
-    "id": "art-050",
+    "id": "48",
+    "type": null,
     "addedDate": "2026-09-03",
-    "createdDate": "2011-01-01",
     "title": "Walking Cabriolet 2/2",
-    "description": "I made this drawing while watching a series called 'Eureka'. The intro had a hovering car which made me think of a walking car somehow.",
+    "description": "I made this drawing while watching a series called \u0027Eureka\u0027. The intro had a hovering car which made me think of a walking car somehow.",
+    "createdDate": "2011-01-01",
     "category": "Illustration",
     "tags": [
       "car",
@@ -957,15 +1012,17 @@
       "Fantastical"
     ],
     "medium": "Pencil",
-    "imageUrl": "/assets/drawings/2011/walking_cabriolet_2.webp",
-    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2011%2Fwalking_cabriolet_2.webp&w=600&q=75"
+    "imageUrl": "https://kaysartshow.fyi/originals/2011/walking_cabriolet_2.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2011/walking_cabriolet_2-600w.webp"
   },
   {
-    "id": "art-051",
+    "id": "49",
+    "type": null,
     "addedDate": "2026-09-03",
-    "createdDate": "2011-01-01",
     "title": "Walking bot (Home edition)",
     "description": "I made this drawing while I was into robots and two legged machines. I imagined this robot to have been created in the year 1932 and steam powered with visible moving parts on outside of its shell.",
+    "createdDate": "2011-01-01",
     "category": "Illustration",
     "tags": [
       "robot",
@@ -976,15 +1033,17 @@
       "Fantastical"
     ],
     "medium": "Pencil",
-    "imageUrl": "/assets/drawings/2011/walking_bot_home_edition.webp",
-    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2011%2Fwalking_bot_home_edition.webp&w=600&q=75"
+    "imageUrl": "https://kaysartshow.fyi/originals/2011/walking_bot_home_edition.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2011/walking_bot_home_edition-600w.webp"
   },
   {
-    "id": "art-052",
+    "id": "50",
+    "type": null,
     "addedDate": "2026-09-03",
-    "createdDate": "2011-01-01",
     "title": "Walking hunter craft",
     "description": "I made this drawing while I was into robots and two legged machines. I was heavily inspired by the game Dishonored and the stilt-walkers (Stilt-police).",
+    "createdDate": "2011-01-01",
     "category": "Illustration",
     "tags": [
       "robot",
@@ -995,15 +1054,17 @@
       "Fantastical"
     ],
     "medium": "Pencil",
-    "imageUrl": "/assets/drawings/2011/walking_hunter_craft.webp",
-    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2011%2Fwalking_hunter_craft.webp&w=600&q=75"
+    "imageUrl": "https://kaysartshow.fyi/originals/2011/walking_hunter_craft.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2011/walking_hunter_craft-600w.webp"
   },
   {
-    "id": "art-053",
+    "id": "51",
+    "type": null,
     "addedDate": "2026-09-03",
-    "createdDate": "2011-01-01",
     "title": "Walking Mech",
     "description": "I made this drawing while I was into robots and two legged machines. This was my attempt at creating a mech.",
+    "createdDate": "2011-01-01",
     "category": "Illustration",
     "tags": [
       "robot",
@@ -1014,9 +1075,55 @@
       "Fantastical"
     ],
     "medium": "Pencil",
-    "imageUrl": "/assets/drawings/2011/walking_mech.webp",
-    "thumbnailUrl": "/.netlify/images?url=%2Fassets%2Fdrawings%2F2011%2Fwalking_mech.webp&w=600&q=75"
+    "imageUrl": "https://kaysartshow.fyi/originals/2011/walking_mech.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2011/walking_mech-600w.webp"
+  },
+  {
+    "id": "52",
+    "type": "video",
+    "addedDate": "2026-09-11",
+    "title": "Elephant Man (v1)",
+    "description": "A surreal portrait merging human features with an elephant\u0027s trunk and tusks.",
+    "createdDate": "2026-08-20",
+    "category": "Portraits",
+    "tags": [
+      "portrait",
+      "surreal",
+      "pencil",
+      "marker",
+      "watercolor",
+      "digital"
+    ],
+    "groups": [
+      "Fantastical"
+    ],
+    "medium": "Pencil, marker and watercolor. Digital.",
+    "imageUrl": null,
+    "videoUrl": "https://www.youtube-nocookie.com/embed/FTVJG6KiknU",
+    "thumbnailUrl": "https://img.youtube.com/vi/FTVJG6KiknU/hqdefault.jpg"
+  },
+  {
+    "id": "53",
+    "type": "video",
+    "addedDate": "2026-09-11",
+    "title": "Video of how I created the Elephant Man (V2)",
+    "description": "This is a video of how I created the Elephant Man (V2) from start to finish. It is a time lapse",
+    "createdDate": "2026-09-01",
+    "category": "Portraits",
+    "tags": [
+      "portrait",
+      "surreal",
+      "pencil",
+      "watercolor",
+      "digital"
+    ],
+    "groups": [
+      "Fantastical"
+    ],
+    "medium": "Pencil, and watercolor. Digital",
+    "imageUrl": null,
+    "videoUrl": "https://www.youtube-nocookie.com/embed/jr1o6kQvHpI",
+    "thumbnailUrl": "https://img.youtube.com/vi/jr1o6kQvHpI/hqdefault.jpg"
   }
 ]
-
-

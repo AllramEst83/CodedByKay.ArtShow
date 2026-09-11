@@ -13,7 +13,7 @@ async function loadServerArtwork() {
   const loadingState = document.getElementById('gallery-loading');
 
   try {
-    const response = await fetch('/.netlify/functions/image');
+    const response = await fetch('/data/artwork.json');
     if (!response.ok) {
       throw new Error(`HTTP ${response.status}: Failed to fetch artwork metadata from server`);
     }

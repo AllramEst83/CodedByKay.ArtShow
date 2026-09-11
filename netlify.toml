@@ -1,23 +1,14 @@
 [build]
   publish = "."
-  functions = "netlify/functions"
 
-# Bundle only the artwork metadata inside the Lambda zip so the
-# metadata function can read it via fs in production. Artwork
-# files themselves are served as static assets straight from the
-# Netlify CDN (gated by netlify/edge-functions/media-gate.js) —
-# no need to bundle them into a function anymore.
-[functions]
-  included_files = ["netlify/functions/data/**"]
-
-# Artwork files don't change once published — cache them at the edge for a
-# year instead of revalidating on every request. If a file is ever replaced
-# with different content, give it a new filename rather than overwriting the
-# old one in place, so stale cached copies aren't served.
+# Artwork metadata is fetched by the frontend as a plain static file (no
+# Netlify function in front of it anymore); artwork images/thumbnails are
+# served entirely from Cloudflare R2 (kaysartshow.fyi). A short TTL keeps
+# same-day catalog edits (a `Publish` run + deploy) showing up promptly.
 [[headers]]
-  for = "/assets/drawings/*"
+  for = "/data/artwork.json"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+    Cache-Control = "public, max-age=300"
 
 # Serve the SPA from the root
 [[redirects]]
