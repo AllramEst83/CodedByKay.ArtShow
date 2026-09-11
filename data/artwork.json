@@ -1168,5 +1168,26 @@
     "imageUrl": null,
     "videoUrl": "https://www.youtube-nocookie.com/embed/9erwbRAsUuQ",
     "thumbnailUrl": "https://img.youtube.com/vi/9erwbRAsUuQ/hqdefault.jpg"
+  },
+  {
+    "id": "56",
+    "type": null,
+    "addedDate": "2026-09-11",
+    "title": "Cargo ship sketch",
+    "description": "A doodle I made while waiting for somebody",
+    "createdDate": "2015-01-01",
+    "category": "Concept Art",
+    "tags": [
+      "fantasy",
+      "ink",
+      "sketch"
+    ],
+    "groups": [
+      "Fantastical"
+    ],
+    "medium": "Ink",
+    "imageUrl": "https://kaysartshow.fyi/originals/2015/cargo-ship-skecth.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2015/cargo-ship-skecth-600w.webp"
   }
 ]
