@@ -1146,5 +1146,27 @@
     "imageUrl": "https://kaysartshow.fyi/originals/2026/skecth-of-flying-organic-spaceship.webp",
     "videoUrl": null,
     "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2026/skecth-of-flying-organic-spaceship-600w.webp"
+  },
+  {
+    "id": "55",
+    "type": "video",
+    "addedDate": "2026-09-11",
+    "title": "Video of how I created the flying organic spaceship sketch",
+    "description": "Video of how I created this skecth.",
+    "createdDate": "2026-09-08",
+    "category": "Concept Art",
+    "tags": [
+      "digital",
+      "pencil",
+      "sketch",
+      "watercolor"
+    ],
+    "groups": [
+      "Whimsical"
+    ],
+    "medium": "Pencil, and watercolor. Digital",
+    "imageUrl": null,
+    "videoUrl": "https://www.youtube-nocookie.com/embed/9erwbRAsUuQ",
+    "thumbnailUrl": "https://img.youtube.com/vi/9erwbRAsUuQ/hqdefault.jpg"
   }
 ]
