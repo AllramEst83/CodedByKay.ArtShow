@@ -1083,7 +1083,7 @@
     "id": "52",
     "type": "video",
     "addedDate": "2026-09-11",
-    "title": "Elephant Man (v1)",
+    "title": "Video of how I created the Elephant Man (V1)",
     "description": "A surreal portrait merging human features with an elephant\u0027s trunk and tusks.",
     "createdDate": "2026-08-20",
     "category": "Portraits",
@@ -1125,5 +1125,26 @@
     "imageUrl": null,
     "videoUrl": "https://www.youtube-nocookie.com/embed/jr1o6kQvHpI",
     "thumbnailUrl": "https://img.youtube.com/vi/jr1o6kQvHpI/hqdefault.jpg"
+  },
+  {
+    "id": "54",
+    "type": null,
+    "addedDate": "2026-09-11",
+    "title": "Skecth of flying organic spaceship",
+    "description": "A sketch of a organic space ship",
+    "createdDate": "2026-09-08",
+    "category": "Concept Art",
+    "tags": [
+      "digital",
+      "pencil",
+      "sketch"
+    ],
+    "groups": [
+      "Whimsical"
+    ],
+    "medium": "Pencil, and watercolor. Digital",
+    "imageUrl": "https://kaysartshow.fyi/originals/2026/skecth-of-flying-organic-spaceship.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2026/skecth-of-flying-organic-spaceship-600w.webp"
   }
 ]
