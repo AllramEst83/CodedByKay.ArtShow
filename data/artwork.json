@@ -1300,26 +1300,6 @@
     "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2011/lunar-droid-600w.webp"
   },
   {
-    "id": "62",
-    "type": null,
-    "addedDate": "2026-09-11",
-    "title": "Study of old phones",
-    "description": "I think phones we use to have at home look intresting and are fun to draw. ",
-    "createdDate": "2012-01-01",
-    "category": "Illustration",
-    "tags": [
-      "pencil",
-      "sketch"
-    ],
-    "groups": [
-      "Studies"
-    ],
-    "medium": "Pencil",
-    "imageUrl": "https://kaysartshow.fyi/originals/2012/study-of-old-phones.webp",
-    "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/study-of-old-phones-600w.webp"
-  },
-  {
     "id": "63",
     "type": null,
     "addedDate": "2026-09-11",
@@ -1380,5 +1360,25 @@
     "imageUrl": "https://kaysartshow.fyi/originals/2011/walking-vehicle-1800th-century.webp",
     "videoUrl": null,
     "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2011/walking-vehicle-1800th-century-600w.webp"
+  },
+  {
+    "id": "66",
+    "type": null,
+    "addedDate": "2026-09-11",
+    "title": "Study of old phones",
+    "description": "I think phones we use to have at home look intresting and are fun to draw.",
+    "createdDate": "2012-01-01",
+    "category": "Illustration",
+    "tags": [
+      "pencil",
+      "sketch"
+    ],
+    "groups": [
+      "Studies"
+    ],
+    "medium": "Pencil",
+    "imageUrl": "https://kaysartshow.fyi/originals/2012/study-of-old-phones.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/study-of-old-phones-600w.webp"
   }
 ]
