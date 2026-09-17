@@ -319,11 +319,20 @@ function applyFilters() {
     return matchesSearch && matchesCat && matchesTag && matchesTimeline;
   });
   
+  // allArtwork's order mirrors artwork.json, i.e. the order items were added in.
+  // Use it as a tiebreaker so same-day addedDate values don't fall back to
+  // whatever order Array.sort's stability happens to preserve.
+  const addedIndex = new Map(allArtwork.map((item, i) => [item, i]));
+
   filtered.sort((a, b) => {
     if (state.sortBy === 'date-desc') return new Date(b.createdDate) - new Date(a.createdDate);
     if (state.sortBy === 'date-asc') return new Date(a.createdDate) - new Date(b.createdDate);
-    if (state.sortBy === 'added-date-desc') return new Date(b.addedDate) - new Date(a.addedDate);
-    if (state.sortBy === 'added-date-asc') return new Date(a.addedDate) - new Date(b.addedDate);
+    if (state.sortBy === 'added-date-desc') {
+      return (new Date(b.addedDate) - new Date(a.addedDate)) || (addedIndex.get(b) - addedIndex.get(a));
+    }
+    if (state.sortBy === 'added-date-asc') {
+      return (new Date(a.addedDate) - new Date(b.addedDate)) || (addedIndex.get(a) - addedIndex.get(b));
+    }
     if (state.sortBy === 'title-asc') return a.title.localeCompare(b.title);
     return 0;
   });
