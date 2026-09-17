@@ -1324,28 +1324,6 @@
     "id": "65",
     "type": null,
     "addedDate": "2026-09-11",
-    "title": "Six legged war walker",
-    "description": "I always think its fun to create drawings with scale of fantastical proportions. ",
-    "createdDate": null,
-    "category": "Concept Art",
-    "tags": [
-      "fantasy",
-      "pencil",
-      "sketch",
-      "surreal"
-    ],
-    "groups": [
-      "Fantastical"
-    ],
-    "medium": "Pencil",
-    "imageUrl": "https://kaysartshow.fyi/originals/2026/six-legged-war-walker.webp",
-    "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2026/six-legged-war-walker-600w.webp"
-  },
-  {
-    "id": "65",
-    "type": null,
-    "addedDate": "2026-09-11",
     "title": "Walking vehicle (1800th century)",
     "description": "I like the idea of walking vehicle. Retro or futuristic.",
     "createdDate": "2011-01-01",
@@ -1382,6 +1360,28 @@
     "imageUrl": "https://kaysartshow.fyi/originals/2012/study-of-old-phones.webp",
     "videoUrl": null,
     "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/study-of-old-phones-600w.webp"
+  },
+  {
+    "id": "75",
+    "type": null,
+    "addedDate": "2026-09-11",
+    "title": "Six legged war walker",
+    "description": "I always think its fun to create drawings with scale of fantastical proportions. ",
+    "createdDate": null,
+    "category": "Concept Art",
+    "tags": [
+      "fantasy",
+      "pencil",
+      "sketch",
+      "surreal"
+    ],
+    "groups": [
+      "Fantastical"
+    ],
+    "medium": "Pencil",
+    "imageUrl": "https://kaysartshow.fyi/originals/2026/six-legged-war-walker.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2026/six-legged-war-walker-600w.webp"
   },
   {
     "id": "67",
