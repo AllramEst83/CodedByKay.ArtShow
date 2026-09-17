@@ -1321,7 +1321,7 @@
     "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2008/old-tree-600w.webp"
   },
   {
-    "id": "64",
+    "id": "65",
     "type": null,
     "addedDate": "2026-09-11",
     "title": "Six legged war walker",
@@ -1334,7 +1334,9 @@
       "sketch",
       "surreal"
     ],
-    "groups": [],
+    "groups": [
+      "Fantastical"
+    ],
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2026/six-legged-war-walker.webp",
     "videoUrl": null,
