@@ -1619,5 +1619,90 @@
     "imageUrl": "https://kaysartshow.fyi/originals/2011/sketches-of-legged-walkers.webp",
     "videoUrl": null,
     "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2011/sketches-of-legged-walkers-600w.webp"
+  },
+  {
+    "id": "79",
+    "type": null,
+    "addedDate": "2026-09-17",
+    "title": "Sketches of portfolio icons (Atelje Kopiko)",
+    "description": "Some of the iterations for the Portfolio icon.",
+    "createdDate": "2012-01-01",
+    "category": "Illustration",
+    "tags": [
+      "pencil",
+      "sketch"
+    ],
+    "groups": [
+      "Atelje Kopiko"
+    ],
+    "medium": "Pencil",
+    "imageUrl": "https://kaysartshow.fyi/originals/2012/sketches-of-portfolio-icons-atelje-kopiko.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/sketches-of-portfolio-icons-atelje-kopiko-600w.webp"
+  },
+  {
+    "id": "80",
+    "type": null,
+    "addedDate": "2026-09-17",
+    "title": "Sketch for blue flower (Atelje Kopiko)",
+    "description": "I created this illustartion for the Atelje Kopiko website, but right now I dont remember what for.",
+    "createdDate": "2012-01-01",
+    "category": "Illustration",
+    "tags": [
+      "pencil",
+      "sketch"
+    ],
+    "groups": [
+      "Atelje Kopiko"
+    ],
+    "medium": "Pencil",
+    "imageUrl": "https://kaysartshow.fyi/originals/2012/sketch-for-blue-flower-atelje-kopiko.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/sketch-for-blue-flower-atelje-kopiko-600w.webp"
+  },
+  {
+    "id": "81",
+    "type": null,
+    "addedDate": "2026-09-17",
+    "title": "Sketch of a Spaceship Bus",
+    "description": "I have always liked drawing spaceships and sci-fi related drawings",
+    "createdDate": "2010-01-01",
+    "category": "Concept Art",
+    "tags": [
+      "ink",
+      "sketch",
+      "fantasy",
+      "sci-fi"
+    ],
+    "groups": [
+      "Fantastical"
+    ],
+    "medium": "Ink",
+    "imageUrl": "https://kaysartshow.fyi/originals/2010/sketch-of-a-spaceship-bus.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2010/sketch-of-a-spaceship-bus-600w.webp"
+  },
+  {
+    "id": "82",
+    "type": null,
+    "addedDate": "2026-09-17",
+    "title": "Sketch of an Ore Transporter",
+    "description": "I have always liked drawing spaceships and sci-fi related drawings",
+    "createdDate": "2010-01-01",
+    "category": "Concept Art",
+    "tags": [
+      "ink",
+      "sketch",
+      "fantasy",
+      "sci-fi",
+      "robot"
+    ],
+    "groups": [
+      "Fantastical"
+    ],
+    "medium": "Ink",
+    "imageUrl": "https://kaysartshow.fyi/originals/2010/sketch-of-an-ore-transporter.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2010/sketch-of-an-ore-transporter-600w.webp"
   }
 ]
