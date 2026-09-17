@@ -1556,5 +1556,68 @@
     "imageUrl": "https://kaysartshow.fyi/originals/2006/the-general.webp",
     "videoUrl": null,
     "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2006/the-general-600w.webp"
+  },
+  {
+    "id": "76",
+    "type": null,
+    "addedDate": "2026-09-17",
+    "title": "Heavy-duty walker",
+    "description": "For a while, I was really into bipedal and quadrupedal walking machines.",
+    "createdDate": "2011-01-01",
+    "category": "Illustration",
+    "tags": [
+      "robot",
+      "pencil",
+      "sketch"
+    ],
+    "groups": [
+      "Fantastical"
+    ],
+    "medium": "Pencil",
+    "imageUrl": "https://kaysartshow.fyi/originals/2011/heavy-duty-walker.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2011/heavy-duty-walker-600w.webp"
+  },
+  {
+    "id": "77",
+    "type": null,
+    "addedDate": "2026-09-17",
+    "title": "Quadruped robot (Home Basic Edition)",
+    "description": null,
+    "createdDate": "2011-01-01",
+    "category": "Illustration",
+    "tags": [
+      "robot",
+      "pencil",
+      "sketch"
+    ],
+    "groups": [
+      "Fantastical"
+    ],
+    "medium": "Pencil",
+    "imageUrl": "https://kaysartshow.fyi/originals/2011/quadruped-robot-home-basic-edition.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2011/quadruped-robot-home-basic-edition-600w.webp"
+  },
+  {
+    "id": "78",
+    "type": null,
+    "addedDate": "2026-09-17",
+    "title": "Sketches of legged walkers",
+    "description": "For a while, I was really into bipedal and quadrupedal walking machines.",
+    "createdDate": "2011-01-01",
+    "category": "Illustration",
+    "tags": [
+      "robot",
+      "pencil",
+      "sketch"
+    ],
+    "groups": [
+      "Fantastical"
+    ],
+    "medium": "Pencil",
+    "imageUrl": "https://kaysartshow.fyi/originals/2011/sketches-of-legged-walkers.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2011/sketches-of-legged-walkers-600w.webp"
   }
 ]
