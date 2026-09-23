@@ -149,3 +149,28 @@
   --font-body: 'Quicksand', sans-serif;
   --transition-speed: 0.3s;
 }
+
+:root[data-theme="synthwave"] {
+  --color-bg: #1a0b2e;
+  --color-bg-secondary: #241242;
+  --color-surface: #2d1b4e;
+  --color-surface-hover: #3a2463;
+  --color-text-primary: #f7f4ff;
+  --color-text-secondary: #d1b3ff;
+  --color-text-muted: #9376c4;
+  --color-accent: #ff2e97;
+  --color-accent-hover: #ff5cad;
+  --color-accent-text: #1a0b2e;
+  --color-border: rgba(63, 220, 255, 0.35);
+  --color-border-subtle: rgba(63, 220, 255, 0.15);
+  --shadow-sm: 0 0 8px rgba(255, 46, 151, 0.35), 0 0 2px rgba(63, 220, 255, 0.25);
+  --shadow-md: 0 0 18px rgba(255, 46, 151, 0.45), 0 0 6px rgba(63, 220, 255, 0.35);
+  --shadow-lg: 0 0 32px rgba(255, 46, 151, 0.55), 0 0 12px rgba(63, 220, 255, 0.4);
+  --radius-sm: 10px;
+  --radius-md: 18px;
+  --radius-lg: 28px;
+  --radius-full: 9999px;
+  --font-heading: 'Orbitron', sans-serif;
+  --font-body: 'Rajdhani', sans-serif;
+  --transition-speed: 0.25s;
+}

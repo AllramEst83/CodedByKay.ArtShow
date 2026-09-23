@@ -12,7 +12,7 @@
   <!-- Applies the persisted theme before first paint to avoid a flash of the default theme -->
   <script>
     (function () {
-      var THEMES = ['neo-brutalism', 'neumorphism', 'glassmorphism', 'material', 'claymorphism'];
+      var THEMES = ['neo-brutalism', 'neumorphism', 'glassmorphism', 'material', 'claymorphism', 'synthwave'];
       try {
         var saved = localStorage.getItem('artshow-theme');
         if (saved && THEMES.indexOf(saved) !== -1) {
@@ -48,7 +48,7 @@
   <link rel="manifest" href="/assets/icons/site.webmanifest">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&family=Space+Mono:wght@400;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&family=Space+Mono:wght@400;700&family=Quicksand:wght@400;500;600;700&family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -77,6 +77,7 @@
           <option value="neumorphism">Neumorphism</option>
           <option value="material">Material</option>
           <option value="claymorphism">Claymorphism</option>
+          <option value="synthwave">Synthwave</option>
         </select>
       </div>
     </div>

@@ -1,4 +1,4 @@
-export const THEMES = ['neo-brutalism', 'neumorphism', 'glassmorphism', 'material', 'claymorphism'];
+export const THEMES = ['neo-brutalism', 'neumorphism', 'glassmorphism', 'material', 'claymorphism', 'synthwave'];
 
 export function applyTheme(themeName) {
   if (THEMES.includes(themeName)) {
