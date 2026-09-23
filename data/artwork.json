@@ -1948,5 +1948,162 @@
     "imageUrl": "https://kaysartshow.fyi/originals/2012/study-of-an-antique-telephone.webp",
     "videoUrl": null,
     "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/study-of-an-antique-telephone-600w.webp"
+  },
+  {
+    "id": "95",
+    "type": null,
+    "addedDate": "2026-09-23",
+    "title": "Cigar on ash tray",
+    "description": null,
+    "createdDate": "2010-01-01",
+    "category": "Illustration",
+    "tags": [
+      "sketch",
+      "marker",
+      "watercolor",
+      "pencil",
+      "horror"
+    ],
+    "groups": [
+      "Studies"
+    ],
+    "medium": "Pencil, markers and fineliner",
+    "imageUrl": "https://kaysartshow.fyi/originals/2010/cigar-on-ash-tray.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2010/cigar-on-ash-tray-600w.webp"
+  },
+  {
+    "id": "96",
+    "type": null,
+    "addedDate": "2026-09-23",
+    "title": "Fat happy cat sketch",
+    "description": null,
+    "createdDate": "2010-01-01",
+    "category": "Illustration",
+    "tags": [
+      "pencil",
+      "sketch",
+      "animal",
+      "humor"
+    ],
+    "groups": [
+      "Whimsical"
+    ],
+    "medium": "Pencil",
+    "imageUrl": "https://kaysartshow.fyi/originals/2010/fat-happy-cat-sketch.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2010/fat-happy-cat-sketch-600w.webp"
+  },
+  {
+    "id": "97",
+    "type": null,
+    "addedDate": "2026-09-23",
+    "title": "Living trees sketch",
+    "description": null,
+    "createdDate": "2010-01-01",
+    "category": "Concept Art",
+    "tags": [
+      "ink",
+      "sketch",
+      "fantasy",
+      "creature",
+      "nature",
+      "humor"
+    ],
+    "groups": [
+      "Fantastical"
+    ],
+    "medium": "Ink",
+    "imageUrl": "https://kaysartshow.fyi/originals/2010/living-trees-sketch.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2010/living-trees-sketch-600w.webp"
+  },
+  {
+    "id": "98",
+    "type": null,
+    "addedDate": "2026-09-23",
+    "title": "Rat and random creature sketch",
+    "description": null,
+    "createdDate": "2010-01-01",
+    "category": "Illustration",
+    "tags": [
+      "ink",
+      "marker",
+      "sketch",
+      "animal",
+      "creature"
+    ],
+    "groups": [
+      "Studies"
+    ],
+    "medium": "Pencil, markers and fineliner",
+    "imageUrl": "https://kaysartshow.fyi/originals/2010/rat-and-random-creature-sketch.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2010/rat-and-random-creature-sketch-600w.webp"
+  },
+  {
+    "id": "99",
+    "type": null,
+    "addedDate": "2026-09-23",
+    "title": "Robot in different states (sneak and run mode)",
+    "description": null,
+    "createdDate": "2010-01-01",
+    "category": "Concept Art",
+    "tags": [
+      "robot",
+      "pencil",
+      "marker",
+      "sketch"
+    ],
+    "groups": [
+      "Fantastical"
+    ],
+    "medium": "Pencil and marker",
+    "imageUrl": "https://kaysartshow.fyi/originals/2010/robot-in-different-states-sneak-and-run-mode.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2010/robot-in-different-states-sneak-and-run-mode-600w.webp"
+  },
+  {
+    "id": "100",
+    "type": null,
+    "addedDate": "2026-09-23",
+    "title": "Scissor study",
+    "description": null,
+    "createdDate": "2010-01-01",
+    "category": "Illustration",
+    "tags": [
+      "pencil",
+      "sketch"
+    ],
+    "groups": [
+      "Studies"
+    ],
+    "medium": "Pencil",
+    "imageUrl": "https://kaysartshow.fyi/originals/2010/scissor-study.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2010/scissor-study-600w.webp"
+  },
+  {
+    "id": "101",
+    "type": null,
+    "addedDate": "2026-09-23",
+    "title": "Violin playing flower sketch",
+    "description": null,
+    "createdDate": "2010-01-01",
+    "category": "Illustration",
+    "tags": [
+      "pencil",
+      "sketch",
+      "fantasy",
+      "creature",
+      "nature"
+    ],
+    "groups": [
+      "Whimsical"
+    ],
+    "medium": "Pencil",
+    "imageUrl": "https://kaysartshow.fyi/originals/2010/violin-playing-flower-sketch.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2010/violin-playing-flower-sketch-600w.webp"
   }
 ]
