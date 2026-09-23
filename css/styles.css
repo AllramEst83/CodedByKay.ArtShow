@@ -434,11 +434,24 @@ main {
 }
 
 /* Badges */
+/* Grid-rows 0fr->1fr trick: animates this row's height smoothly between
+   "no active filters" and "has badges" instead of the grid below it
+   snapping down/up the instant a badge is added or removed. */
+.active-filters-wrapper {
+  width: 100%;
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.25s ease;
+}
+.active-filters-wrapper.has-active-filters {
+  grid-template-rows: 1fr;
+}
 .active-filters {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  width: 100%;
+  overflow: hidden;
+  min-height: 0;
 }
 .badge {
   display: flex;

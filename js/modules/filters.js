@@ -287,6 +287,9 @@ function renderBadges() {
       applyFilters();
     });
   }
+
+  document.getElementById('active-filters-wrapper')
+    .classList.toggle('has-active-filters', container.children.length > 0);
 }
 
 function createBadge(text, onRemove) {
