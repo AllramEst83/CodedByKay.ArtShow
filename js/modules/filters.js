@@ -11,6 +11,8 @@ let state = {
 
 let allArtwork = [];
 let updateCallback = null;
+let searchDebounceTimer = null;
+const SEARCH_DEBOUNCE_MS = 350;
 
 export function initFilters(artwork, onUpdate) {
   allArtwork = artwork;
@@ -194,11 +196,24 @@ function formatDate(dateInput) {
 // ─── Events ───────────────────────────────────────────────────────────────────
 
 function bindEvents() {
-  document.getElementById('search-input').addEventListener('input', (e) => {
-    state.searchQuery = e.target.value.toLowerCase();
-    applyFilters();
+  const searchInput = document.getElementById('search-input');
+
+  // Debounced so the "Search: ..." badge (and result narrowing) doesn't fire
+  // after every single keystroke — only once the user pauses typing.
+  searchInput.addEventListener('input', (e) => {
+    const value = e.target.value;
+    clearTimeout(searchDebounceTimer);
+    searchDebounceTimer = setTimeout(() => commitSearch(value), SEARCH_DEBOUNCE_MS);
   });
-  
+
+  // Enter commits immediately, skipping the debounce delay.
+  searchInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      clearTimeout(searchDebounceTimer);
+      commitSearch(e.target.value);
+    }
+  });
+
   document.querySelectorAll('input[name="sort"]').forEach(radio => {
     radio.addEventListener('change', (e) => {
       state.sortBy = e.target.value;
@@ -222,12 +237,18 @@ function bindEvents() {
   document.getElementById('empty-clear-btn').addEventListener('click', clearAllFilters);
 }
 
+function commitSearch(rawValue) {
+  state.searchQuery = rawValue.toLowerCase();
+  applyFilters();
+}
+
 function renderBadges() {
   const container = document.getElementById('active-filters');
   container.innerHTML = '';
   
   if (state.searchQuery) {
     createBadge(`Search: ${state.searchQuery}`, () => {
+      clearTimeout(searchDebounceTimer);
       state.searchQuery = '';
       document.getElementById('search-input').value = '';
       applyFilters();
@@ -277,6 +298,7 @@ function createBadge(text, onRemove) {
 }
 
 export function clearAllFilters() {
+  clearTimeout(searchDebounceTimer);
   state.searchQuery = '';
   state.selectedCategories.clear();
   state.selectedTags.clear();
@@ -298,10 +320,10 @@ export function clearAllFilters() {
 
 function applyFilters() {
   let filtered = allArtwork.filter(item => {
-    const matchesSearch = !state.searchQuery || 
-      item.title.toLowerCase().includes(state.searchQuery) || 
-      item.description.toLowerCase().includes(state.searchQuery) ||
-      item.tags.some(t => t.toLowerCase().includes(state.searchQuery));
+    const matchesSearch = !state.searchQuery ||
+      (item.title || '').toLowerCase().includes(state.searchQuery) ||
+      (item.description || '').toLowerCase().includes(state.searchQuery) ||
+      (item.tags || []).some(t => (t || '').toLowerCase().includes(state.searchQuery));
       
     const matchesCat = state.selectedCategories.size === 0 || state.selectedCategories.has(item.category);
     const matchesTag = state.selectedTags.size === 0 || item.tags.some(t => state.selectedTags.has(t));
