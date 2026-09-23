@@ -6,6 +6,13 @@ import { initPagination, resetToPageOne, updatePaginationAndRender } from './mod
 import { initGroups } from './modules/groups.js';
 import { initAdsToggle } from './modules/ads.js';
 
+function hidePageLoader() {
+  const loader = document.getElementById('page-loader');
+  if (!loader) return;
+  loader.classList.add('is-hidden');
+  setTimeout(() => loader.remove(), 350);
+}
+
 async function loadServerArtwork() {
   const emptyState = document.getElementById('empty-state');
   const emptyTitle = document.getElementById('empty-title');
@@ -37,6 +44,7 @@ async function loadServerArtwork() {
     if (emptyState) emptyState.hidden = false;
   } finally {
     if (loadingState) loadingState.hidden = true;
+    hidePageLoader();
   }
 }
 
