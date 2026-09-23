@@ -749,9 +749,8 @@ main {
   color: var(--color-text-secondary);
 }
 .empty-emoji {
-  font-size: 3.5rem;
   margin-bottom: 1rem;
-  display: inline-block;
+  display: inline-flex;
   animation: floatEmoji 3s infinite ease-in-out;
 }
 @keyframes floatEmoji {
@@ -782,8 +781,8 @@ main {
 }
 
 .card-error-fallback .error-emoji {
-  font-size: 2.5rem;
-  display: block;
+  display: flex;
+  justify-content: center;
   margin-bottom: 0.5rem;
 }
 
@@ -894,8 +893,8 @@ main {
 }
 
 .lightbox-error-fallback .error-emoji {
-  font-size: 3.5rem;
-  display: block;
+  display: flex;
+  justify-content: center;
   margin-bottom: 1rem;
 }
 

@@ -236,10 +236,10 @@ function updateLightboxContent() {
           const errDiv = document.createElement('div');
           errDiv.className = 'lightbox-error-fallback';
           errDiv.innerHTML = `
-            <span class="error-emoji" aria-hidden="true">🎨🙈</span>
+            <span class="error-emoji" aria-hidden="true"><svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></span>
             <h3>Oops, we seem to have an issue...</h3>
             <p>The canvas lost connection! Couldn't load "${currentItem.title}".</p>
-            <button id="lightbox-retry-btn" class="btn btn-retry">Retry Loading 🔄</button>
+            <button id="lightbox-retry-btn" class="btn btn-retry"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg> Retry Loading</button>
           `;
           container.appendChild(errDiv);
           const retryBtn = errDiv.querySelector('#lightbox-retry-btn');
