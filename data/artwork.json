@@ -2276,5 +2276,77 @@
     "imageUrl": "https://kaysartshow.fyi/originals/2002/graffiti-tattoo-for-maria.webp",
     "videoUrl": null,
     "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2002/graffiti-tattoo-for-maria-600w.webp"
+  },
+  {
+    "id": "109",
+    "type": null,
+    "addedDate": "2026-10-06",
+    "title": "Graffiti Marie",
+    "description": "A graffiti piece based on the name of a girl I liked at the time.",
+    "createdDate": "2002-01-01",
+    "category": "Graffiti",
+    "tags": [
+      "graffiti",
+      "lettering",
+      "pencil",
+      "marker",
+      "ink"
+    ],
+    "groups": [
+      "Graffiti",
+      "Bush Man"
+    ],
+    "medium": "Pencil, markers and fineliner",
+    "imageUrl": "https://kaysartshow.fyi/originals/2002/graffiti-marie.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2002/graffiti-marie-600w.webp"
+  },
+  {
+    "id": "110",
+    "type": null,
+    "addedDate": "2026-10-06",
+    "title": "Graffiti Two Flowers in Love",
+    "description": "At the time, I was into a video game based on Alice in Wonderland, but with a dark twist. This drawing was inspired by that game.",
+    "createdDate": "2002-01-01",
+    "category": "Illustration",
+    "tags": [
+      "fantasy",
+      "surreal",
+      "creature",
+      "pencil",
+      "marker",
+      "ink"
+    ],
+    "groups": [
+      "Fantastical",
+      "Bush Man"
+    ],
+    "medium": "Pencil, markers and fineliner",
+    "imageUrl": "https://kaysartshow.fyi/originals/2002/graffiti-two-flowers-in-love.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2002/graffiti-two-flowers-in-love-600w.webp"
+  },
+  {
+    "id": "111",
+    "type": null,
+    "addedDate": "2026-10-06",
+    "title": "Graffiti Organic",
+    "description": "The word \"Organic\" in graffiti lettering. Here, I was experimenting with a different graffiti style.",
+    "createdDate": "2002-01-01",
+    "category": "Graffiti",
+    "tags": [
+      "graffiti",
+      "lettering",
+      "pencil",
+      "ink"
+    ],
+    "groups": [
+      "Graffiti",
+      "Bush Man"
+    ],
+    "medium": "Pencil, markers and fineliner",
+    "imageUrl": "https://kaysartshow.fyi/originals/2002/graffiti-organic.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2002/graffiti-organic-600w.webp"
   }
 ]
