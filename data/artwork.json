@@ -2348,5 +2348,117 @@
     "imageUrl": "https://kaysartshow.fyi/originals/2002/graffiti-organic.webp",
     "videoUrl": null,
     "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2002/graffiti-organic-600w.webp"
+  },
+  {
+    "id": "112",
+    "type": null,
+    "addedDate": "2026-10-06",
+    "title": "Meat-Eating Flower Sketch",
+    "description": "I was inspired by fantastical things in ordinary settings. The background is a kitchen, with a meat-eating flower.",
+    "createdDate": "2005-01-01",
+    "category": "Illustration",
+    "tags": [
+      "fantasy",
+      "creature",
+      "horror",
+      "humor",
+      "pencil",
+      "sketch"
+    ],
+    "groups": [
+      "Fantastical",
+      "Whimsical"
+    ],
+    "medium": "Pencil",
+    "imageUrl": "https://kaysartshow.fyi/originals/2005/meat-eating-flower-sketch.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2005/meat-eating-flower-sketch-600w.webp"
+  },
+  {
+    "id": "113",
+    "type": null,
+    "addedDate": "2026-10-06",
+    "title": "Study of Face Expressions",
+    "description": "In these sketches, I was studying different extreme facial expressions.",
+    "createdDate": "2005-01-01",
+    "category": "Portraits",
+    "tags": [
+      "portrait",
+      "pencil",
+      "sketch"
+    ],
+    "groups": [
+      "Studies",
+      "Portraits"
+    ],
+    "medium": "Pencil",
+    "imageUrl": "https://kaysartshow.fyi/originals/2005/study-of-face-expressions.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2005/study-of-face-expressions-600w.webp"
+  },
+  {
+    "id": "114",
+    "type": null,
+    "addedDate": "2026-10-06",
+    "title": "Study of Temples",
+    "description": "A study of ancient temples (for an assessment).",
+    "createdDate": "2005-01-01",
+    "category": "Architecture",
+    "tags": [
+      "architecture",
+      "ink",
+      "sketch"
+    ],
+    "groups": [
+      "Studies",
+      "Architecture"
+    ],
+    "medium": "Ink",
+    "imageUrl": "https://kaysartshow.fyi/originals/2005/study-of-temples.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2005/study-of-temples-600w.webp"
+  },
+  {
+    "id": "115",
+    "type": null,
+    "addedDate": "2026-10-06",
+    "title": "Ancient Temple Wide View",
+    "description": "A study of ancient temples from a wider angle (for an assessment).",
+    "createdDate": "2005-01-01",
+    "category": "Architecture",
+    "tags": [
+      "architecture",
+      "pencil",
+      "sketch"
+    ],
+    "groups": [
+      "Studies",
+      "Architecture"
+    ],
+    "medium": "Pencil",
+    "imageUrl": "https://kaysartshow.fyi/originals/2005/ancient-temple-wide-view.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2005/ancient-temple-wide-view-600w.webp"
+  },
+  {
+    "id": "116",
+    "type": null,
+    "addedDate": "2026-10-06",
+    "title": "Self-Portrait (v1)",
+    "description": "A self-portrait of me.",
+    "createdDate": "2026-01-01",
+    "category": "Portraits",
+    "tags": [
+      "portrait",
+      "digital",
+      "surreal"
+    ],
+    "groups": [
+      "Portraits"
+    ],
+    "medium": "Digital",
+    "imageUrl": "https://kaysartshow.fyi/originals/2026/self-portrait-v1.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2026/self-portrait-v1-600w.webp"
   }
 ]
