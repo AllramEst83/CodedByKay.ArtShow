@@ -2460,5 +2460,25 @@
     "imageUrl": "https://kaysartshow.fyi/originals/2026/self-portrait-v1.webp",
     "videoUrl": null,
     "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2026/self-portrait-v1-600w.webp"
+  },
+  {
+    "id": "117",
+    "type": null,
+    "addedDate": "2026-10-07",
+    "title": "Snazy",
+    "description": "I wanted to draw a human in a fun pose, and I found this man with a snazzy one.",
+    "createdDate": "2026-10-04",
+    "category": "Portraits",
+    "tags": [
+      "portrait",
+      "digital"
+    ],
+    "groups": [
+      "Portraits"
+    ],
+    "medium": "Digital",
+    "imageUrl": "https://kaysartshow.fyi/originals/2026/snazy.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2026/snazy-600w.webp"
   }
 ]
