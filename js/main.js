@@ -1,9 +1,9 @@
 import { initTheme, initBackground } from './modules/themes.js';
 import { initGallery, renderGallery } from './modules/gallery.js';
 import { initFilters } from './modules/filters.js';
-import { initLightbox } from './modules/lightbox.js';
-import { initPagination, resetToPageOne, updatePaginationAndRender } from './modules/pagination.js';
-import { initGroups } from './modules/groups.js';
+import { initLightbox, setArtworkIndex, openArtworkFromUrl } from './modules/lightbox.js';
+import { initPagination, resetToPageOne, updatePaginationAndRender, showPageContaining } from './modules/pagination.js';
+import { initGroups, showGridView } from './modules/groups.js';
 import { initAdsToggle } from './modules/ads.js';
 
 function hidePageLoader() {
@@ -37,6 +37,13 @@ async function loadServerArtwork() {
       resetToPageOne();
       updatePaginationAndRender();
     });
+
+    // Shared /art/<id> links open straight into the viewer.
+    setArtworkIndex(artwork, (item) => {
+      showGridView();
+      showPageContaining(item.id);
+    });
+    openArtworkFromUrl();
   } catch (err) {
     console.error('[App] Failed to load server artwork:', err);
     if (emptyTitle) emptyTitle.textContent = "Oops, we seem to have an issue...";

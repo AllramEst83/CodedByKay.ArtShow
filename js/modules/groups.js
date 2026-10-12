@@ -37,6 +37,18 @@ export function initGroups(onUpdate) {
   updateBreadcrumb();
 }
 
+// Switches to the flat grid without touching the saved view preference. Used
+// when a shared link has to show an artwork inside the full list.
+export function showGridView() {
+  if (viewMode === 'grid' && !activeGroup) return;
+  viewMode = 'grid';
+  activeGroup = null;
+  updateToggleUI();
+  updateSortVisibility();
+  updateGroupByToggleVisibility();
+  updateBreadcrumb();
+}
+
 function setViewMode(mode) {
   if (viewMode === mode) return;
   viewMode = mode;

@@ -1,10 +1,55 @@
 import { formatDate } from './gallery.js';
 import { getScopedArtwork } from './groups.js';
+import { getArtworkPath, getArtworkIdFromLocation, shareArtwork, showToast } from './share.js';
 
 let currentItem = null;
 let isZoomed = false;
 let isInfoOpen = false;
 let isFullscreen = false;
+
+// Every artwork, regardless of the active filter/group - a shared link has to
+// resolve even when the item is outside the current grid view.
+let allArtwork = [];
+// True when opening the viewer pushed a history entry, so closing it can pop
+// that entry instead of stacking another one.
+let urlPushed = false;
+// Fixed rather than read from document.title: a shared link's HTML already
+// carries the artwork title there (see netlify/edge-functions/share-preview.js).
+const SITE_TITLE = "Kay's ArtShow";
+
+// `sync` runs before a URL-driven open (direct visit, back/forward) so the
+// gallery behind the viewer shows the artwork - grid view, right page.
+let syncGalleryToArtwork = () => {};
+
+export function setArtworkIndex(artwork, sync) {
+  allArtwork = artwork;
+  if (sync) syncGalleryToArtwork = sync;
+}
+
+// Opens the viewer for the /art/<id> URL the page was loaded (or navigated) to.
+export function openArtworkFromUrl() {
+  const id = getArtworkIdFromLocation();
+  if (id === null) return;
+  const item = allArtwork.find((entry) => String(entry.id) === id);
+  if (!item) {
+    window.history.replaceState({}, '', '/');
+    showToast("That artwork couldn't be found");
+    return;
+  }
+  syncGalleryToArtwork(item);
+  openLightbox(item, { updateUrl: false });
+}
+
+function pushArtworkUrl(item) {
+  const path = getArtworkPath(item);
+  if (window.location.pathname === path) return;
+  window.history.pushState({ artworkId: item.id }, '', path);
+  urlPushed = true;
+}
+
+function replaceArtworkUrl(item) {
+  window.history.replaceState({ artworkId: item.id }, '', getArtworkPath(item));
+}
 
 export function initLightbox() {
   document.addEventListener('artwork:open', (e) => {
@@ -23,6 +68,31 @@ export function initLightbox() {
   const fullscreenBtn = document.getElementById('lightbox-fullscreen');
   
   closeBtn.addEventListener('click', closeLightbox);
+
+  const shareBtn = document.getElementById('lightbox-share');
+  if (shareBtn) {
+    shareBtn.addEventListener('click', async () => {
+      if (!currentItem) return;
+      const result = await shareArtwork(currentItem);
+      if (result === 'copied') showToast('Link copied to clipboard');
+      if (result === 'failed') showToast("Couldn't share - copy the link from the address bar");
+    });
+  }
+
+  // Back/forward: the URL is the source of truth for whether the viewer is open.
+  window.addEventListener('popstate', () => {
+    const id = getArtworkIdFromLocation();
+    if (id === null) {
+      urlPushed = false;
+      hideLightbox();
+      return;
+    }
+    const item = allArtwork.find((entry) => String(entry.id) === id);
+    if (!item) return;
+    urlPushed = true;
+    syncGalleryToArtwork(item);
+    openLightbox(item, { updateUrl: false });
+  });
   
   prevBtn.addEventListener('click', showPrev);
   nextBtn.addEventListener('click', showNext);
@@ -84,8 +154,9 @@ export function initLightbox() {
   });
 }
 
-function openLightbox(item) {
+function openLightbox(item, { updateUrl = true } = {}) {
   currentItem = item;
+  if (updateUrl) pushArtworkUrl(item);
   isZoomed = false;
   isInfoOpen = false; // default info state
   
@@ -106,21 +177,49 @@ function openLightbox(item) {
   document.getElementById('lightbox-close').focus();
 }
 
+// User-initiated close. Drops the history entry the viewer pushed (the
+// popstate handler then hides it); for a direct /art/<id> visit there is no
+// such entry, so hide it and rewrite the URL back to the gallery.
 function closeLightbox() {
+  if (urlPushed) {
+    urlPushed = false;
+    window.history.back();
+    return;
+  }
+  hideLightbox();
+  if (getArtworkIdFromLocation() !== null) {
+    window.history.replaceState({}, '', '/');
+  }
+}
+
+function hideLightbox() {
+  const lightbox = document.getElementById('lightbox');
+  if (lightbox.hidden) return;
+  document.title = SITE_TITLE;
+
   if (isFullscreen) exitFullscreen();
   stopCurrentVideo();
 
-  const lightbox = document.getElementById('lightbox');
   lightbox.classList.remove('is-open');
 
   const content = document.querySelector('.lightbox-content');
   if (content) content.classList.remove('info-active');
 
+  const closedItem = currentItem;
   setTimeout(() => {
     lightbox.hidden = true;
     document.body.style.overflow = '';
     clearLightboxMedia();
+    revealCard(closedItem);
   }, 300); // var(--transition-speed)
+}
+
+// After viewing (esp. via a shared link) leave the artwork's card on screen so
+// the visitor isn't dropped somewhere else on the page. No-op if already visible.
+function revealCard(item) {
+  if (!item) return;
+  const card = document.querySelector(`#gallery [data-id="${CSS.escape(String(item.id))}"]`);
+  if (card) card.scrollIntoView({ block: 'center', behavior: 'instant' });
 }
 
 function stopCurrentVideo() {
@@ -260,6 +359,7 @@ function updateLightboxContent() {
     }
   }
 
+  document.title = `${currentItem.title} — ${SITE_TITLE}`;
   document.getElementById('lightbox-title').textContent = currentItem.title;
   document.getElementById('lightbox-category').textContent = currentItem.category;
   document.getElementById('lightbox-date').textContent = formatDate(currentItem.createdDate);
@@ -283,6 +383,7 @@ function showPrev() {
   const currentIndex = scoped.findIndex(a => a.id === currentItem.id);
   if (currentIndex > 0) {
     currentItem = scoped[currentIndex - 1];
+    replaceArtworkUrl(currentItem);
     updateLightboxContent();
   }
 }
@@ -292,6 +393,7 @@ function showNext() {
   const currentIndex = scoped.findIndex(a => a.id === currentItem.id);
   if (currentIndex >= 0 && currentIndex < scoped.length - 1) {
     currentItem = scoped[currentIndex + 1];
+    replaceArtworkUrl(currentItem);
     updateLightboxContent();
   }
 }

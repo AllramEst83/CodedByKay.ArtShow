@@ -41,6 +41,15 @@ export function initPagination() {
   }
 }
 
+// Renders the page of the (filtered, sorted) grid that contains this artwork.
+// No-op if an active filter hides it.
+export function showPageContaining(id) {
+  const index = getScopedArtwork().findIndex((item) => String(item.id) === String(id));
+  if (index === -1) return;
+  currentPage = Math.floor(index / itemsPerPage) + 1;
+  updatePaginationAndRender();
+}
+
 export function resetToPageOne() {
   currentPage = 1;
 }

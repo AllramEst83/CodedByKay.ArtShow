@@ -1612,3 +1612,27 @@ main {
   background-color: var(--color-surface);
   border-color: var(--color-border);
 }
+
+/* Share-link feedback */
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 1.5rem;
+  transform: translate(-50%, 0.75rem);
+  max-width: calc(100vw - 2rem);
+  padding: 0.65rem 1.1rem;
+  background: rgba(0, 0, 0, 0.88);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s, transform 0.2s;
+  z-index: 10000;
+}
+.toast.is-visible {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
