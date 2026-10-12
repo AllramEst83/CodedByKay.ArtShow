@@ -166,6 +166,8 @@ a, button, input, select {
   align-items: center;
   gap: 0.5rem;
   flex-shrink: 0;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 /* Ads toggle switch */
@@ -268,8 +270,26 @@ html.hide-ads .fake-ad {
   .header-controls {
     gap: 0.75rem;
   }
+  /* Controls drop to their own row under the brand title; the two selects
+     share that row equally so both fit within the viewport. */
+  .app-header {
+    flex-wrap: wrap;
+    row-gap: 0.5rem;
+  }
+  .header-controls {
+    flex-basis: 100%;
+  }
+  .theme-controls {
+    flex: 1;
+    min-width: 0;
+    flex-wrap: nowrap;
+    justify-content: stretch;
+  }
   .theme-selector {
-    max-width: 125px;
+    flex: 1;
+    width: auto;
+    min-width: 0;
+    max-width: none;
     padding: 0.35rem 0.5rem;
     font-size: 0.8rem;
   }
@@ -1551,4 +1571,44 @@ main {
 #page-info {
   font-weight: 500;
   color: var(--color-text-primary);
+}
+
+/* ── Background overrides (see tokens.css) ───────────────────────────────
+   Theme blocks above hard-code tinted header/popover/card colours; when the
+   user picks a dark or light background those have to follow the tokens. */
+:root[data-bg="dark"] .app-header,
+:root[data-bg="gray"] .app-header,
+:root[data-bg="light"] .app-header {
+  background: color-mix(in srgb, var(--color-bg) 92%, transparent);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+:root[data-bg="dark"][data-theme="claymorphism"] .app-header {
+  border-bottom-color: var(--color-border-subtle);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+}
+:root[data-bg="light"][data-theme="claymorphism"] .app-header {
+  border-bottom-color: rgba(120, 100, 70, 0.25);
+  box-shadow: 0 4px 14px rgba(120, 100, 70, 0.2);
+}
+:root[data-bg="light"][data-theme="synthwave"] .app-header {
+  box-shadow: 0 2px 16px rgba(214, 21, 122, 0.25);
+}
+:root[data-bg="dark"] .filter-popover,
+:root[data-bg="gray"] .filter-popover,
+:root[data-bg="light"] .filter-popover {
+  background-color: color-mix(in srgb, var(--color-surface) 94%, transparent);
+  border-color: var(--color-border);
+}
+:root[data-bg="gray"][data-theme="claymorphism"] .app-header {
+  border-bottom-color: var(--color-border-subtle);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+:root[data-bg="gray"][data-theme="synthwave"] .app-header {
+  box-shadow: 0 2px 16px rgba(110, 6, 63, 0.3);
+}
+:root[data-bg="gray"][data-theme="glassmorphism"] .art-card,
+:root[data-bg="light"][data-theme="glassmorphism"] .art-card {
+  background-color: var(--color-surface);
+  border-color: var(--color-border);
 }

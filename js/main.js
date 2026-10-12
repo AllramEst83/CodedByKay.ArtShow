@@ -1,4 +1,4 @@
-import { initTheme } from './modules/themes.js';
+import { initTheme, initBackground } from './modules/themes.js';
 import { initGallery, renderGallery } from './modules/gallery.js';
 import { initFilters } from './modules/filters.js';
 import { initLightbox } from './modules/lightbox.js';
@@ -50,6 +50,7 @@ async function loadServerArtwork() {
 
 document.addEventListener('DOMContentLoaded', () => {
   initTheme();
+  initBackground();
   initAdsToggle();
   initLightbox();
   loadServerArtwork();

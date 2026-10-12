@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="glassmorphism">
+<html lang="en" data-theme="glassmorphism" data-bg="default">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +9,7 @@
   <meta name="keywords" content="art, portfolio, drawings, portraits, illustration, Kay, ArtShow">
   <meta name="theme-color" content="#120e24">
 
-  <!-- Applies the persisted theme before first paint to avoid a flash of the default theme -->
+  <!-- Applies the persisted theme and background before first paint to avoid a flash of the default theme -->
   <script>
     (function () {
       var THEMES = ['neo-brutalism', 'neumorphism', 'glassmorphism', 'material', 'claymorphism', 'synthwave'];
@@ -17,6 +17,10 @@
         var saved = localStorage.getItem('artshow-theme');
         if (saved && THEMES.indexOf(saved) !== -1) {
           document.documentElement.setAttribute('data-theme', saved);
+        }
+        var savedBg = localStorage.getItem('artshow-background');
+        if (savedBg === 'dark' || savedBg === 'gray' || savedBg === 'light') {
+          document.documentElement.setAttribute('data-bg', savedBg);
         }
       } catch (e) {}
     })();
@@ -78,6 +82,13 @@
           <option value="material">Material</option>
           <option value="claymorphism">Claymorphism</option>
           <option value="synthwave">Synthwave</option>
+        </select>
+        <label for="background-selector" class="sr-only">Select Background</label>
+        <select id="background-selector" class="theme-selector" aria-label="Select Background">
+          <option value="default">Theme default</option>
+          <option value="dark">Dark</option>
+          <option value="gray">Gray</option>
+          <option value="light">Light</option>
         </select>
       </div>
     </div>

@@ -174,3 +174,183 @@
   --font-body: 'Rajdhani', sans-serif;
   --transition-speed: 0.25s;
 }
+
+/* ── Background overrides ────────────────────────────────────────────────
+   Independent of the selected theme: [data-bg="dark"|"light"] re-skins the
+   colour tokens of whichever theme is active. "default" (or no attribute)
+   leaves the theme's own palette untouched. `[data-theme]` is included in the
+   selectors so they outrank the per-theme blocks above regardless of order. */
+:root[data-bg="dark"][data-theme] {
+  --color-bg: #18181d;
+  --color-bg-secondary: #202027;
+  --color-surface: #26262e;
+  --color-surface-hover: #32323c;
+  --color-text-primary: #f1f0f5;
+  --color-text-secondary: #c9c8d2;
+  --color-text-muted: #9c9aab;
+  --color-border: rgba(255, 255, 255, 0.2);
+  --color-border-subtle: rgba(255, 255, 255, 0.1);
+  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.55);
+}
+
+:root[data-bg="light"][data-theme] {
+  --color-bg: #f3eee4;
+  --color-bg-secondary: #e9e2d4;
+  --color-surface: #faf7f0;
+  --color-surface-hover: #efe8d9;
+  --color-text-primary: #2b2723;
+  --color-text-secondary: #4d4640;
+  --color-text-muted: #6b635a;
+  --color-border: rgba(43, 39, 35, 0.2);
+  --color-border-subtle: rgba(43, 39, 35, 0.1);
+  --shadow-sm: 0 1px 4px rgba(60, 45, 20, 0.15);
+  --shadow-md: 0 6px 18px rgba(60, 45, 20, 0.18);
+  --shadow-lg: 0 14px 36px rgba(60, 45, 20, 0.22);
+}
+
+/* Accents that lose contrast against the swapped background */
+:root[data-bg="dark"][data-theme="material"] {
+  --color-accent: #64b5f6;
+  --color-accent-hover: #90caf9;
+  --color-accent-text: #0b1b2b;
+}
+:root[data-bg="light"][data-theme="glassmorphism"] {
+  --color-accent: #7c4dbd;
+  --color-accent-hover: #6a3aa8;
+  --color-accent-text: #ffffff;
+}
+:root[data-bg="light"][data-theme="synthwave"] {
+  --color-accent: #d6157a;
+  --color-accent-hover: #b8106a;
+  --color-accent-text: #ffffff;
+  --color-border: rgba(214, 21, 122, 0.35);
+  --color-border-subtle: rgba(214, 21, 122, 0.15);
+  --shadow-sm: 0 2px 8px rgba(214, 21, 122, 0.25);
+  --shadow-md: 0 4px 18px rgba(214, 21, 122, 0.3);
+  --shadow-lg: 0 8px 32px rgba(214, 21, 122, 0.35);
+}
+
+/* Themes whose look depends on border/shadow colour matching the surface */
+:root[data-bg="dark"][data-theme="synthwave"] {
+  --color-border: rgba(63, 220, 255, 0.35);
+  --color-border-subtle: rgba(63, 220, 255, 0.15);
+  --shadow-sm: 0 0 8px rgba(255, 46, 151, 0.35), 0 0 2px rgba(63, 220, 255, 0.25);
+  --shadow-md: 0 0 18px rgba(255, 46, 151, 0.45), 0 0 6px rgba(63, 220, 255, 0.35);
+  --shadow-lg: 0 0 32px rgba(255, 46, 151, 0.55), 0 0 12px rgba(63, 220, 255, 0.4);
+}
+:root[data-bg="dark"][data-theme="neo-brutalism"] {
+  --color-border: #f1f0f5;
+  --color-border-subtle: #f1f0f5;
+  --shadow-sm: 2px 2px 0px #f1f0f5;
+  --shadow-md: 4px 4px 0px #f1f0f5;
+  --shadow-lg: 8px 8px 0px #f1f0f5;
+}
+:root[data-bg="light"][data-theme="neo-brutalism"] {
+  --color-border: #000000;
+  --color-border-subtle: #000000;
+  --shadow-sm: 2px 2px 0px #000000;
+  --shadow-md: 4px 4px 0px #000000;
+  --shadow-lg: 8px 8px 0px #000000;
+}
+:root[data-bg="dark"][data-theme="neumorphism"] {
+  --color-bg: #1f2126;
+  --color-bg-secondary: #1f2126;
+  --color-surface: #1f2126;
+  --color-surface-hover: #1f2126;
+  --color-border: transparent;
+  --color-border-subtle: transparent;
+  --shadow-sm: 5px 5px 10px #15161a, -5px -5px 10px #292c32;
+  --shadow-md: 9px 9px 16px #131418, -9px -9px 16px #2b2e35;
+  --shadow-lg: 12px 12px 24px #131418, -12px -12px 24px #2b2e35;
+}
+:root[data-bg="light"][data-theme="neumorphism"] {
+  --color-bg: #efe9dc;
+  --color-bg-secondary: #efe9dc;
+  --color-surface: #efe9dc;
+  --color-surface-hover: #efe9dc;
+  --color-border: transparent;
+  --color-border-subtle: transparent;
+  --shadow-sm: 5px 5px 10px #d2cabb, -5px -5px 10px #fffdf8;
+  --shadow-md: 9px 9px 16px #c9c0ae, -9px -9px 16px #fffdf8;
+  --shadow-lg: 12px 12px 24px #c9c0ae, -12px -12px 24px #fffdf8;
+}
+:root[data-bg="dark"][data-theme="claymorphism"] {
+  --color-border: rgba(255, 255, 255, 0.12);
+  --color-border-subtle: rgba(255, 255, 255, 0.06);
+  --shadow-sm: 4px 4px 10px rgba(0, 0, 0, 0.45), inset -2px -2px 6px rgba(0, 0, 0, 0.25), inset 2px 2px 6px rgba(255, 255, 255, 0.07);
+  --shadow-md: 8px 8px 16px rgba(0, 0, 0, 0.5), inset -3px -3px 8px rgba(0, 0, 0, 0.25), inset 3px 3px 8px rgba(255, 255, 255, 0.07);
+  --shadow-lg: 12px 12px 24px rgba(0, 0, 0, 0.55), inset -4px -4px 10px rgba(0, 0, 0, 0.25), inset 4px 4px 10px rgba(255, 255, 255, 0.07);
+}
+:root[data-bg="light"][data-theme="claymorphism"] {
+  --color-border: #ffffff;
+  --color-border-subtle: rgba(255, 255, 255, 0.6);
+  --shadow-sm: 4px 4px 10px rgba(120, 100, 70, 0.28), inset -2px -2px 6px rgba(0, 0, 0, 0.04), inset 2px 2px 6px #ffffff;
+  --shadow-md: 8px 8px 16px rgba(120, 100, 70, 0.28), inset -3px -3px 8px rgba(0, 0, 0, 0.04), inset 3px 3px 8px #ffffff;
+  --shadow-lg: 12px 12px 24px rgba(120, 100, 70, 0.32), inset -4px -4px 10px rgba(0, 0, 0, 0.04), inset 4px 4px 10px #ffffff;
+}
+
+/* Gray: a neutral mid-tone, the classic backdrop for judging colour and
+   tone in artwork. Dark text on a ~#a9a9ae field; accents are deepened per
+   theme so they keep their contrast against the mid-gray. */
+:root[data-bg="gray"][data-theme] {
+  --color-bg: #a9a9ae;
+  --color-bg-secondary: #a0a0a5;
+  --color-surface: #bcbcc1;
+  --color-surface-hover: #c7c7cc;
+  --color-text-primary: #121216;
+  --color-text-secondary: #1c1c21;
+  --color-text-muted: #232328;
+  --color-border: rgba(18, 18, 22, 0.28);
+  --color-border-subtle: rgba(18, 18, 22, 0.14);
+  --color-accent: #3a1d73;
+  --color-accent-hover: #2a1157;
+  --color-accent-text: #ffffff;
+  --shadow-sm: 0 1px 4px rgba(0, 0, 0, 0.25);
+  --shadow-md: 0 6px 18px rgba(0, 0, 0, 0.28);
+  --shadow-lg: 0 14px 36px rgba(0, 0, 0, 0.35);
+}
+:root[data-bg="gray"][data-theme="neo-brutalism"] {
+  --color-accent: #6e0010;
+  --color-accent-hover: #4f000b;
+  --color-border: #000000;
+  --color-border-subtle: #000000;
+  --shadow-sm: 2px 2px 0px #000000;
+  --shadow-md: 4px 4px 0px #000000;
+  --shadow-lg: 8px 8px 0px #000000;
+}
+:root[data-bg="gray"][data-theme="neumorphism"] {
+  --color-bg-secondary: #a9a9ae;
+  --color-surface: #a9a9ae;
+  --color-surface-hover: #a9a9ae;
+  --color-accent: #18326a;
+  --color-accent-hover: #102452;
+  --color-border: transparent;
+  --color-border-subtle: transparent;
+  --shadow-sm: 5px 5px 10px #87878c, -5px -5px 10px #cbcbd0;
+  --shadow-md: 9px 9px 16px #7e7e83, -9px -9px 16px #d1d1d6;
+  --shadow-lg: 12px 12px 24px #7e7e83, -12px -12px 24px #d1d1d6;
+}
+:root[data-bg="gray"][data-theme="material"] {
+  --color-accent: #08306e;
+  --color-accent-hover: #052048;
+}
+:root[data-bg="gray"][data-theme="claymorphism"] {
+  --color-accent: #5f1019;
+  --color-accent-hover: #450b12;
+  --color-border: rgba(255, 255, 255, 0.45);
+  --color-border-subtle: rgba(255, 255, 255, 0.25);
+  --shadow-sm: 4px 4px 10px rgba(0, 0, 0, 0.3), inset -2px -2px 6px rgba(0, 0, 0, 0.08), inset 2px 2px 6px rgba(255, 255, 255, 0.45);
+  --shadow-md: 8px 8px 16px rgba(0, 0, 0, 0.32), inset -3px -3px 8px rgba(0, 0, 0, 0.08), inset 3px 3px 8px rgba(255, 255, 255, 0.45);
+  --shadow-lg: 12px 12px 24px rgba(0, 0, 0, 0.36), inset -4px -4px 10px rgba(0, 0, 0, 0.08), inset 4px 4px 10px rgba(255, 255, 255, 0.45);
+}
+:root[data-bg="gray"][data-theme="synthwave"] {
+  --color-accent: #6e063f;
+  --color-accent-hover: #52042f;
+  --color-border: rgba(110, 6, 63, 0.4);
+  --color-border-subtle: rgba(110, 6, 63, 0.2);
+  --shadow-sm: 0 2px 8px rgba(110, 6, 63, 0.3);
+  --shadow-md: 0 4px 18px rgba(110, 6, 63, 0.35);
+  --shadow-lg: 0 8px 32px rgba(110, 6, 63, 0.4);
+}

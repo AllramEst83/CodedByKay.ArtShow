@@ -19,3 +19,25 @@ export function initTheme() {
     });
   }
 }
+
+export const BACKGROUNDS = ['default', 'dark', 'gray', 'light'];
+
+export function applyBackground(backgroundName) {
+  if (BACKGROUNDS.includes(backgroundName)) {
+    document.documentElement.setAttribute('data-bg', backgroundName);
+    localStorage.setItem('artshow-background', backgroundName);
+  }
+}
+
+export function initBackground() {
+  const savedBackground = localStorage.getItem('artshow-background') || 'default';
+  applyBackground(savedBackground);
+
+  const selector = document.getElementById('background-selector');
+  if (selector) {
+    selector.value = savedBackground;
+    selector.addEventListener('change', (e) => {
+      applyBackground(e.target.value);
+    });
+  }
+}
