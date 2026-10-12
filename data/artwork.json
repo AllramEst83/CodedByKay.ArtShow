@@ -2480,5 +2480,266 @@
     "imageUrl": "https://kaysartshow.fyi/originals/2026/snazy.webp",
     "videoUrl": null,
     "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2026/snazy-600w.webp"
+  },
+  {
+    "id": "118",
+    "type": null,
+    "addedDate": "2026-10-12",
+    "title": "Sketches of Bugs",
+    "description": "Insects and bugs have always interested me, both in how they look and how they work mechanically. On top of that, they look super cool and come in all shapes and sizes.",
+    "createdDate": "2009-01-01",
+    "category": "Illustration",
+    "tags": [
+      "animal",
+      "nature",
+      "pencil",
+      "sketch"
+    ],
+    "groups": [
+      "Studies"
+    ],
+    "medium": "Pencil",
+    "imageUrl": "https://kaysartshow.fyi/originals/2009/sketches-of-bugs.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2009/sketches-of-bugs-600w.webp"
+  },
+  {
+    "id": "119",
+    "type": null,
+    "addedDate": "2026-10-12",
+    "title": "Brain Optimization",
+    "description": "I like drawing the human body opened up to reveal the machinery inside.",
+    "createdDate": "2009-01-01",
+    "category": "Portraits",
+    "tags": [
+      "portrait",
+      "sci-fi",
+      "surreal",
+      "pencil",
+      "sketch"
+    ],
+    "groups": [
+      "Portraits",
+      "Fantastical"
+    ],
+    "medium": "Pencil",
+    "imageUrl": "https://kaysartshow.fyi/originals/2009/brain-optimization.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2009/brain-optimization-600w.webp"
+  },
+  {
+    "id": "120",
+    "type": null,
+    "addedDate": "2026-10-12",
+    "title": "Reconnection with the Ancient Ones",
+    "description": "I\u0027m fascinated and inspired by H.R. Giger, and this image draws on his work.",
+    "createdDate": "2009-01-01",
+    "category": "Concept Art",
+    "tags": [
+      "robot",
+      "sci-fi",
+      "pencil",
+      "marker",
+      "watercolor",
+      "sketch"
+    ],
+    "groups": [
+      "Fantastical"
+    ],
+    "medium": "Pencil, marker and watercolor pens",
+    "imageUrl": "https://kaysartshow.fyi/originals/2009/reconnection-with-the-ancient-ones.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2009/reconnection-with-the-ancient-ones-600w.webp"
+  },
+  {
+    "id": "121",
+    "type": null,
+    "addedDate": "2026-10-12",
+    "title": "Hand Study and Woman Getting Shot",
+    "description": "In this drawing I captured what was in front of me, my own hand, alongside a cartoon character getting shot and how that might look.",
+    "createdDate": "2009-01-01",
+    "category": "Illustration",
+    "tags": [
+      "pencil",
+      "marker",
+      "watercolor",
+      "sketch"
+    ],
+    "groups": [
+      "Studies"
+    ],
+    "medium": "Pencil, marker and watercolor",
+    "imageUrl": "https://kaysartshow.fyi/originals/2009/hand-study-and-woman-getting-shot.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2009/hand-study-and-woman-getting-shot-600w.webp"
+  },
+  {
+    "id": "122",
+    "type": null,
+    "addedDate": "2026-10-12",
+    "title": "Old Wise Turtle in Different Poses",
+    "description": "A continuation of my experiments with the comic strip style, this time with a turtle character.",
+    "createdDate": "2009-01-01",
+    "category": "Illustration",
+    "tags": [
+      "animal",
+      "creature",
+      "humor",
+      "fantasy",
+      "pencil",
+      "watercolor",
+      "ink",
+      "sketch"
+    ],
+    "groups": [
+      "Whimsical"
+    ],
+    "medium": "Pencil, Water color and Fine liner",
+    "imageUrl": "https://kaysartshow.fyi/originals/2009/old-wise-turtle-in-different-poses.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2009/old-wise-turtle-in-different-poses-600w.webp"
+  },
+  {
+    "id": "123",
+    "type": null,
+    "addedDate": "2026-10-12",
+    "title": "Mountain God of Everest",
+    "description": "Inspired by the artist Wayne Barlowe and his painting Type and Villar (1976): the gigantic walking mountain.",
+    "createdDate": "2009-01-01",
+    "category": "Illustration",
+    "tags": [
+      "fantasy",
+      "creature",
+      "pencil",
+      "sketch"
+    ],
+    "groups": [
+      "Fantastical"
+    ],
+    "medium": "Pencil",
+    "imageUrl": "https://kaysartshow.fyi/originals/2009/mountain-god-of-everest.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2009/mountain-god-of-everest-600w.webp"
+  },
+  {
+    "id": "124",
+    "type": null,
+    "addedDate": "2026-10-12",
+    "title": "Assorted Sea Creatures",
+    "description": "A study of various sea creatures.",
+    "createdDate": "2009-01-01",
+    "category": "Illustration",
+    "tags": [
+      "animal",
+      "creature",
+      "nature",
+      "pencil",
+      "watercolor",
+      "ink",
+      "sketch"
+    ],
+    "groups": [
+      "Studies"
+    ],
+    "medium": "Pencil, Water color and Fine liner",
+    "imageUrl": "https://kaysartshow.fyi/originals/2009/assorted-sea-creatures.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2009/assorted-sea-creatures-600w.webp"
+  },
+  {
+    "id": "125",
+    "type": null,
+    "addedDate": "2026-10-12",
+    "title": "The Mountain Philosopher",
+    "description": "Inspired by the artist Wayne Barlowe and his painting Type and Villar (1976): the gigantic walking mountain.",
+    "createdDate": "2009-03-30",
+    "category": "Illustration",
+    "tags": [
+      "fantasy",
+      "creature",
+      "architecture",
+      "pencil",
+      "marker",
+      "ink",
+      "sketch"
+    ],
+    "groups": [
+      "Fantastical"
+    ],
+    "medium": "Pencil, markers and fineliner",
+    "imageUrl": "https://kaysartshow.fyi/originals/2009/the-mountain-philosopher.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2009/the-mountain-philosopher-600w.webp"
+  },
+  {
+    "id": "126",
+    "type": null,
+    "addedDate": "2026-10-12",
+    "title": "Creatures Without a Dedicated Head",
+    "description": "An experiment with beasts and monsters that have no head but a huge mouth full of razor-sharp teeth.",
+    "createdDate": "2009-01-01",
+    "category": "Concept Art",
+    "tags": [
+      "creature",
+      "fantasy",
+      "horror",
+      "pencil",
+      "watercolor",
+      "ink",
+      "sketch"
+    ],
+    "groups": [
+      "Fantastical"
+    ],
+    "medium": "Pencil, Water color and Fine liner",
+    "imageUrl": "https://kaysartshow.fyi/originals/2009/creatures-without-a-dedicated-head.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2009/creatures-without-a-dedicated-head-600w.webp"
+  },
+  {
+    "id": "127",
+    "type": null,
+    "addedDate": "2026-10-12",
+    "title": "Various Sketches",
+    "description": "Various sketches from the top of my head.",
+    "createdDate": "2009-01-01",
+    "category": "Illustration",
+    "tags": [
+      "creature",
+      "animal",
+      "pencil",
+      "sketch"
+    ],
+    "groups": [
+      "Fantastical"
+    ],
+    "medium": "Pencil",
+    "imageUrl": "https://kaysartshow.fyi/originals/2009/various-sketches.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2009/various-sketches-600w.webp"
+  },
+  {
+    "id": "128",
+    "type": null,
+    "addedDate": "2026-10-12",
+    "title": "Birdie Comic Strip",
+    "description": "Birdie is a character I drew in many phases. I liked the idea of a bird with human legs and feet. In this drawing I try out the style of a comic strip.",
+    "createdDate": "2009-01-01",
+    "category": "Concept Art",
+    "tags": [
+      "creature",
+      "humor",
+      "pencil",
+      "watercolor",
+      "ink",
+      "sketch"
+    ],
+    "groups": [
+      "Whimsical"
+    ],
+    "medium": "Pencil and watercolor",
+    "imageUrl": "https://kaysartshow.fyi/originals/2009/birdie-comic-strip.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2009/birdie-comic-strip-600w.webp"
   }
 ]
