@@ -11,6 +11,9 @@
 - **Share links:** `/art/<id>?v=<hash>` opens that artwork in the lightbox (`js/modules/share.js`, `lightbox.js`; the lightbox's share button builds the link, `v` is a hash of title/description/image so chat apps refetch the preview when an artwork changes). Because link-preview crawlers don't run JS, the one remaining Netlify **Edge Function**, `netlify/edge-functions/share-preview.js`, serves `index.html` for `/art/*` with that artwork's title, description and 600w thumbnail written into the Open Graph tags. It only reads the static `data/artwork.json`. A URL-driven open (direct visit, back/forward) first switches to the grid view (without changing the saved view preference) and pages to the page containing the artwork, so closing the viewer leaves its card on screen. Asset paths in `index.html` are root-absolute (`/css/...`) so the page works under `/art/<id>`.
 - **Routing & Deployment:** Single Page Application (SPA) using root fallback (`/*` -> `/index.html`). The root folder `.` is published directly with no build step (`npm run dev` starts `netlify dev`).
 
+## Planned Overhaul
+A phased plan to strip the app down to a viewing-focused gallery (one look instead of 6 themes, no fake ads, a full-bleed viewer, URL-based collections) lives in [docs/gallery-overhaul-plan.md](./docs/gallery-overhaul-plan.md). Check it before touching themes, the lightbox, grouping, filters or pagination.
+
 ## Agent Learnings (`agent-learnt/`)
 The `agent-learnt/` directory is reserved for recording technical insights, environment quirks, and architectural decisions discovered across development sessions. 
 
