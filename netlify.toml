@@ -10,6 +10,18 @@
   [headers.values]
     Cache-Control = "public, max-age=300"
 
+# CSS/JS are unversioned (no build step), so keep the TTL short: a deploy shows
+# up within minutes while repeat visits still skip most requests.
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=300"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=300"
+
 # Serve the SPA from the root
 [[redirects]]
   from = "/*"

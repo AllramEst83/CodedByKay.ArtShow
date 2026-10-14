@@ -17,6 +17,11 @@
   --shadow-lg: none;
 
   --transition-speed: 0.15s;
+
+  /* The walls themselves, for the swatches that pick them. */
+  --wall-dark: #0f0f10;
+  --wall-gray: #a9a9ae;
+  --wall-paper: #f3eee4;
 }
 
 /* Dark (default) — immersive; light paper and scans glow */

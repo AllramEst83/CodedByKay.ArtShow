@@ -203,11 +203,13 @@ Only after §3 asks land (or earlier with the fallbacks, then switch to real fie
 
 ### Phase 5 — Polish, accessibility, performance, verification · medium
 
-- [ ] **Verification harness:** a small Playwright script (Chromium is pre-installed in the cloud env at `/opt/pw-browsers`; do **not** run `playwright install`) that loads `/`, `/collections`, `/collections/<slug>`, `/art/<id>` at 375, 768, 1440 px for each wall and saves screenshots to a scratch dir; plus assertions: no console errors, no horizontal scroll, no `localStorage`-throws crash, deep link opens viewer, back closes it. Keep it under `scripts/` or `tests/` as a dev-only file (D4).
-- [ ] **A11y:** one `h1` per view, logical heading order (cards currently use `h3` with no `h2`), skip-to-content link, visible focus on every wall, `aria-current` on nav, landmarks, alt text from data, live-region announcements for filter counts, touch targets ≥ 44px.
-- [ ] **Perf:** preconnect to `kaysartshow.fyi`; `fetchpriority="high"` on the first row; `Cache-Control` for `/css`, `/js` (short or fingerprinted via a `?v=` string bumped manually since there is no build); consider splitting `styles.css` (1638 lines → ~500 after Phase 1) into `base/layout/components/viewer` files if still > 700 lines.
-- [ ] **PWA/meta:** update `site.webmanifest` `theme_color/background_color`; refresh OG/Twitter site description to match the new voice; keep `og:image` absolute.
-- [ ] **Docs:** rewrite the "App Overview" in `AGENTS.md` (no themes/ads, new routes, new modules); add `agent-learnt/` notes on router/store, viewer pointer handling, and the wall system; archive this plan with ✅ marks.
+- [x] **Verification harness:** a small script (`scripts/verify.mjs`: dependency-free, drives a local Chrome over CDP instead of Playwright, so no `package.json` change) that loads `/`, `/collections`, `/collections/<slug>`, `/art/<id>` at 375, 768, 1440 px for each wall and saves screenshots to a scratch dir; plus assertions: no console errors, no horizontal scroll, no `localStorage`-throws crash, deep link opens viewer, back closes it. Keep it under `scripts/` or `tests/` as a dev-only file (D4).
+- [x] **A11y:** one `h1` per view, logical heading order (cards currently use `h3` with no `h2`), skip-to-content link, visible focus on every wall, `aria-current` on nav, landmarks, alt text from data, live-region announcements for filter counts, touch targets ≥ 44px.
+- [x] **Perf:** preconnect to `kaysartshow.fyi`; `fetchpriority="high"` on the first row; `Cache-Control` for `/css`, `/js` (short or fingerprinted via a `?v=` string bumped manually since there is no build); consider splitting `styles.css` (1638 lines → ~500 after Phase 1) into `base/layout/components/viewer` files if still > 700 lines.
+- [x] **PWA/meta:** update `site.webmanifest` `theme_color/background_color`; refresh OG/Twitter site description to match the new voice; keep `og:image` absolute.
+- [x] **Docs:** rewrite the "App Overview" in `AGENTS.md` (no themes/ads, new routes, new modules); add `agent-learnt/` notes on router/store, viewer pointer handling, and the wall system; archive this plan with ✅ marks.
+
+*Notes: not done: self-hosting the font (still Google Fonts, one family), splitting `styles.css` (now 3 files, all < 500 lines), Lighthouse scores (not run), a `/year` index. The `data-theme`/`fake-ad` grep and tokens-only colour check pass.*
 
 ---
 

@@ -1,7 +1,7 @@
 {
   "name": "Kay's ArtShow",
   "short_name": "ArtShow",
-  "description": "A beautiful art portfolio featuring stunning drawings and artwork by Kay.",
+  "description": "Original drawings, illustrations and portraits by Kay.",
   "icons": [
     {
       "src": "/assets/icons/android-chrome-192x192.png",
@@ -16,6 +16,6 @@
   ],
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#120e24",
-  "theme_color": "#120e24"
+  "background_color": "#0f0f10",
+  "theme_color": "#0f0f10"
 }

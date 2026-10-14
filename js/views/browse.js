@@ -233,7 +233,7 @@ export function renderBrowse(root, route, opts) {
     } else {
       const grid = el('div');
       results.appendChild(grid);
-      gridHandles.push(renderGrid(grid, items, { onOpen }));
+      gridHandles.push(renderGrid(grid, items, { onOpen, priority: true }));
     }
   }
 

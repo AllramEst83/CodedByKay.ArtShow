@@ -413,3 +413,21 @@
 .view.empty-state p {
   margin: 0.5rem 0 1.25rem;
 }
+
+@media (pointer: coarse) {
+  .segmented__btn,
+  .toolbar__btn,
+  .facet__toggle,
+  .filter-chip,
+  .year-rail__btn,
+  .btn-text {
+    min-height: 2.75rem;
+  }
+  .segmented__btn,
+  .year-rail__btn {
+    min-width: 2.75rem;
+  }
+  .facet__values {
+    gap: 0.5rem;
+  }
+}

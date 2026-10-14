@@ -72,7 +72,7 @@ export function computeRows(items, width) {
   });
 }
 
-function buildCard(item, onOpen, onRatio) {
+function buildCard(item, onOpen, onRatio, priority) {
   const a = document.createElement('a');
   a.className = 'art-card';
   a.href = `/art/${encodeURIComponent(item.id)}`;
@@ -89,7 +89,12 @@ function buildCard(item, onOpen, onRatio) {
   img.src = item.thumbnailUrl;
   img.alt = item.description || item.title;
   img.decoding = 'async';
-  img.loading = 'lazy';
+  // The first screenful loads eagerly at high priority; the rest lazily.
+  if (priority) {
+    img.fetchPriority = 'high';
+  } else {
+    img.loading = 'lazy';
+  }
 
   img.addEventListener('load', () => {
     placeholder.classList.add('shimmer--done');
@@ -139,7 +144,7 @@ function buildCard(item, onOpen, onRatio) {
 
 // Renders `items` into `container` and keeps rows justified on resize and as
 // image ratios are discovered. Returns { destroy() }.
-export function renderGrid(container, items, { onOpen }) {
+export function renderGrid(container, items, { onOpen, priority = false }) {
   container.classList.add('art-grid');
   container.replaceChildren();
 
@@ -175,7 +180,7 @@ export function renderGrid(container, items, { onOpen }) {
     if (!frameRequest) frameRequest = requestAnimationFrame(layout);
   }
 
-  items.forEach((item) => cards.set(item.id, buildCard(item, onOpen, schedule)));
+  items.forEach((item, i) => cards.set(item.id, buildCard(item, onOpen, schedule, priority && i < 6)));
 
   const observer = new ResizeObserver(() => {
     if (Math.floor(container.clientWidth) !== lastWidth) schedule();
