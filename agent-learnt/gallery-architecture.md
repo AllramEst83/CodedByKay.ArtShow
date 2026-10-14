@@ -1,7 +1,7 @@
 # Gallery architecture notes
 
 Things that are not obvious from reading the code. Written at the end of the
-2026-10 gallery overhaul (see `docs/gallery-overhaul-plan.md`).
+2026-10 gallery overhaul.
 
 ## URL is the source of truth
 - `router.js` owns `popstate`. List state (facets, search, order) lives in the

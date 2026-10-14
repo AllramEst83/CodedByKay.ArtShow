@@ -1,10 +1,9 @@
 // Normalises data/artwork.json for the browsing UI and holds the pure
 // filter / sort helpers.
 //
-// Everything derived here has a front-end fallback by design (see
-// docs/gallery-overhaul-plan.md §3): when the CLI/MCP start publishing a real
-// `media[]`, `datePrecision`, collection slugs, etc., the fields below are
-// used as-is and the derivation is skipped.
+// Everything derived here has a front-end fallback by design: when the CLI/MCP
+// publish a real `media[]`, `datePrecision`, etc. (they do since 2026-10), the
+// fields below are used as-is and the derivation is skipped.
 
 // Display names for the normalised medium vocabulary, in facet order.
 export const MEDIA_LABELS = {

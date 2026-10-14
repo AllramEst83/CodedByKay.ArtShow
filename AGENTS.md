@@ -37,7 +37,7 @@ js/views/browse.js    work / collection / year list view; collections.js: tiles
 
 Routes: `/`, `/collections`, `/collections/<slug>`, `/year/<yyyy>`, `/art/<id>`. Query params on list views: `q`, `collection`, `medium`, `subject` (comma lists, OR within a facet, AND across), `order=chronological`.
 
-Status of the gallery overhaul and what is still open (About page, data fields that need the CLI/MCP, self-hosted font): [docs/gallery-overhaul-plan.md](./docs/gallery-overhaul-plan.md).
+Open items (About page, self-hosted font, Lighthouse pass) are tracked in `ArtShow.Workspace/todo.md`. Non-obvious design notes: `agent-learnt/gallery-architecture.md`.
 
 ## Checking changes
 `node scripts/verify.mjs` (dev-only, no dependencies; needs a local Chrome/Chromium — set `CHROME_PATH` or `--chrome`). It serves the repo with the SPA fallback and checks every route at 375/768/1440px on all three walls: console errors, horizontal scroll, one `h1`, deep link + Escape, boot with blocked storage, 44px touch targets, tokens-only colours. Screenshots land in the temp dir (or `--out`).
