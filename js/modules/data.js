@@ -109,7 +109,13 @@ export function sortItems(items, order) {
   return copy;
 }
 
-export function buildCollections(artwork) {
+/**
+ * @param artwork normalised items
+ * @param meta    optional data/collections.json entries: { slug, blurb, coverId, order }.
+ *                Everything in it is optional; without it a collection's cover is its newest
+ *                image, it has no blurb, and the order is by size.
+ */
+export function buildCollections(artwork, meta = []) {
   const map = new Map();
   artwork.forEach((item) => {
     item.collections.forEach(({ name, slug }) => {
@@ -117,14 +123,22 @@ export function buildCollections(artwork) {
       map.get(slug).items.push(item);
     });
   });
+  const metaBySlug = new Map((Array.isArray(meta) ? meta : []).map((m) => [m.slug, m]));
+
   return [...map.values()]
-    .map((c) => ({
-      ...c,
-      count: c.items.length,
-      // Fallback cover: the most recent piece that is an image.
-      cover: c.items.slice().sort(latestFirst).find((i) => !i.isVideo) || c.items[0],
-    }))
-    .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name));
+    .map((c) => {
+      const m = metaBySlug.get(c.slug) || {};
+      const chosen = m.coverId != null ? c.items.find((i) => i.id === String(m.coverId) && !i.isVideo) : null;
+      return {
+        ...c,
+        count: c.items.length,
+        blurb: typeof m.blurb === 'string' && m.blurb.trim() ? m.blurb.trim() : null,
+        order: Number.isInteger(m.order) ? m.order : null,
+        cover: chosen || c.items.slice().sort(latestFirst).find((i) => !i.isVideo) || c.items[0],
+      };
+    })
+    .sort((a, b) =>
+      ((a.order ?? Infinity) - (b.order ?? Infinity)) || (b.count - a.count) || a.name.localeCompare(b.name));
 }
 
 export function buildYears(artwork) {

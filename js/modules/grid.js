@@ -100,7 +100,8 @@ function buildCard(item, onOpen, onRatio, priority) {
     placeholder.classList.add('shimmer--done');
     if (img.naturalWidth && img.naturalHeight) {
       const r = img.naturalWidth / img.naturalHeight;
-      if (Math.abs(r - ratioOf(item)) > 0.01) {
+      // Items that carry width/height already reserve their exact ratio.
+      if (!(item.width && item.height) && Math.abs(r - ratioOf(item)) > 0.01) {
         rememberRatio(item.id, r);
         onRatio();
       }

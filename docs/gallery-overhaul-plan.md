@@ -196,10 +196,12 @@ Goal: replace modes/pagination/popover with navigation that lives in the URL. In
 
 Only after §3 asks land (or earlier with the fallbacks, then switch to real fields):
 
-- [ ] Frontend consumes `width/height`, `displayUrl`, `datePrecision`, `media[]`, collection metadata when present; fallbacks removed once all 143 items carry the fields (note in `agent-learnt/`).
+- [x] Frontend consumes `width/height`, `displayUrl`, `datePrecision`, `media[]`, collection metadata when present; fallbacks removed once all 143 items carry the fields (note in `agent-learnt/`).
 - [ ] Update `netlify/edge-functions/share-preview.js` only if field names change; it must keep working for `/art/<id>`; consider using `displayUrl` for the OG image (still the 600w thumb unless a 1200×630 crop is generated) and the collection name in the description.
 - [ ] Sharding decision (`plan.md` open item) is still not needed at 143 items; revisit at ~500.
-- [ ] Update `AGENTS.md` data-contract paragraph to list the new fields.
+- [x] Update `AGENTS.md` data-contract paragraph to list the new fields.
+
+*Status 2026-10-14: the CLI and MCP now publish `width`, `height`, `displayUrl`, `datePrecision`, `media[]` and `data/collections.json` (byte-identical from both tools); the live catalog is backfilled (140 images, 127 display files). Not done: `alt` (the site reuses `description`), the OG image still uses the 600w thumbnail, the front-end fallbacks stay (they cost nothing and keep the site working against an older JSON).*
 
 ### Phase 5 — Polish, accessibility, performance, verification · medium
 

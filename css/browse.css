@@ -64,6 +64,14 @@
   line-height: 1.1;
   outline: none;
 }
+.view-blurb {
+  flex-basis: 100%;
+  max-width: 42rem;
+  margin-top: 0.5rem;
+  color: var(--color-text-secondary);
+  font-size: 1rem;
+  line-height: 1.5;
+}
 .view-count {
   color: var(--color-text-muted);
   font-size: 0.8rem;

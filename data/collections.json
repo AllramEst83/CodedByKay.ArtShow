@@ -1,0 +1,72 @@
+[
+  {
+    "slug": "architecture",
+    "name": "Architecture",
+    "blurb": null,
+    "coverId": null,
+    "order": null
+  },
+  {
+    "slug": "atelje-kopiko",
+    "name": "Atelje Kopiko",
+    "blurb": null,
+    "coverId": null,
+    "order": null
+  },
+  {
+    "slug": "fantastical",
+    "name": "Fantastical",
+    "blurb": null,
+    "coverId": null,
+    "order": null
+  },
+  {
+    "slug": "graffiti",
+    "name": "Graffiti",
+    "blurb": null,
+    "coverId": null,
+    "order": null
+  },
+  {
+    "slug": "landscape",
+    "name": "Landscape",
+    "blurb": null,
+    "coverId": null,
+    "order": null
+  },
+  {
+    "slug": "mythology",
+    "name": "Mythology",
+    "blurb": null,
+    "coverId": null,
+    "order": null
+  },
+  {
+    "slug": "portraits",
+    "name": "Portraits",
+    "blurb": null,
+    "coverId": null,
+    "order": null
+  },
+  {
+    "slug": "school-project",
+    "name": "School project",
+    "blurb": null,
+    "coverId": null,
+    "order": null
+  },
+  {
+    "slug": "studies",
+    "name": "Studies",
+    "blurb": null,
+    "coverId": null,
+    "order": null
+  },
+  {
+    "slug": "whimsical",
+    "name": "Whimsical",
+    "blurb": null,
+    "coverId": null,
+    "order": null
+  }
+]

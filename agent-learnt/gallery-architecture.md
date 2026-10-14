@@ -30,10 +30,12 @@ Things that are not obvious from reading the code. Written at the end of the
   before touching the DOM.
 
 ## Grid
-- The data carries no image dimensions yet. `grid.js` reserves 3:4 per card,
-  learns real ratios from `naturalWidth/Height` on load, and caches them in
-  `localStorage` (`artshow_ratios`). When items gain `width`/`height` they are
-  used directly and the cache is bypassed.
+- Items carry `width`/`height` (since the 2026-10 data contract), so cards
+  reserve their exact ratio and nothing reflows. Older JSON without them still
+  works: `grid.js` then reserves 3:4, learns ratios from `naturalWidth/Height`
+  on load and caches them in `localStorage` (`artshow_ratios`).
+- The viewer shows `displayUrl` (2000px) and swaps in `imageUrl` only when the
+  visitor zooms; originals are multi-MB scans up to ~7000px.
 - Row layout is computed in JS (flex rows, width = rowHeight x ratio). It is
   re-run on container width change and whenever a new ratio is learnt.
 

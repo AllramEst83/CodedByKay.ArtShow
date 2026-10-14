@@ -94,7 +94,7 @@ function renderRoute(route) {
       }
       setTitle(collection.name);
       activeView = renderBrowse(root, route, {
-        title: collection.name, scope: collection.items,
+        title: collection.name, blurb: collection.blurb, scope: collection.items,
         facets: ['medium', 'subject'], orderToggle: true, onOpen,
       });
       break;
@@ -176,6 +176,19 @@ function initSearch() {
   });
 }
 
+// Optional presentation details for collections (blurb, cover, order). The site is fully
+// usable without it, so any failure just means defaults.
+async function loadCollectionMeta() {
+  try {
+    const response = await fetch('/data/collections.json');
+    if (!response.ok) return [];
+    const parsed = await response.json();
+    return Array.isArray(parsed) ? parsed : [];
+  } catch {
+    return [];
+  }
+}
+
 // ─── Boot ─────────────────────────────────────────────────────────────────────
 
 async function boot() {
@@ -186,10 +199,11 @@ async function boot() {
       throw new Error(`HTTP ${response.status}: Failed to fetch artwork metadata from server`);
     }
     const artwork = normalizeArtwork(await response.json());
+    const collectionMeta = await loadCollectionMeta();
     setState({
       artwork,
       list: artwork,
-      collections: buildCollections(artwork),
+      collections: buildCollections(artwork, collectionMeta),
       years: buildYears(artwork),
     });
 

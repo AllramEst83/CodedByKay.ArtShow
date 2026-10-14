@@ -20,7 +20,16 @@
     "medium": "Pencil, Water color and Fine liner",
     "imageUrl": "https://kaysartshow.fyi/originals/2010/mom-and-grandma.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2010/mom-and-grandma-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2010/mom-and-grandma-600w.webp",
+    "width": 1068,
+    "height": 720,
+    "displayUrl": null,
+    "datePrecision": "day",
+    "media": [
+      "pencil",
+      "watercolor",
+      "ink"
+    ]
   },
   {
     "id": "2",
@@ -42,7 +51,15 @@
     "medium": "Pencil and watercolor",
     "imageUrl": "https://kaysartshow.fyi/originals/2009/my-son.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2009/my-son-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2009/my-son-600w.webp",
+    "width": 861,
+    "height": 928,
+    "displayUrl": null,
+    "datePrecision": "day",
+    "media": [
+      "pencil",
+      "watercolor"
+    ]
   },
   {
     "id": "3",
@@ -62,7 +79,14 @@
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2010/old-lady.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2010/old-lady-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2010/old-lady-600w.webp",
+    "width": 828,
+    "height": 1138,
+    "displayUrl": null,
+    "datePrecision": "day",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "4",
@@ -83,7 +107,14 @@
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2010/portrait-of-girl-with-deer-eyes.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2010/portrait-of-girl-with-deer-eyes-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2010/portrait-of-girl-with-deer-eyes-600w.webp",
+    "width": 731,
+    "height": 1024,
+    "displayUrl": null,
+    "datePrecision": "day",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "5",
@@ -105,7 +136,14 @@
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2009/yggdrasil.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2009/yggdrasil-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2009/yggdrasil-600w.webp",
+    "width": 1024,
+    "height": 697,
+    "displayUrl": null,
+    "datePrecision": "day",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "6",
@@ -125,7 +163,14 @@
     "medium": "Photography / Costume",
     "imageUrl": "https://kaysartshow.fyi/originals/2009/air-schoold-project.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2009/air-schoold-project-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2009/air-schoold-project-600w.webp",
+    "width": 600,
+    "height": 424,
+    "displayUrl": null,
+    "datePrecision": "year",
+    "media": [
+      "photography"
+    ]
   },
   {
     "id": "7",
@@ -145,7 +190,14 @@
     "medium": "Photography / Body Paint",
     "imageUrl": "https://kaysartshow.fyi/originals/2009/fire-schoold-project.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2009/fire-schoold-project-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2009/fire-schoold-project-600w.webp",
+    "width": 600,
+    "height": 424,
+    "displayUrl": null,
+    "datePrecision": "year",
+    "media": [
+      "photography"
+    ]
   },
   {
     "id": "8",
@@ -165,7 +217,14 @@
     "medium": "Photography / Body Paint",
     "imageUrl": "https://kaysartshow.fyi/originals/2009/water-schoold-project.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2009/water-schoold-project-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2009/water-schoold-project-600w.webp",
+    "width": 600,
+    "height": 424,
+    "displayUrl": null,
+    "datePrecision": "year",
+    "media": [
+      "photography"
+    ]
   },
   {
     "id": "9",
@@ -188,7 +247,16 @@
     "medium": "Pencil, Watercolor \u0026 Fine Liner",
     "imageUrl": "https://kaysartshow.fyi/originals/2025/insect-demon.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2025/insect-demon-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2025/insect-demon-600w.webp",
+    "width": 6587,
+    "height": 4590,
+    "displayUrl": "https://kaysartshow.fyi/display/2025/insect-demon-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil",
+      "watercolor",
+      "ink"
+    ]
   },
   {
     "id": "10",
@@ -211,7 +279,14 @@
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2025/tentacle-nightmare.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2025/tentacle-nightmare-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2025/tentacle-nightmare-600w.webp",
+    "width": 4216,
+    "height": 4133,
+    "displayUrl": "https://kaysartshow.fyi/display/2025/tentacle-nightmare-2000w.webp",
+    "datePrecision": "day",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "11",
@@ -233,7 +308,14 @@
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2023/ant_cup.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2023/ant_cup-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2023/ant_cup-600w.webp",
+    "width": 3793,
+    "height": 3776,
+    "displayUrl": "https://kaysartshow.fyi/display/2023/ant_cup-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "12",
@@ -254,7 +336,14 @@
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2023/eyes_and_nose.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2023/eyes_and_nose-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2023/eyes_and_nose-600w.webp",
+    "width": 3839,
+    "height": 3930,
+    "displayUrl": "https://kaysartshow.fyi/display/2023/eyes_and_nose-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "13",
@@ -274,7 +363,14 @@
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2023/segloria.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2023/segloria-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2023/segloria-600w.webp",
+    "width": 3662,
+    "height": 3622,
+    "displayUrl": "https://kaysartshow.fyi/display/2023/segloria-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "14",
@@ -296,7 +392,14 @@
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2023/the_sacrifice.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2023/the_sacrifice-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2023/the_sacrifice-600w.webp",
+    "width": 3801,
+    "height": 3723,
+    "displayUrl": "https://kaysartshow.fyi/display/2023/the_sacrifice-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "15",
@@ -319,7 +422,14 @@
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2024/demon_beast.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2024/demon_beast-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2024/demon_beast-600w.webp",
+    "width": 3800,
+    "height": 3868,
+    "displayUrl": "https://kaysartshow.fyi/display/2024/demon_beast-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "16",
@@ -339,7 +449,14 @@
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2024/kid_reading_in_by_the_light.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2024/kid_reading_in_by_the_light-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2024/kid_reading_in_by_the_light-600w.webp",
+    "width": 3796,
+    "height": 3818,
+    "displayUrl": "https://kaysartshow.fyi/display/2024/kid_reading_in_by_the_light-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "17",
@@ -360,7 +477,14 @@
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2024/mug_shot.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2024/mug_shot-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2024/mug_shot-600w.webp",
+    "width": 3844,
+    "height": 3522,
+    "displayUrl": "https://kaysartshow.fyi/display/2024/mug_shot-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "18",
@@ -382,7 +506,14 @@
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2024/pencil_mantis.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2024/pencil_mantis-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2024/pencil_mantis-600w.webp",
+    "width": 3786,
+    "height": 3672,
+    "displayUrl": "https://kaysartshow.fyi/display/2024/pencil_mantis-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "19",
@@ -403,7 +534,14 @@
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2026/boy_with_cap.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2026/boy_with_cap-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2026/boy_with_cap-600w.webp",
+    "width": 3597,
+    "height": 3794,
+    "displayUrl": "https://kaysartshow.fyi/display/2026/boy_with_cap-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "20",
@@ -424,7 +562,14 @@
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2026/boy_with_closed_eyes.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2026/boy_with_closed_eyes-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2026/boy_with_closed_eyes-600w.webp",
+    "width": 3537,
+    "height": 3872,
+    "displayUrl": "https://kaysartshow.fyi/display/2026/boy_with_closed_eyes-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "21",
@@ -446,7 +591,14 @@
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2026/me_and_my_better_half_1.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2026/me_and_my_better_half_1-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2026/me_and_my_better_half_1-600w.webp",
+    "width": 3757,
+    "height": 3662,
+    "displayUrl": "https://kaysartshow.fyi/display/2026/me_and_my_better_half_1-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "22",
@@ -468,7 +620,14 @@
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2026/me_and_my_better_half_2.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2026/me_and_my_better_half_2-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2026/me_and_my_better_half_2-600w.webp",
+    "width": 3673,
+    "height": 3187,
+    "displayUrl": "https://kaysartshow.fyi/display/2026/me_and_my_better_half_2-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "23",
@@ -490,7 +649,14 @@
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2026/parrot_and_woman.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2026/parrot_and_woman-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2026/parrot_and_woman-600w.webp",
+    "width": 3748,
+    "height": 3740,
+    "displayUrl": "https://kaysartshow.fyi/display/2026/parrot_and_woman-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "24",
@@ -511,7 +677,14 @@
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2026/tree_by_the_fence.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2026/tree_by_the_fence-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2026/tree_by_the_fence-600w.webp",
+    "width": 3089,
+    "height": 3253,
+    "displayUrl": "https://kaysartshow.fyi/display/2026/tree_by_the_fence-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "25",
@@ -535,7 +708,17 @@
     "medium": "Pencil, marker and watercolor. Digital",
     "imageUrl": "https://kaysartshow.fyi/originals/2026/elephant_man_v1.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2026/elephant_man_v1-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2026/elephant_man_v1-600w.webp",
+    "width": 2633,
+    "height": 4161,
+    "displayUrl": "https://kaysartshow.fyi/display/2026/elephant_man_v1-2000w.webp",
+    "datePrecision": "day",
+    "media": [
+      "pencil",
+      "watercolor",
+      "marker",
+      "digital"
+    ]
   },
   {
     "id": "26",
@@ -555,7 +738,15 @@
     "medium": "Pencil, Water color pencils and Water color",
     "imageUrl": "https://kaysartshow.fyi/originals/2012/atelje_kopiko_logo.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/atelje_kopiko_logo-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/atelje_kopiko_logo-600w.webp",
+    "width": 5951,
+    "height": 4470,
+    "displayUrl": "https://kaysartshow.fyi/display/2012/atelje_kopiko_logo-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil",
+      "watercolor"
+    ]
   },
   {
     "id": "27",
@@ -577,7 +768,14 @@
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2010/remote_controlled_cat.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2010/remote_controlled_cat-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2010/remote_controlled_cat-600w.webp",
+    "width": 6024,
+    "height": 4217,
+    "displayUrl": "https://kaysartshow.fyi/display/2010/remote_controlled_cat-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "28",
@@ -600,7 +798,16 @@
     "medium": "Pencil, and watercolor. Digital",
     "imageUrl": "https://kaysartshow.fyi/originals/2026/elephant_man_v2.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2026/elephant_man_v2-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2026/elephant_man_v2-600w.webp",
+    "width": 2633,
+    "height": 4161,
+    "displayUrl": "https://kaysartshow.fyi/display/2026/elephant_man_v2-2000w.webp",
+    "datePrecision": "day",
+    "media": [
+      "pencil",
+      "watercolor",
+      "digital"
+    ]
   },
   {
     "id": "29",
@@ -622,7 +829,16 @@
     "medium": "Pencil, markers and fineliner",
     "imageUrl": "https://kaysartshow.fyi/originals/2004/gabriel_chive_1.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2004/gabriel_chive_1-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2004/gabriel_chive_1-600w.webp",
+    "width": 2116,
+    "height": 2932,
+    "displayUrl": "https://kaysartshow.fyi/display/2004/gabriel_chive_1-2000w.webp",
+    "datePrecision": "day",
+    "media": [
+      "pencil",
+      "ink",
+      "marker"
+    ]
   },
   {
     "id": "30",
@@ -644,7 +860,16 @@
     "medium": "Pencil, markers and fineliner",
     "imageUrl": "https://kaysartshow.fyi/originals/2004/gabriel_chive_2.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2004/gabriel_chive_2-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2004/gabriel_chive_2-600w.webp",
+    "width": 2116,
+    "height": 2928,
+    "displayUrl": "https://kaysartshow.fyi/display/2004/gabriel_chive_2-2000w.webp",
+    "datePrecision": "day",
+    "media": [
+      "pencil",
+      "ink",
+      "marker"
+    ]
   },
   {
     "id": "31",
@@ -665,7 +890,16 @@
     "medium": "Pencil, Water color and Fine liner",
     "imageUrl": "https://kaysartshow.fyi/originals/2010/gabriel_chives_tatue_original.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2010/gabriel_chives_tatue_original-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2010/gabriel_chives_tatue_original-600w.webp",
+    "width": 2180,
+    "height": 3340,
+    "displayUrl": "https://kaysartshow.fyi/display/2010/gabriel_chives_tatue_original-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil",
+      "watercolor",
+      "ink"
+    ]
   },
   {
     "id": "32",
@@ -686,7 +920,16 @@
     "medium": "Pencil, Water color and Fine liner",
     "imageUrl": "https://kaysartshow.fyi/originals/2010/tatue-design-sketch.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2010/tatue-design-sketch-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2010/tatue-design-sketch-600w.webp",
+    "width": 2178,
+    "height": 2178,
+    "displayUrl": "https://kaysartshow.fyi/display/2010/tatue-design-sketch-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil",
+      "watercolor",
+      "ink"
+    ]
   },
   {
     "id": "33",
@@ -706,7 +949,15 @@
     "medium": "Pencil, Water color pencils and Water color",
     "imageUrl": "https://kaysartshow.fyi/originals/2012/atelje_kopiko_back_button.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/atelje_kopiko_back_button-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/atelje_kopiko_back_button-600w.webp",
+    "width": 3243,
+    "height": 2334,
+    "displayUrl": "https://kaysartshow.fyi/display/2012/atelje_kopiko_back_button-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil",
+      "watercolor"
+    ]
   },
   {
     "id": "34",
@@ -726,7 +977,15 @@
     "medium": "Pencil, Water color pencils and Water color",
     "imageUrl": "https://kaysartshow.fyi/originals/2012/atelje_kopiko_blue_flower.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/atelje_kopiko_blue_flower-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/atelje_kopiko_blue_flower-600w.webp",
+    "width": 2488,
+    "height": 3484,
+    "displayUrl": "https://kaysartshow.fyi/display/2012/atelje_kopiko_blue_flower-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil",
+      "watercolor"
+    ]
   },
   {
     "id": "35",
@@ -746,7 +1005,15 @@
     "medium": "Pencil, Water color pencils and Water color",
     "imageUrl": "https://kaysartshow.fyi/originals/2012/atelje_kopiko_home.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/atelje_kopiko_home-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/atelje_kopiko_home-600w.webp",
+    "width": 3170,
+    "height": 2327,
+    "displayUrl": "https://kaysartshow.fyi/display/2012/atelje_kopiko_home-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil",
+      "watercolor"
+    ]
   },
   {
     "id": "36",
@@ -766,7 +1033,15 @@
     "medium": "Pencil, Water color pencils and Water color",
     "imageUrl": "https://kaysartshow.fyi/originals/2012/atelje_kopiko_lady_bug_closed_wings.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/atelje_kopiko_lady_bug_closed_wings-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/atelje_kopiko_lady_bug_closed_wings-600w.webp",
+    "width": 2317,
+    "height": 2799,
+    "displayUrl": "https://kaysartshow.fyi/display/2012/atelje_kopiko_lady_bug_closed_wings-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil",
+      "watercolor"
+    ]
   },
   {
     "id": "37",
@@ -786,7 +1061,15 @@
     "medium": "Pencil, Water color pencils and Water color",
     "imageUrl": "https://kaysartshow.fyi/originals/2012/atelje_kopiko_lady_bug_wings_open.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/atelje_kopiko_lady_bug_wings_open-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/atelje_kopiko_lady_bug_wings_open-600w.webp",
+    "width": 3223,
+    "height": 2245,
+    "displayUrl": "https://kaysartshow.fyi/display/2012/atelje_kopiko_lady_bug_wings_open-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil",
+      "watercolor"
+    ]
   },
   {
     "id": "38",
@@ -806,7 +1089,15 @@
     "medium": "Pencil, Water color pencils and Water color",
     "imageUrl": "https://kaysartshow.fyi/originals/2012/atelje_kopiko_portfolio.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/atelje_kopiko_portfolio-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/atelje_kopiko_portfolio-600w.webp",
+    "width": 2600,
+    "height": 1634,
+    "displayUrl": "https://kaysartshow.fyi/display/2012/atelje_kopiko_portfolio-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil",
+      "watercolor"
+    ]
   },
   {
     "id": "39",
@@ -826,7 +1117,15 @@
     "medium": "Pencil, Water color pencils and Water color",
     "imageUrl": "https://kaysartshow.fyi/originals/2012/atelje_kopiko_resume.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/atelje_kopiko_resume-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/atelje_kopiko_resume-600w.webp",
+    "width": 2597,
+    "height": 1634,
+    "displayUrl": "https://kaysartshow.fyi/display/2012/atelje_kopiko_resume-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil",
+      "watercolor"
+    ]
   },
   {
     "id": "40",
@@ -846,7 +1145,15 @@
     "medium": "Pencil, Water color pencils and Water color",
     "imageUrl": "https://kaysartshow.fyi/originals/2012/atelje_kopiko_self_portrait_oval_frame.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/atelje_kopiko_self_portrait_oval_frame-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/atelje_kopiko_self_portrait_oval_frame-600w.webp",
+    "width": 2367,
+    "height": 3242,
+    "displayUrl": "https://kaysartshow.fyi/display/2012/atelje_kopiko_self_portrait_oval_frame-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil",
+      "watercolor"
+    ]
   },
   {
     "id": "41",
@@ -866,7 +1173,15 @@
     "medium": "Pencil, Water color pencils and Water color",
     "imageUrl": "https://kaysartshow.fyi/originals/2012/atelje_kopiko_the_tools_of_the_trade.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/atelje_kopiko_the_tools_of_the_trade-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/atelje_kopiko_the_tools_of_the_trade-600w.webp",
+    "width": 3290,
+    "height": 2155,
+    "displayUrl": "https://kaysartshow.fyi/display/2012/atelje_kopiko_the_tools_of_the_trade-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil",
+      "watercolor"
+    ]
   },
   {
     "id": "42",
@@ -886,7 +1201,15 @@
     "medium": "Pencil, Water color pencils and Water color",
     "imageUrl": "https://kaysartshow.fyi/originals/2012/self_portrait_orange_cloths.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/self_portrait_orange_cloths-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/self_portrait_orange_cloths-600w.webp",
+    "width": 2480,
+    "height": 2824,
+    "displayUrl": "https://kaysartshow.fyi/display/2012/self_portrait_orange_cloths-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil",
+      "watercolor"
+    ]
   },
   {
     "id": "43",
@@ -906,7 +1229,15 @@
     "medium": "Pencil, Water color pencils and Water color",
     "imageUrl": "https://kaysartshow.fyi/originals/2012/self_portrait_red_cloths.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/self_portrait_red_cloths-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/self_portrait_red_cloths-600w.webp",
+    "width": 2480,
+    "height": 2812,
+    "displayUrl": "https://kaysartshow.fyi/display/2012/self_portrait_red_cloths-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil",
+      "watercolor"
+    ]
   },
   {
     "id": "44",
@@ -928,7 +1259,14 @@
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2011/octopus_study.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2011/octopus_study-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2011/octopus_study-600w.webp",
+    "width": 3476,
+    "height": 1868,
+    "displayUrl": "https://kaysartshow.fyi/display/2011/octopus_study-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "45",
@@ -949,7 +1287,14 @@
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2011/guardian_of_the_holy_grail.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2011/guardian_of_the_holy_grail-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2011/guardian_of_the_holy_grail-600w.webp",
+    "width": 2376,
+    "height": 2970,
+    "displayUrl": "https://kaysartshow.fyi/display/2011/guardian_of_the_holy_grail-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "46",
@@ -970,7 +1315,14 @@
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2011/walking_bot_exploration_edition.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2011/walking_bot_exploration_edition-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2011/walking_bot_exploration_edition-600w.webp",
+    "width": 2480,
+    "height": 3507,
+    "displayUrl": "https://kaysartshow.fyi/display/2011/walking_bot_exploration_edition-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "47",
@@ -992,7 +1344,14 @@
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2011/walking_cabriolet_1.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2011/walking_cabriolet_1-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2011/walking_cabriolet_1-600w.webp",
+    "width": 2480,
+    "height": 3507,
+    "displayUrl": "https://kaysartshow.fyi/display/2011/walking_cabriolet_1-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "48",
@@ -1014,7 +1373,14 @@
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2011/walking_cabriolet_2.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2011/walking_cabriolet_2-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2011/walking_cabriolet_2-600w.webp",
+    "width": 3423,
+    "height": 1925,
+    "displayUrl": "https://kaysartshow.fyi/display/2011/walking_cabriolet_2-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "49",
@@ -1035,7 +1401,14 @@
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2011/walking_bot_home_edition.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2011/walking_bot_home_edition-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2011/walking_bot_home_edition-600w.webp",
+    "width": 2386,
+    "height": 3340,
+    "displayUrl": "https://kaysartshow.fyi/display/2011/walking_bot_home_edition-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "50",
@@ -1056,7 +1429,14 @@
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2011/walking_hunter_craft.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2011/walking_hunter_craft-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2011/walking_hunter_craft-600w.webp",
+    "width": 2185,
+    "height": 3059,
+    "displayUrl": "https://kaysartshow.fyi/display/2011/walking_hunter_craft-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "51",
@@ -1077,7 +1457,14 @@
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2011/walking_mech.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2011/walking_mech-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2011/walking_mech-600w.webp",
+    "width": 2318,
+    "height": 3245,
+    "displayUrl": "https://kaysartshow.fyi/display/2011/walking_mech-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "52",
@@ -1101,7 +1488,17 @@
     "medium": "Pencil, marker and watercolor. Digital.",
     "imageUrl": null,
     "videoUrl": "https://www.youtube-nocookie.com/embed/FTVJG6KiknU",
-    "thumbnailUrl": "https://img.youtube.com/vi/FTVJG6KiknU/hqdefault.jpg"
+    "thumbnailUrl": "https://img.youtube.com/vi/FTVJG6KiknU/hqdefault.jpg",
+    "width": null,
+    "height": null,
+    "displayUrl": null,
+    "datePrecision": "day",
+    "media": [
+      "pencil",
+      "watercolor",
+      "marker",
+      "digital"
+    ]
   },
   {
     "id": "53",
@@ -1124,7 +1521,16 @@
     "medium": "Pencil, and watercolor. Digital",
     "imageUrl": null,
     "videoUrl": "https://www.youtube-nocookie.com/embed/jr1o6kQvHpI",
-    "thumbnailUrl": "https://img.youtube.com/vi/jr1o6kQvHpI/hqdefault.jpg"
+    "thumbnailUrl": "https://img.youtube.com/vi/jr1o6kQvHpI/hqdefault.jpg",
+    "width": null,
+    "height": null,
+    "displayUrl": null,
+    "datePrecision": "day",
+    "media": [
+      "pencil",
+      "watercolor",
+      "digital"
+    ]
   },
   {
     "id": "54",
@@ -1145,7 +1551,16 @@
     "medium": "Pencil, and watercolor. Digital",
     "imageUrl": "https://kaysartshow.fyi/originals/2026/skecth-of-flying-organic-spaceship.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2026/skecth-of-flying-organic-spaceship-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2026/skecth-of-flying-organic-spaceship-600w.webp",
+    "width": 7224,
+    "height": 4571,
+    "displayUrl": "https://kaysartshow.fyi/display/2026/skecth-of-flying-organic-spaceship-2000w.webp",
+    "datePrecision": "day",
+    "media": [
+      "pencil",
+      "watercolor",
+      "digital"
+    ]
   },
   {
     "id": "55",
@@ -1167,7 +1582,16 @@
     "medium": "Pencil, and watercolor. Digital",
     "imageUrl": null,
     "videoUrl": "https://www.youtube-nocookie.com/embed/9erwbRAsUuQ",
-    "thumbnailUrl": "https://img.youtube.com/vi/9erwbRAsUuQ/hqdefault.jpg"
+    "thumbnailUrl": "https://img.youtube.com/vi/9erwbRAsUuQ/hqdefault.jpg",
+    "width": null,
+    "height": null,
+    "displayUrl": null,
+    "datePrecision": "day",
+    "media": [
+      "pencil",
+      "watercolor",
+      "digital"
+    ]
   },
   {
     "id": "56",
@@ -1188,7 +1612,14 @@
     "medium": "Ink",
     "imageUrl": "https://kaysartshow.fyi/originals/2015/cargo-ship-skecth.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2015/cargo-ship-skecth-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2015/cargo-ship-skecth-600w.webp",
+    "width": 2452,
+    "height": 1328,
+    "displayUrl": "https://kaysartshow.fyi/display/2015/cargo-ship-skecth-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "ink"
+    ]
   },
   {
     "id": "57",
@@ -1209,7 +1640,14 @@
     "medium": "Ink",
     "imageUrl": "https://kaysartshow.fyi/originals/2015/center-rotor-driven-hoover-craft.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2015/center-rotor-driven-hoover-craft-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2015/center-rotor-driven-hoover-craft-600w.webp",
+    "width": 2264,
+    "height": 1100,
+    "displayUrl": "https://kaysartshow.fyi/display/2015/center-rotor-driven-hoover-craft-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "ink"
+    ]
   },
   {
     "id": "58",
@@ -1231,7 +1669,15 @@
     "medium": "Pencil and watercolor",
     "imageUrl": "https://kaysartshow.fyi/originals/2008/character-iterations-kay-oya.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2008/character-iterations-kay-oya-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2008/character-iterations-kay-oya-600w.webp",
+    "width": 1744,
+    "height": 2460,
+    "displayUrl": "https://kaysartshow.fyi/display/2008/character-iterations-kay-oya-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil",
+      "watercolor"
+    ]
   },
   {
     "id": "59",
@@ -1253,7 +1699,14 @@
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2015/crab-sketch.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2015/crab-sketch-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2015/crab-sketch-600w.webp",
+    "width": 2444,
+    "height": 1736,
+    "displayUrl": "https://kaysartshow.fyi/display/2015/crab-sketch-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "60",
@@ -1275,7 +1728,14 @@
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2015/feast-of-the-ants.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2015/feast-of-the-ants-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2015/feast-of-the-ants-600w.webp",
+    "width": 2464,
+    "height": 1724,
+    "displayUrl": "https://kaysartshow.fyi/display/2015/feast-of-the-ants-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "61",
@@ -1297,7 +1757,14 @@
     "medium": "Ink",
     "imageUrl": "https://kaysartshow.fyi/originals/2011/lunar-droid.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2011/lunar-droid-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2011/lunar-droid-600w.webp",
+    "width": 2468,
+    "height": 1740,
+    "displayUrl": "https://kaysartshow.fyi/display/2011/lunar-droid-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "ink"
+    ]
   },
   {
     "id": "63",
@@ -1318,7 +1785,16 @@
     "medium": "Pencil, markers and fineliner",
     "imageUrl": "https://kaysartshow.fyi/originals/2008/old-tree.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2008/old-tree-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2008/old-tree-600w.webp",
+    "width": 2464,
+    "height": 3484,
+    "displayUrl": "https://kaysartshow.fyi/display/2008/old-tree-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil",
+      "ink",
+      "marker"
+    ]
   },
   {
     "id": "65",
@@ -1339,7 +1815,14 @@
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2011/walking-vehicle-1800th-century.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2011/walking-vehicle-1800th-century-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2011/walking-vehicle-1800th-century-600w.webp",
+    "width": 1776,
+    "height": 1756,
+    "displayUrl": null,
+    "datePrecision": "year",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "66",
@@ -1359,7 +1842,14 @@
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2012/study-of-old-phones.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/study-of-old-phones-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/study-of-old-phones-600w.webp",
+    "width": 3484,
+    "height": 2456,
+    "displayUrl": "https://kaysartshow.fyi/display/2012/study-of-old-phones-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "75",
@@ -1381,7 +1871,14 @@
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2011/six-legged-war-walker.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2011/six-legged-war-walker-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2011/six-legged-war-walker-600w.webp",
+    "width": 2448,
+    "height": 1728,
+    "displayUrl": "https://kaysartshow.fyi/display/2011/six-legged-war-walker-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "67",
@@ -1403,7 +1900,16 @@
     "medium": "Pencil, Water color and Fine liner",
     "imageUrl": "https://kaysartshow.fyi/originals/2006/wormsnake.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2006/wormsnake-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2006/wormsnake-600w.webp",
+    "width": 2448,
+    "height": 1724,
+    "displayUrl": "https://kaysartshow.fyi/display/2006/wormsnake-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil",
+      "watercolor",
+      "ink"
+    ]
   },
   {
     "id": "68",
@@ -1424,7 +1930,15 @@
     "medium": "Pencil and marker",
     "imageUrl": "https://kaysartshow.fyi/originals/2006/birdie-take-off.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2006/birdie-take-off-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2006/birdie-take-off-600w.webp",
+    "width": 2428,
+    "height": 1724,
+    "displayUrl": "https://kaysartshow.fyi/display/2006/birdie-take-off-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil",
+      "marker"
+    ]
   },
   {
     "id": "69",
@@ -1446,7 +1960,15 @@
     "medium": "Pencil and marker",
     "imageUrl": "https://kaysartshow.fyi/originals/2006/birdie-neutral-and-looking-pose.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2006/birdie-neutral-and-looking-pose-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2006/birdie-neutral-and-looking-pose-600w.webp",
+    "width": 2440,
+    "height": 1728,
+    "displayUrl": "https://kaysartshow.fyi/display/2006/birdie-neutral-and-looking-pose-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil",
+      "marker"
+    ]
   },
   {
     "id": "70",
@@ -1468,7 +1990,15 @@
     "medium": "Pencil and marker",
     "imageUrl": "https://kaysartshow.fyi/originals/2006/birdie-pooping.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2006/birdie-pooping-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2006/birdie-pooping-600w.webp",
+    "width": 2436,
+    "height": 1724,
+    "displayUrl": "https://kaysartshow.fyi/display/2006/birdie-pooping-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil",
+      "marker"
+    ]
   },
   {
     "id": "71",
@@ -1490,7 +2020,16 @@
     "medium": "Pencil and marker",
     "imageUrl": "https://kaysartshow.fyi/originals/2006/birdie-nesting.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2006/birdie-nesting-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2006/birdie-nesting-600w.webp",
+    "width": 2432,
+    "height": 1732,
+    "displayUrl": "https://kaysartshow.fyi/display/2006/birdie-nesting-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil",
+      "ink",
+      "marker"
+    ]
   },
   {
     "id": "72",
@@ -1512,7 +2051,15 @@
     "medium": "Pencil and marker",
     "imageUrl": "https://kaysartshow.fyi/originals/2006/flat-crab.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2006/flat-crab-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2006/flat-crab-600w.webp",
+    "width": 2448,
+    "height": 1728,
+    "displayUrl": "https://kaysartshow.fyi/display/2006/flat-crab-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil",
+      "marker"
+    ]
   },
   {
     "id": "73",
@@ -1534,7 +2081,15 @@
     "medium": "Pencil and marker",
     "imageUrl": "https://kaysartshow.fyi/originals/2006/crab-characters.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2006/crab-characters-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2006/crab-characters-600w.webp",
+    "width": 2440,
+    "height": 1724,
+    "displayUrl": "https://kaysartshow.fyi/display/2006/crab-characters-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil",
+      "marker"
+    ]
   },
   {
     "id": "74",
@@ -1555,7 +2110,15 @@
     "medium": "Pencil and watercolor",
     "imageUrl": "https://kaysartshow.fyi/originals/2006/the-general.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2006/the-general-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2006/the-general-600w.webp",
+    "width": 2440,
+    "height": 1728,
+    "displayUrl": "https://kaysartshow.fyi/display/2006/the-general-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil",
+      "watercolor"
+    ]
   },
   {
     "id": "76",
@@ -1576,7 +2139,14 @@
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2011/heavy-duty-walker.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2011/heavy-duty-walker-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2011/heavy-duty-walker-600w.webp",
+    "width": 2304,
+    "height": 3484,
+    "displayUrl": "https://kaysartshow.fyi/display/2011/heavy-duty-walker-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "77",
@@ -1597,7 +2167,14 @@
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2011/quadruped-robot-home-basic-edition.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2011/quadruped-robot-home-basic-edition-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2011/quadruped-robot-home-basic-edition-600w.webp",
+    "width": 2456,
+    "height": 3472,
+    "displayUrl": "https://kaysartshow.fyi/display/2011/quadruped-robot-home-basic-edition-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "78",
@@ -1618,7 +2195,14 @@
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2011/sketches-of-legged-walkers.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2011/sketches-of-legged-walkers-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2011/sketches-of-legged-walkers-600w.webp",
+    "width": 3484,
+    "height": 2460,
+    "displayUrl": "https://kaysartshow.fyi/display/2011/sketches-of-legged-walkers-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "79",
@@ -1638,7 +2222,14 @@
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2012/sketches-of-portfolio-icons-atelje-kopiko.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/sketches-of-portfolio-icons-atelje-kopiko-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/sketches-of-portfolio-icons-atelje-kopiko-600w.webp",
+    "width": 2460,
+    "height": 3484,
+    "displayUrl": "https://kaysartshow.fyi/display/2012/sketches-of-portfolio-icons-atelje-kopiko-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "80",
@@ -1658,7 +2249,14 @@
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2012/sketch-for-blue-flower-atelje-kopiko.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/sketch-for-blue-flower-atelje-kopiko-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/sketch-for-blue-flower-atelje-kopiko-600w.webp",
+    "width": 3468,
+    "height": 2128,
+    "displayUrl": "https://kaysartshow.fyi/display/2012/sketch-for-blue-flower-atelje-kopiko-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "81",
@@ -1680,7 +2278,14 @@
     "medium": "Ink",
     "imageUrl": "https://kaysartshow.fyi/originals/2010/sketch-of-a-spaceship-bus.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2010/sketch-of-a-spaceship-bus-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2010/sketch-of-a-spaceship-bus-600w.webp",
+    "width": 2912,
+    "height": 568,
+    "displayUrl": "https://kaysartshow.fyi/display/2010/sketch-of-a-spaceship-bus-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "ink"
+    ]
   },
   {
     "id": "82",
@@ -1703,7 +2308,14 @@
     "medium": "Ink",
     "imageUrl": "https://kaysartshow.fyi/originals/2010/sketch-of-an-ore-transporter.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2010/sketch-of-an-ore-transporter-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2010/sketch-of-an-ore-transporter-600w.webp",
+    "width": 3316,
+    "height": 1832,
+    "displayUrl": "https://kaysartshow.fyi/display/2010/sketch-of-an-ore-transporter-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "ink"
+    ]
   },
   {
     "id": "83",
@@ -1723,7 +2335,14 @@
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2012/guest-book-closed-atelje-kopiko.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/guest-book-closed-atelje-kopiko-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/guest-book-closed-atelje-kopiko-600w.webp",
+    "width": 3507,
+    "height": 2480,
+    "displayUrl": "https://kaysartshow.fyi/display/2012/guest-book-closed-atelje-kopiko-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "84",
@@ -1743,7 +2362,14 @@
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2012/guest-book-open-atelje-kopiko.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/guest-book-open-atelje-kopiko-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/guest-book-open-atelje-kopiko-600w.webp",
+    "width": 3507,
+    "height": 2480,
+    "displayUrl": "https://kaysartshow.fyi/display/2012/guest-book-open-atelje-kopiko-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "85",
@@ -1763,7 +2389,14 @@
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2012/self-portrait-with-random-sketches-atelje-kopiko.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/self-portrait-with-random-sketches-atelje-kopiko-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/self-portrait-with-random-sketches-atelje-kopiko-600w.webp",
+    "width": 3472,
+    "height": 2472,
+    "displayUrl": "https://kaysartshow.fyi/display/2012/self-portrait-with-random-sketches-atelje-kopiko-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "86",
@@ -1783,7 +2416,14 @@
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2012/self-portrait-bust-atelje-kopiko.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/self-portrait-bust-atelje-kopiko-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/self-portrait-bust-atelje-kopiko-600w.webp",
+    "width": 2452,
+    "height": 3484,
+    "displayUrl": "https://kaysartshow.fyi/display/2012/self-portrait-bust-atelje-kopiko-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "87",
@@ -1803,7 +2443,14 @@
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2012/back-button-icon-sketches-atelje-kopiko.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/back-button-icon-sketches-atelje-kopiko-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/back-button-icon-sketches-atelje-kopiko-600w.webp",
+    "width": 3507,
+    "height": 2480,
+    "displayUrl": "https://kaysartshow.fyi/display/2012/back-button-icon-sketches-atelje-kopiko-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "88",
@@ -1823,7 +2470,14 @@
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2012/home-button-icon-sketches-atelje-kopiko.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/home-button-icon-sketches-atelje-kopiko-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/home-button-icon-sketches-atelje-kopiko-600w.webp",
+    "width": 3507,
+    "height": 2480,
+    "displayUrl": "https://kaysartshow.fyi/display/2012/home-button-icon-sketches-atelje-kopiko-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "89",
@@ -1843,7 +2497,14 @@
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2012/portfolio-button-icon-sketches-atelje-kopiko.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/portfolio-button-icon-sketches-atelje-kopiko-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/portfolio-button-icon-sketches-atelje-kopiko-600w.webp",
+    "width": 3507,
+    "height": 2480,
+    "displayUrl": "https://kaysartshow.fyi/display/2012/portfolio-button-icon-sketches-atelje-kopiko-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "90",
@@ -1865,7 +2526,14 @@
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2012/guest-book-concept-sketch-atelje-kopiko.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/guest-book-concept-sketch-atelje-kopiko-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/guest-book-concept-sketch-atelje-kopiko-600w.webp",
+    "width": 2617,
+    "height": 2093,
+    "displayUrl": "https://kaysartshow.fyi/display/2012/guest-book-concept-sketch-atelje-kopiko-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "91",
@@ -1885,7 +2553,14 @@
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2012/tools-of-the-trade-sketch-atelje-kopiko.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/tools-of-the-trade-sketch-atelje-kopiko-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/tools-of-the-trade-sketch-atelje-kopiko-600w.webp",
+    "width": 3099,
+    "height": 1950,
+    "displayUrl": "https://kaysartshow.fyi/display/2012/tools-of-the-trade-sketch-atelje-kopiko-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "92",
@@ -1906,7 +2581,14 @@
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2012/study-of-ivy.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/study-of-ivy-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/study-of-ivy-600w.webp",
+    "width": 1604,
+    "height": 1604,
+    "displayUrl": null,
+    "datePrecision": "year",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "93",
@@ -1927,7 +2609,14 @@
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2012/study-of-a-hop-flower.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/study-of-a-hop-flower-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/study-of-a-hop-flower-600w.webp",
+    "width": 2032,
+    "height": 2032,
+    "displayUrl": "https://kaysartshow.fyi/display/2012/study-of-a-hop-flower-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "94",
@@ -1947,7 +2636,14 @@
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2012/study-of-an-antique-telephone.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/study-of-an-antique-telephone-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2012/study-of-an-antique-telephone-600w.webp",
+    "width": 1701,
+    "height": 1701,
+    "displayUrl": null,
+    "datePrecision": "year",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "95",
@@ -1970,7 +2666,17 @@
     "medium": "Pencil, markers and fineliner",
     "imageUrl": "https://kaysartshow.fyi/originals/2010/cigar-on-ash-tray.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2010/cigar-on-ash-tray-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2010/cigar-on-ash-tray-600w.webp",
+    "width": 1842,
+    "height": 1842,
+    "displayUrl": null,
+    "datePrecision": "year",
+    "media": [
+      "pencil",
+      "watercolor",
+      "ink",
+      "marker"
+    ]
   },
   {
     "id": "96",
@@ -1992,7 +2698,14 @@
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2010/fat-happy-cat-sketch.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2010/fat-happy-cat-sketch-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2010/fat-happy-cat-sketch-600w.webp",
+    "width": 2480,
+    "height": 3100,
+    "displayUrl": "https://kaysartshow.fyi/display/2010/fat-happy-cat-sketch-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "97",
@@ -2016,7 +2729,14 @@
     "medium": "Ink",
     "imageUrl": "https://kaysartshow.fyi/originals/2010/living-trees-sketch.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2010/living-trees-sketch-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2010/living-trees-sketch-600w.webp",
+    "width": 3484,
+    "height": 2460,
+    "displayUrl": "https://kaysartshow.fyi/display/2010/living-trees-sketch-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "ink"
+    ]
   },
   {
     "id": "98",
@@ -2039,7 +2759,16 @@
     "medium": "Pencil, markers and fineliner",
     "imageUrl": "https://kaysartshow.fyi/originals/2010/rat-and-random-creature-sketch.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2010/rat-and-random-creature-sketch-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2010/rat-and-random-creature-sketch-600w.webp",
+    "width": 2460,
+    "height": 2460,
+    "displayUrl": "https://kaysartshow.fyi/display/2010/rat-and-random-creature-sketch-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil",
+      "ink",
+      "marker"
+    ]
   },
   {
     "id": "99",
@@ -2061,7 +2790,15 @@
     "medium": "Pencil and marker",
     "imageUrl": "https://kaysartshow.fyi/originals/2010/robot-in-different-states-sneak-and-run-mode.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2010/robot-in-different-states-sneak-and-run-mode-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2010/robot-in-different-states-sneak-and-run-mode-600w.webp",
+    "width": 2765,
+    "height": 2074,
+    "displayUrl": "https://kaysartshow.fyi/display/2010/robot-in-different-states-sneak-and-run-mode-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil",
+      "marker"
+    ]
   },
   {
     "id": "100",
@@ -2081,7 +2818,14 @@
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2010/scissor-study.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2010/scissor-study-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2010/scissor-study-600w.webp",
+    "width": 2584,
+    "height": 1938,
+    "displayUrl": "https://kaysartshow.fyi/display/2010/scissor-study-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "101",
@@ -2104,7 +2848,14 @@
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2010/violin-playing-flower-sketch.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2010/violin-playing-flower-sketch-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2010/violin-playing-flower-sketch-600w.webp",
+    "width": 2292,
+    "height": 2292,
+    "displayUrl": "https://kaysartshow.fyi/display/2010/violin-playing-flower-sketch-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "102",
@@ -2127,7 +2878,16 @@
     "medium": "Pencil, markers and fineliner",
     "imageUrl": "https://kaysartshow.fyi/originals/2002/graffiti-3d-shapes-klara.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2002/graffiti-3d-shapes-klara-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2002/graffiti-3d-shapes-klara-600w.webp",
+    "width": 3507,
+    "height": 2200,
+    "displayUrl": "https://kaysartshow.fyi/display/2002/graffiti-3d-shapes-klara-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil",
+      "ink",
+      "marker"
+    ]
   },
   {
     "id": "103",
@@ -2151,7 +2911,16 @@
     "medium": "Pencil, markers and fineliner",
     "imageUrl": "https://kaysartshow.fyi/originals/2002/bush-man-tag-v1.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2002/bush-man-tag-v1-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2002/bush-man-tag-v1-600w.webp",
+    "width": 3448,
+    "height": 2087,
+    "displayUrl": "https://kaysartshow.fyi/display/2002/bush-man-tag-v1-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil",
+      "ink",
+      "marker"
+    ]
   },
   {
     "id": "104",
@@ -2176,7 +2945,16 @@
     "medium": "Pencil, markers and fineliner",
     "imageUrl": "https://kaysartshow.fyi/originals/2002/bush-man-tag-v2.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2002/bush-man-tag-v2-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2002/bush-man-tag-v2-600w.webp",
+    "width": 3444,
+    "height": 2158,
+    "displayUrl": "https://kaysartshow.fyi/display/2002/bush-man-tag-v2-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil",
+      "ink",
+      "marker"
+    ]
   },
   {
     "id": "105",
@@ -2201,7 +2979,16 @@
     "medium": "Pencil, markers and fineliner",
     "imageUrl": "https://kaysartshow.fyi/originals/2002/bush-man-tag-v3.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2002/bush-man-tag-v3-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2002/bush-man-tag-v3-600w.webp",
+    "width": 3424,
+    "height": 2075,
+    "displayUrl": "https://kaysartshow.fyi/display/2002/bush-man-tag-v3-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil",
+      "ink",
+      "marker"
+    ]
   },
   {
     "id": "106",
@@ -2226,7 +3013,16 @@
     "medium": "Pencil, markers and fineliner",
     "imageUrl": "https://kaysartshow.fyi/originals/2002/organically-grotesque-cd-cover.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2002/organically-grotesque-cd-cover-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2002/organically-grotesque-cd-cover-600w.webp",
+    "width": 3465,
+    "height": 2193,
+    "displayUrl": "https://kaysartshow.fyi/display/2002/organically-grotesque-cd-cover-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil",
+      "ink",
+      "marker"
+    ]
   },
   {
     "id": "107",
@@ -2250,7 +3046,16 @@
     "medium": "Pencil, markers and fineliner",
     "imageUrl": "https://kaysartshow.fyi/originals/2002/graffiti-sketch-of-the-name-lina.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2002/graffiti-sketch-of-the-name-lina-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2002/graffiti-sketch-of-the-name-lina-600w.webp",
+    "width": 3453,
+    "height": 2276,
+    "displayUrl": "https://kaysartshow.fyi/display/2002/graffiti-sketch-of-the-name-lina-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil",
+      "ink",
+      "marker"
+    ]
   },
   {
     "id": "108",
@@ -2272,7 +3077,15 @@
     "medium": "Pencil and fineliner",
     "imageUrl": "https://kaysartshow.fyi/originals/2002/graffiti-tattoo-for-maria.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2002/graffiti-tattoo-for-maria-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2002/graffiti-tattoo-for-maria-600w.webp",
+    "width": 3437,
+    "height": 2166,
+    "displayUrl": "https://kaysartshow.fyi/display/2002/graffiti-tattoo-for-maria-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil",
+      "ink"
+    ]
   },
   {
     "id": "109",
@@ -2295,7 +3108,16 @@
     "medium": "Pencil, markers and fineliner",
     "imageUrl": "https://kaysartshow.fyi/originals/2002/graffiti-marie.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2002/graffiti-marie-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2002/graffiti-marie-600w.webp",
+    "width": 3507,
+    "height": 1696,
+    "displayUrl": "https://kaysartshow.fyi/display/2002/graffiti-marie-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil",
+      "ink",
+      "marker"
+    ]
   },
   {
     "id": "110",
@@ -2320,7 +3142,16 @@
     "medium": "Pencil, markers and fineliner",
     "imageUrl": "https://kaysartshow.fyi/originals/2002/graffiti-two-flowers-in-love.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2002/graffiti-two-flowers-in-love-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2002/graffiti-two-flowers-in-love-600w.webp",
+    "width": 3479,
+    "height": 2206,
+    "displayUrl": "https://kaysartshow.fyi/display/2002/graffiti-two-flowers-in-love-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil",
+      "ink",
+      "marker"
+    ]
   },
   {
     "id": "111",
@@ -2342,7 +3173,16 @@
     "medium": "Pencil, markers and fineliner",
     "imageUrl": "https://kaysartshow.fyi/originals/2004/graffiti-organic.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2004/graffiti-organic-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2004/graffiti-organic-600w.webp",
+    "width": 3492,
+    "height": 2194,
+    "displayUrl": "https://kaysartshow.fyi/display/2004/graffiti-organic-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil",
+      "ink",
+      "marker"
+    ]
   },
   {
     "id": "112",
@@ -2367,7 +3207,14 @@
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2005/meat-eating-flower-sketch.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2005/meat-eating-flower-sketch-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2005/meat-eating-flower-sketch-600w.webp",
+    "width": 2426,
+    "height": 3465,
+    "displayUrl": "https://kaysartshow.fyi/display/2005/meat-eating-flower-sketch-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "113",
@@ -2389,7 +3236,14 @@
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2005/study-of-face-expressions.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2005/study-of-face-expressions-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2005/study-of-face-expressions-600w.webp",
+    "width": 2398,
+    "height": 3458,
+    "displayUrl": "https://kaysartshow.fyi/display/2005/study-of-face-expressions-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "114",
@@ -2411,7 +3265,14 @@
     "medium": "Ink",
     "imageUrl": "https://kaysartshow.fyi/originals/2005/study-of-temples.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2005/study-of-temples-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2005/study-of-temples-600w.webp",
+    "width": 2253,
+    "height": 3479,
+    "displayUrl": "https://kaysartshow.fyi/display/2005/study-of-temples-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "ink"
+    ]
   },
   {
     "id": "115",
@@ -2433,7 +3294,14 @@
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2005/ancient-temple-wide-view.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2005/ancient-temple-wide-view-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2005/ancient-temple-wide-view-600w.webp",
+    "width": 5604,
+    "height": 4126,
+    "displayUrl": "https://kaysartshow.fyi/display/2005/ancient-temple-wide-view-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "116",
@@ -2454,7 +3322,14 @@
     "medium": "Digital",
     "imageUrl": "https://kaysartshow.fyi/originals/2026/self-portrait-v1.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2026/self-portrait-v1-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2026/self-portrait-v1-600w.webp",
+    "width": 7224,
+    "height": 4571,
+    "displayUrl": "https://kaysartshow.fyi/display/2026/self-portrait-v1-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "digital"
+    ]
   },
   {
     "id": "117",
@@ -2474,7 +3349,14 @@
     "medium": "Digital",
     "imageUrl": "https://kaysartshow.fyi/originals/2026/snazy.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2026/snazy-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2026/snazy-600w.webp",
+    "width": 1090,
+    "height": 1542,
+    "displayUrl": null,
+    "datePrecision": "day",
+    "media": [
+      "digital"
+    ]
   },
   {
     "id": "118",
@@ -2496,7 +3378,14 @@
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2009/sketches-of-bugs.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2009/sketches-of-bugs-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2009/sketches-of-bugs-600w.webp",
+    "width": 2395,
+    "height": 3194,
+    "displayUrl": "https://kaysartshow.fyi/display/2009/sketches-of-bugs-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "119",
@@ -2520,7 +3409,14 @@
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2009/brain-optimization.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2009/brain-optimization-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2009/brain-optimization-600w.webp",
+    "width": 2373,
+    "height": 2966,
+    "displayUrl": "https://kaysartshow.fyi/display/2009/brain-optimization-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "120",
@@ -2544,7 +3440,16 @@
     "medium": "Pencil, marker and watercolor pens",
     "imageUrl": "https://kaysartshow.fyi/originals/2009/reconnection-with-the-ancient-ones.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2009/reconnection-with-the-ancient-ones-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2009/reconnection-with-the-ancient-ones-600w.webp",
+    "width": 2393,
+    "height": 3507,
+    "displayUrl": "https://kaysartshow.fyi/display/2009/reconnection-with-the-ancient-ones-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil",
+      "watercolor",
+      "marker"
+    ]
   },
   {
     "id": "121",
@@ -2566,7 +3471,16 @@
     "medium": "Pencil, marker and watercolor",
     "imageUrl": "https://kaysartshow.fyi/originals/2009/hand-study-and-woman-getting-shot.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2009/hand-study-and-woman-getting-shot-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2009/hand-study-and-woman-getting-shot-600w.webp",
+    "width": 2295,
+    "height": 3383,
+    "displayUrl": "https://kaysartshow.fyi/display/2009/hand-study-and-woman-getting-shot-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil",
+      "watercolor",
+      "marker"
+    ]
   },
   {
     "id": "122",
@@ -2592,7 +3506,16 @@
     "medium": "Pencil, Water color and Fine liner",
     "imageUrl": "https://kaysartshow.fyi/originals/2009/old-wise-turtle-in-different-poses.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2009/old-wise-turtle-in-different-poses-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2009/old-wise-turtle-in-different-poses-600w.webp",
+    "width": 2318,
+    "height": 3484,
+    "displayUrl": "https://kaysartshow.fyi/display/2009/old-wise-turtle-in-different-poses-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil",
+      "watercolor",
+      "ink"
+    ]
   },
   {
     "id": "123",
@@ -2614,7 +3537,14 @@
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2009/mountain-god-of-everest.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2009/mountain-god-of-everest-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2009/mountain-god-of-everest-600w.webp",
+    "width": 2382,
+    "height": 3484,
+    "displayUrl": "https://kaysartshow.fyi/display/2009/mountain-god-of-everest-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "124",
@@ -2639,7 +3569,16 @@
     "medium": "Pencil, Water color and Fine liner",
     "imageUrl": "https://kaysartshow.fyi/originals/2009/assorted-sea-creatures.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2009/assorted-sea-creatures-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2009/assorted-sea-creatures-600w.webp",
+    "width": 2415,
+    "height": 3443,
+    "displayUrl": "https://kaysartshow.fyi/display/2009/assorted-sea-creatures-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil",
+      "watercolor",
+      "ink"
+    ]
   },
   {
     "id": "125",
@@ -2664,7 +3603,16 @@
     "medium": "Pencil, markers and fineliner",
     "imageUrl": "https://kaysartshow.fyi/originals/2009/the-mountain-philosopher.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2009/the-mountain-philosopher-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2009/the-mountain-philosopher-600w.webp",
+    "width": 2307,
+    "height": 2884,
+    "displayUrl": "https://kaysartshow.fyi/display/2009/the-mountain-philosopher-2000w.webp",
+    "datePrecision": "day",
+    "media": [
+      "pencil",
+      "ink",
+      "marker"
+    ]
   },
   {
     "id": "126",
@@ -2689,7 +3637,16 @@
     "medium": "Pencil, Water color and Fine liner",
     "imageUrl": "https://kaysartshow.fyi/originals/2009/creatures-without-a-dedicated-head.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2009/creatures-without-a-dedicated-head-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2009/creatures-without-a-dedicated-head-600w.webp",
+    "width": 2366,
+    "height": 3477,
+    "displayUrl": "https://kaysartshow.fyi/display/2009/creatures-without-a-dedicated-head-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil",
+      "watercolor",
+      "ink"
+    ]
   },
   {
     "id": "127",
@@ -2711,7 +3668,14 @@
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2009/various-sketches.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2009/various-sketches-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2009/various-sketches-600w.webp",
+    "width": 2416,
+    "height": 3484,
+    "displayUrl": "https://kaysartshow.fyi/display/2009/various-sketches-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "128",
@@ -2735,7 +3699,16 @@
     "medium": "Pencil and watercolor",
     "imageUrl": "https://kaysartshow.fyi/originals/2009/birdie-comic-strip.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2009/birdie-comic-strip-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2009/birdie-comic-strip-600w.webp",
+    "width": 2363,
+    "height": 3448,
+    "displayUrl": "https://kaysartshow.fyi/display/2009/birdie-comic-strip-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil",
+      "watercolor",
+      "ink"
+    ]
   },
   {
     "id": "129",
@@ -2759,7 +3732,15 @@
     "medium": "Pencil and marker",
     "imageUrl": "https://kaysartshow.fyi/originals/2009/birdie-in-various-poses.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2009/birdie-in-various-poses-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2009/birdie-in-various-poses-600w.webp",
+    "width": 2400,
+    "height": 3484,
+    "displayUrl": "https://kaysartshow.fyi/display/2009/birdie-in-various-poses-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil",
+      "marker"
+    ]
   },
   {
     "id": "130",
@@ -2782,7 +3763,14 @@
     "medium": "Pencil and colored pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2009/cybernetic-processing-1-4.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2009/cybernetic-processing-1-4-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2009/cybernetic-processing-1-4-600w.webp",
+    "width": 2359,
+    "height": 3484,
+    "displayUrl": "https://kaysartshow.fyi/display/2009/cybernetic-processing-1-4-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "131",
@@ -2805,14 +3793,21 @@
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2009/cybernetic-processing-2-4.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2009/cybernetic-processing-2-4-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2009/cybernetic-processing-2-4-600w.webp",
+    "width": 2380,
+    "height": 3389,
+    "displayUrl": "https://kaysartshow.fyi/display/2009/cybernetic-processing-2-4-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "132",
     "type": null,
     "addedDate": "2026-10-13",
     "title": "Cybernetic Processing (3/4)",
-    "description": "An open machine \"head\" with mechanical insides, shown between sketches of books and a boy reading a bedtime story.",
+    "description": "An open machine \u0022head\u0022 with mechanical insides, shown between sketches of books and a boy reading a bedtime story.",
     "createdDate": "2009-01-01",
     "category": "Concept Art",
     "tags": [
@@ -2828,7 +3823,14 @@
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2009/cybernetic-processing-3-4.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2009/cybernetic-processing-3-4-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2009/cybernetic-processing-3-4-600w.webp",
+    "width": 2364,
+    "height": 3484,
+    "displayUrl": "https://kaysartshow.fyi/display/2009/cybernetic-processing-3-4-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "133",
@@ -2851,7 +3853,14 @@
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2009/cybernetic-processing-4-4.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2009/cybernetic-processing-4-4-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2009/cybernetic-processing-4-4-600w.webp",
+    "width": 2392,
+    "height": 2679,
+    "displayUrl": "https://kaysartshow.fyi/display/2009/cybernetic-processing-4-4-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "134",
@@ -2874,7 +3883,16 @@
     "medium": "Pencil, Water color and Fine liner",
     "imageUrl": "https://kaysartshow.fyi/originals/2010/fairy-tale-character-studies.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2010/fairy-tale-character-studies-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2010/fairy-tale-character-studies-600w.webp",
+    "width": 2390,
+    "height": 2744,
+    "displayUrl": "https://kaysartshow.fyi/display/2010/fairy-tale-character-studies-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil",
+      "watercolor",
+      "ink"
+    ]
   },
   {
     "id": "135",
@@ -2897,7 +3915,14 @@
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2010/hoover-craft-designs-1-2.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2010/hoover-craft-designs-1-2-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2010/hoover-craft-designs-1-2-600w.webp",
+    "width": 2379,
+    "height": 3484,
+    "displayUrl": "https://kaysartshow.fyi/display/2010/hoover-craft-designs-1-2-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "136",
@@ -2920,7 +3945,14 @@
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2010/hoover-craft-designs-2-2.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2010/hoover-craft-designs-2-2-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2010/hoover-craft-designs-2-2-600w.webp",
+    "width": 2359,
+    "height": 3484,
+    "displayUrl": "https://kaysartshow.fyi/display/2010/hoover-craft-designs-2-2-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "137",
@@ -2940,7 +3972,14 @@
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2010/keys-studies.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2010/keys-studies-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2010/keys-studies-600w.webp",
+    "width": 2405,
+    "height": 3449,
+    "displayUrl": "https://kaysartshow.fyi/display/2010/keys-studies-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "138",
@@ -2964,7 +4003,14 @@
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2009/mega-serpent-destroys-church.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2009/mega-serpent-destroys-church-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2009/mega-serpent-destroys-church-600w.webp",
+    "width": 2398,
+    "height": 3484,
+    "displayUrl": "https://kaysartshow.fyi/display/2009/mega-serpent-destroys-church-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "139",
@@ -2987,7 +4033,14 @@
     "medium": "Pencil and colored pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2009/monster-studies-1-2.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2009/monster-studies-1-2-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2009/monster-studies-1-2-600w.webp",
+    "width": 2331,
+    "height": 2615,
+    "displayUrl": "https://kaysartshow.fyi/display/2009/monster-studies-1-2-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "140",
@@ -3008,7 +4061,14 @@
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2009/monster-studies-2-2.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2009/monster-studies-2-2-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2009/monster-studies-2-2-600w.webp",
+    "width": 2382,
+    "height": 3449,
+    "displayUrl": "https://kaysartshow.fyi/display/2009/monster-studies-2-2-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "141",
@@ -3031,7 +4091,14 @@
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2010/radio-controlled-cat-1-4.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2010/radio-controlled-cat-1-4-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2010/radio-controlled-cat-1-4-600w.webp",
+    "width": 2375,
+    "height": 3484,
+    "displayUrl": "https://kaysartshow.fyi/display/2010/radio-controlled-cat-1-4-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "142",
@@ -3054,14 +4121,21 @@
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2010/radio-controlled-cat-2-4.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2010/radio-controlled-cat-2-4-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2010/radio-controlled-cat-2-4-600w.webp",
+    "width": 2369,
+    "height": 3484,
+    "displayUrl": "https://kaysartshow.fyi/display/2010/radio-controlled-cat-2-4-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "143",
     "type": null,
     "addedDate": "2026-10-13",
     "title": "Radio Controlled Cat (3/4)",
-    "description": "A cat sleeping on its charging station, with a \"Cat Charge\" panel showing voltage and charge level.",
+    "description": "A cat sleeping on its charging station, with a \u0022Cat Charge\u0022 panel showing voltage and charge level.",
     "createdDate": "2010-01-01",
     "category": "Concept Art",
     "tags": [
@@ -3077,14 +4151,21 @@
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2010/radio-controlled-cat-3-4.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2010/radio-controlled-cat-3-4-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2010/radio-controlled-cat-3-4-600w.webp",
+    "width": 2201,
+    "height": 1739,
+    "displayUrl": "https://kaysartshow.fyi/display/2010/radio-controlled-cat-3-4-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "144",
     "type": null,
     "addedDate": "2026-10-13",
     "title": "Radio Controlled Cat (4/4)",
-    "description": "Studies of hands operating the \"Cat Control\" remote.",
+    "description": "Studies of hands operating the \u0022Cat Control\u0022 remote.",
     "createdDate": "2010-01-01",
     "category": "Concept Art",
     "tags": [
@@ -3100,7 +4181,14 @@
     "medium": "Pencil",
     "imageUrl": "https://kaysartshow.fyi/originals/2010/radio-controlled-cat-4-4.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2010/radio-controlled-cat-4-4-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2010/radio-controlled-cat-4-4-600w.webp",
+    "width": 2359,
+    "height": 3484,
+    "displayUrl": "https://kaysartshow.fyi/display/2010/radio-controlled-cat-4-4-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil"
+    ]
   },
   {
     "id": "145",
@@ -3124,6 +4212,15 @@
     "medium": "Pencil, Water color and Fine liner",
     "imageUrl": "https://kaysartshow.fyi/originals/2009/various-characters.webp",
     "videoUrl": null,
-    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2009/various-characters-600w.webp"
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2009/various-characters-600w.webp",
+    "width": 2379,
+    "height": 3314,
+    "displayUrl": "https://kaysartshow.fyi/display/2009/various-characters-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil",
+      "watercolor",
+      "ink"
+    ]
   }
 ]

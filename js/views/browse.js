@@ -35,7 +35,7 @@ function facetLabel(facetKey, value, collections) {
  * @returns {{ refresh(route), destroy() }}
  */
 export function renderBrowse(root, route, opts) {
-  const { title, scope, facets, orderToggle, onOpen } = opts;
+  const { title, blurb, scope, facets, orderToggle, onOpen } = opts;
   const { collections } = getState();
   let sheetOpen = false;
   let gridHandles = [];
@@ -51,6 +51,7 @@ export function renderBrowse(root, route, opts) {
   const count = el('p', 'view-count');
   count.setAttribute('role', 'status');
   header.append(h1, count);
+  if (blurb) header.appendChild(el('p', 'view-blurb', blurb));
 
   // Toolbar
   const toolbar = el('div', 'toolbar');
