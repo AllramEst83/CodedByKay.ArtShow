@@ -1,6 +1,6 @@
 // Share links for individual artworks: /art/<id>?v=<version>.
 //
-// The path opens that artwork in the viewer (see lightbox.js) and is what the
+// The path opens that artwork in the viewer (see viewer.js) and is what the
 // netlify/edge-functions/share-preview.js function builds link-preview cards
 // from. `v` is a short hash of the fields shown in the preview: it is stable
 // while the artwork is unchanged, and changes when its title, description or
@@ -77,8 +77,10 @@ export async function shareArtwork(item) {
 let toastTimer = null;
 
 export function showToast(message) {
-  // Inside native fullscreen only the fullscreened subtree renders.
-  const host = document.fullscreenElement || document.webkitFullscreenElement || document.body;
+  // Inside native fullscreen only the fullscreened subtree renders, and an
+  // open modal <dialog> sits in the top layer above anything in <body>.
+  const host = document.fullscreenElement || document.webkitFullscreenElement ||
+    document.querySelector('dialog[open]') || document.body;
   let toast = document.getElementById('share-toast');
   if (!toast) {
     toast = document.createElement('div');

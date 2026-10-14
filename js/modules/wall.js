@@ -44,19 +44,21 @@ export function initWall() {
   const wall = WALLS.includes(saved) ? saved : DEFAULT_WALL;
   applyWall(wall, { persist: false });
 
-  const group = document.getElementById('wall-switch');
-  if (!group) return;
-  const options = [...group.querySelectorAll('[data-wall-option]')];
-
-  options.forEach((btn, i) => {
-    btn.addEventListener('click', () => applyWall(btn.dataset.wallOption));
-    btn.addEventListener('keydown', (e) => {
-      const step = { ArrowRight: 1, ArrowDown: 1, ArrowLeft: -1, ArrowUp: -1 }[e.key];
-      if (!step) return;
-      e.preventDefault();
-      const next = options[(i + step + options.length) % options.length];
-      applyWall(next.dataset.wallOption);
-      next.focus();
+  // One control in the header and one inside the viewer; each is its own radiogroup.
+  document.querySelectorAll('.wall-switch').forEach((group) => {
+    const options = [...group.querySelectorAll('[data-wall-option]')];
+    options.forEach((btn, i) => {
+      btn.addEventListener('click', () => applyWall(btn.dataset.wallOption));
+      btn.addEventListener('keydown', (e) => {
+        const step = { ArrowRight: 1, ArrowDown: 1, ArrowLeft: -1, ArrowUp: -1 }[e.key];
+        if (!step) return;
+        // The viewer's own key handler must not also treat this as navigation.
+        e.preventDefault();
+        e.stopPropagation();
+        const next = options[(i + step + options.length) % options.length];
+        applyWall(next.dataset.wallOption);
+        next.focus();
+      });
     });
   });
 }

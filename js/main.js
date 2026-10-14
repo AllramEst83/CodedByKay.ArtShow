@@ -2,7 +2,7 @@ import { initWall } from './modules/wall.js';
 import { COPY } from './modules/copy.js';
 import { initGallery, renderGallery } from './modules/gallery.js';
 import { initFilters } from './modules/filters.js';
-import { initLightbox, setArtworkIndex, openArtworkFromUrl } from './modules/lightbox.js';
+import { initLightbox, setArtworkIndex, openArtworkFromUrl } from './modules/viewer.js';
 import { initPagination, resetToPageOne, updatePaginationAndRender, showPageContaining } from './modules/pagination.js';
 import { initGroups, showGridView } from './modules/groups.js';
 

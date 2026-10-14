@@ -140,7 +140,7 @@ function getItemYear(item) {
   return Number.isNaN(year) ? null : String(year);
 }
 
-// The artwork list pagination/lightbox should walk: everything filtered in
+// The artwork list pagination/viewer should walk: everything filtered in
 // grid mode, or only the active group's/year's items when one is selected.
 export function getScopedArtwork() {
   if (viewMode === 'groups' && activeGroup) {
