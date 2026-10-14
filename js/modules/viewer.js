@@ -1,19 +1,14 @@
 import { COPY } from './copy.js';
-import { formatDate } from './gallery.js';
-import { getScopedArtwork } from './groups.js';
+import { displayDate, MEDIA_LABELS } from './data.js';
+import { getState } from './store.js';
 import { getArtworkPath, getArtworkIdFromLocation, shareArtwork, showToast } from './share.js';
 import { createZoom } from './viewer-zoom.js';
 
 const IDLE_HIDE_MS = 2500;
 
-// Fixed rather than read from document.title: a shared link's HTML already
-// carries the artwork title there (see netlify/edge-functions/share-preview.js).
-const SITE_TITLE = "Kay's ArtShow";
-
 let currentItem = null;
-// Every artwork, regardless of the active filter/group - a shared link has to
-// resolve even when the item is outside the current grid view.
-let allArtwork = [];
+// The page title to restore on close (the underlying view sets it).
+let titleBeforeOpen = '';
 // True when opening the viewer pushed a history entry, so closing it can pop
 // that entry instead of stacking another one.
 let urlPushed = false;
@@ -25,29 +20,34 @@ let opener = null;
 let idleTimer = null;
 let zoom = null;
 
-// `sync` runs before a URL-driven open (direct visit, back/forward) so the
-// gallery behind the viewer shows the artwork - grid view, right page.
-let syncGalleryToArtwork = () => {};
-
 const $ = (id) => document.getElementById(id);
 
-export function setArtworkIndex(artwork, sync) {
-  allArtwork = artwork;
-  if (sync) syncGalleryToArtwork = sync;
+// Card click: push /art/<id> and open over the list on screen.
+export function openArtwork(item) {
+  openViewer(item);
 }
 
-// Opens the viewer for the /art/<id> URL the page was loaded (or navigated) to.
-export function openArtworkFromUrl() {
-  const id = getArtworkIdFromLocation();
-  if (id === null) return;
-  const item = allArtwork.find((entry) => String(entry.id) === id);
+// Router callback for an /art/<id> location (first load, back/forward).
+// The list underneath is already rendered; this only shows the viewer.
+export function openArtworkById(id, { initial = false } = {}) {
+  const item = getState().artwork.find((entry) => entry.id === id);
   if (!item) {
     window.history.replaceState({}, '', '/');
     showToast("That artwork couldn't be found");
     return;
   }
-  syncGalleryToArtwork(item);
+  if ($('viewer').open && currentItem && currentItem.id === item.id) return;
+  // Reached by history navigation: an entry sits before this one, so closing
+  // may pop it. A direct visit (initial) has nothing to pop.
+  urlPushed = !initial;
   openViewer(item, { updateUrl: false });
+}
+
+// Router callback when the location is no longer /art/<id>: hide without
+// touching history (the location already changed).
+export function closeArtworkSilently() {
+  urlPushed = false;
+  if (currentItem) hideViewer();
 }
 
 function pushArtworkUrl(item) {
@@ -61,26 +61,25 @@ function replaceArtworkUrl(item) {
   window.history.replaceState({ artworkId: item.id }, '', getArtworkPath(item));
 }
 
-// Created dates are year-precision for almost every piece (stored as YYYY-01-01).
-function displayDate(value) {
-  if (!value) return '';
-  return /-01-01$/.test(value) ? value.slice(0, 4) : formatDate(value);
-}
-
+// The list the visitor came from; falls back to everything when the current
+// piece is not in it (e.g. a deep link into a filtered view).
 function sequence() {
-  const scoped = getScopedArtwork();
-  const index = scoped.findIndex((a) => a.id === currentItem.id);
+  const { list, artwork } = getState();
+  let scoped = list;
+  let index = scoped.findIndex((a) => a.id === currentItem.id);
+  if (index === -1) {
+    scoped = artwork;
+    index = scoped.findIndex((a) => a.id === currentItem.id);
+  }
   return { scoped, index };
 }
 
 // ─── Setup ────────────────────────────────────────────────────────────────────
 
-export function initLightbox() {
+export function initViewer() {
   const dialog = $('viewer');
   const stage = $('viewer-stage');
   if (!dialog || !stage) return;
-
-  document.addEventListener('artwork:open', (e) => openViewer(e.detail));
 
   zoom = createZoom({
     stage,
@@ -111,21 +110,6 @@ export function initLightbox() {
 
   $('viewer-retry').addEventListener('click', retryImage);
   $('viewer-play').addEventListener('click', playVideo);
-
-  // Back/forward: the URL is the source of truth for whether the viewer is open.
-  window.addEventListener('popstate', () => {
-    const id = getArtworkIdFromLocation();
-    if (id === null) {
-      urlPushed = false;
-      hideViewer();
-      return;
-    }
-    const item = allArtwork.find((entry) => String(entry.id) === id);
-    if (!item) return;
-    urlPushed = true;
-    syncGalleryToArtwork(item);
-    openViewer(item, { updateUrl: false });
-  });
 
   // Escape is handled in onKeyDown (preventDefault there also stops the
   // browser's close watcher, which would otherwise close the dialog outright on
@@ -218,6 +202,7 @@ function openViewer(item, { updateUrl = true } = {}) {
   if (updateUrl) pushArtworkUrl(item);
 
   if (!wasOpen) {
+    titleBeforeOpen = document.title;
     closeInfo();
     document.body.style.overflow = 'hidden';
     dialog.showModal();
@@ -250,7 +235,7 @@ function hideViewer() {
   currentItem = null;
   generation += 1; // abandon any in-flight loads
 
-  document.title = SITE_TITLE;
+  if (titleBeforeOpen) document.title = titleBeforeOpen;
   if (document.fullscreenElement || document.webkitFullscreenElement) exitFullscreen();
   clearMedia();
   zoom.reset();
@@ -265,19 +250,15 @@ function hideViewer() {
 }
 
 function findCard(item) {
-  return document.querySelector(`#gallery [data-id="${CSS.escape(String(item.id))}"]`);
+  return document.querySelector(`#view [data-id="${CSS.escape(String(item.id))}"]`);
 }
 
 // After viewing (esp. via a shared link) leave the artwork's card on screen so
 // the visitor isn't dropped somewhere else on the page.
 function revealCard(item) {
-  let card = findCard(item);
-  if (!card) {
-    // The grid page behind the viewer no longer holds the card (we navigated
-    // across pages with next/prev): bring its page back.
-    syncGalleryToArtwork(item);
-    card = findCard(item);
-  }
+  // Every card of the list is in the DOM (no pagination), so it is always there
+  // unless the viewer walked outside the filtered list.
+  const card = findCard(item);
   if (card) card.scrollIntoView({ block: 'center', behavior: 'instant' });
 }
 
@@ -317,9 +298,9 @@ function renderItem() {
   $('viewer-zoom').hidden = isVideo;
   $('viewer').classList.toggle('is-video', isVideo);
 
-  document.title = `${item.title} — ${SITE_TITLE}`;
+  document.title = `${item.title} — Kay's ArtShow`;
   $('viewer-title').textContent = item.title;
-  $('viewer-year').textContent = displayDate(item.createdDate);
+  $('viewer-year').textContent = displayDate(item);
   $('viewer').setAttribute('aria-label', item.title);
 
   renderInfo(item);
@@ -420,18 +401,29 @@ function playVideo() {
 
 function renderInfo(item) {
   $('viewer-info-title').textContent = item.title;
-  $('viewer-collection').textContent = (item.groups && item.groups.length ? item.groups.join(', ') : item.category) || '';
-  $('viewer-date').textContent = displayDate(item.createdDate);
-  $('viewer-medium').textContent = item.medium || '';
+
+  const collection = $('viewer-collection');
+  collection.replaceChildren();
+  item.collections.forEach((c, i) => {
+    if (i) collection.append(', ');
+    const a = document.createElement('a');
+    a.href = `/collections/${encodeURIComponent(c.slug)}`;
+    a.textContent = c.name;
+    collection.appendChild(a);
+  });
+
+  $('viewer-date').textContent = displayDate(item);
+  $('viewer-medium').textContent = item.medium || item.media.map((m) => MEDIA_LABELS[m] || m).join(', ');
   $('viewer-desc').textContent = item.description || '';
 
   const tags = $('viewer-tags');
   tags.replaceChildren();
-  (item.tags || []).forEach((tag) => {
-    const span = document.createElement('span');
-    span.className = 'chip static';
-    span.textContent = tag;
-    tags.appendChild(span);
+  item.subjects.forEach((tag) => {
+    const a = document.createElement('a');
+    a.className = 'chip static chip--link';
+    a.href = `/?subject=${encodeURIComponent(tag)}`;
+    a.textContent = tag;
+    tags.appendChild(a);
   });
 }
 
