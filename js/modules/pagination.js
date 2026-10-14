@@ -1,10 +1,12 @@
 import { renderGallery } from './gallery.js';
+import { storageService } from './storage.js';
 import { getScopedArtwork, isGroupsMode, getActiveGroup, computeGroupBoxes, renderGroupBoxes, clearGroupsViewClass } from './groups.js';
 
 let currentPage = 1;
-let itemsPerPage = parseInt(localStorage.getItem('artshow_items_per_page'), 10) || 25;
+let itemsPerPage = 25;
 
 export function initPagination() {
+  itemsPerPage = parseInt(storageService.get('items_per_page'), 10) || 25;
   const perPageSelect = document.getElementById('per-page');
   const prevBtn = document.getElementById('prev-page-btn');
   const nextBtn = document.getElementById('next-page-btn');
@@ -13,7 +15,7 @@ export function initPagination() {
     perPageSelect.value = itemsPerPage;
     perPageSelect.addEventListener('change', (e) => {
       itemsPerPage = parseInt(e.target.value, 10);
-      localStorage.setItem('artshow_items_per_page', itemsPerPage);
+      storageService.set('items_per_page', itemsPerPage);
       currentPage = 1; // Reset to page 1 on size change
       updatePaginationAndRender();
     });

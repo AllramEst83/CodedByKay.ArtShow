@@ -9,7 +9,12 @@ export const storageService = {
     try {
       const raw = localStorage.getItem(buildKey(key));
       if (raw === null) return fallback;
-      return JSON.parse(raw);
+      try {
+        return JSON.parse(raw);
+      } catch {
+        // Legacy values were written as plain strings, not JSON.
+        return raw;
+      }
     } catch {
       return fallback;
     }

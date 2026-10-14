@@ -46,6 +46,10 @@ function setupUI() {
   popover.addEventListener('click', (e) => e.stopPropagation());
 }
 
+// Filter checkboxes by value, so badges never need attribute selectors built from data.
+const categoryInputs = new Map();
+const tagInputs = new Map();
+
 function populateFilterOptions() {
   const categories = [...new Set(allArtwork.map(a => a.category))];
   const tags = [...new Set(allArtwork.flatMap(a => a.tags))];
@@ -53,7 +57,12 @@ function populateFilterOptions() {
   const catContainer = document.getElementById('category-filters');
   categories.forEach(cat => {
     const label = document.createElement('label');
-    label.innerHTML = `<input type="checkbox" value="${cat}" data-filter="category"> ${cat}`;
+    const input = document.createElement('input');
+    input.type = 'checkbox';
+    input.value = cat;
+    input.dataset.filter = 'category';
+    label.append(input, ` ${cat}`);
+    categoryInputs.set(cat, input);
     catContainer.appendChild(label);
   });
   
@@ -61,7 +70,15 @@ function populateFilterOptions() {
   tags.forEach(tag => {
     const label = document.createElement('label');
     label.className = 'chip-label';
-    label.innerHTML = `<input type="checkbox" value="${tag}" data-filter="tag"> <span class="chip">${tag}</span>`;
+    const input = document.createElement('input');
+    input.type = 'checkbox';
+    input.value = tag;
+    input.dataset.filter = 'tag';
+    const chip = document.createElement('span');
+    chip.className = 'chip';
+    chip.textContent = tag;
+    label.append(input, ' ', chip);
+    tagInputs.set(tag, input);
     tagContainer.appendChild(label);
   });
 }
@@ -258,7 +275,8 @@ function renderBadges() {
   state.selectedCategories.forEach(cat => {
     createBadge(`Category: ${cat}`, () => {
       state.selectedCategories.delete(cat);
-      document.querySelector(`input[data-filter="category"][value="${cat}"]`).checked = false;
+      const input = categoryInputs.get(cat);
+      if (input) input.checked = false;
       applyFilters();
     });
   });
@@ -266,7 +284,8 @@ function renderBadges() {
   state.selectedTags.forEach(tag => {
     createBadge(`Tag: ${tag}`, () => {
       state.selectedTags.delete(tag);
-      document.querySelector(`input[data-filter="tag"][value="${tag}"]`).checked = false;
+      const input = tagInputs.get(tag);
+      if (input) input.checked = false;
       applyFilters();
     });
   });
@@ -295,7 +314,11 @@ function renderBadges() {
 function createBadge(text, onRemove) {
   const badge = document.createElement('button');
   badge.className = 'badge';
-  badge.innerHTML = `${text} <span aria-hidden="true">&times;</span>`;
+  badge.append(`${text} `);
+  const x = document.createElement('span');
+  x.setAttribute('aria-hidden', 'true');
+  x.textContent = '×';
+  badge.appendChild(x);
   badge.addEventListener('click', onRemove);
   document.getElementById('active-filters').appendChild(badge);
 }

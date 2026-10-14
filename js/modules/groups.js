@@ -1,15 +1,18 @@
 import { filteredArtwork } from './gallery.js';
+import { storageService } from './storage.js';
 
-const STORAGE_KEY = 'artshow_view_mode';
-const GROUP_BY_STORAGE_KEY = 'artshow_group_by_mode';
+const STORAGE_KEY = 'view_mode';
+const GROUP_BY_STORAGE_KEY = 'group_by_mode';
 
-let viewMode = localStorage.getItem(STORAGE_KEY) === 'groups' ? 'groups' : 'grid';
-let groupByMode = localStorage.getItem(GROUP_BY_STORAGE_KEY) === 'year' ? 'year' : 'name';
+let viewMode = 'grid';
+let groupByMode = 'name';
 let activeGroup = null;
 let onChange = null;
 
 export function initGroups(onUpdate) {
   onChange = onUpdate;
+  viewMode = storageService.get(STORAGE_KEY) === 'groups' ? 'groups' : 'grid';
+  groupByMode = storageService.get(GROUP_BY_STORAGE_KEY) === 'year' ? 'year' : 'name';
 
   const gridBtn = document.getElementById('view-grid-btn');
   const groupsBtn = document.getElementById('view-groups-btn');
@@ -53,7 +56,7 @@ function setViewMode(mode) {
   if (viewMode === mode) return;
   viewMode = mode;
   activeGroup = null;
-  localStorage.setItem(STORAGE_KEY, mode);
+  storageService.set(STORAGE_KEY, mode);
   updateToggleUI();
   updateSortVisibility();
   updateGroupByToggleVisibility();
@@ -65,7 +68,7 @@ function setGroupByMode(mode) {
   if (groupByMode === mode) return;
   groupByMode = mode;
   activeGroup = null;
-  localStorage.setItem(GROUP_BY_STORAGE_KEY, mode);
+  storageService.set(GROUP_BY_STORAGE_KEY, mode);
   updateGroupByToggleUI();
   updateSortVisibility();
   updateBreadcrumb();

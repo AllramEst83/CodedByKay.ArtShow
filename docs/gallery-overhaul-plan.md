@@ -130,11 +130,11 @@ Every phase: keep `/art/<id>` deep links, share-preview edge function and `data/
 
 Goal: shrink the surface area and fix boot-time hazards before restyling.
 
-- [ ] Delete `css/themes.css` (unreferenced). Delete the unused `:root` token block (`tokens.css:2-26`) after grepping `styles.css` for each variable (grep already shows none are used).
-- [ ] Route **all** storage through `storageService`; make every read guarded; remove module-top-level `localStorage` reads in `groups.js`, `pagination.js`, `themes.js` (read lazily inside `init*`). Keep the inline pre-paint script but wrap it in try/catch (it is) and align key names.
-- [ ] Fix HTML injection: build filter checkboxes/badges with `textContent`/`createElement` (or an `escapeHtml` helper), stop using attribute selectors with raw values (keep a `Map` of inputs instead).
-- [ ] Fix the stale docs: remove the Netlify Identity sections from `agent-learnt/environment-and-architecture.md`; delete (or move to `docs/archive/`) `docs/netlify-identity-auth-setup.md`; move the finished root `plan.md` (storage migration, mostly ✅) to `docs/archive/storage-migration-plan.md` and fix links.
-- [ ] Add `@media (prefers-reduced-motion: reduce)` that disables transforms/shimmer/smooth-scroll (this is permanent and survives the redesign).
+- [x] Delete `css/themes.css` (unreferenced). Delete the unused `:root` token block (`tokens.css:2-26`) after grepping `styles.css` for each variable (grep already shows none are used).
+- [x] Route **all** storage through `storageService`; make every read guarded; remove module-top-level `localStorage` reads in `groups.js`, `pagination.js`, `themes.js` (read lazily inside `init*`). Keep the inline pre-paint script but wrap it in try/catch (it is) and align key names.
+- [x] Fix HTML injection: build filter checkboxes/badges with `textContent`/`createElement` (or an `escapeHtml` helper), stop using attribute selectors with raw values (keep a `Map` of inputs instead).
+- [x] Fix the stale docs: remove the Netlify Identity sections from `agent-learnt/environment-and-architecture.md`; delete (or move to `docs/archive/`) `docs/netlify-identity-auth-setup.md`; move the finished root `plan.md` (storage migration, mostly ✅) to `docs/archive/storage-migration-plan.md` and fix links.
+- [x] Add `@media (prefers-reduced-motion: reduce)` that disables transforms/shimmer/smooth-scroll (this is permanent and survives the redesign).
 
 **Done when:** site looks identical; app boots with `localStorage` throwing (test by stubbing in devtools / Playwright `addInitScript`); no unreferenced CSS/JS/assets remain except those removed in Phase 1.
 

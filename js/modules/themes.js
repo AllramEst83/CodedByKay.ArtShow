@@ -1,14 +1,22 @@
+function safeGet(key) {
+  try { return localStorage.getItem(key); } catch { return null; }
+}
+
+function safeSet(key, value) {
+  try { localStorage.setItem(key, value); } catch { /* storage blocked */ }
+}
+
 export const THEMES = ['neo-brutalism', 'neumorphism', 'glassmorphism', 'material', 'claymorphism', 'synthwave'];
 
 export function applyTheme(themeName) {
   if (THEMES.includes(themeName)) {
     document.documentElement.setAttribute('data-theme', themeName);
-    localStorage.setItem('artshow-theme', themeName);
+    safeSet('artshow-theme', themeName);
   }
 }
 
 export function initTheme() {
-  const savedTheme = localStorage.getItem('artshow-theme') || 'glassmorphism';
+  const savedTheme = safeGet('artshow-theme') || 'glassmorphism';
   applyTheme(savedTheme);
   
   const selector = document.getElementById('theme-selector');
@@ -25,12 +33,12 @@ export const BACKGROUNDS = ['default', 'dark', 'gray', 'light'];
 export function applyBackground(backgroundName) {
   if (BACKGROUNDS.includes(backgroundName)) {
     document.documentElement.setAttribute('data-bg', backgroundName);
-    localStorage.setItem('artshow-background', backgroundName);
+    safeSet('artshow-background', backgroundName);
   }
 }
 
 export function initBackground() {
-  const savedBackground = localStorage.getItem('artshow-background') || 'default';
+  const savedBackground = safeGet('artshow-background') || 'default';
   applyBackground(savedBackground);
 
   const selector = document.getElementById('background-selector');
