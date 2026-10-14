@@ -1,10 +1,10 @@
-import { initTheme, initBackground } from './modules/themes.js';
+import { initWall } from './modules/wall.js';
+import { COPY } from './modules/copy.js';
 import { initGallery, renderGallery } from './modules/gallery.js';
 import { initFilters } from './modules/filters.js';
 import { initLightbox, setArtworkIndex, openArtworkFromUrl } from './modules/lightbox.js';
 import { initPagination, resetToPageOne, updatePaginationAndRender, showPageContaining } from './modules/pagination.js';
 import { initGroups, showGridView } from './modules/groups.js';
-import { initAdsToggle } from './modules/ads.js';
 
 function hidePageLoader() {
   const loader = document.getElementById('page-loader');
@@ -46,8 +46,8 @@ async function loadServerArtwork() {
     openArtworkFromUrl();
   } catch (err) {
     console.error('[App] Failed to load server artwork:', err);
-    if (emptyTitle) emptyTitle.textContent = "Oops, we seem to have an issue...";
-    if (emptyDesc) emptyDesc.textContent = "The internet ate our pencils! We couldn't fetch the artwork metadata from the server right now.";
+    if (emptyTitle) emptyTitle.textContent = COPY.errorTitle;
+    if (emptyDesc) emptyDesc.textContent = COPY.loadFailed;
     if (emptyState) emptyState.hidden = false;
   } finally {
     if (loadingState) loadingState.hidden = true;
@@ -56,31 +56,7 @@ async function loadServerArtwork() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  initTheme();
-  initBackground();
-  initAdsToggle();
+  initWall();
   initLightbox();
   loadServerArtwork();
-
-  // Fake ad parallax — ads drift at 40% of page scroll speed
-  const adLeft  = document.querySelector('.fake-ad--left');
-  const adRight = document.querySelector('.fake-ad--right');
-
-  if (adLeft || adRight) {
-    const DRIFT_RATIO = 0.4;
-    let ticking = false;
-
-    window.addEventListener('scroll', () => {
-      if (!ticking) {
-        requestAnimationFrame(() => {
-          const offset = window.scrollY * DRIFT_RATIO;
-          if (adLeft)  adLeft.scrollTop  = offset;
-          if (adRight) adRight.scrollTop = offset;
-          ticking = false;
-        });
-        ticking = true;
-      }
-    }, { passive: true });
-  }
 });
-

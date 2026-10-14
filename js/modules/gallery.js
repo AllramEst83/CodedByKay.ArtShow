@@ -1,3 +1,4 @@
+import { COPY } from './copy.js';
 export let filteredArtwork = [];
 
 export function formatDate(dateInput) {
@@ -23,8 +24,8 @@ export function renderGallery(items) {
   const emptyDesc = document.getElementById('empty-desc');
   
   if (items.length === 0) {
-    if (emptyTitle) emptyTitle.textContent = "Oops, we seem to have an issue...";
-    if (emptyDesc) emptyDesc.textContent = "No artwork found matching your search or filters. Try resetting your search!";
+    if (emptyTitle) emptyTitle.textContent = COPY.noMatches;
+    if (emptyDesc) emptyDesc.textContent = '';
     if (emptyState) emptyState.hidden = false;
     return;
   }
@@ -65,15 +66,14 @@ export function renderGallery(items) {
       imgWrapper.innerHTML = `
         <div class="card-error-fallback">
           <span class="error-emoji" aria-hidden="true"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></span>
-          <p class="error-title">Oops, we seem to have an issue...</p>
-          <p class="error-subtext">This drawing took an unexpected coffee break!</p>
+          <p class="error-title">${COPY.cardImageFailed}</p>
         </div>
       `;
       
       // If all images in gallery fail to load due to network/server issues
       if (failedCount === items.length && emptyState) {
-        if (emptyTitle) emptyTitle.textContent = "Oops, we seem to have an issue...";
-        if (emptyDesc) emptyDesc.textContent = "The internet ate our pencils! We couldn't fetch the artwork images from the server right now.";
+        if (emptyTitle) emptyTitle.textContent = COPY.errorTitle;
+        if (emptyDesc) emptyDesc.textContent = COPY.imagesFailed;
         emptyState.hidden = false;
       }
     };

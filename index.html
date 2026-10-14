@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="glassmorphism" data-bg="default">
+<html lang="en" data-wall="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,21 +7,24 @@
   <meta name="description" content="A beautiful art portfolio featuring stunning drawings and artwork by Kay.">
   <meta name="author" content="Kay">
   <meta name="keywords" content="art, portfolio, drawings, portraits, illustration, Kay, ArtShow">
-  <meta name="theme-color" content="#120e24">
+  <meta name="theme-color" content="#0f0f10">
 
-  <!-- Applies the persisted theme and background before first paint to avoid a flash of the default theme -->
+  <!-- Applies the persisted wall before first paint to avoid a flash of the default wall -->
   <script>
     (function () {
-      var THEMES = ['neo-brutalism', 'neumorphism', 'glassmorphism', 'material', 'claymorphism', 'synthwave'];
+      var WALLS = ['dark', 'gray', 'paper'];
+      var COLORS = { dark: '#0f0f10', gray: '#a9a9ae', paper: '#f3eee4' };
       try {
-        var saved = localStorage.getItem('artshow-theme');
-        if (saved && THEMES.indexOf(saved) !== -1) {
-          document.documentElement.setAttribute('data-theme', saved);
+        var wall = null;
+        var raw = localStorage.getItem('artshow_wall');
+        if (raw) { try { wall = JSON.parse(raw); } catch (e) { wall = raw; } }
+        if (WALLS.indexOf(wall) === -1) {
+          // Pre-redesign key; wall.js migrates and deletes it on boot.
+          wall = { dark: 'dark', gray: 'gray', light: 'paper' }[localStorage.getItem('artshow-background')] || 'dark';
         }
-        var savedBg = localStorage.getItem('artshow-background');
-        if (savedBg === 'dark' || savedBg === 'gray' || savedBg === 'light') {
-          document.documentElement.setAttribute('data-bg', savedBg);
-        }
+        document.documentElement.setAttribute('data-wall', wall);
+        var meta = document.querySelector('meta[name="theme-color"]');
+        if (meta) meta.setAttribute('content', COLORS[wall]);
       } catch (e) {}
     })();
   </script>
@@ -52,7 +55,7 @@
   <link rel="manifest" href="/assets/icons/site.webmanifest">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&family=Space+Mono:wght@400;700&family=Quicksand:wght@400;500;600;700&family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/tokens.css">
   <link rel="stylesheet" href="/css/styles.css">
 </head>
@@ -63,34 +66,10 @@
   </div>
   <header class="app-header">
     <h1 class="brand-title"><a href="/" class="brand-title-link">Kay's ArtShow</a></h1>
-    <div class="header-controls">
-      <label class="ads-toggle">
-        <span class="ads-toggle__label" aria-hidden="true">Hide Ads</span>
-        <span class="switch">
-          <input type="checkbox" id="ads-toggle" role="switch" aria-label="Hide ads" aria-checked="false">
-          <span class="switch__track" aria-hidden="true">
-            <span class="switch__thumb"></span>
-          </span>
-        </span>
-      </label>
-      <div class="theme-controls">
-        <label for="theme-selector" class="sr-only">Select Theme</label>
-        <select id="theme-selector" class="theme-selector" aria-label="Select Theme">
-          <option value="glassmorphism">Glassmorphism</option>
-          <option value="neo-brutalism">Neo-Brutalism</option>
-          <option value="neumorphism">Neumorphism</option>
-          <option value="material">Material</option>
-          <option value="claymorphism">Claymorphism</option>
-          <option value="synthwave">Synthwave</option>
-        </select>
-        <label for="background-selector" class="sr-only">Select Background</label>
-        <select id="background-selector" class="theme-selector" aria-label="Select Background">
-          <option value="default">Theme default</option>
-          <option value="dark">Dark</option>
-          <option value="gray">Gray</option>
-          <option value="light">Light</option>
-        </select>
-      </div>
+    <div id="wall-switch" class="wall-switch" role="radiogroup" aria-label="Wall colour">
+      <button type="button" role="radio" aria-checked="true" data-wall-option="dark" class="wall-swatch wall-swatch--dark" aria-label="Dark wall" title="Dark"></button>
+      <button type="button" role="radio" aria-checked="false" tabindex="-1" data-wall-option="gray" class="wall-swatch wall-swatch--gray" aria-label="Gray wall" title="Gray"></button>
+      <button type="button" role="radio" aria-checked="false" tabindex="-1" data-wall-option="paper" class="wall-swatch wall-swatch--paper" aria-label="Paper wall" title="Paper"></button>
     </div>
   </header>
 
@@ -164,9 +143,9 @@
       </div>
       <div id="empty-state" class="empty-state" hidden>
         <div class="empty-emoji" aria-hidden="true"><svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg></div>
-        <h2 id="empty-title">Oops, we seem to have an issue...</h2>
-        <p id="empty-desc">The internet ate our pencils! We couldn't load any artwork right now.</p>
-        <button id="empty-clear-btn" class="btn">Try Again / Reset Filters</button>
+        <h2 id="empty-title">Something went wrong</h2>
+        <p id="empty-desc">The artwork couldn't be loaded right now. Please try again.</p>
+        <button id="empty-clear-btn" class="btn">Reset filters</button>
       </div>
 
       <!-- Pagination Controls -->
@@ -187,29 +166,6 @@
       </div>
     </section>
   </main>
-
-  <!-- Fake ads in viewport gutters -->
-  <aside class="fake-ad fake-ad--left" aria-hidden="true">
-    <div class="fake-ad__unit">
-      <img src="/assets/ads/fake_ad_1.webp" alt="Fake ad" loading="lazy" />
-      <span class="fake-ad__label">Advertisement</span>
-    </div>
-    <div class="fake-ad__unit">
-      <img src="/assets/ads/fake_ad_2.webp" alt="Fake ad" loading="lazy" />
-      <span class="fake-ad__label">Sponsored</span>
-    </div>
-  </aside>
-
-  <aside class="fake-ad fake-ad--right" aria-hidden="true">
-    <div class="fake-ad__unit">
-      <img src="/assets/ads/fake_ad_3.webp" alt="Fake ad" loading="lazy" />
-      <span class="fake-ad__label">Advertisement</span>
-    </div>
-    <div class="fake-ad__unit">
-      <img src="/assets/ads/fake_ad_4.webp" alt="Fake ad" loading="lazy" />
-      <span class="fake-ad__label">Sponsored</span>
-    </div>
-  </aside>
 
   <!-- Lightbox Modal -->
   <div id="lightbox" class="lightbox-overlay" role="dialog" aria-modal="true" aria-label="Artwork detail" hidden>

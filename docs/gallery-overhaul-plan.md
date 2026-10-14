@@ -142,14 +142,14 @@ Goal: shrink the surface area and fix boot-time hazards before restyling.
 
 Goal: the "gallery wall" look in §2, with the header reduced to essentials.
 
-- [ ] **Tokens** (`css/tokens.css`): rewrite as one base block + `[data-wall="dark|gray|paper"]`. Define: wall/ink/muted/hairline/accent/focus colours, a 4-or-8-pt spacing scale, a type scale (`--text-xs … --text-xl`), one `--ease` + `--duration` pair. Check contrast ≥ 4.5:1 for body, 3:1 for large text and UI borders on **all three** walls (gray is the risky one).
-- [ ] **Remove** from `styles.css`: every `[data-theme=…]` rule (21 lines reference it), the `[data-bg]` overrides at the bottom, `.theme-selector`, `.theme-controls`, all `.fake-ad*`, `.ads-toggle`, `.switch*`, glass/clay/synthwave header styles, hover `scale`, shadows, radii (set `--radius: 0`; delete the var if nothing needs it).
-- [ ] **Remove** `js/modules/ads.js`, the parallax block in `js/main.js:65-86`, `assets/ads/`, the `<aside class="fake-ad…">` markup and the `#ads-toggle` label, `initAdsToggle`. (Open decision D1 — default: remove.)
-- [ ] **Replace** `themes.js` with `wall.js` (`initWall()`, `applyWall()`), one header control (icon + 3 swatches), `aria-pressed`/`role="radiogroup"` semantics, keyboard accessible. Old-key migration per §2.2. Update the `<head>` pre-paint script accordingly.
-- [ ] **Fonts:** one family (+ optional mono). Prefer self-hosting a variable WOFF2 in `assets/fonts/` with `font-display: swap` and a `<link rel="preload">`; if staying on Google Fonts, request a single family with only the needed weights. Remove the other five.
-- [ ] **Header:** brand (home link) · text nav (`Work`, `Collections`, optional `About`) · search icon · wall control. Sticky only if it doesn't cost viewport height on mobile (consider hide-on-scroll-down).
-- [ ] **Copy:** one `copy.js` (or constants) for empty/error states in a neutral, mature voice ("Nothing matches those filters.", "This image couldn't be loaded. Retry"). Remove the pencil/coffee jokes (D2).
-- [ ] `theme-color` meta follows the wall.
+- [x] **Tokens** (`css/tokens.css`): rewrite as one base block + `[data-wall="dark|gray|paper"]`. Define: wall/ink/muted/hairline/accent/focus colours, a 4-or-8-pt spacing scale, a type scale (`--text-xs … --text-xl`), one `--ease` + `--duration` pair. Check contrast ≥ 4.5:1 for body, 3:1 for large text and UI borders on **all three** walls (gray is the risky one).
+- [x] **Remove** from `styles.css`: every `[data-theme=…]` rule (21 lines reference it), the `[data-bg]` overrides at the bottom, `.theme-selector`, `.theme-controls`, all `.fake-ad*`, `.ads-toggle`, `.switch*`, glass/clay/synthwave header styles, hover `scale`, shadows, radii (set `--radius: 0`; delete the var if nothing needs it).
+- [x] **Remove** `js/modules/ads.js`, the parallax block in `js/main.js:65-86`, `assets/ads/`, the `<aside class="fake-ad…">` markup and the `#ads-toggle` label, `initAdsToggle`. (Open decision D1 — default: remove.)
+- [x] **Replace** `themes.js` with `wall.js` (`initWall()`, `applyWall()`), one header control (icon + 3 swatches), `aria-pressed`/`role="radiogroup"` semantics, keyboard accessible. Old-key migration per §2.2. Update the `<head>` pre-paint script accordingly.
+- [x] **Fonts:** one family (+ optional mono). Prefer self-hosting a variable WOFF2 in `assets/fonts/` with `font-display: swap` and a `<link rel="preload">`; if staying on Google Fonts, request a single family with only the needed weights. Remove the other five. *(Done via Google Fonts, Inter 400–700 only; self-hosting still open.)*
+- [ ] **Header:** *(Brand + wall switch shipped; text nav waits for Phase 3 routes; search/filter bar still in `<main>`.)* brand (home link) · text nav (`Work`, `Collections`, optional `About`) · search icon · wall control. Sticky only if it doesn't cost viewport height on mobile (consider hide-on-scroll-down).
+- [x] **Copy:** one `copy.js` (or constants) for empty/error states in a neutral, mature voice ("Nothing matches those filters.", "This image couldn't be loaded. Retry"). Remove the pencil/coffee jokes (D2).
+- [x] `theme-color` meta follows the wall.
 
 **Done when:** `grep -r "data-theme\|fake-ad\|ads-toggle" .` returns nothing outside archived docs; first paint shows no flash of another wall; Lighthouse a11y ≥ 95 on both `/` and `/art/<id>`; page weight drops by the fonts + 1.7 MB ads.
 
