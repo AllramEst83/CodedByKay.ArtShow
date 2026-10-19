@@ -28,7 +28,7 @@ js/modules/store.js   shared state: artwork, collections, years, current list
 js/modules/grid.js    justified rows, cards (<a href="/art/<id>">), ratio cache
 js/modules/viewer.js  dialog viewer: progressive load, nav, info, fullscreen
 js/modules/viewer-zoom.js  pointer-event zoom/pan/swipe
-js/modules/wall.js    wall switch + legacy key migration
+js/modules/wall.js    wall switch (collapses behind an icon popover at <=600px) + legacy key migration
 js/modules/share.js   share URLs, toast
 js/modules/storage.js guarded localStorage (all storage goes through it)
 js/modules/copy.js    neutral UI strings

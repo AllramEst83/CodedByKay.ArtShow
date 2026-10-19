@@ -78,10 +78,15 @@
       <button id="search-toggle" type="button" class="icon-toggle" aria-label="Search" aria-expanded="false" aria-controls="search-bar" title="Search">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
       </button>
-      <div id="wall-switch" class="wall-switch" role="radiogroup" aria-label="Wall colour">
-        <button type="button" role="radio" aria-checked="true" data-wall-option="dark" class="wall-swatch wall-swatch--dark" aria-label="Dark wall" title="Dark"></button>
-        <button type="button" role="radio" aria-checked="false" tabindex="-1" data-wall-option="gray" class="wall-swatch wall-swatch--gray" aria-label="Gray wall" title="Gray"></button>
-        <button type="button" role="radio" aria-checked="false" tabindex="-1" data-wall-option="paper" class="wall-swatch wall-swatch--paper" aria-label="Paper wall" title="Paper"></button>
+      <div id="wall-menu" class="wall-menu">
+        <button id="wall-toggle" type="button" class="icon-toggle wall-toggle" aria-label="Wall colour" aria-expanded="false" aria-controls="wall-switch" title="Wall colour">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor" stroke="none"></path></svg>
+        </button>
+        <div id="wall-switch" class="wall-switch" role="radiogroup" aria-label="Wall colour">
+          <button type="button" role="radio" aria-checked="true" data-wall-option="dark" class="wall-swatch wall-swatch--dark" aria-label="Dark wall" title="Dark"></button>
+          <button type="button" role="radio" aria-checked="false" tabindex="-1" data-wall-option="gray" class="wall-swatch wall-swatch--gray" aria-label="Gray wall" title="Gray"></button>
+          <button type="button" role="radio" aria-checked="false" tabindex="-1" data-wall-option="paper" class="wall-swatch wall-swatch--paper" aria-label="Paper wall" title="Paper"></button>
+        </div>
       </div>
     </div>
   </header>
