@@ -40,6 +40,7 @@ export function applyWall(wall, { persist = true } = {}) {
 
 export function initWall() {
   migrateLegacy();
+  initWallMenu();
   const saved = storageService.get(STORAGE_KEY);
   const wall = WALLS.includes(saved) ? saved : DEFAULT_WALL;
   applyWall(wall, { persist: false });
@@ -60,5 +61,35 @@ export function initWall() {
         next.focus();
       });
     });
+  });
+}
+
+// Phones collapse the header swatches behind #wall-toggle (CSS decides when the
+// toggle is visible); this just opens/closes the popover.
+function initWallMenu() {
+  const menu = document.getElementById('wall-menu');
+  const toggle = document.getElementById('wall-toggle');
+  if (!menu || !toggle) return;
+
+  const setOpen = (open, { restoreFocus = false } = {}) => {
+    menu.classList.toggle('is-open', open);
+    toggle.setAttribute('aria-expanded', String(open));
+    if (!open && restoreFocus) toggle.focus();
+  };
+
+  toggle.addEventListener('click', () => {
+    const open = !menu.classList.contains('is-open');
+    setOpen(open);
+    if (open) menu.querySelector('[aria-checked="true"]')?.focus();
+  });
+  // Picking a wall is the whole job of the popover: apply, then get out of the way.
+  menu.addEventListener('click', (e) => {
+    if (e.target.closest('[data-wall-option]')) setOpen(false);
+  });
+  document.addEventListener('click', (e) => {
+    if (!menu.contains(e.target)) setOpen(false);
+  });
+  menu.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && menu.classList.contains('is-open')) setOpen(false, { restoreFocus: true });
   });
 }
