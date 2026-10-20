@@ -4609,5 +4609,95 @@
       "watercolor",
       "ink"
     ]
+  },
+  {
+    "id": "159",
+    "type": null,
+    "addedDate": "2026-10-20",
+    "title": "Red Death\u0027s Mask",
+    "description": "One of several drawings I made for my school application, meant to depict the Red Death from the plague story. Studies of a figure in a pale dress and glasses wearing a bright red mask, shown from several angles and holding a red-stained cloth, with handwritten notes marking the white dress and white socks.",
+    "createdDate": "2004-01-01",
+    "category": "Illustration",
+    "tags": [
+      "horror",
+      "sketch",
+      "marker",
+      "ink",
+      "school-project"
+    ],
+    "groups": [
+      "Fantastical",
+      "Studies",
+      "School project"
+    ],
+    "medium": "Pencil, markers and fineliner",
+    "imageUrl": "https://kaysartshow.fyi/originals/2004/red-death-s-mask.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2004/red-death-s-mask-600w.webp",
+    "width": 5570,
+    "height": 3978,
+    "displayUrl": "https://kaysartshow.fyi/display/2004/red-death-s-mask-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil",
+      "ink",
+      "marker"
+    ]
+  },
+  {
+    "id": "160",
+    "type": null,
+    "addedDate": "2026-10-20",
+    "title": "Self-Portrait, Eyes Down",
+    "description": "A pencil self-portrait with the head tilted down and eyes closed, with loose hatching in the hair, beard, and shoulder.",
+    "createdDate": "2005-01-01",
+    "category": "Portraits",
+    "tags": [
+      "portrait",
+      "pencil",
+      "sketch"
+    ],
+    "groups": [
+      "Portraits"
+    ],
+    "medium": "Pencil",
+    "imageUrl": "https://kaysartshow.fyi/originals/2005/self-portrait-eyes-down.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2005/self-portrait-eyes-down-600w.webp",
+    "width": 5373,
+    "height": 3838,
+    "displayUrl": "https://kaysartshow.fyi/display/2005/self-portrait-eyes-down-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil"
+    ]
+  },
+  {
+    "id": "161",
+    "type": null,
+    "addedDate": "2026-10-20",
+    "title": "Me and Myself",
+    "description": "A bold pencil self-portrait of the artist looking straight ahead while drawing, with a pencil in hand and the title handwritten beside it.",
+    "createdDate": "2005-01-01",
+    "category": "Portraits",
+    "tags": [
+      "portrait",
+      "pencil",
+      "sketch"
+    ],
+    "groups": [
+      "Portraits"
+    ],
+    "medium": "Pencil",
+    "imageUrl": "https://kaysartshow.fyi/originals/2005/me-and-myself.webp",
+    "videoUrl": null,
+    "thumbnailUrl": "https://kaysartshow.fyi/thumbs/2005/me-and-myself-600w.webp",
+    "width": 5871,
+    "height": 4194,
+    "displayUrl": "https://kaysartshow.fyi/display/2005/me-and-myself-2000w.webp",
+    "datePrecision": "year",
+    "media": [
+      "pencil"
+    ]
   }
 ]
