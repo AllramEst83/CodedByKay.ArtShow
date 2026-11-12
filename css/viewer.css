@@ -159,10 +159,14 @@
   color: var(--color-text-primary);
   cursor: pointer;
 }
-.viewer-btn:hover {
-  background: var(--color-accent);
-  border-color: var(--color-accent);
-  color: var(--color-accent-text);
+/* Hover colour only where a pointer can really hover; on touch it would stick
+   after a tap. */
+@media (hover: hover) {
+  .viewer-btn:hover {
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+    color: var(--color-accent-text);
+  }
 }
 .viewer-btn:disabled,
 .viewer-edge:disabled {
@@ -221,13 +225,26 @@
   background: transparent;
   color: var(--color-text-primary);
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+/* The zone itself never shows a focus ring (it would draw a tall rectangle);
+   the arrow chip inside takes it instead. */
+.viewer-edge:focus,
+.viewer-edge:focus-visible {
+  outline: none;
+}
+.viewer-edge:focus-visible .viewer-btn {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
 }
 .viewer-edge--prev { left: 0;  justify-content: flex-start; padding-left: max(0.5rem, env(safe-area-inset-left)); }
 .viewer-edge--next { right: 0; justify-content: flex-end;   padding-right: max(0.5rem, env(safe-area-inset-right)); }
-.viewer-edge:hover .viewer-btn {
-  background: var(--color-accent);
-  border-color: var(--color-accent);
-  color: var(--color-accent-text);
+@media (hover: hover) {
+  .viewer-edge:hover .viewer-btn {
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+    color: var(--color-accent-text);
+  }
 }
 /* Touch: swipe replaces the zones; keep the chips small and out of the way. */
 @media (pointer: coarse) {
