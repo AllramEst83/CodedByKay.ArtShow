@@ -158,6 +158,9 @@
   background: var(--color-bg);
   color: var(--color-text-primary);
   cursor: pointer;
+  /* Fades back after release so a quick tap still reads as a flash. */
+  transition: background-color 220ms ease-out, border-color 220ms ease-out,
+    color 220ms ease-out;
 }
 /* Hover colour only where a pointer can really hover; on touch it would stick
    after a tap. */
@@ -167,6 +170,15 @@
     border-color: var(--color-accent);
     color: var(--color-accent-text);
   }
+}
+/* Pressed state works for mouse and touch alike (it ends on release, so it
+   never sticks). Snaps on instantly, fades out via the base transition. */
+.viewer-btn:active,
+.viewer-edge:active .viewer-btn {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-accent-text);
+  transition: none;
 }
 .viewer-btn:disabled,
 .viewer-edge:disabled {
